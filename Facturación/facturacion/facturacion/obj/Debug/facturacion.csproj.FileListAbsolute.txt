@@ -1,0 +1,2 @@
+c:\users\jacc\documents\visual studio 2013\Projects\facturacion\facturacion\bin\Debug\facturacion.exe.config
+C:\Users\Pamela\Dropbox\Octavo Semestre\Diseño de Sistemas\NAVEGADOR 2DO PROYECTO\FACTURACION\facturacion\facturacion\bin\Debug\facturacion.exe.config
