@@ -1,0 +1,11 @@
+c:\users\walter\documents\visual studio 2013\Projects\Errores\Errores\obj\Debug\Errores.frmErrores.resources
+c:\users\walter\documents\visual studio 2013\Projects\Errores\Errores\obj\Debug\Errores.Properties.Resources.resources
+c:\users\walter\documents\visual studio 2013\Projects\Errores\Errores\obj\Debug\Errores.csproj.GenerateResource.Cache
+c:\users\walter\documents\visual studio 2013\Projects\Errores\Errores\bin\Debug\Errores.pdb
+c:\users\walter\documents\visual studio 2013\Projects\Errores\Errores\obj\Debug\Errores.pdb
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\bin\Debug\ConexionODBC.dll
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\bin\Debug\ConexionODBC.pdb
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\obj\Debug\Errores.csprojResolveAssemblyReference.cache
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\bin\Debug\Errores.dll.config
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\bin\Debug\Errores.dll
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\obj\Debug\Errores.dll
