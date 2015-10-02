@@ -1,0 +1,10 @@
+c:\users\hector cardona\documents\visual studio 2013\Projects\Manejo Rol\Manejo Rol\bin\Debug\Manejo Rol.exe.config
+C:\Users\Hector Cardona\Documents\Visual Studio 2013\Projects\Manejo Rol\Manejo Rol\bin\Debug\Manejo Rol.exe
+C:\Users\Hector Cardona\Documents\Visual Studio 2013\Projects\Manejo Rol\Manejo Rol\bin\Debug\Manejo Rol.pdb
+C:\Users\Hector Cardona\Documents\Visual Studio 2013\Projects\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.csprojResolveAssemblyReference.cache
+C:\Users\Hector Cardona\Documents\Visual Studio 2013\Projects\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.frmManejoRol.resources
+C:\Users\Hector Cardona\Documents\Visual Studio 2013\Projects\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.Properties.Resources.resources
+C:\Users\Hector Cardona\Documents\Visual Studio 2013\Projects\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.csproj.GenerateResource.Cache
+C:\Users\Hector Cardona\Documents\Visual Studio 2013\Projects\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.exe
+C:\Users\Hector Cardona\Documents\Visual Studio 2013\Projects\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.pdb
+C:\Users\Hector Cardona\Documents\Visual Studio 2013\Projects\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.frmConsulta.resources
