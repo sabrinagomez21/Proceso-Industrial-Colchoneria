@@ -1,0 +1,13 @@
+C:\Users\LuiisFer\Downloads\Manejo-Rol\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.frmAsignacionAplicacion.resources
+C:\Users\LuiisFer\Downloads\Manejo-Rol\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.Prueba.resources
+C:\Users\LuiisFer\Downloads\Manejo-Rol\Manejo Rol\Manejo Rol\obj\Debug\ManejoAsignacionAplicacion.csproj.GenerateResource.Cache
+C:\Users\LuiisFer\Downloads\Manejo-Rol\Manejo Rol\Manejo Rol\bin\Debug\ManejoAsignacionAplicacion.exe.config
+C:\Users\LuiisFer\Downloads\Manejo-Rol\Manejo Rol\Manejo Rol\obj\Debug\ManejoAsignacionAplicacion.csprojResolveAssemblyReference.cache
+C:\Users\LuiisFer\Downloads\Manejo-Rol\Manejo Rol\Manejo Rol\obj\Debug\ManejoAsignacionAplicacion.Properties.Resources.resources
+C:\Users\LuiisFer\Downloads\Manejo-Rol\Manejo Rol\Manejo Rol\bin\Debug\ManejoAsignacionAplicacion.exe
+C:\Users\LuiisFer\Downloads\Manejo-Rol\Manejo Rol\Manejo Rol\bin\Debug\ManejoAsignacionAplicacion.pdb
+C:\Users\LuiisFer\Downloads\Manejo-Rol\Manejo Rol\Manejo Rol\obj\Debug\ManejoAsignacionAplicacion.exe
+C:\Users\LuiisFer\Downloads\Manejo-Rol\Manejo Rol\Manejo Rol\obj\Debug\ManejoAsignacionAplicacion.pdb
+C:\Users\LuiisFer\Downloads\Manejo-Rol\ManejoAsignacionAplicacion\ManejoAsignacionAplicacion\bin\Debug\ManejoAsignacionAplicacion.exe.config
+C:\Users\LuiisFer\Downloads\Manejo-Rol\ManejoAsignacionAplicacion\ManejoAsignacionAplicacion\obj\Debug\ManejoAsignacionAplicacion.exe
+C:\Users\LuiisFer\Downloads\Manejo-Rol\ManejoAsignacionAplicacion\ManejoAsignacionAplicacion\obj\Debug\ManejoAsignacionAplicacion.pdb
