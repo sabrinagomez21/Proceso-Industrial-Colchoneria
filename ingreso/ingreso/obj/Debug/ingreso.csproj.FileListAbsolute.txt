@@ -1,0 +1,10 @@
+c:\users\melvinalejandro\documents\visual studio 2013\Projects\ingreso\ingreso\bin\Debug\ingreso.exe.config
+c:\users\melvinalejandro\documents\visual studio 2013\Projects\ingreso\ingreso\bin\Debug\ingreso.exe
+c:\users\melvinalejandro\documents\visual studio 2013\Projects\ingreso\ingreso\bin\Debug\ingreso.pdb
+c:\users\melvinalejandro\documents\visual studio 2013\Projects\ingreso\ingreso\bin\Debug\ConexionODBC.dll
+c:\users\melvinalejandro\documents\visual studio 2013\Projects\ingreso\ingreso\obj\Debug\ingreso.csprojResolveAssemblyReference.cache
+c:\users\melvinalejandro\documents\visual studio 2013\Projects\ingreso\ingreso\obj\Debug\ingreso.Form1.resources
+c:\users\melvinalejandro\documents\visual studio 2013\Projects\ingreso\ingreso\obj\Debug\ingreso.Properties.Resources.resources
+c:\users\melvinalejandro\documents\visual studio 2013\Projects\ingreso\ingreso\obj\Debug\ingreso.csproj.GenerateResource.Cache
+c:\users\melvinalejandro\documents\visual studio 2013\Projects\ingreso\ingreso\obj\Debug\ingreso.exe
+c:\users\melvinalejandro\documents\visual studio 2013\Projects\ingreso\ingreso\obj\Debug\ingreso.pdb
