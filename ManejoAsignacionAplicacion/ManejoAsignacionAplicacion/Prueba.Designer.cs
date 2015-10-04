@@ -1,4 +1,4 @@
-﻿namespace Manejo_Rol
+﻿namespace ManejoAsignacionAplicacion
 {
     partial class Prueba
     {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Manejo_Rol
+namespace ManejoAsignacionAplicacion
 {
     public class N_Rol:D_Rol
     {
@@ -19,11 +19,11 @@ namespace Manejo_Rol
         {
             return D_Rol.AplicacionesDisponibles();
         }
-        public System.Data.DataTable AppAsig()
+        public System.Data.DataTable AppAsig(string sIdUser)
         {
-            return D_Rol.AplicacionesAsignadas();
+            return D_Rol.AplicacionesAsignadas(sIdUser);
         }
-        public void agregaAplicaciones(string sApp)
+        public void agregaAplicaciones(string sApp, string sIdUser)
         {
             if (string.IsNullOrWhiteSpace(sApp))
             {
@@ -32,7 +32,7 @@ namespace Manejo_Rol
             else
             {
 
-                int resultado = D_Rol.AgregarApp(sApp);
+                int resultado = D_Rol.AgregarApp(sApp, sIdUser);
 
                 if (resultado > 0)
                 {
@@ -45,7 +45,7 @@ namespace Manejo_Rol
             }
         }
 
-        public void quitaAplicaciones(string sApp)
+        public void quitaAplicaciones(string sApp, string sIdUser)
         {
             if (string.IsNullOrWhiteSpace(sApp))
             {
@@ -54,11 +54,33 @@ namespace Manejo_Rol
             else
             {
 
-                int resultado = D_Rol.quitaApp(sApp);
+                int resultado = D_Rol.quitaApp(sApp, sIdUser);
 
                 if (resultado > 0)
                 {
                     MessageBox.Show("App Quitada Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo eliminar la app", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+        }
+
+        public void quitarAllApps(string sIdUser)
+        {
+            if (string.IsNullOrWhiteSpace(sIdUser))
+            {
+                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+
+                int resultado = D_Rol.quitaAllApp( sIdUser);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("App Eliminadas Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {

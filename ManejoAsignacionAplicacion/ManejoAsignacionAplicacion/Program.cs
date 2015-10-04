@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Manejo_Rol
+namespace ManejoAsignacionAplicacion
 {
     static class Program
     {

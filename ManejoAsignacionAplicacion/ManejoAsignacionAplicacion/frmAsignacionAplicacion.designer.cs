@@ -1,4 +1,4 @@
-﻿namespace Manejo_Rol
+﻿namespace ManejoAsignacionAplicacion
 {
     partial class frmAsignacionAplicacion
     {
@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAsignacionAplicacion));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnbuscar = new System.Windows.Forms.Button();
             this.txtCodigoPerfil = new System.Windows.Forms.TextBox();
             this.lblusuario = new System.Windows.Forms.Label();
             this.lblNombrePerfil = new System.Windows.Forms.Label();
@@ -42,13 +41,14 @@
             this.lblAplicacionesAsign = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnLimpiarPerfil = new System.Windows.Forms.Button();
+            this.lbxAppAsignadas = new System.Windows.Forms.ListBox();
+            this.lbxAppDisponibles = new System.Windows.Forms.ListBox();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnQuitarSimple = new System.Windows.Forms.Button();
             this.btnQuitarMuchas = new System.Windows.Forms.Button();
             this.btnAsignacionMuchas = new System.Windows.Forms.Button();
             this.btnAsignacionSimple = new System.Windows.Forms.Button();
-            this.lbxAppAsignadas = new System.Windows.Forms.ListBox();
-            this.lbxAppDisponibles = new System.Windows.Forms.ListBox();
+            this.btnbuscar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,22 +67,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Perfil Seleccionado";
             // 
-            // btnbuscar
-            // 
-            this.btnbuscar.Image = global::ManejoAsignacionAplicacion.Properties.Resources.buscar;
-            this.btnbuscar.Location = new System.Drawing.Point(51, 32);
-            this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(47, 50);
-            this.btnbuscar.TabIndex = 0;
-            this.btnbuscar.UseVisualStyleBackColor = true;
-            // 
             // txtCodigoPerfil
             // 
+            this.txtCodigoPerfil.Enabled = false;
             this.txtCodigoPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigoPerfil.Location = new System.Drawing.Point(115, 55);
             this.txtCodigoPerfil.Name = "txtCodigoPerfil";
             this.txtCodigoPerfil.Size = new System.Drawing.Size(110, 27);
             this.txtCodigoPerfil.TabIndex = 1;
+            this.txtCodigoPerfil.TabStop = false;
             // 
             // lblusuario
             // 
@@ -106,6 +99,7 @@
             // 
             // txtNombrePerfil
             // 
+            this.txtNombrePerfil.Enabled = false;
             this.txtNombrePerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombrePerfil.Location = new System.Drawing.Point(270, 55);
             this.txtNombrePerfil.Name = "txtNombrePerfil";
@@ -181,6 +175,25 @@
             this.btnLimpiarPerfil.TabIndex = 31;
             this.btnLimpiarPerfil.Text = "Limpiar Perfiles";
             this.btnLimpiarPerfil.UseVisualStyleBackColor = true;
+            this.btnLimpiarPerfil.Click += new System.EventHandler(this.btnLimpiarPerfil_Click);
+            // 
+            // lbxAppAsignadas
+            // 
+            this.lbxAppAsignadas.FormattingEnabled = true;
+            this.lbxAppAsignadas.Location = new System.Drawing.Point(370, 157);
+            this.lbxAppAsignadas.Name = "lbxAppAsignadas";
+            this.lbxAppAsignadas.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.lbxAppAsignadas.Size = new System.Drawing.Size(277, 303);
+            this.lbxAppAsignadas.TabIndex = 33;
+            // 
+            // lbxAppDisponibles
+            // 
+            this.lbxAppDisponibles.FormattingEnabled = true;
+            this.lbxAppDisponibles.Location = new System.Drawing.Point(37, 153);
+            this.lbxAppDisponibles.Name = "lbxAppDisponibles";
+            this.lbxAppDisponibles.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.lbxAppDisponibles.Size = new System.Drawing.Size(220, 303);
+            this.lbxAppDisponibles.TabIndex = 34;
             // 
             // btnEditar
             // 
@@ -231,23 +244,15 @@
             this.btnAsignacionSimple.UseVisualStyleBackColor = true;
             this.btnAsignacionSimple.Click += new System.EventHandler(this.btnAsignacionSimple_Click);
             // 
-            // lbxAppAsignadas
+            // btnbuscar
             // 
-            this.lbxAppAsignadas.FormattingEnabled = true;
-            this.lbxAppAsignadas.Location = new System.Drawing.Point(370, 157);
-            this.lbxAppAsignadas.Name = "lbxAppAsignadas";
-            this.lbxAppAsignadas.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.lbxAppAsignadas.Size = new System.Drawing.Size(277, 303);
-            this.lbxAppAsignadas.TabIndex = 33;
-            // 
-            // lbxAppDisponibles
-            // 
-            this.lbxAppDisponibles.FormattingEnabled = true;
-            this.lbxAppDisponibles.Location = new System.Drawing.Point(37, 153);
-            this.lbxAppDisponibles.Name = "lbxAppDisponibles";
-            this.lbxAppDisponibles.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.lbxAppDisponibles.Size = new System.Drawing.Size(220, 303);
-            this.lbxAppDisponibles.TabIndex = 34;
+            this.btnbuscar.Image = global::ManejoAsignacionAplicacion.Properties.Resources.buscar;
+            this.btnbuscar.Location = new System.Drawing.Point(51, 32);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(47, 50);
+            this.btnbuscar.TabIndex = 0;
+            this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // frmAsignacionAplicacion
             // 
@@ -287,10 +292,8 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnbuscar;
-        private System.Windows.Forms.TextBox txtCodigoPerfil;
         private System.Windows.Forms.Label lblusuario;
         private System.Windows.Forms.Label lblNombrePerfil;
-        private System.Windows.Forms.TextBox txtNombrePerfil;
         private System.Windows.Forms.Label lblEditar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnQuitarSimple;
@@ -305,5 +308,7 @@
         private System.Windows.Forms.Button btnLimpiarPerfil;
         private System.Windows.Forms.ListBox lbxAppAsignadas;
         private System.Windows.Forms.ListBox lbxAppDisponibles;
+        public System.Windows.Forms.TextBox txtCodigoPerfil;
+        public System.Windows.Forms.TextBox txtNombrePerfil;
     }
 }

@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+﻿//using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
 
-namespace Manejo_Rol
+namespace ManejoAsignacionAplicacion
 {
     public class D_Rol: CAD
     {
@@ -39,7 +39,7 @@ namespace Manejo_Rol
 
             return dtRegistros;
         }
-
+        #endregion
         public static DataTable AplicacionesDisponibles() // consulta para las aplicaciones disponibles
         {
             DataTable dtRegistros = new DataTable();
@@ -95,14 +95,14 @@ namespace Manejo_Rol
             return Id;
         }
 
-        public static DataTable AplicacionesAsignadas() // consulta para las aplicaciones asignadas
+        public static DataTable AplicacionesAsignadas(string sIdUser) // consulta para las aplicaciones asignadas
         {
             DataTable dtRegistros = new DataTable();
 
             try
             {
                 mySqlComando = new OdbcCommand(
-                     string.Format("SELECT TrUSUARIOTOAPLICACION.iidAplicacion,vnombreAplicacion FROM MaAPLICACION INNER JOIN TrUSUARIOTOAPLICACION ON TrUSUARIOTOAPLICACION.iidAplicacion = MaAPLICACION.iidAplicacion"),
+                     string.Format("SELECT TrUSUARIOTOAPLICACION.iidAplicacion,vnombreAplicacion FROM MaAPLICACION INNER JOIN TrUSUARIOTOAPLICACION ON TrUSUARIOTOAPLICACION.iidAplicacion = MaAPLICACION.iidAplicacion where iidUsuario = '" + sIdUser + "'"),
                      CAD.ObtenerConexion()
                  );
                 mySqlDAdAdaptador = new OdbcDataAdapter();
@@ -112,38 +112,82 @@ namespace Manejo_Rol
             }
             catch (Exception Ex)
             {
-                MessageBox.Show("No es posible obtener el registro", "Error al Realizar la Consulta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(Ex + "No es posible obtener el registro", "Error al Realizar la Consulta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
 
             return dtRegistros;
         }
 
-        public static int AgregarApp(String sApp)
+        public static int AgregarApp(string sApp, string sId)
         {
             int iValorRetorno = 0;
 
             mySqlComando = new OdbcCommand(
-                string.Format("INSERT into TrUSUARIOTOAPLICACION (iidUsuario, iidAplicacion) values ('1','" + sApp + "')"),
+                string.Format("INSERT into TrUSUARIOTOAPLICACION (iidUsuario, iidAplicacion) values (" + sId + "," + sApp + ")"),
                 CAD.ObtenerConexion()
             );
 
             iValorRetorno = mySqlComando.ExecuteNonQuery();
             return iValorRetorno;
         }
-        #endregion
 
-        protected static int quitaApp(string sApp)
+
+        protected static int quitaApp(string sApp, string sIdUser)
         {
             int iValorRetorno = 0;
 
             mySqlComando = new OdbcCommand(
-                string.Format("DELETE from TrUSUARIOTOAPLICACION  where iidUsuario = 1 and iidAplicacion = '" + sApp + "'"),
-                CAD.ObtenerConexion()
+                string.Format("DELETE from TrUSUARIOTOAPLICACION  where iidUsuario = '" + sIdUser + "' and iidAplicacion = '" + sApp + "'"),
+               CAD.ObtenerConexion()
             );
 
             iValorRetorno = mySqlComando.ExecuteNonQuery();
             return iValorRetorno;
+        }
+
+        protected static int quitaAllApp(string sIdUser)
+        {
+            int iValorRetorno = 0;
+
+            mySqlComando = new OdbcCommand(
+                string.Format("DELETE from TrUSUARIOTOAPLICACION  where iidUsuario = '" + sIdUser + "'"),
+               CAD.ObtenerConexion()
+            );
+
+            iValorRetorno = mySqlComando.ExecuteNonQuery();
+            return iValorRetorno;
+        }
+
+        public static List<E_Rol> Buscar(string pNombre, string pApellido)
+        {
+            List<E_Rol> _lista = new List<E_Rol>();
+
+            try
+            {
+                OdbcCommand _comando = new OdbcCommand(String.Format(
+               "SELECT iidUsuario, vnombreUsuario, vapellidoUsuario, vemailUsuario FROM MAUSUARIO where vnombreUsuario ='{0}' or vapellidoUsuario='{1}'", pNombre, pApellido),
+               CAD.ObtenerConexion()
+               );
+                OdbcDataReader _reader = _comando.ExecuteReader();
+                while (_reader.Read())
+                {
+                    E_Rol pEmpleado = new E_Rol();
+                    pEmpleado.Id = _reader.GetInt32(0);
+                    pEmpleado.Nombre = _reader.GetString(1);
+                    pEmpleado.Apellido = _reader.GetString(2);
+
+
+
+
+                    _lista.Add(pEmpleado);
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("No es posible obtener el registro" + e, "Error al Realizar la Consulta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            return _lista;
         }
     }
 }
