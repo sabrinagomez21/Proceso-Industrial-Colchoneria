@@ -1,0 +1,9 @@
+C:\Users\Wilfredo\Desktop\no funcionales\compras\Compras\Compras\bin\Debug\Compras.exe.config
+C:\Users\Wilfredo\Desktop\no funcionales\compras\Compras\Compras\bin\Debug\Compras.exe
+C:\Users\Wilfredo\Desktop\no funcionales\compras\Compras\Compras\bin\Debug\Compras.pdb
+C:\Users\Wilfredo\Desktop\no funcionales\compras\Compras\Compras\obj\Debug\Compras.csprojResolveAssemblyReference.cache
+C:\Users\Wilfredo\Desktop\no funcionales\compras\Compras\Compras\obj\Debug\Compras.frmCompras.resources
+C:\Users\Wilfredo\Desktop\no funcionales\compras\Compras\Compras\obj\Debug\Compras.Properties.Resources.resources
+C:\Users\Wilfredo\Desktop\no funcionales\compras\Compras\Compras\obj\Debug\Compras.csproj.GenerateResource.Cache
+C:\Users\Wilfredo\Desktop\no funcionales\compras\Compras\Compras\obj\Debug\Compras.exe
+C:\Users\Wilfredo\Desktop\no funcionales\compras\Compras\Compras\obj\Debug\Compras.pdb

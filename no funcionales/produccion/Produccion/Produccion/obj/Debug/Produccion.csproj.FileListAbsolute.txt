@@ -1,0 +1,10 @@
+C:\Users\Wilfredo\Desktop\no funcionales\produccion\Produccion\Produccion\bin\Debug\Produccion.exe.config
+C:\Users\Wilfredo\Desktop\no funcionales\produccion\Produccion\Produccion\bin\Debug\Produccion.exe
+C:\Users\Wilfredo\Desktop\no funcionales\produccion\Produccion\Produccion\bin\Debug\Produccion.pdb
+C:\Users\Wilfredo\Desktop\no funcionales\produccion\Produccion\Produccion\obj\Debug\Produccion.csprojResolveAssemblyReference.cache
+C:\Users\Wilfredo\Desktop\no funcionales\produccion\Produccion\Produccion\obj\Debug\Produccion.frmOrden.resources
+C:\Users\Wilfredo\Desktop\no funcionales\produccion\Produccion\Produccion\obj\Debug\Produccion.Properties.Resources.resources
+C:\Users\Wilfredo\Desktop\no funcionales\produccion\Produccion\Produccion\obj\Debug\Produccion.csproj.GenerateResource.Cache
+C:\Users\Wilfredo\Desktop\no funcionales\produccion\Produccion\Produccion\obj\Debug\Produccion.exe
+C:\Users\Wilfredo\Desktop\no funcionales\produccion\Produccion\Produccion\obj\Debug\Produccion.pdb
+C:\Users\Wilfredo\Desktop\no funcionales\produccion\Produccion\Produccion\obj\Debug\Produccion.frmEntregasParciales.resources
