@@ -6,6 +6,7 @@ c:\users\walter\documents\visual studio 2013\Projects\Errores\Errores\obj\Debug\
 C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\bin\Debug\ConexionODBC.dll
 C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\bin\Debug\ConexionODBC.pdb
 C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\obj\Debug\Errores.csprojResolveAssemblyReference.cache
-C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\bin\Debug\Errores.dll.config
-C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\bin\Debug\Errores.dll
-C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\obj\Debug\Errores.dll
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\bin\Debug\Errores.exe.config
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\bin\Debug\Errores.exe
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\obj\Debug\Errores.exe
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\obj\Debug\Errores.frmBuscarUsuario.resources

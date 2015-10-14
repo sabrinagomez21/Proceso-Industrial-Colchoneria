@@ -31,10 +31,14 @@ namespace Errores
                 }
             }
         }
-        public DataTable ErrorUsuario(int id)
+        public System.Data.DataTable SUSER(int id)
+        {
+            return cErrorD.ConsultarUsuario(id);
+        }
+        public DataTable ErrorUsuario()
         {
             cError pCliente = new cError();
-            return cErrorD.Consultar(id);
+            return cErrorD.Consultar();
         }
         public DataTable ErrorAdmin()
         {
