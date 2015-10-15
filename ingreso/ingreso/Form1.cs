@@ -26,6 +26,7 @@ namespace ingreso
         {
             info.username = tbUname.Text;
             info.password = tbPass.Text;
+            
             dt = opr.login(info);
 
             if (dt.Rows.Count > 0)
@@ -33,10 +34,10 @@ namespace ingreso
                 this.Hide();
                 menuprincipal mde = new menuprincipal();
                 mde.Show();
-            }
+           }
             else
             {
-                MessageBox.Show("Invalid username or password !");
+              
             }
 
         }

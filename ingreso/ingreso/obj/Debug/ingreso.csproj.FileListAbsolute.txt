@@ -8,3 +8,12 @@ c:\users\melvinalejandro\documents\visual studio 2013\Projects\ingreso\ingreso\o
 c:\users\melvinalejandro\documents\visual studio 2013\Projects\ingreso\ingreso\obj\Debug\ingreso.csproj.GenerateResource.Cache
 c:\users\melvinalejandro\documents\visual studio 2013\Projects\ingreso\ingreso\obj\Debug\ingreso.exe
 c:\users\melvinalejandro\documents\visual studio 2013\Projects\ingreso\ingreso\obj\Debug\ingreso.pdb
+C:\Users\melvinalejandro\Desktop\ingreso\ingreso\bin\Debug\ingreso.exe.config
+C:\Users\melvinalejandro\Desktop\ingreso\ingreso\obj\Debug\ingreso.exe
+C:\Users\melvinalejandro\Desktop\ingreso\ingreso\obj\Debug\ingreso.pdb
+C:\Users\melvinalejandro\Desktop\ingreso\ingreso\bin\Debug\ingreso.exe
+C:\Users\melvinalejandro\Desktop\ingreso\ingreso\bin\Debug\ingreso.pdb
+C:\Users\melvinalejandro\Desktop\ingreso\ingreso\obj\Debug\ingreso.csprojResolveAssemblyReference.cache
+C:\Users\melvinalejandro\Desktop\ingreso\ingreso\obj\Debug\ingreso.Form1.resources
+C:\Users\melvinalejandro\Desktop\ingreso\ingreso\obj\Debug\ingreso.Properties.Resources.resources
+C:\Users\melvinalejandro\Desktop\ingreso\ingreso\obj\Debug\ingreso.csproj.GenerateResource.Cache
