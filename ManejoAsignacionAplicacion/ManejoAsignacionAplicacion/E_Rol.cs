@@ -9,9 +9,20 @@ namespace ManejoAsignacionAplicacion
     public class E_Rol
     {
          #region Atributos y Encapsulamiento
+
         //  variables de busqueda usuario.
-        public int Id { get; set; }
-        public string Nombre { get; set; }
+        public static int IdUser;
+        public static string NameUser;
+        public int Id
+        {
+            get;
+            set;
+        }
+        public string Nombre
+        {
+            get;
+            set;
+        }
 
         //variables de insercionRol
         public string Apellido { get; set; }

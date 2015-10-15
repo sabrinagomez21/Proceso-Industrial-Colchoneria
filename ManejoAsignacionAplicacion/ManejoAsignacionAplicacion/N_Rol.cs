@@ -23,7 +23,12 @@ namespace ManejoAsignacionAplicacion
         {
             return D_Rol.AplicacionesAsignadas(sIdUser);
         }
-        public void agregaAplicaciones(string sApp, string sIdUser)
+
+        public System.Data.DataTable PermisAsig(string sIdUser, string sApp)
+        {
+            return D_Rol.PermisosAsignadosLbx(sIdUser, sApp);
+        }
+        public void agregaAplicaciones(string sApp, string sIdUser, bool sPerInserta, bool sPerElimina, bool sPerEdita, bool sPerBusca, bool sPerCancela)
         {
             if (string.IsNullOrWhiteSpace(sApp))
             {
@@ -32,7 +37,7 @@ namespace ManejoAsignacionAplicacion
             else
             {
 
-                int resultado = D_Rol.AgregarApp(sApp, sIdUser);
+                int resultado = D_Rol.AgregarApp(sApp, sIdUser, sPerInserta, sPerElimina, sPerEdita, sPerBusca, sPerCancela);
 
                 if (resultado > 0)
                 {
@@ -40,7 +45,7 @@ namespace ManejoAsignacionAplicacion
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo guardar el cliente", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("No se pudo guardar la App", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
         }
@@ -94,6 +99,32 @@ namespace ManejoAsignacionAplicacion
         {
             //MessageBox.Show(D_Rol.Consultar(sApp)+ "");
             return D_Rol.consultarNombreApp(sApp);
+        }
+        public List<int> PermisosAsigna(string sIdUser, string sApp)
+        {
+            return D_Rol.PermisosAsignados(sIdUser, sApp);
+        }
+
+        public void EditaAplicaciones(string sApp, string sIdUser, bool sPerInserta, bool sPerElimina, bool sPerEdita, bool sPerBusca, bool sPerCancela)
+        {
+            if (string.IsNullOrWhiteSpace(sApp))
+            {
+                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+
+                int resultado = D_Rol.EditarApp(sApp, sIdUser, sPerInserta, sPerElimina, sPerEdita, sPerBusca, sPerCancela);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Permisos Editados Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo editar los permisos", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
         }
     }
 }

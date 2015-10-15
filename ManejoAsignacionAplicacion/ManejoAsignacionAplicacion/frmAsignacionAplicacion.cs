@@ -1,4 +1,5 @@
 ﻿/* Creacion y Diseño: Hector Joannes Gil Cardona
+ * Programador y Analista: Luis Fernando Linares Garzaro
  * Fecha:13/09/2015
  * 
 */
@@ -26,10 +27,8 @@ namespace ManejoAsignacionAplicacion
             //CargarDatos();
             CargarAppDispo();
             PresionarBotones();
-            
-
         }
-
+        //No se pueden presionar ningun boton hasta que se seleccione algun usuario
         private void PresionarBotones()
         {
             if (string.IsNullOrWhiteSpace(txtCodigoPerfil.Text))
@@ -38,7 +37,9 @@ namespace ManejoAsignacionAplicacion
                 btnAsignacionMuchas.Enabled = false;
                 btnQuitarSimple.Enabled = false;
                 btnQuitarMuchas.Enabled = false;
+                btnEditar.Enabled = false;
             }
+
         }
 
         public void CargarAppAsig()
@@ -53,7 +54,7 @@ namespace ManejoAsignacionAplicacion
             catch (Exception Ex)
             {
                 MessageBox.Show(Ex.Message);
-            } 
+            }
         }
 
         private void CargarAppDispo()
@@ -68,53 +69,52 @@ namespace ManejoAsignacionAplicacion
             catch (Exception Ex)
             {
                 MessageBox.Show(Ex.Message);
-            } 
+            }
         }
-
+        //se llama para saber el nombre de la applicacion escojida
         private int BuscarRegistro(string sApp)
         {
             int app = new N_Rol().getName_App(sApp);
             return app;
         }
-
+        //asigna las aplicacion simples 
         private void btnAsignacionSimple_Click(object sender, EventArgs e)
         {
-            string sApp = lbxAppDisponibles.GetItemText(lbxAppDisponibles.SelectedValue);
-            MessageBox.Show(sApp);
-            N_Rol Nego = new N_Rol();
-            Nego.agregaAplicaciones(sApp, txtCodigoPerfil.Text);
-            string sIdUser = txtCodigoPerfil.Text;
-            lbxAppAsignadas.DataSource = new N_Rol().AppAsig(sIdUser);
-            
-        }
 
+            string sApp = lbxAppDisponibles.GetItemText(lbxAppDisponibles.SelectedValue);
+            N_Rol Nego = new N_Rol();
+            string sIdUser = txtCodigoPerfil.Text;
+            Nego.agregaAplicaciones(sApp, sIdUser, cbInser(), cbElimina(), cbEdit(), cbBusca(), cbCancela());
+            lbxAppAsignadas.DataSource = new N_Rol().AppAsig(sIdUser);
+
+        }
+        //quita las aplicaciones del usuario simples
         private void btnQuitarSimple_Click(object sender, EventArgs e)
         {
             string sApp = lbxAppAsignadas.GetItemText(lbxAppAsignadas.SelectedValue);
             //MessageBox.Show(sApp);
             N_Rol Nego = new N_Rol();
             string sIdUser = txtCodigoPerfil.Text;
-            Nego.quitaAplicaciones(sApp, sIdUser);       
+            Nego.quitaAplicaciones(sApp, sIdUser);
             lbxAppAsignadas.DataSource = new N_Rol().AppAsig(sIdUser);
         }
 
         private void btnAsignacionMuchas_Click(object sender, EventArgs e)
-        { 
+        {
             for (int i = 0; i < lbxAppDisponibles.Items.Count; i++)
             {
                 if (lbxAppDisponibles.GetSelected(i))
                 {
                     string selectedItem = lbxAppDisponibles.GetItemText(lbxAppDisponibles.Items[i]).ToString();
-                    //insert command
                     //MessageBox.Show(selectedItem);
                     int iiApp = BuscarRegistro(selectedItem);
                     N_Rol Nego = new N_Rol();
                     string siApp = System.Convert.ToString(iiApp);
                     string sID = txtCodigoPerfil.Text;
-                    Nego.agregaAplicaciones(siApp, sID);
+                    Nego.agregaAplicaciones(siApp, sID, cbInser(), cbElimina(), cbEdit(), cbBusca(), cbCancela());
                     string sIdUser = txtCodigoPerfil.Text;
                     lbxAppAsignadas.DataSource = new N_Rol().AppAsig(sIdUser);
-                }   
+                }
             }
         }
 
@@ -131,17 +131,17 @@ namespace ManejoAsignacionAplicacion
                     int iiApp = BuscarRegistro(selectedItem);
                     N_Rol Nego = new N_Rol();
                     string siApp = System.Convert.ToString(iiApp);
-                    //MessageBox.Show(siApp);
-                    
-                    Nego.quitaAplicaciones(siApp, sIdUser);   
-                    
+                    //MessageBox.Show(siApp);           
+                    Nego.quitaAplicaciones(siApp, sIdUser);
                 }
-                
+
             }
-            
+
             lbxAppAsignadas.DataSource = new N_Rol().AppAsig(sIdUser);
         }
         public E_Rol EmpleadoActual { get; set; }
+
+
         private void btnbuscar_Click(object sender, EventArgs e)
         {
             frmConsulta buscar = new frmConsulta();
@@ -153,11 +153,9 @@ namespace ManejoAsignacionAplicacion
                 EmpleadoActual = buscar.EmpleadoSeleccionado;
                 txtCodigoPerfil.Text = Convert.ToString(buscar.EmpleadoSeleccionado.Id);
                 txtNombrePerfil.Text = buscar.EmpleadoSeleccionado.Nombre;
-
-
+                
             }
             this.Hide();
-            
         }
 
         private void btnLimpiarPerfil_Click(object sender, EventArgs e)
@@ -168,7 +166,162 @@ namespace ManejoAsignacionAplicacion
             lbxAppAsignadas.DataSource = new N_Rol().AppAsig(sIdUser);
         }
 
-        
+
+        private bool cbInser()
+        {
+            bool bPermisoInserta;
+            if (cBInserta.Checked)
+            {
+                bPermisoInserta = true;
+            }
+            else
+            {
+                bPermisoInserta = false;
+            }
+            //MessageBox.Show(iPermisoInserta);
+            return bPermisoInserta;
+        }
+
+        private bool cbElimina()
+        {
+            bool bPermisoElimina;
+            if (cBEliminar.Checked)
+            {
+                bPermisoElimina = true;
+            }
+            else
+            {
+                bPermisoElimina = false;
+            }
+            //MessageBox.Show(iPermisoInserta);
+            return bPermisoElimina;
+        }
+
+        private bool cbEdit()
+        {
+            bool bPermisoEdita;
+            if (cBEditar.Checked)
+            {
+                bPermisoEdita = true;
+            }
+            else
+            {
+                bPermisoEdita = false;
+            }
+            //MessageBox.Show(iPermisoInserta);
+            return bPermisoEdita;
+        }
+
+        private bool cbBusca()
+        {
+            bool bPermisoBusca;
+            if (cBBuscar.Checked)
+            {
+                bPermisoBusca = true;
+            }
+            else
+            {
+                bPermisoBusca = false;
+            }
+            //MessageBox.Show(iPermisoInserta);
+            return bPermisoBusca;
+        }
+
+        private bool cbCancela()
+        {
+            bool bPermisoCancelar;
+            if (cBCancelar.Checked)
+            {
+                bPermisoCancelar = true;
+            }
+            else
+            {
+                bPermisoCancelar = false;
+            }
+            //MessageBox.Show(iPermisoInserta);
+            return bPermisoCancelar;
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+
+            frmEditar Edita = new frmEditar();
+
+            //Edita.txtIdUser.Text = this.txtCodigoPerfil.Text;
+            //Edita.txtNameUser.Text = this.txtNombrePerfil.Text;
+            Edita.txtIdUser.Text = Convert.ToString(E_Rol.IdUser);
+            Edita.txtNameUser.Text = E_Rol.NameUser;
+
+            Edita.Show();
+
+
+
+            this.Hide();
+        }
+       
+
+        private void lbxAppAsignadas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string sApp = lbxAppAsignadas.GetItemText(lbxAppAsignadas.SelectedValue);
+            string sIdUser = Convert.ToString(E_Rol.IdUser);
+            N_Rol Nego = new N_Rol();
+            //Nego.PermisosAsigna(sIdUser, sApp);
+            //Contador para ver cuantos permisos hay 
+            int i = 0;
+            lbxPermisoAsig.Items.Clear();
+            foreach (int Variable in Nego.PermisosAsigna(sIdUser, sApp))
+            {
+                if (i == 0)
+                {
+                    if (Variable == 1)
+                    {
+                        lbxPermisoAsig.Items.Add("Insertar");
+
+                    }                
+
+                }
+                else if (i == 1)
+                {
+                    if (Variable == 1)
+                    {
+                        lbxPermisoAsig.Items.Add("Eliminar");
+                    }
+
+
+                }
+                else if (i == 2)
+                {
+                    if (Variable == 1)
+                    {
+                        lbxPermisoAsig.Items.Add("Editar");
+                    }
+
+                }
+                else if (i == 3)
+                {
+                    if (Variable == 1)
+                    {
+                        lbxPermisoAsig.Items.Add("Buscar");
+                    }
+
+                }
+                else if (i == 4)
+                {
+                    if (Variable == 1)
+                    {
+                        lbxPermisoAsig.Items.Add("Cancelar");
+                    }
+                    
+
+                }
+
+                i++;
+            }
+           
+        }
+
+
 
         //private void CargarDatos()
         //{

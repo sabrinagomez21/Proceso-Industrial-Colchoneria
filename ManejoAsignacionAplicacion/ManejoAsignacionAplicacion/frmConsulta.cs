@@ -15,6 +15,7 @@ namespace ManejoAsignacionAplicacion
         public frmConsulta()
         {
             InitializeComponent();
+            
         }
         public E_Rol EmpleadoSeleccionado { get; set; }
 
@@ -22,15 +23,25 @@ namespace ManejoAsignacionAplicacion
         {
             dvgbuscar.DataSource = D_Rol.Buscar(txtname.Text, txtlastname.Text);
         }
+        private void Cargar() 
+        {
+            E_Rol.IdUser = Convert.ToInt16(dvgbuscar.CurrentRow.Cells[0].Value.ToString());
+            E_Rol.NameUser = dvgbuscar.CurrentRow.Cells[1].Value.ToString();
+        }
 
         private void btnaccept_Click(object sender, EventArgs e)
         {
+
+            
+
             frmAsignacionAplicacion Emp = new frmAsignacionAplicacion();
             Emp.txtCodigoPerfil.Text = this.dvgbuscar.CurrentRow.Cells[0].Value.ToString();
             Emp.txtNombrePerfil.Text = this.dvgbuscar.CurrentRow.Cells[1].Value.ToString();
+            Cargar();
             this.Close();
             Emp.Show();
             Emp.CargarAppAsig();
+          
         }
 
         private void frmConsulta_Load(object sender, EventArgs e)

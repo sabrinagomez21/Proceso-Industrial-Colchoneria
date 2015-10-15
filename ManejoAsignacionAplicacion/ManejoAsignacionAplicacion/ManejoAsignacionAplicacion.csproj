@@ -32,8 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ConexionODBC">
-      <HintPath>..\..\..\..\Downloads\Base de datos\Base de datos\ConexionODBC.dll</HintPath>
+    <Reference Include="ConexionODBC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Manejo-Rol (1)\Manejo Rol\Manejo Rol\bin\Debug\ConexionODBC.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -62,6 +63,12 @@
     <Compile Include="frmConsulta.designer.cs">
       <DependentUpon>frmConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditar.Designer.cs">
+      <DependentUpon>frmEditar.cs</DependentUpon>
+    </Compile>
     <Compile Include="N_Rol.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmConsulta.resx">
       <DependentUpon>frmConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditar.resx">
+      <DependentUpon>frmEditar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -128,6 +138,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cancelar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

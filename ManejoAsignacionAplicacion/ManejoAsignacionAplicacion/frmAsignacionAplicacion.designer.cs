@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAsignacionAplicacion));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnbuscar = new System.Windows.Forms.Button();
             this.txtCodigoPerfil = new System.Windows.Forms.TextBox();
             this.lblusuario = new System.Windows.Forms.Label();
             this.lblNombrePerfil = new System.Windows.Forms.Label();
             this.txtNombrePerfil = new System.Windows.Forms.TextBox();
-            this.lblEditar = new System.Windows.Forms.Label();
             this.lblQuitar = new System.Windows.Forms.Label();
             this.lblAsignar = new System.Windows.Forms.Label();
             this.lblAplicacionesDisp = new System.Windows.Forms.Label();
@@ -43,12 +43,19 @@
             this.btnLimpiarPerfil = new System.Windows.Forms.Button();
             this.lbxAppAsignadas = new System.Windows.Forms.ListBox();
             this.lbxAppDisponibles = new System.Windows.Forms.ListBox();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.btnQuitarSimple = new System.Windows.Forms.Button();
             this.btnQuitarMuchas = new System.Windows.Forms.Button();
             this.btnAsignacionMuchas = new System.Windows.Forms.Button();
             this.btnAsignacionSimple = new System.Windows.Forms.Button();
-            this.btnbuscar = new System.Windows.Forms.Button();
+            this.cBInserta = new System.Windows.Forms.CheckBox();
+            this.cBEliminar = new System.Windows.Forms.CheckBox();
+            this.cBEditar = new System.Windows.Forms.CheckBox();
+            this.cBBuscar = new System.Windows.Forms.CheckBox();
+            this.cBCancelar = new System.Windows.Forms.CheckBox();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbxPermisoAsig = new System.Windows.Forms.ListBox();
+            this.PermisoAsignado = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,10 +69,20 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(37, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(586, 100);
+            this.groupBox1.Size = new System.Drawing.Size(764, 100);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Perfil Seleccionado";
+            // 
+            // btnbuscar
+            // 
+            this.btnbuscar.Image = global::ManejoAsignacionAplicacion.Properties.Resources.buscar;
+            this.btnbuscar.Location = new System.Drawing.Point(51, 32);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(47, 50);
+            this.btnbuscar.TabIndex = 0;
+            this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // txtCodigoPerfil
             // 
@@ -91,7 +108,7 @@
             // 
             this.lblNombrePerfil.AutoSize = true;
             this.lblNombrePerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombrePerfil.Location = new System.Drawing.Point(330, 32);
+            this.lblNombrePerfil.Location = new System.Drawing.Point(330, 36);
             this.lblNombrePerfil.Name = "lblNombrePerfil";
             this.lblNombrePerfil.Size = new System.Drawing.Size(103, 16);
             this.lblNombrePerfil.TabIndex = 4;
@@ -101,26 +118,16 @@
             // 
             this.txtNombrePerfil.Enabled = false;
             this.txtNombrePerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombrePerfil.Location = new System.Drawing.Point(270, 55);
+            this.txtNombrePerfil.Location = new System.Drawing.Point(261, 55);
             this.txtNombrePerfil.Name = "txtNombrePerfil";
             this.txtNombrePerfil.Size = new System.Drawing.Size(259, 27);
             this.txtNombrePerfil.TabIndex = 3;
-            // 
-            // lblEditar
-            // 
-            this.lblEditar.AutoSize = true;
-            this.lblEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditar.Location = new System.Drawing.Point(295, 397);
-            this.lblEditar.Name = "lblEditar";
-            this.lblEditar.Size = new System.Drawing.Size(49, 16);
-            this.lblEditar.TabIndex = 27;
-            this.lblEditar.Text = "Editar";
             // 
             // lblQuitar
             // 
             this.lblQuitar.AutoSize = true;
             this.lblQuitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuitar.Location = new System.Drawing.Point(294, 262);
+            this.lblQuitar.Location = new System.Drawing.Point(432, 252);
             this.lblQuitar.Name = "lblQuitar";
             this.lblQuitar.Size = new System.Drawing.Size(49, 16);
             this.lblQuitar.TabIndex = 23;
@@ -130,7 +137,7 @@
             // 
             this.lblAsignar.AutoSize = true;
             this.lblAsignar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAsignar.Location = new System.Drawing.Point(293, 122);
+            this.lblAsignar.Location = new System.Drawing.Point(432, 124);
             this.lblAsignar.Name = "lblAsignar";
             this.lblAsignar.Size = new System.Drawing.Size(61, 16);
             this.lblAsignar.TabIndex = 20;
@@ -150,7 +157,7 @@
             // 
             this.lblAplicacionesAsign.AutoSize = true;
             this.lblAplicacionesAsign.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAplicacionesAsign.Location = new System.Drawing.Point(422, 122);
+            this.lblAplicacionesAsign.Location = new System.Drawing.Point(579, 122);
             this.lblAplicacionesAsign.Name = "lblAplicacionesAsign";
             this.lblAplicacionesAsign.Size = new System.Drawing.Size(176, 16);
             this.lblAplicacionesAsign.TabIndex = 29;
@@ -180,34 +187,26 @@
             // lbxAppAsignadas
             // 
             this.lbxAppAsignadas.FormattingEnabled = true;
-            this.lbxAppAsignadas.Location = new System.Drawing.Point(370, 157);
+            this.lbxAppAsignadas.Location = new System.Drawing.Point(527, 143);
             this.lbxAppAsignadas.Name = "lbxAppAsignadas";
             this.lbxAppAsignadas.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.lbxAppAsignadas.Size = new System.Drawing.Size(277, 303);
             this.lbxAppAsignadas.TabIndex = 33;
+            this.lbxAppAsignadas.SelectedIndexChanged += new System.EventHandler(this.lbxAppAsignadas_SelectedIndexChanged);
             // 
             // lbxAppDisponibles
             // 
             this.lbxAppDisponibles.FormattingEnabled = true;
-            this.lbxAppDisponibles.Location = new System.Drawing.Point(37, 153);
+            this.lbxAppDisponibles.Location = new System.Drawing.Point(42, 143);
             this.lbxAppDisponibles.Name = "lbxAppDisponibles";
             this.lbxAppDisponibles.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.lbxAppDisponibles.Size = new System.Drawing.Size(220, 303);
             this.lbxAppDisponibles.TabIndex = 34;
             // 
-            // btnEditar
-            // 
-            this.btnEditar.Image = global::ManejoAsignacionAplicacion.Properties.Resources.guardar;
-            this.btnEditar.Location = new System.Drawing.Point(296, 416);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(47, 50);
-            this.btnEditar.TabIndex = 26;
-            this.btnEditar.UseVisualStyleBackColor = true;
-            // 
             // btnQuitarSimple
             // 
             this.btnQuitarSimple.Image = global::ManejoAsignacionAplicacion.Properties.Resources.asignar4;
-            this.btnQuitarSimple.Location = new System.Drawing.Point(296, 337);
+            this.btnQuitarSimple.Location = new System.Drawing.Point(435, 337);
             this.btnQuitarSimple.Name = "btnQuitarSimple";
             this.btnQuitarSimple.Size = new System.Drawing.Size(47, 50);
             this.btnQuitarSimple.TabIndex = 25;
@@ -217,7 +216,7 @@
             // btnQuitarMuchas
             // 
             this.btnQuitarMuchas.Image = global::ManejoAsignacionAplicacion.Properties.Resources.asignar3;
-            this.btnQuitarMuchas.Location = new System.Drawing.Point(296, 281);
+            this.btnQuitarMuchas.Location = new System.Drawing.Point(435, 281);
             this.btnQuitarMuchas.Name = "btnQuitarMuchas";
             this.btnQuitarMuchas.Size = new System.Drawing.Size(47, 50);
             this.btnQuitarMuchas.TabIndex = 24;
@@ -227,7 +226,7 @@
             // btnAsignacionMuchas
             // 
             this.btnAsignacionMuchas.Image = global::ManejoAsignacionAplicacion.Properties.Resources.asignar2;
-            this.btnAsignacionMuchas.Location = new System.Drawing.Point(296, 199);
+            this.btnAsignacionMuchas.Location = new System.Drawing.Point(435, 199);
             this.btnAsignacionMuchas.Name = "btnAsignacionMuchas";
             this.btnAsignacionMuchas.Size = new System.Drawing.Size(47, 50);
             this.btnAsignacionMuchas.TabIndex = 22;
@@ -237,36 +236,119 @@
             // btnAsignacionSimple
             // 
             this.btnAsignacionSimple.Image = global::ManejoAsignacionAplicacion.Properties.Resources.asginar;
-            this.btnAsignacionSimple.Location = new System.Drawing.Point(296, 143);
+            this.btnAsignacionSimple.Location = new System.Drawing.Point(435, 143);
             this.btnAsignacionSimple.Name = "btnAsignacionSimple";
             this.btnAsignacionSimple.Size = new System.Drawing.Size(47, 50);
             this.btnAsignacionSimple.TabIndex = 21;
             this.btnAsignacionSimple.UseVisualStyleBackColor = true;
             this.btnAsignacionSimple.Click += new System.EventHandler(this.btnAsignacionSimple_Click);
             // 
-            // btnbuscar
+            // cBInserta
             // 
-            this.btnbuscar.Image = global::ManejoAsignacionAplicacion.Properties.Resources.buscar;
-            this.btnbuscar.Location = new System.Drawing.Point(51, 32);
-            this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(47, 50);
-            this.btnbuscar.TabIndex = 0;
-            this.btnbuscar.UseVisualStyleBackColor = true;
-            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
+            this.cBInserta.Location = new System.Drawing.Point(298, 157);
+            this.cBInserta.Name = "cBInserta";
+            this.cBInserta.Size = new System.Drawing.Size(104, 24);
+            this.cBInserta.TabIndex = 40;
+            this.cBInserta.Text = "Insertar";
+            // 
+            // cBEliminar
+            // 
+            this.cBEliminar.AutoSize = true;
+            this.cBEliminar.Location = new System.Drawing.Point(298, 211);
+            this.cBEliminar.Name = "cBEliminar";
+            this.cBEliminar.Size = new System.Drawing.Size(62, 17);
+            this.cBEliminar.TabIndex = 36;
+            this.cBEliminar.Text = "Eliminar";
+            this.cBEliminar.UseVisualStyleBackColor = true;
+            // 
+            // cBEditar
+            // 
+            this.cBEditar.AutoSize = true;
+            this.cBEditar.Location = new System.Drawing.Point(298, 252);
+            this.cBEditar.Name = "cBEditar";
+            this.cBEditar.Size = new System.Drawing.Size(53, 17);
+            this.cBEditar.TabIndex = 37;
+            this.cBEditar.Text = "Editar";
+            this.cBEditar.UseVisualStyleBackColor = true;
+            // 
+            // cBBuscar
+            // 
+            this.cBBuscar.AutoSize = true;
+            this.cBBuscar.Location = new System.Drawing.Point(298, 304);
+            this.cBBuscar.Name = "cBBuscar";
+            this.cBBuscar.Size = new System.Drawing.Size(59, 17);
+            this.cBBuscar.TabIndex = 38;
+            this.cBBuscar.Text = "Buscar";
+            this.cBBuscar.UseVisualStyleBackColor = true;
+            // 
+            // cBCancelar
+            // 
+            this.cBCancelar.AutoSize = true;
+            this.cBCancelar.Location = new System.Drawing.Point(298, 349);
+            this.cBCancelar.Name = "cBCancelar";
+            this.cBCancelar.Size = new System.Drawing.Size(68, 17);
+            this.cBCancelar.TabIndex = 39;
+            this.cBCancelar.Text = "Cancelar";
+            this.cBCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Image = global::ManejoAsignacionAplicacion.Properties.Resources.buscar1;
+            this.btnEditar.Location = new System.Drawing.Point(436, 415);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(46, 42);
+            this.btnEditar.TabIndex = 41;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(435, 399);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 16);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "Editar";
+            // 
+            // lbxPermisoAsig
+            // 
+            this.lbxPermisoAsig.FormattingEnabled = true;
+            this.lbxPermisoAsig.Location = new System.Drawing.Point(842, 143);
+            this.lbxPermisoAsig.Name = "lbxPermisoAsig";
+            this.lbxPermisoAsig.Size = new System.Drawing.Size(123, 134);
+            this.lbxPermisoAsig.TabIndex = 43;
+            // 
+            // PermisoAsignado
+            // 
+            this.PermisoAsignado.AutoSize = true;
+            this.PermisoAsignado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PermisoAsignado.Location = new System.Drawing.Point(822, 124);
+            this.PermisoAsignado.Name = "PermisoAsignado";
+            this.PermisoAsignado.Size = new System.Drawing.Size(151, 16);
+            this.PermisoAsignado.TabIndex = 44;
+            this.PermisoAsignado.Text = "Permisos Asignados";
             // 
             // frmAsignacionAplicacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(676, 520);
+            this.ClientSize = new System.Drawing.Size(977, 539);
+            this.Controls.Add(this.PermisoAsignado);
+            this.Controls.Add(this.lbxPermisoAsig);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.cBCancelar);
+            this.Controls.Add(this.cBBuscar);
+            this.Controls.Add(this.cBEditar);
+            this.Controls.Add(this.cBEliminar);
+            this.Controls.Add(this.cBInserta);
             this.Controls.Add(this.lbxAppDisponibles);
             this.Controls.Add(this.lbxAppAsignadas);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnLimpiarPerfil);
             this.Controls.Add(this.lblAplicacionesAsign);
             this.Controls.Add(this.lblAplicacionesDisp);
-            this.Controls.Add(this.lblEditar);
-            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnQuitarSimple);
             this.Controls.Add(this.btnQuitarMuchas);
             this.Controls.Add(this.lblQuitar);
@@ -294,8 +376,6 @@
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.Label lblusuario;
         private System.Windows.Forms.Label lblNombrePerfil;
-        private System.Windows.Forms.Label lblEditar;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnQuitarSimple;
         private System.Windows.Forms.Button btnQuitarMuchas;
         private System.Windows.Forms.Label lblQuitar;
@@ -310,5 +390,14 @@
         private System.Windows.Forms.ListBox lbxAppDisponibles;
         public System.Windows.Forms.TextBox txtCodigoPerfil;
         public System.Windows.Forms.TextBox txtNombrePerfil;
+        private System.Windows.Forms.CheckBox cBInserta;
+        private System.Windows.Forms.CheckBox cBEliminar;
+        private System.Windows.Forms.CheckBox cBEditar;
+        private System.Windows.Forms.CheckBox cBBuscar;
+        private System.Windows.Forms.CheckBox cBCancelar;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox lbxPermisoAsig;
+        private System.Windows.Forms.Label PermisoAsignado;
     }
 }
