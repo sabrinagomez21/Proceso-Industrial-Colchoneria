@@ -4,7 +4,7 @@
 -- Project :      er facturacion.dm1
 -- Author :       Jose
 --
--- Date Created : Tuesday, September 29, 2015 15:34:22
+-- Date Created : Sunday, October 18, 2015 17:04:41
 -- Target DBMS : MySQL 5.x
 --
 
@@ -27,6 +27,42 @@ CREATE TABLE MaCLIENTE(
 
 
 -- 
+-- TABLE: MaCOTIZACIÓN 
+--
+
+CREATE TABLE MaCOTIZACIÓN(
+    ncodcotizacion       DECIMAL(10, 0)    NOT NULL,
+    vserie               VARCHAR(10),
+    vnombrecotizacion    VARCHAR(50),
+    vnit                 VARCHAR(10),
+    vdireccion           VARCHAR(50),
+    dfechacotizacion     DATE,
+    dfechavencimiento    DATE,
+    ntotal               DECIMAL(10, 0),
+    vestadocotizacion    VARCHAR(20),
+    ncodcliente          DECIMAL(10, 0)    NOT NULL,
+    vnombrevendedor      VARCHAR(100),
+    PRIMARY KEY (ncodcotizacion)
+)ENGINE=MYISAM
+;
+
+
+
+-- 
+-- TABLE: MaDETALLECOTIZACION 
+--
+
+CREATE TABLE MaDETALLECOTIZACION(
+    ncodcotizacion       DECIMAL(10, 0)    NOT NULL,
+    ncodproducto         DECIMAL(10, 0)    NOT NULL,
+    ncantidadcotizada    DECIMAL(10, 0),
+    npreciocotizado      DECIMAL(10, 0)
+)ENGINE=MYISAM
+;
+
+
+
+-- 
 -- TABLE: MaDETALLEFACTURA 
 --
 
@@ -35,6 +71,20 @@ CREATE TABLE MaDETALLEFACTURA(
     ncodproducto      DECIMAL(10, 0),
     ncantidadventa    DECIMAL(10, 0),
     nprecioventa      DECIMAL(10, 0)
+)ENGINE=MYISAM
+;
+
+
+
+-- 
+-- TABLE: MaDETALLEPEDIDO 
+--
+
+CREATE TABLE MaDETALLEPEDIDO(
+    ncodpedido         DECIMAL(10, 0)    NOT NULL,
+    ncodproducto       DECIMAL(10, 0)    NOT NULL,
+    ncantidadpedido    DECIMAL(10, 0),
+    npreciopedido      DECIMAL(10, 0)
 )ENGINE=MYISAM
 ;
 
@@ -56,6 +106,28 @@ CREATE TABLE MaFACTURA(
     vestadofactura       VARCHAR(20),
     ncodcliente          DECIMAL(10, 0),
     PRIMARY KEY (ncodfactura)
+)ENGINE=MYISAM
+;
+
+
+
+-- 
+-- TABLE: MaPEDIDO 
+--
+
+CREATE TABLE MaPEDIDO(
+    ncodpedido           DECIMAL(10, 0)    NOT NULL,
+    vserie               VARCHAR(10),
+    vnombrepedido        VARCHAR(50),
+    vnit                 VARCHAR(10),
+    vdireccion           VARCHAR(50),
+    dfechapedido         DATE,
+    dfechavencimiento    DATE,
+    ntotal               DECIMAL(10, 0),
+    vestadopedido        VARCHAR(20),
+    ncodcliente          DECIMAL(10, 0)    NOT NULL,
+    vnombrevendedor      VARCHAR(100),
+    PRIMARY KEY (ncodpedido)
 )ENGINE=MYISAM
 ;
 
@@ -93,6 +165,31 @@ CREATE TABLE MaTIPOPRODUCTO(
 
 
 -- 
+-- TABLE: MaCOTIZACIÓN 
+--
+
+ALTER TABLE MaCOTIZACIÓN ADD CONSTRAINT RefMaCLIENTE11 
+    FOREIGN KEY (ncodcliente)
+    REFERENCES MaCLIENTE(ncodcliente)
+;
+
+
+-- 
+-- TABLE: MaDETALLECOTIZACION 
+--
+
+ALTER TABLE MaDETALLECOTIZACION ADD CONSTRAINT RefMaCOTIZACIÓN15 
+    FOREIGN KEY (ncodcotizacion)
+    REFERENCES MaCOTIZACIÓN(ncodcotizacion)
+;
+
+ALTER TABLE MaDETALLECOTIZACION ADD CONSTRAINT RefMaPRODUCTO17 
+    FOREIGN KEY (ncodproducto)
+    REFERENCES MaPRODUCTO(ncodproducto)
+;
+
+
+-- 
 -- TABLE: MaDETALLEFACTURA 
 --
 
@@ -108,10 +205,35 @@ ALTER TABLE MaDETALLEFACTURA ADD CONSTRAINT RefMaPRODUCTO4
 
 
 -- 
+-- TABLE: MaDETALLEPEDIDO 
+--
+
+ALTER TABLE MaDETALLEPEDIDO ADD CONSTRAINT RefMaPEDIDO18 
+    FOREIGN KEY (ncodpedido)
+    REFERENCES MaPEDIDO(ncodpedido)
+;
+
+ALTER TABLE MaDETALLEPEDIDO ADD CONSTRAINT RefMaPRODUCTO19 
+    FOREIGN KEY (ncodproducto)
+    REFERENCES MaPRODUCTO(ncodproducto)
+;
+
+
+-- 
 -- TABLE: MaFACTURA 
 --
 
 ALTER TABLE MaFACTURA ADD CONSTRAINT RefMaCLIENTE2 
+    FOREIGN KEY (ncodcliente)
+    REFERENCES MaCLIENTE(ncodcliente)
+;
+
+
+-- 
+-- TABLE: MaPEDIDO 
+--
+
+ALTER TABLE MaPEDIDO ADD CONSTRAINT RefMaCLIENTE8 
     FOREIGN KEY (ncodcliente)
     REFERENCES MaCLIENTE(ncodcliente)
 ;
