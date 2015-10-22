@@ -1,0 +1,46 @@
+C:\Users\Wilfredo\Desktop\bitacora\Bitacora\Bitacora\obj\Debug\Bitacora.frmIniciarSesion.resources
+C:\Users\Wilfredo\Desktop\bitacora\Bitacora\Bitacora\obj\Debug\Bitacora.Presentacion.resources
+C:\Users\Wilfredo\Desktop\bitacora\Bitacora\Bitacora\obj\Debug\Bitacora.Properties.Resources.resources
+C:\Users\Wilfredo\Desktop\bitacora\Bitacora\Bitacora\obj\Debug\Bitacora.csproj.GenerateResource.Cache
+C:\Users\Wilfredo\Desktop\bitacora\Bitacora\Bitacora\bin\Debug\Bitacora.exe.config
+C:\Users\Wilfredo\Desktop\bitacora\Bitacora\Bitacora\bin\Debug\Bitacora.exe
+C:\Users\Wilfredo\Desktop\bitacora\Bitacora\Bitacora\bin\Debug\Bitacora.pdb
+C:\Users\Wilfredo\Desktop\bitacora\Bitacora\Bitacora\obj\Debug\Bitacora.exe
+C:\Users\Wilfredo\Desktop\bitacora\Bitacora\Bitacora\obj\Debug\Bitacora.pdb
+C:\Users\Wilfredo\Desktop\bitacora\Bitacora\Bitacora\obj\Debug\Bitacora.csprojResolveAssemblyReference.cache
+C:\Users\walter\Documents\Diseño de sistemas\colchoneria\bitacora\Bitacora\Bitacora\bin\Debug\Bitacora.exe.config
+C:\Users\walter\Documents\Diseño de sistemas\colchoneria\bitacora\Bitacora\Bitacora\obj\Debug\Bitacora.exe
+C:\Users\walter\Documents\Diseño de sistemas\colchoneria\bitacora\Bitacora\Bitacora\obj\Debug\Bitacora.pdb
+C:\Users\walter\Documents\Diseño de sistemas\colchoneria\bitacora\Bitacora\Bitacora\bin\Debug\Bitacora.exe
+C:\Users\walter\Documents\Diseño de sistemas\colchoneria\bitacora\Bitacora\Bitacora\bin\Debug\Bitacora.pdb
+C:\Users\walter\Documents\Diseño de sistemas\colchoneria\bitacora\Bitacora\Bitacora\obj\Debug\Bitacora.csprojResolveAssemblyReference.cache
+C:\Users\walter\Documents\Diseño de sistemas\colchoneria\bitacora\Bitacora\Bitacora\obj\Debug\Bitacora.Presentacion.resources
+C:\Users\walter\Documents\Diseño de sistemas\colchoneria\bitacora\Bitacora\Bitacora\obj\Debug\Bitacora.Properties.Resources.resources
+C:\Users\walter\Documents\Diseño de sistemas\colchoneria\bitacora\Bitacora\Bitacora\obj\Debug\Bitacora.csproj.GenerateResource.Cache
+C:\Users\walter\Documents\Visual Studio 2013\Projects\bitacora\Bitacora\bin\Debug\Bitacora.exe.config
+C:\Users\walter\Documents\Visual Studio 2013\Projects\bitacora\Bitacora\bin\Debug\Bitacora.exe
+C:\Users\walter\Documents\Visual Studio 2013\Projects\bitacora\Bitacora\bin\Debug\Bitacora.pdb
+C:\Users\walter\Documents\Visual Studio 2013\Projects\bitacora\Bitacora\bin\Debug\ConexionODBC.dll
+C:\Users\walter\Documents\Visual Studio 2013\Projects\bitacora\Bitacora\obj\Debug\Bitacora.frmConsulta.resources
+C:\Users\walter\Documents\Visual Studio 2013\Projects\bitacora\Bitacora\obj\Debug\Bitacora.Presentacion.resources
+C:\Users\walter\Documents\Visual Studio 2013\Projects\bitacora\Bitacora\obj\Debug\Bitacora.Properties.Resources.resources
+C:\Users\walter\Documents\Visual Studio 2013\Projects\bitacora\Bitacora\obj\Debug\Bitacora.csproj.GenerateResource.Cache
+C:\Users\walter\Documents\Visual Studio 2013\Projects\bitacora\Bitacora\obj\Debug\Bitacora.exe
+C:\Users\walter\Documents\Visual Studio 2013\Projects\bitacora\Bitacora\obj\Debug\Bitacora.pdb
+C:\Users\walter\Documents\Visual Studio 2013\Projects\bitacora\Bitacora\obj\Debug\Bitacora.csprojResolveAssemblyReference.cache
+C:\Users\walter\Documents\Visual Studio 2013\Projects\bitacora\Bitacora\obj\Debug\Bitacora.frmFechas.resources
+C:\Users\Wilfredo\Desktop\req\bit\bitacora\Bitacora\bin\Debug\Bitacora.exe.config
+C:\Users\Wilfredo\Desktop\req\bit\bitacora\Bitacora\obj\Debug\Bitacora.exe
+C:\Users\Wilfredo\Desktop\req\bit\bitacora\Bitacora\obj\Debug\Bitacora.pdb
+C:\Users\Wilfredo\Desktop\req\bit\bitacora\Bitacora\bin\Debug\Bitacora.exe
+C:\Users\Wilfredo\Desktop\req\bit\bitacora\Bitacora\bin\Debug\Bitacora.pdb
+C:\Users\Wilfredo\Desktop\req\bit\bitacora\Bitacora\bin\Debug\ConexionODBC.dll
+C:\Users\Wilfredo\Desktop\req\bit\bitacora\Bitacora\obj\Debug\Bitacora.csprojResolveAssemblyReference.cache
+C:\Users\Wilfredo\Desktop\req\bit\bitacora\Bitacora\obj\Debug\Bitacora.frmConsulta.resources
+C:\Users\Wilfredo\Desktop\req\bit\bitacora\Bitacora\obj\Debug\Bitacora.frmFechas.resources
+C:\Users\Wilfredo\Desktop\req\bit\bitacora\Bitacora\obj\Debug\Bitacora.Presentacion.resources
+C:\Users\Wilfredo\Desktop\req\bit\bitacora\Bitacora\obj\Debug\Bitacora.Properties.Resources.resources
+C:\Users\Wilfredo\Desktop\req\bit\bitacora\Bitacora\obj\Debug\Bitacora.csproj.GenerateResource.Cache
+C:\Users\Wilfredo\Documents\GitHub\Proceso-Industrial-Colchoneria\bitacora v4\bitacora\Bitacora\bin\Debug\Bitacora.exe.config
+C:\Users\Wilfredo\Documents\GitHub\Proceso-Industrial-Colchoneria\bitacora v4\bitacora\Bitacora\obj\Debug\Bitacora.exe
+C:\Users\Wilfredo\Documents\GitHub\Proceso-Industrial-Colchoneria\bitacora v4\bitacora\Bitacora\obj\Debug\Bitacora.pdb
