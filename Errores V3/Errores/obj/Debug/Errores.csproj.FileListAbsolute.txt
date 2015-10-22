@@ -1,0 +1,13 @@
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\bin\Debug\Errores.exe.config
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\bin\Debug\Errores.exe
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\bin\Debug\Errores.pdb
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\bin\Debug\ConexionODBC.dll
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\bin\Debug\ConexionODBC.pdb
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\obj\Debug\Errores.frmBuscarUsuario.resources
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\obj\Debug\Errores.frmErrores.resources
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\obj\Debug\Errores.frmFechas.resources
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\obj\Debug\Errores.Properties.Resources.resources
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\obj\Debug\Errores.csproj.GenerateResource.Cache
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\obj\Debug\Errores.exe
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\obj\Debug\Errores.pdb
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Errores\Errores\obj\Debug\Errores.csprojResolveAssemblyReference.cache
