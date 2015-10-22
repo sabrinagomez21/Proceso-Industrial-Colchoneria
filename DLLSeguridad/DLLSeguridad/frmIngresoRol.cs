@@ -19,13 +19,18 @@ namespace DLLSeguridad
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            E_ManejoRol pNameRol = new E_ManejoRol();
-            pNameRol.Nombre = txtname.Text.Trim();
-            new N_ManejoRol().Insert_Rol(pNameRol);
+            E_ManageRol pNameRol = new E_ManageRol();     
+            pNameRol.Nombre_Rol = txtname.Text.Trim();
+            new N_ManageRol().Insert_Rol(pNameRol);
             txtname.ResetText();
             txtID.ResetText();
             ActualizarForm();
         }
+
+
+
+       
+
 
         private void frmIngresoRol_Load(object sender, EventArgs e)
         {
@@ -35,9 +40,10 @@ namespace DLLSeguridad
 
         private void BuscarRol(int Llave)
         {
-            E_ManejoRol pRol = new N_ManejoRol().GetSingle_Rol(Llave); // busca los atributos de la llave y los obtiene para cada registro 
-            txtID.Text = Convert.ToString(pRol.Id);
-            txtname.Text = pRol.Nombre;
+            E_ManageRol pRol = new N_ManageRol().GetSingle_Rol(Llave); // busca los atributos de la llave y los obtiene para cada registro 
+            txtID.Text = Convert.ToString(pRol.Id_Rol);
+            txtname.Text = pRol.Nombre_Rol;
+            
             
         }
 
@@ -45,7 +51,7 @@ namespace DLLSeguridad
         {
             try
             {
-                dgvRoles.DataSource = new N_ManejoRol().GetAll(); // tiene todos los registro del datatable
+                dgvRoles.DataSource = new N_ManageRol().GetAll(); // tiene todos los registro del datatable
                 dgvRoles.Refresh();
 
             }
@@ -81,7 +87,7 @@ namespace DLLSeguridad
 
         private void btnsearch_Click(object sender, EventArgs e)
         {
-            dgvRoles.DataSource = D_ManejoRol.BuscarRegisRol(txtname.Text);
+            dgvRoles.DataSource = D_ManageRol.BuscarRegisRol(txtname.Text);
             if (dgvRoles.Rows.Count > 0)
             {
                 MessageBox.Show("Registro Encontrado");
@@ -108,11 +114,11 @@ namespace DLLSeguridad
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            E_ManejoRol pRol = new E_ManejoRol();
+            E_ManageRol pRol = new E_ManageRol();
             if (!string.IsNullOrWhiteSpace(txtID.Text))
             {
-                pRol.Id = Convert.ToInt32(txtID.Text);
-                new N_ManejoRol().Delete_Rol(pRol);
+                pRol.Id_Rol = Convert.ToInt32(txtID.Text);
+                new N_ManageRol().Delete_Rol(pRol);
                 ActualizarForm();
                 txtname.ResetText();
                 txtID.ResetText();
@@ -133,10 +139,25 @@ namespace DLLSeguridad
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            E_ManejoRol pRol = new E_ManejoRol();
-            pRol.Id = Convert.ToInt16(txtID.Text);
-            pRol.Nombre = txtname.Text.Trim();
-            new N_ManejoRol().Update_Rol(pRol);
+            E_ManageRol pRol = new E_ManageRol();
+            pRol.Id_Rol = Convert.ToInt16(txtID.Text);
+            pRol.Nombre_Rol = txtname.Text.Trim();
+            new N_ManageRol().Update_Rol(pRol);
+            txtname.ResetText();
+            txtID.ResetText();
+            ActualizarForm();
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            txtname.ResetText();
+            txtID.ResetText();
+            ActualizarForm();
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
             txtname.ResetText();
             txtID.ResetText();
             ActualizarForm();

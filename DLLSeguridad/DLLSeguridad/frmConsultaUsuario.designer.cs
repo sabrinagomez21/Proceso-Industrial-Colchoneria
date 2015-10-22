@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaUsuario));
             this.dvgbuscar = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnsearch = new System.Windows.Forms.Button();
             this.txtlastname = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btncancel = new System.Windows.Forms.Button();
             this.btnaccept = new System.Windows.Forms.Button();
-            this.btnsearch = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dvgbuscar)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -66,6 +66,17 @@
             this.groupBox1.Size = new System.Drawing.Size(477, 91);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
+            // 
+            // btnsearch
+            // 
+            this.btnsearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnsearch.Image = global::DLLSeguridad.Properties.Resources.buscar;
+            this.btnsearch.Location = new System.Drawing.Point(401, 22);
+            this.btnsearch.Name = "btnsearch";
+            this.btnsearch.Size = new System.Drawing.Size(46, 42);
+            this.btnsearch.TabIndex = 4;
+            this.btnsearch.UseVisualStyleBackColor = true;
+            this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
             // 
             // txtlastname
             // 
@@ -117,6 +128,7 @@
             // btncancel
             // 
             this.btncancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btncancel.Enabled = false;
             this.btncancel.Image = global::DLLSeguridad.Properties.Resources.cancelar;
             this.btncancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btncancel.Location = new System.Drawing.Point(341, 327);
@@ -142,17 +154,6 @@
             this.btnaccept.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnaccept.UseVisualStyleBackColor = true;
             this.btnaccept.Click += new System.EventHandler(this.btnaccept_Click);
-            // 
-            // btnsearch
-            // 
-            this.btnsearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnsearch.Image = global::DLLSeguridad.Properties.Resources.buscar;
-            this.btnsearch.Location = new System.Drawing.Point(401, 22);
-            this.btnsearch.Name = "btnsearch";
-            this.btnsearch.Size = new System.Drawing.Size(46, 42);
-            this.btnsearch.TabIndex = 4;
-            this.btnsearch.UseVisualStyleBackColor = true;
-            this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
             // 
             // label3
             // 

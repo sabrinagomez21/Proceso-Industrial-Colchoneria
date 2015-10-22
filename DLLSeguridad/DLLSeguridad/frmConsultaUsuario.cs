@@ -26,6 +26,7 @@ namespace DLLSeguridad
             {
                 MessageBox.Show("Registro Encontrado");
                 btnaccept.Enabled = true;
+                btncancel.Enabled = true;
             }
             else
             {
@@ -33,6 +34,7 @@ namespace DLLSeguridad
                 txtname.ResetText();
                 txtlastname.ResetText();
                 btnaccept.Enabled = false;
+                btncancel.Enabled = false;
                 dvgbuscar.DataSource = null;
                 dvgbuscar.Refresh();
             }
@@ -44,7 +46,8 @@ namespace DLLSeguridad
             Empleado.txtUsuario.Text = this.dvgbuscar.CurrentRow.Cells[0].Value.ToString();
             Empleado.txtNombreUsuario.Text = this.dvgbuscar.CurrentRow.Cells[1].Value.ToString();
             this.Close();
-            Empleado.ShowDialog();
+            Empleado.Show();
+            Empleado.CargarRolAsig();
         }
 
         private void frmConsulta_Load(object sender, EventArgs e)

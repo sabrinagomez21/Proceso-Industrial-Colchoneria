@@ -29,102 +29,40 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManejoRol));
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnLimpiarUsuario = new System.Windows.Forms.Button();
-            this.rbAplicaciones = new System.Windows.Forms.RadioButton();
-            this.rbPerfiles = new System.Windows.Forms.RadioButton();
-            this.lblGuardar = new System.Windows.Forms.Label();
             this.lblAppAsignadas = new System.Windows.Forms.Label();
             this.lblQuitar = new System.Windows.Forms.Label();
             this.lblAsignar = new System.Windows.Forms.Label();
-            this.lblAppDisponibles = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnbuscar = new System.Windows.Forms.Button();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblusuario = new System.Windows.Forms.Label();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.txtNombreUsuario = new System.Windows.Forms.TextBox();
             this.lblPerfilesDispo = new System.Windows.Forms.Label();
-            this.tvAppYUserAsignado = new System.Windows.Forms.TreeView();
             this.lbPerfiles = new System.Windows.Forms.ListBox();
-            this.lbAppDisponibles = new System.Windows.Forms.ListBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
+            this.lbRolAsignado = new System.Windows.Forms.ListBox();
             this.btnQuitarSimple = new System.Windows.Forms.Button();
             this.lblQuitarMuchos = new System.Windows.Forms.Button();
             this.btnAsignarMuchos = new System.Windows.Forms.Button();
             this.btnAsignarSimple = new System.Windows.Forms.Button();
-            this.btnbuscar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(538, 536);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(60, 34);
-            this.btnSalir.TabIndex = 42;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            // 
-            // btnLimpiarUsuario
-            // 
-            this.btnLimpiarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarUsuario.Location = new System.Drawing.Point(415, 536);
-            this.btnLimpiarUsuario.Name = "btnLimpiarUsuario";
-            this.btnLimpiarUsuario.Size = new System.Drawing.Size(107, 34);
-            this.btnLimpiarUsuario.TabIndex = 41;
-            this.btnLimpiarUsuario.Text = "Limpiar Usuario";
-            this.btnLimpiarUsuario.UseVisualStyleBackColor = true;
-            // 
-            // rbAplicaciones
-            // 
-            this.rbAplicaciones.AutoSize = true;
-            this.rbAplicaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbAplicaciones.Location = new System.Drawing.Point(119, 526);
-            this.rbAplicaciones.Name = "rbAplicaciones";
-            this.rbAplicaciones.Size = new System.Drawing.Size(106, 19);
-            this.rbAplicaciones.TabIndex = 40;
-            this.rbAplicaciones.TabStop = true;
-            this.rbAplicaciones.Text = "Aplicaciones";
-            this.rbAplicaciones.UseVisualStyleBackColor = true;
-            // 
-            // rbPerfiles
-            // 
-            this.rbPerfiles.AutoSize = true;
-            this.rbPerfiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbPerfiles.Location = new System.Drawing.Point(29, 526);
-            this.rbPerfiles.Name = "rbPerfiles";
-            this.rbPerfiles.Size = new System.Drawing.Size(74, 19);
-            this.rbPerfiles.TabIndex = 39;
-            this.rbPerfiles.TabStop = true;
-            this.rbPerfiles.Text = "Perfiles";
-            this.rbPerfiles.UseVisualStyleBackColor = true;
-            // 
-            // lblGuardar
-            // 
-            this.lblGuardar.AutoSize = true;
-            this.lblGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGuardar.Location = new System.Drawing.Point(289, 451);
-            this.lblGuardar.Name = "lblGuardar";
-            this.lblGuardar.Size = new System.Drawing.Size(64, 16);
-            this.lblGuardar.TabIndex = 38;
-            this.lblGuardar.Text = "Guardar";
             // 
             // lblAppAsignadas
             // 
             this.lblAppAsignadas.AutoSize = true;
             this.lblAppAsignadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAppAsignadas.Location = new System.Drawing.Point(436, 125);
+            this.lblAppAsignadas.Location = new System.Drawing.Point(436, 133);
             this.lblAppAsignadas.Name = "lblAppAsignadas";
-            this.lblAppAsignadas.Size = new System.Drawing.Size(127, 16);
+            this.lblAppAsignadas.Size = new System.Drawing.Size(139, 16);
             this.lblAppAsignadas.TabIndex = 35;
-            this.lblAppAsignadas.Text = "Roles Asignados";
+            this.lblAppAsignadas.Text = "Perfiles Asignados";
             // 
             // lblQuitar
             // 
             this.lblQuitar.AutoSize = true;
             this.lblQuitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuitar.Location = new System.Drawing.Point(297, 299);
+            this.lblQuitar.Location = new System.Drawing.Point(297, 244);
             this.lblQuitar.Name = "lblQuitar";
             this.lblQuitar.Size = new System.Drawing.Size(49, 16);
             this.lblQuitar.TabIndex = 32;
@@ -134,21 +72,11 @@
             // 
             this.lblAsignar.AutoSize = true;
             this.lblAsignar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAsignar.Location = new System.Drawing.Point(292, 127);
+            this.lblAsignar.Location = new System.Drawing.Point(290, 125);
             this.lblAsignar.Name = "lblAsignar";
             this.lblAsignar.Size = new System.Drawing.Size(61, 16);
             this.lblAsignar.TabIndex = 29;
             this.lblAsignar.Text = "Asignar";
-            // 
-            // lblAppDisponibles
-            // 
-            this.lblAppDisponibles.AutoSize = true;
-            this.lblAppDisponibles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAppDisponibles.Location = new System.Drawing.Point(48, 331);
-            this.lblAppDisponibles.Name = "lblAppDisponibles";
-            this.lblAppDisponibles.Size = new System.Drawing.Size(185, 16);
-            this.lblAppDisponibles.TabIndex = 27;
-            this.lblAppDisponibles.Text = "Aplicaciones Disponibles";
             // 
             // groupBox1
             // 
@@ -164,6 +92,16 @@
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Usuario Seleccionado";
+            // 
+            // btnbuscar
+            // 
+            this.btnbuscar.Image = global::DLLSeguridad.Properties.Resources.buscar;
+            this.btnbuscar.Location = new System.Drawing.Point(22, 32);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(47, 50);
+            this.btnbuscar.TabIndex = 0;
+            this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // txtUsuario
             // 
@@ -207,108 +145,79 @@
             // 
             this.lblPerfilesDispo.AutoSize = true;
             this.lblPerfilesDispo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPerfilesDispo.Location = new System.Drawing.Point(68, 125);
+            this.lblPerfilesDispo.Location = new System.Drawing.Point(68, 133);
             this.lblPerfilesDispo.Name = "lblPerfilesDispo";
             this.lblPerfilesDispo.Size = new System.Drawing.Size(148, 16);
             this.lblPerfilesDispo.TabIndex = 24;
             this.lblPerfilesDispo.Text = "Perfiles Disponibles";
             // 
-            // tvAppYUserAsignado
-            // 
-            this.tvAppYUserAsignado.Location = new System.Drawing.Point(359, 153);
-            this.tvAppYUserAsignado.Name = "tvAppYUserAsignado";
-            this.tvAppYUserAsignado.Size = new System.Drawing.Size(273, 367);
-            this.tvAppYUserAsignado.TabIndex = 43;
-            // 
             // lbPerfiles
             // 
             this.lbPerfiles.FormattingEnabled = true;
-            this.lbPerfiles.Location = new System.Drawing.Point(10, 153);
+            this.lbPerfiles.Location = new System.Drawing.Point(12, 169);
             this.lbPerfiles.Name = "lbPerfiles";
             this.lbPerfiles.ScrollAlwaysVisible = true;
+            this.lbPerfiles.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.lbPerfiles.Size = new System.Drawing.Size(271, 160);
             this.lbPerfiles.TabIndex = 44;
             // 
-            // lbAppDisponibles
+            // lbRolAsignado
             // 
-            this.lbAppDisponibles.FormattingEnabled = true;
-            this.lbAppDisponibles.Location = new System.Drawing.Point(10, 360);
-            this.lbAppDisponibles.Name = "lbAppDisponibles";
-            this.lbAppDisponibles.ScrollAlwaysVisible = true;
-            this.lbAppDisponibles.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.lbAppDisponibles.Size = new System.Drawing.Size(271, 160);
-            this.lbAppDisponibles.TabIndex = 45;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Image = global::DLLSeguridad.Properties.Resources.guardar;
-            this.btnGuardar.Location = new System.Drawing.Point(298, 470);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(47, 50);
-            this.btnGuardar.TabIndex = 37;
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.lbRolAsignado.FormattingEnabled = true;
+            this.lbRolAsignado.Location = new System.Drawing.Point(367, 169);
+            this.lbRolAsignado.Name = "lbRolAsignado";
+            this.lbRolAsignado.ScrollAlwaysVisible = true;
+            this.lbRolAsignado.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.lbRolAsignado.Size = new System.Drawing.Size(271, 160);
+            this.lbRolAsignado.TabIndex = 48;
             // 
             // btnQuitarSimple
             // 
             this.btnQuitarSimple.Image = global::DLLSeguridad.Properties.Resources.asignar4;
-            this.btnQuitarSimple.Location = new System.Drawing.Point(299, 389);
+            this.btnQuitarSimple.Location = new System.Drawing.Point(299, 309);
             this.btnQuitarSimple.Name = "btnQuitarSimple";
-            this.btnQuitarSimple.Size = new System.Drawing.Size(47, 50);
+            this.btnQuitarSimple.Size = new System.Drawing.Size(45, 40);
             this.btnQuitarSimple.TabIndex = 34;
             this.btnQuitarSimple.UseVisualStyleBackColor = true;
+            this.btnQuitarSimple.Click += new System.EventHandler(this.btnQuitarSimple_Click);
             // 
             // lblQuitarMuchos
             // 
             this.lblQuitarMuchos.Image = global::DLLSeguridad.Properties.Resources.asignar3;
-            this.lblQuitarMuchos.Location = new System.Drawing.Point(299, 333);
+            this.lblQuitarMuchos.Location = new System.Drawing.Point(299, 263);
             this.lblQuitarMuchos.Name = "lblQuitarMuchos";
-            this.lblQuitarMuchos.Size = new System.Drawing.Size(47, 50);
+            this.lblQuitarMuchos.Size = new System.Drawing.Size(45, 40);
             this.lblQuitarMuchos.TabIndex = 33;
             this.lblQuitarMuchos.UseVisualStyleBackColor = true;
+            this.lblQuitarMuchos.Click += new System.EventHandler(this.lblQuitarMuchos_Click);
             // 
             // btnAsignarMuchos
             // 
             this.btnAsignarMuchos.Image = global::DLLSeguridad.Properties.Resources.asignar2;
-            this.btnAsignarMuchos.Location = new System.Drawing.Point(299, 211);
+            this.btnAsignarMuchos.Location = new System.Drawing.Point(297, 190);
             this.btnAsignarMuchos.Name = "btnAsignarMuchos";
-            this.btnAsignarMuchos.Size = new System.Drawing.Size(47, 50);
+            this.btnAsignarMuchos.Size = new System.Drawing.Size(45, 40);
             this.btnAsignarMuchos.TabIndex = 31;
             this.btnAsignarMuchos.UseVisualStyleBackColor = true;
+            this.btnAsignarMuchos.Click += new System.EventHandler(this.btnAsignarMuchos_Click);
             // 
             // btnAsignarSimple
             // 
             this.btnAsignarSimple.Image = global::DLLSeguridad.Properties.Resources.asginar;
-            this.btnAsignarSimple.Location = new System.Drawing.Point(298, 155);
+            this.btnAsignarSimple.Location = new System.Drawing.Point(297, 144);
             this.btnAsignarSimple.Name = "btnAsignarSimple";
-            this.btnAsignarSimple.Size = new System.Drawing.Size(47, 50);
+            this.btnAsignarSimple.Size = new System.Drawing.Size(45, 40);
             this.btnAsignarSimple.TabIndex = 30;
             this.btnAsignarSimple.UseVisualStyleBackColor = true;
             this.btnAsignarSimple.Click += new System.EventHandler(this.btnAsignarSimple_Click);
-            // 
-            // btnbuscar
-            // 
-            this.btnbuscar.Image = global::DLLSeguridad.Properties.Resources.buscar;
-            this.btnbuscar.Location = new System.Drawing.Point(22, 32);
-            this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(47, 50);
-            this.btnbuscar.TabIndex = 0;
-            this.btnbuscar.UseVisualStyleBackColor = true;
-            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // frmManejoRol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(646, 584);
-            this.Controls.Add(this.lbAppDisponibles);
+            this.ClientSize = new System.Drawing.Size(674, 388);
+            this.Controls.Add(this.lbRolAsignado);
             this.Controls.Add(this.lbPerfiles);
-            this.Controls.Add(this.tvAppYUserAsignado);
-            this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnLimpiarUsuario);
-            this.Controls.Add(this.rbAplicaciones);
-            this.Controls.Add(this.rbPerfiles);
-            this.Controls.Add(this.lblGuardar);
-            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.lblAppAsignadas);
             this.Controls.Add(this.btnQuitarSimple);
             this.Controls.Add(this.lblQuitarMuchos);
@@ -316,7 +225,6 @@
             this.Controls.Add(this.btnAsignarMuchos);
             this.Controls.Add(this.btnAsignarSimple);
             this.Controls.Add(this.lblAsignar);
-            this.Controls.Add(this.lblAppDisponibles);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblPerfilesDispo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -335,12 +243,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnLimpiarUsuario;
-        private System.Windows.Forms.RadioButton rbAplicaciones;
-        private System.Windows.Forms.RadioButton rbPerfiles;
-        private System.Windows.Forms.Label lblGuardar;
-        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label lblAppAsignadas;
         private System.Windows.Forms.Button btnQuitarSimple;
         private System.Windows.Forms.Button lblQuitarMuchos;
@@ -348,17 +250,15 @@
         private System.Windows.Forms.Button btnAsignarMuchos;
         private System.Windows.Forms.Button btnAsignarSimple;
         private System.Windows.Forms.Label lblAsignar;
-        private System.Windows.Forms.Label lblAppDisponibles;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.Label lblusuario;
         private System.Windows.Forms.Label lblNombreUsuario;
         private System.Windows.Forms.Label lblPerfilesDispo;
-        private System.Windows.Forms.TreeView tvAppYUserAsignado;
         public System.Windows.Forms.TextBox txtUsuario;
         public System.Windows.Forms.TextBox txtNombreUsuario;
         public System.Windows.Forms.ListBox lbPerfiles;
-        public System.Windows.Forms.ListBox lbAppDisponibles;
+        public System.Windows.Forms.ListBox lbRolAsignado;
     }
 }
 

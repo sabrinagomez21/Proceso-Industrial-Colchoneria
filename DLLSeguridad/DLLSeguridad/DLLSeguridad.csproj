@@ -56,13 +56,23 @@
     <Compile Include="cUsuario.cs" />
     <Compile Include="D_Bitacora.cs" />
     <Compile Include="D_Login.cs" />
+    <Compile Include="D_ManageRol.cs" />
     <Compile Include="D_ManejoRol.cs" />
+    <Compile Include="D_Permisos.cs" />
     <Compile Include="D_Rol.cs" />
     <Compile Include="E_Bitacora.cs" />
     <Compile Include="E_Login.cs" />
+    <Compile Include="E_ManageRol.cs" />
     <Compile Include="E_ManejoRol.cs" />
+    <Compile Include="E_Permisos.cs" />
     <Compile Include="E_Rol.cs" />
     <Compile Include="E_Usuario.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAsignacionAplicacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,9 +151,17 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPermisosRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPermisosRol.Designer.cs">
+      <DependentUpon>frmPermisosRol.cs</DependentUpon>
+    </Compile>
     <Compile Include="N_Bitacora.cs" />
     <Compile Include="N_Login.cs" />
+    <Compile Include="N_ManageRol.cs" />
     <Compile Include="N_ManejoRol.cs" />
+    <Compile Include="N_Permisos.cs" />
     <Compile Include="N_Rol.cs" />
     <Compile Include="Presentacion.cs">
       <SubType>Form</SubType>
@@ -153,12 +171,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Prueba.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Prueba.designer.cs">
       <DependentUpon>Prueba.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAsignacionAplicacion.resx">
       <DependentUpon>frmAsignacionAplicacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,19 +224,17 @@
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPermisosRol.resx">
+      <DependentUpon>frmPermisosRol.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion.resx">
       <DependentUpon>Presentacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Prueba.resx">
       <DependentUpon>Prueba.cs</DependentUpon>
     </EmbeddedResource>
@@ -295,6 +319,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMPRIM.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

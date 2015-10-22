@@ -34,17 +34,17 @@
             this.txtname = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblcancelar = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.lblbuscar = new System.Windows.Forms.Label();
+            this.dgvRoles = new System.Windows.Forms.DataGridView();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnsearch = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.dgvRoles = new System.Windows.Forms.DataGridView();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoles)).BeginInit();
             this.SuspendLayout();
@@ -108,17 +108,6 @@
             this.lblcancelar.TabIndex = 50;
             this.lblcancelar.Text = "Cancelar";
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelar.Enabled = false;
-            this.btnCancelar.Image = global::DLLSeguridad.Properties.Resources.cancelar;
-            this.btnCancelar.Location = new System.Drawing.Point(603, 19);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(46, 42);
-            this.btnCancelar.TabIndex = 49;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -129,18 +118,6 @@
             this.label2.TabIndex = 48;
             this.label2.Text = "Editar";
             // 
-            // btnEditar
-            // 
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.Enabled = false;
-            this.btnEditar.Image = global::DLLSeguridad.Properties.Resources.editar1;
-            this.btnEditar.Location = new System.Drawing.Point(537, 19);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(46, 42);
-            this.btnEditar.TabIndex = 47;
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -150,6 +127,59 @@
             this.label1.Size = new System.Drawing.Size(61, 15);
             this.label1.TabIndex = 46;
             this.label1.Text = "Eliminar";
+            // 
+            // lblbuscar
+            // 
+            this.lblbuscar.AutoSize = true;
+            this.lblbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblbuscar.Location = new System.Drawing.Point(144, 64);
+            this.lblbuscar.Name = "lblbuscar";
+            this.lblbuscar.Size = new System.Drawing.Size(51, 15);
+            this.lblbuscar.TabIndex = 44;
+            this.lblbuscar.Text = "Buscar";
+            // 
+            // dgvRoles
+            // 
+            this.dgvRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRoles.Location = new System.Drawing.Point(91, 123);
+            this.dgvRoles.Name = "dgvRoles";
+            this.dgvRoles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvRoles.Size = new System.Drawing.Size(489, 189);
+            this.dgvRoles.TabIndex = 45;
+            this.dgvRoles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRoles_CellClick);
+            // 
+            // txtID
+            // 
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Location = new System.Drawing.Point(140, 160);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(43, 26);
+            this.txtID.TabIndex = 51;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.Enabled = false;
+            this.btnCancelar.Image = global::DLLSeguridad.Properties.Resources.cancelar;
+            this.btnCancelar.Location = new System.Drawing.Point(603, 19);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(46, 42);
+            this.btnCancelar.TabIndex = 49;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.Enabled = false;
+            this.btnEditar.Image = global::DLLSeguridad.Properties.Resources.editar;
+            this.btnEditar.Location = new System.Drawing.Point(537, 19);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(46, 42);
+            this.btnEditar.TabIndex = 47;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnEliminar
             // 
@@ -163,16 +193,6 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // lblbuscar
-            // 
-            this.lblbuscar.AutoSize = true;
-            this.lblbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblbuscar.Location = new System.Drawing.Point(144, 64);
-            this.lblbuscar.Name = "lblbuscar";
-            this.lblbuscar.Size = new System.Drawing.Size(51, 15);
-            this.lblbuscar.TabIndex = 44;
-            this.lblbuscar.Text = "Buscar";
-            // 
             // btnNuevo
             // 
             this.btnNuevo.Image = global::DLLSeguridad.Properties.Resources.nuevo;
@@ -181,6 +201,7 @@
             this.btnNuevo.Size = new System.Drawing.Size(46, 42);
             this.btnNuevo.TabIndex = 39;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnsearch
             // 
@@ -203,33 +224,14 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // dgvRoles
-            // 
-            this.dgvRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRoles.Location = new System.Drawing.Point(105, 125);
-            this.dgvRoles.Name = "dgvRoles";
-            this.dgvRoles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRoles.Size = new System.Drawing.Size(489, 189);
-            this.dgvRoles.TabIndex = 45;
-            this.dgvRoles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRoles_CellClick);
-            // 
-            // txtID
-            // 
-            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(12, 112);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(43, 26);
-            this.txtID.TabIndex = 51;
-            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
-            // 
             // frmIngresoRol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 339);
-            this.Controls.Add(this.txtID);
-            this.Controls.Add(this.dgvRoles);
+            this.ClientSize = new System.Drawing.Size(702, 368);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.dgvRoles);
+            this.Controls.Add(this.txtID);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;

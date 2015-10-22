@@ -19,27 +19,30 @@ namespace DLLSeguridad
         {
             List<E_ManejoRol> _lista = new List<E_ManejoRol>();
 
-          try
+            try
             {
-            OdbcCommand _comando = new OdbcCommand(String.Format(
-           "SELECT iidUsuario, vnombreUsuario, vapellidoUsuario FROM MaUSUARIO where vnombreUsuario ='{0}' or vapellidoUsuario='{1}'", pNombre, pApellido), ConexionODBC.Conexion.ObtenerConexion());
-            OdbcDataReader _reader = _comando.ExecuteReader();
-            while (_reader.Read())
-            {
-                E_ManejoRol pEmpleado = new E_ManejoRol();
-                pEmpleado.Id = _reader.GetInt32(0);
-                pEmpleado.Nombre = _reader.GetString(1);
-               
-              
+                OdbcCommand _comando = new OdbcCommand(String.Format(
+               "SELECT iidUsuario, vnombreUsuario, vapellidoUsuario, vemailUsuario FROM MAUSUARIO where vnombreUsuario ='{0}' or vapellidoUsuario='{1}'", pNombre, pApellido),
+               ConexionODBC.Conexion.ObtenerConexion()
+               );
+                OdbcDataReader _reader = _comando.ExecuteReader();
+                while (_reader.Read())
+                {
+                    E_ManejoRol pEmpleado = new E_ManejoRol();
+                    pEmpleado.Id = _reader.GetInt32(0);
+                    pEmpleado.Nombre = _reader.GetString(1);
+                    pEmpleado.Apellido = _reader.GetString(2);
 
 
-                _lista.Add(pEmpleado);
+
+
+                    _lista.Add(pEmpleado);
+                }
             }
+            catch (Exception e)
+            {
+                MessageBox.Show("No es posible obtener el registro" + e, "Error al Realizar la Consulta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-          catch (Exception e)
-          {
-              MessageBox.Show("No es posible obtener el registro" + e, "Error al Realizar la Consulta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-          }
             return _lista;
         }
 
@@ -69,13 +72,12 @@ namespace DLLSeguridad
 
 
         #region Insertar Rol Usuario
-        public static int AgregarRol(E_ManejoRol eNameRol)
+        public static int AgregarRol(string sRol, string sId)
         {
             int iValorRetorno = 0;
 
             mySqlComando = new OdbcCommand(
-                string.Format("Insert into MaROLUSUARIO (vnombreRole) values ('{0}')",
-                eNameRol.Nombre),
+                string.Format("INSERT into TrUSUARIOTOROLE (iidRole, iidUsuario) values (" + sRol + "," + sId + ")"),
                 ConexionODBC.Conexion.ObtenerConexion()
             );
 
@@ -84,16 +86,14 @@ namespace DLLSeguridad
         }
         #endregion
 
-
-        #region Consultar Registros
-        public static DataTable ObtenerRegistros() // consulta para el grid
+        public static DataTable AplicacionesDisponibles() // consulta para las aplicaciones disponibles
         {
             DataTable dtRegistros = new DataTable();
 
             try
             {
                 mySqlComando = new OdbcCommand(
-                     string.Format("SELECT * FROM MaROLUSUARIO"),
+                     string.Format("SELECT * FROM MaAPLICACION"),
                      ConexionODBC.Conexion.ObtenerConexion()
                  );
                 mySqlDAdAdaptador = new OdbcDataAdapter();
@@ -109,72 +109,11 @@ namespace DLLSeguridad
 
             return dtRegistros;
         }
-        #endregion
+       
 
-        #region Consultar Un Registro
+       
 
-        public static E_ManejoRol Consultar(E_ManejoRol eRol)
-        {
-            E_ManejoRol pRol = new E_ManejoRol();
-
-            try
-            {
-                mySqlComando = new OdbcCommand(
-                    string.Format("SELECT * FROM MaROLUSUARIO WHERE iidRole = '{0}'", eRol.Id),
-                    ConexionODBC.Conexion.ObtenerConexion()
-                );
-
-                OdbcDataReader mySqlDLector = mySqlComando.ExecuteReader();
-
-                if (mySqlDLector.Read())
-                {
-                    if (mySqlDLector.HasRows)
-                    {
-                        pRol.Id = (int)mySqlDLector["iidRole"];
-                        pRol.Nombre = (string)mySqlDLector["vnombreRole"];
-                     
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("No es posible obtener el registro" + e, "Error al Realizar la Consulta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-
-            return pRol;
-        }
-        #endregion
-
-        public static List<E_ManejoRol> BuscarRegisRol(string pNombreRol)
-        {
-            List<E_ManejoRol> _lista1 = new List<E_ManejoRol>();
-
-            try
-            {
-                OdbcCommand _comando = new OdbcCommand(String.Format(
-               "SELECT iidRole, vnombreRole FROM MaROLUSUARIO where vnombreRole ='{0}'", pNombreRol), ConexionODBC.Conexion.ObtenerConexion());
-                OdbcDataReader _reader = _comando.ExecuteReader();
-
-
-              
-                while (_reader.Read())
-                {
-                    E_ManejoRol pEmpleado = new E_ManejoRol();
-                    pEmpleado.Id = _reader.GetInt32(0);
-                    pEmpleado.Nombre = _reader.GetString(1);
-
-
-
-
-                    _lista1.Add(pEmpleado);
-                }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("No es posible obtener el registro" + e, "Error al Realizar la Consulta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            return _lista1;
-        }
+        
 
 
 
@@ -201,27 +140,80 @@ namespace DLLSeguridad
 
 
 
-        #region Actualizar Registro
+       
 
-        public static int Actualizar(E_ManejoRol pRol)
+       
+
+
+        public static DataTable RolAsignados(string sIdUser) // consulta para las aplicaciones asignadas
         {
-            int retorno = 0;
+            DataTable dtRegistros = new DataTable();
+
             try
             {
-                OdbcCommand comando1 = new OdbcCommand(string.Format("Update MaROLUSUARIO set vnombreRole='{0}' where iidRole={1}",
-                pRol.Nombre, pRol.Id), ConexionODBC.Conexion.ObtenerConexion());
+                mySqlComando = new OdbcCommand(
+                     string.Format("SELECT TrUSUARIOTOROLE.iidRole , MaROLUSUARIO.vnombreRole FROM MaROLUSUARIO, TrUSUARIOTOROLE WHERE MaROLUSUARIO.iidRole = TrUSUARIOTOROLE.iidRole AND TrUSUARIOTOROLE.iidUsuario ='" + sIdUser + "'"),
+                     ConexionODBC.Conexion.ObtenerConexion()
+                 );
+                mySqlDAdAdaptador = new OdbcDataAdapter();
+                mySqlDAdAdaptador.SelectCommand = mySqlComando;
+                mySqlDAdAdaptador.Fill(dtRegistros);
 
-                retorno = comando1.ExecuteNonQuery();
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex + "No es posible obtener el registro", "Error al Realizar la Consulta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+
+            return dtRegistros;
+        }
+
+
+
+        public static int consultarNombreRol(string sRol)
+        {
+            int Id = 0;
+
+            try
+            {
+                mySqlComando = new OdbcCommand(
+                     string.Format("SELECT iidRole FROM MaROLUSUARIO where vnombreRole = '" + sRol + "'"),
+                     ConexionODBC.Conexion.ObtenerConexion()
+                 );
+
+                OdbcDataReader mySqlDLector = mySqlComando.ExecuteReader();
+
+                if (mySqlDLector.Read())
+                {
+                    if (mySqlDLector.HasRows)
+                    {
+                        Id = (int)mySqlDLector["iidRole"];
+
+                    }
+                }
             }
             catch (Exception e)
             {
-                MessageBox.Show("No es posible Actualizar el Registro", "Error al Actualizar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("No es posible obtener el registro" + e, "Error al Realizar la Consulta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
-            return retorno;
+            return Id;
         }
 
-        #endregion
+
+        protected static int quitaRol(string sRol, string sIdUser)
+        {
+            int iValorRetorno = 0;
+
+            mySqlComando = new OdbcCommand(
+                string.Format("DELETE from TrUSUARIOTOROLE  where iidUsuario = '" + sIdUser + "' and iidRole = '" + sRol + "'"),
+               ConexionODBC.Conexion.ObtenerConexion()
+            );
+
+            iValorRetorno = mySqlComando.ExecuteNonQuery();
+            return iValorRetorno;
+        }
 
     }
 }

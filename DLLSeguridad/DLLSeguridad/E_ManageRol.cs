@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace DLLSeguridad
 {
-    public class E_ManejoRol
+    
+    public class E_ManageRol
     {
         #region Atributos y Encapsulamiento
         //  variables de busqueda usuario.
-        public int Id { get; set; }
-        public string Nombre { get; set; }
+        public int Id_Rol { get; set; }
+        public string Nombre_Rol { get; set; }
 
         //variables de insercionRol
-        public string Apellido { get; set; }
+       
 
 
 
@@ -24,14 +25,14 @@ namespace DLLSeguridad
 
         #region Constructor
 
-        public E_ManejoRol()
+        public E_ManageRol()
         { }
 
-        public E_ManejoRol(int pId, string pNombre, string pApellido)
+        public E_ManageRol(int pIdRol, string pNombreRol)
         {
-            this.Id = pId;
-            this.Nombre = pNombre;
-            this.Apellido = pApellido;
+            this.Id_Rol = pIdRol;
+            this.Nombre_Rol = pNombreRol;
+          
 
 
         }
