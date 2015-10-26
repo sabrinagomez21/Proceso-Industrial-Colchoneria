@@ -1,1 +1,2 @@
 c:\users\josue\documents\visual studio 2013\Projects\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\CuentasPorCobrar.exe.config
+C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\CuentasPorCobrar.exe.config
