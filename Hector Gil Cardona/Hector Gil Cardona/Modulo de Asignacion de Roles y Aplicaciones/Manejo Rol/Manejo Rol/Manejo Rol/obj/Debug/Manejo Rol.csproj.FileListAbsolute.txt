@@ -1,0 +1,62 @@
+C:\Users\Hector Cardona\Documents\Visual Studio 2013\Projects\Manejo Rol\Manejo Rol\bin\Debug\Manejo Rol.exe.config
+C:\Users\Hector Cardona\Documents\Visual Studio 2013\Projects\Manejo Rol\Manejo Rol\bin\Debug\Manejo Rol.exe
+C:\Users\Hector Cardona\Documents\Visual Studio 2013\Projects\Manejo Rol\Manejo Rol\bin\Debug\Manejo Rol.pdb
+C:\Users\Hector Cardona\Documents\Visual Studio 2013\Projects\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.frmConsulta.resources
+C:\Users\Hector Cardona\Documents\Visual Studio 2013\Projects\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.frmIngresoRol.resources
+C:\Users\Hector Cardona\Documents\Visual Studio 2013\Projects\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.frmManejoRol.resources
+C:\Users\Hector Cardona\Documents\Visual Studio 2013\Projects\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.Properties.Resources.resources
+C:\Users\Hector Cardona\Documents\Visual Studio 2013\Projects\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.csproj.GenerateResource.Cache
+C:\Users\Hector Cardona\Documents\Visual Studio 2013\Projects\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.exe
+C:\Users\Hector Cardona\Documents\Visual Studio 2013\Projects\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.pdb
+C:\Users\Hector Cardona\Documents\Visual Studio 2013\Projects\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.csprojResolveAssemblyReference.cache
+C:\Users\Hector Cardona\Documents\Visual Studio 2013\Projects\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.frmPermisosRol.resources
+C:\Users\Hector Cardona\Desktop\Manejo Rol\Manejo Rol\bin\Debug\Manejo Rol.exe.config
+C:\Users\Hector Cardona\Desktop\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.exe
+C:\Users\Hector Cardona\Desktop\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.pdb
+C:\Users\Hector Cardona\Desktop\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.csprojResolveAssemblyReference.cache
+C:\Users\Hector Cardona\Desktop\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.frmConsulta.resources
+C:\Users\Hector Cardona\Desktop\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.frmIngresoRol.resources
+C:\Users\Hector Cardona\Desktop\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.frmManejoRol.resources
+C:\Users\Hector Cardona\Desktop\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.frmPermisosRol.resources
+C:\Users\Hector Cardona\Desktop\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.Properties.Resources.resources
+C:\Users\Hector Cardona\Desktop\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.csproj.GenerateResource.Cache
+C:\Users\Hector Cardona\Desktop\Manejo Rol\Manejo Rol\bin\Debug\Manejo Rol.exe
+C:\Users\Hector Cardona\Desktop\Manejo Rol\Manejo Rol\bin\Debug\Manejo Rol.pdb
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol\Manejo Rol\bin\Debug\Manejo Rol.exe.config
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.exe
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.pdb
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol\Manejo Rol\bin\Debug\Manejo Rol.exe
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol\Manejo Rol\bin\Debug\Manejo Rol.pdb
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.frmConsulta.resources
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.frmIngresoRol.resources
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.frmManejoRol.resources
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.frmPermisosRol.resources
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.Properties.Resources.resources
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.csproj.GenerateResource.Cache
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol\Manejo Rol\bin\Debug\Manejo Rol.exe.config
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.exe
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.pdb
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol\Manejo Rol\bin\Debug\Manejo Rol.exe.config
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.exe
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.pdb
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol\Manejo Rol\bin\Debug\Manejo Rol.exe
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol\Manejo Rol\bin\Debug\Manejo Rol.pdb
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.csprojResolveAssemblyReference.cache
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.frmConsulta.resources
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.frmIngresoRol.resources
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.frmManejoRol.resources
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.frmPermisosRol.resources
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.Properties.Resources.resources
+C:\Users\Hector Cardona\Desktop\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol Completo\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.csproj.GenerateResource.Cache
+C:\Users\Hector Cardona\Desktop\Hector Gil Cardona\Hector Gil Cardona\Modulo de Asignacion de Roles y Aplicaciones\Manejo Rol\Manejo Rol\Manejo Rol\bin\Debug\Manejo Rol.exe.config
+C:\Users\Hector Cardona\Desktop\Hector Gil Cardona\Hector Gil Cardona\Modulo de Asignacion de Roles y Aplicaciones\Manejo Rol\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.exe
+C:\Users\Hector Cardona\Desktop\Hector Gil Cardona\Hector Gil Cardona\Modulo de Asignacion de Roles y Aplicaciones\Manejo Rol\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.pdb
+C:\Users\Hector Cardona\Desktop\Hector Gil Cardona\Hector Gil Cardona\Modulo de Asignacion de Roles y Aplicaciones\Manejo Rol\Manejo Rol\Manejo Rol\bin\Debug\Manejo Rol.exe
+C:\Users\Hector Cardona\Desktop\Hector Gil Cardona\Hector Gil Cardona\Modulo de Asignacion de Roles y Aplicaciones\Manejo Rol\Manejo Rol\Manejo Rol\bin\Debug\Manejo Rol.pdb
+C:\Users\Hector Cardona\Desktop\Hector Gil Cardona\Hector Gil Cardona\Modulo de Asignacion de Roles y Aplicaciones\Manejo Rol\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.csprojResolveAssemblyReference.cache
+C:\Users\Hector Cardona\Desktop\Hector Gil Cardona\Hector Gil Cardona\Modulo de Asignacion de Roles y Aplicaciones\Manejo Rol\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.frmConsulta.resources
+C:\Users\Hector Cardona\Desktop\Hector Gil Cardona\Hector Gil Cardona\Modulo de Asignacion de Roles y Aplicaciones\Manejo Rol\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.frmIngresoRol.resources
+C:\Users\Hector Cardona\Desktop\Hector Gil Cardona\Hector Gil Cardona\Modulo de Asignacion de Roles y Aplicaciones\Manejo Rol\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.frmManejoRol.resources
+C:\Users\Hector Cardona\Desktop\Hector Gil Cardona\Hector Gil Cardona\Modulo de Asignacion de Roles y Aplicaciones\Manejo Rol\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.frmPermisosRol.resources
+C:\Users\Hector Cardona\Desktop\Hector Gil Cardona\Hector Gil Cardona\Modulo de Asignacion de Roles y Aplicaciones\Manejo Rol\Manejo Rol\Manejo Rol\obj\Debug\Manejo_Rol.Properties.Resources.resources
+C:\Users\Hector Cardona\Desktop\Hector Gil Cardona\Hector Gil Cardona\Modulo de Asignacion de Roles y Aplicaciones\Manejo Rol\Manejo Rol\Manejo Rol\obj\Debug\Manejo Rol.csproj.GenerateResource.Cache
