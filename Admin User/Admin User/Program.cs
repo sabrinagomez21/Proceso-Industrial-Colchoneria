@@ -16,7 +16,7 @@ namespace Admin_User
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmBuscarUser());
+            Application.Run(new frmRegistro());
         }
     }
 }

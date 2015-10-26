@@ -9,3 +9,14 @@ c:\users\hector cardona\documents\visual studio 2013\Projects\Admin User\Admin U
 c:\users\hector cardona\documents\visual studio 2013\Projects\Admin User\Admin User\obj\Debug\Admin User.pdb
 c:\users\hector cardona\documents\visual studio 2013\Projects\Admin User\Admin User\obj\Debug\Admin_User.frmBuscarUser.resources
 c:\users\hector cardona\documents\visual studio 2013\Projects\Admin User\Admin User\obj\Debug\Admin_User.frmEditUser.resources
+D:\Admin User\Admin User\bin\Debug\Admin User.exe.config
+D:\Admin User\Admin User\obj\Debug\Admin User.exe
+D:\Admin User\Admin User\obj\Debug\Admin User.pdb
+D:\Admin User\Admin User\bin\Debug\Admin User.exe
+D:\Admin User\Admin User\bin\Debug\Admin User.pdb
+D:\Admin User\Admin User\obj\Debug\Admin User.csprojResolveAssemblyReference.cache
+D:\Admin User\Admin User\obj\Debug\Admin_User.frmBuscarUser.resources
+D:\Admin User\Admin User\obj\Debug\Admin_User.frmEditUser.resources
+D:\Admin User\Admin User\obj\Debug\Admin_User.frmRegistro.resources
+D:\Admin User\Admin User\obj\Debug\Admin_User.Properties.Resources.resources
+D:\Admin User\Admin User\obj\Debug\Admin User.csproj.GenerateResource.Cache

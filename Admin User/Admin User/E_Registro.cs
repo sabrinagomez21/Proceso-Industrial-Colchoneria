@@ -1,4 +1,10 @@
-﻿using System;
+﻿// Capa en la cual se encuentran las variables a utilizar dentro del sistema.
+// Programador: Melvin Alejandro Batz Farfan
+// carné: 0901-12-1049
+// Diseño por: Melvin Batz
+
+//LLmada a las librerias a utilizarse en nuestro modulo
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +19,7 @@ namespace Admin_User
         public int IdUser { get; set; }
         public string NombreUser { get; set; }
 
-        //variables de insercionRol
+        //variables de insercion
         public string ApellidoUser { get; set; }
 
         public string EmailUser { get; set; }

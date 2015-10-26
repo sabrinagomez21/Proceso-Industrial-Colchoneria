@@ -14,6 +14,7 @@ namespace Admin_User
             if (string.IsNullOrWhiteSpace(pUser.NombreUser) || string.IsNullOrWhiteSpace(pUser.ApellidoUser) || string.IsNullOrWhiteSpace(pUser.EmailUser) || string.IsNullOrWhiteSpace(pUser.Password) || string.IsNullOrWhiteSpace(pUser.User))
             {
                 MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
             }
             else
             {

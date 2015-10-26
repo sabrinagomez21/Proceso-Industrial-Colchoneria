@@ -30,6 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditUser));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnRegresar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -40,16 +48,8 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblApellidoUsuario = new System.Windows.Forms.Label();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
-            this.lblModificacionUser = new System.Windows.Forms.Label();
             this.txtid = new System.Windows.Forms.TextBox();
-            this.btnRegresar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblModificacionUser = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,6 +79,89 @@
             this.groupBox1.Size = new System.Drawing.Size(504, 293);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(338, 274);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(111, 16);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Otra Busqueda";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(248, 274);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 16);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Cancelar";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(173, 274);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 16);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Eliminar";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(119, 274);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 16);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Editar";
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.Image = global::Admin_User.Properties.Resources.regresar;
+            this.btnRegresar.Location = new System.Drawing.Point(367, 221);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(47, 50);
+            this.btnRegresar.TabIndex = 16;
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Enabled = false;
+            this.btnCancelar.Image = global::Admin_User.Properties.Resources.cancelar;
+            this.btnCancelar.Location = new System.Drawing.Point(259, 222);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(47, 50);
+            this.btnCancelar.TabIndex = 15;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Enabled = false;
+            this.btnEliminar.Image = global::Admin_User.Properties.Resources.eliminar;
+            this.btnEliminar.Location = new System.Drawing.Point(181, 222);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(47, 50);
+            this.btnEliminar.TabIndex = 14;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Enabled = false;
+            this.btnEditar.Image = global::Admin_User.Properties.Resources.editar;
+            this.btnEditar.Location = new System.Drawing.Point(120, 222);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(47, 50);
+            this.btnEditar.TabIndex = 12;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // txtPassword
             // 
@@ -171,6 +254,14 @@
             this.lblNombreUsuario.TabIndex = 4;
             this.lblNombreUsuario.Text = "Nombre Usuario:";
             // 
+            // txtid
+            // 
+            this.txtid.Location = new System.Drawing.Point(259, 237);
+            this.txtid.Name = "txtid";
+            this.txtid.Size = new System.Drawing.Size(45, 20);
+            this.txtid.TabIndex = 16;
+            this.txtid.Visible = false;
+            // 
             // lblModificacionUser
             // 
             this.lblModificacionUser.AutoSize = true;
@@ -181,97 +272,6 @@
             this.lblModificacionUser.TabIndex = 9;
             this.lblModificacionUser.Text = "Modificacion Usuario";
             // 
-            // txtid
-            // 
-            this.txtid.Location = new System.Drawing.Point(259, 237);
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(45, 20);
-            this.txtid.TabIndex = 16;
-            this.txtid.Visible = false;
-            // 
-            // btnRegresar
-            // 
-            this.btnRegresar.Image = global::Admin_User.Properties.Resources.regresar;
-            this.btnRegresar.Location = new System.Drawing.Point(367, 221);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(47, 50);
-            this.btnRegresar.TabIndex = 16;
-            this.btnRegresar.UseVisualStyleBackColor = true;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Enabled = false;
-            this.btnCancelar.Image = global::Admin_User.Properties.Resources.cancelar;
-            this.btnCancelar.Location = new System.Drawing.Point(259, 222);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(47, 50);
-            this.btnCancelar.TabIndex = 15;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Enabled = false;
-            this.btnEliminar.Image = global::Admin_User.Properties.Resources.eliminar;
-            this.btnEliminar.Location = new System.Drawing.Point(181, 222);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(47, 50);
-            this.btnEliminar.TabIndex = 14;
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Enabled = false;
-            this.btnEditar.Image = global::Admin_User.Properties.Resources.editar;
-            this.btnEditar.Location = new System.Drawing.Point(120, 222);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(47, 50);
-            this.btnEditar.TabIndex = 12;
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(119, 274);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 16);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Editar";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(173, 274);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 16);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Eliminar";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(248, 274);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 16);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Cancelar";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(338, 274);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 16);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Otra Busqueda";
-            // 
             // frmEditUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,6 +280,8 @@
             this.Controls.Add(this.lblModificacionUser);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmEditUser";
             this.Text = "Edicion Usuario";
             this.groupBox1.ResumeLayout(false);

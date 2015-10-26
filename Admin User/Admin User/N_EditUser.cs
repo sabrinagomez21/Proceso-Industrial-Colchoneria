@@ -1,4 +1,10 @@
-﻿using System;
+﻿// Capa de validaciones.
+// Programador: Melvin Alejandro Batz Farfan
+// carné: 0901-12-1049
+// Diseño por: Melvin Batz
+
+//LLmada a las librerias a utilizarse en nuestro modulo
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

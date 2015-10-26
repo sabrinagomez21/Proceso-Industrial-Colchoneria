@@ -1,0 +1,12 @@
+c:\users\melvinalejandro\documents\visual studio 2013\Projects\aplicaciones\aplicaciones\bin\Debug\aplicaciones.exe.config
+c:\users\melvinalejandro\documents\visual studio 2013\Projects\aplicaciones\aplicaciones\bin\Debug\aplicaciones.exe
+c:\users\melvinalejandro\documents\visual studio 2013\Projects\aplicaciones\aplicaciones\bin\Debug\aplicaciones.pdb
+c:\users\melvinalejandro\documents\visual studio 2013\Projects\aplicaciones\aplicaciones\bin\Debug\ConexionODBC.dll
+c:\users\melvinalejandro\documents\visual studio 2013\Projects\aplicaciones\aplicaciones\obj\Debug\aplicaciones.csprojResolveAssemblyReference.cache
+c:\users\melvinalejandro\documents\visual studio 2013\Projects\aplicaciones\aplicaciones\obj\Debug\aplicaciones.frmaplicacionNueva.resources
+c:\users\melvinalejandro\documents\visual studio 2013\Projects\aplicaciones\aplicaciones\obj\Debug\aplicaciones.Properties.Resources.resources
+c:\users\melvinalejandro\documents\visual studio 2013\Projects\aplicaciones\aplicaciones\obj\Debug\aplicaciones.csproj.GenerateResource.Cache
+c:\users\melvinalejandro\documents\visual studio 2013\Projects\aplicaciones\aplicaciones\obj\Debug\aplicaciones.exe
+c:\users\melvinalejandro\documents\visual studio 2013\Projects\aplicaciones\aplicaciones\obj\Debug\aplicaciones.pdb
+c:\users\melvinalejandro\documents\visual studio 2013\Projects\aplicaciones\aplicaciones\obj\Debug\aplicaciones.frmBuscarApli.resources
+C:\Users\melvinalejandro\Documents\Visual Studio 2013\Projects\aplicaciones\aplicaciones\obj\Debug\aplicaciones.frmEditarAplicacion.resources

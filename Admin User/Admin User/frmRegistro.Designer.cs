@@ -40,13 +40,15 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblApellidoUsuario = new System.Windows.Forms.Label();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
-            this.btnRegistrar = new System.Windows.Forms.Button();
             this.lblRegistro = new System.Windows.Forms.Label();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.gbRegistro.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbRegistro
             // 
+            this.gbRegistro.Controls.Add(this.label1);
             this.gbRegistro.Controls.Add(this.txtPassword);
             this.gbRegistro.Controls.Add(this.txtUsuario);
             this.gbRegistro.Controls.Add(this.txtEmail);
@@ -60,9 +62,10 @@
             this.gbRegistro.Controls.Add(this.btnRegistrar);
             this.gbRegistro.Location = new System.Drawing.Point(12, 32);
             this.gbRegistro.Name = "gbRegistro";
-            this.gbRegistro.Size = new System.Drawing.Size(504, 267);
+            this.gbRegistro.Size = new System.Drawing.Size(504, 296);
             this.gbRegistro.TabIndex = 7;
             this.gbRegistro.TabStop = false;
+            this.gbRegistro.Enter += new System.EventHandler(this.gbRegistro_Enter);
             // 
             // txtPassword
             // 
@@ -155,17 +158,6 @@
             this.lblNombreUsuario.TabIndex = 15;
             this.lblNombreUsuario.Text = "Nombre Usuario:";
             // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(200, 222);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(116, 28);
-            this.btnRegistrar.TabIndex = 14;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
             // lblRegistro
             // 
             this.lblRegistro.AutoSize = true;
@@ -176,11 +168,32 @@
             this.lblRegistro.TabIndex = 6;
             this.lblRegistro.Text = "Registro de Nuevo Usuario";
             // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Image = global::Admin_User.Properties.Resources.guardar;
+            this.btnRegistrar.Location = new System.Drawing.Point(247, 216);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(54, 55);
+            this.btnRegistrar.TabIndex = 14;
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(244, 274);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 16);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Guardar";
+            // 
             // frmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 304);
+            this.ClientSize = new System.Drawing.Size(528, 331);
             this.Controls.Add(this.gbRegistro);
             this.Controls.Add(this.lblRegistro);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -189,6 +202,7 @@
             this.Name = "frmRegistro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Regristro Usuario";
+            this.Load += new System.EventHandler(this.frmRegistro_Load);
             this.gbRegistro.ResumeLayout(false);
             this.gbRegistro.PerformLayout();
             this.ResumeLayout(false);
@@ -211,6 +225,7 @@
         private System.Windows.Forms.Label lblNombreUsuario;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Label lblRegistro;
+        private System.Windows.Forms.Label label1;
     }
 }
 
