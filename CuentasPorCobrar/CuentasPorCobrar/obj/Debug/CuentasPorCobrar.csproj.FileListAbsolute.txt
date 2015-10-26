@@ -1,4 +1,7 @@
 c:\users\josue\documents\visual studio 2013\Projects\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\CuentasPorCobrar.exe.config
+<<<<<<< HEAD
+C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\CuentasPorCobrar.exe.config
+=======
 C:\Users\DylanIsaac\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\CuentasPorCobrar.exe.config
 C:\Users\DylanIsaac\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.csprojResolveAssemblyReference.cache
 C:\Users\DylanIsaac\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.frmAutorizacionCobros.resources
@@ -9,3 +12,4 @@ C:\Users\DylanIsaac\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCo
 C:\Users\DylanIsaac\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\CuentasPorCobrar.pdb
 C:\Users\DylanIsaac\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.exe
 C:\Users\DylanIsaac\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.pdb
+>>>>>>> Grupo2
