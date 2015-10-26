@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAutorizacionCobros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAutorizacionCobros.Designer.cs">
+      <DependentUpon>frmAutorizacionCobros.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTipoCobro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -52,6 +58,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAutorizacionCobros.resx">
+      <DependentUpon>frmAutorizacionCobros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTipoCobro.resx">
       <DependentUpon>frmTipoCobro.cs</DependentUpon>
     </EmbeddedResource>
