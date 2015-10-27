@@ -1,0 +1,11 @@
+c:\users\dennysivan\documents\visual studio 2013\Projects\cuentasporpagar\cuentasporpagar\bin\Debug\cuentasporpagar.exe.config
+C:\Users\DennysIvan\Documents\Visual Studio 2013\Projects\cuentasporpagar\cuentasporpagar\bin\Debug\cuentasporpagar.exe
+C:\Users\DennysIvan\Documents\Visual Studio 2013\Projects\cuentasporpagar\cuentasporpagar\bin\Debug\cuentasporpagar.pdb
+C:\Users\DennysIvan\Documents\Visual Studio 2013\Projects\cuentasporpagar\cuentasporpagar\obj\Debug\cuentasporpagar.csprojResolveAssemblyReference.cache
+C:\Users\DennysIvan\Documents\Visual Studio 2013\Projects\cuentasporpagar\cuentasporpagar\obj\Debug\cuentasporpagar.Properties.Resources.resources
+C:\Users\DennysIvan\Documents\Visual Studio 2013\Projects\cuentasporpagar\cuentasporpagar\obj\Debug\cuentasporpagar.csproj.GenerateResource.Cache
+C:\Users\DennysIvan\Documents\Visual Studio 2013\Projects\cuentasporpagar\cuentasporpagar\obj\Debug\cuentasporpagar.exe
+C:\Users\DennysIvan\Documents\Visual Studio 2013\Projects\cuentasporpagar\cuentasporpagar\obj\Debug\cuentasporpagar.pdb
+C:\Users\DennysIvan\Documents\Visual Studio 2013\Projects\cuentasporpagar\cuentasporpagar\obj\Debug\cuentasporpagar.frmCuentasxpagar.resources
+C:\Users\DennysIvan\Documents\Visual Studio 2013\Projects\cuentasporpagar\cuentasporpagar\obj\Debug\cuentasporpagar.frmPagos.resources
+C:\Users\DennysIvan\Documents\Visual Studio 2013\Projects\cuentasporpagar\cuentasporpagar\obj\Debug\cuentasporpagar.frmProveedor.resources
