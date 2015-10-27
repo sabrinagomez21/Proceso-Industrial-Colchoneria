@@ -16,7 +16,7 @@ namespace CuentasPorCobrar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAutorizacionCobros());
+            Application.Run(new frmCuentasPorCobrar());
         }
     }
 }
