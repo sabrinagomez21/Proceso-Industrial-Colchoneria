@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreacionBancos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreacionBancos.Designer.cs">
+      <DependentUpon>CreacionBancos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,8 +82,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <EmbeddedResource Include="frmBancos.resx">
       <DependentUpon>frmBancos.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="CreacionBancos.resx">
+      <DependentUpon>CreacionBancos.cs</DependentUpon>
+>>>>>>> Grupo2
     </EmbeddedResource>
     <EmbeddedResource Include="frmConciliacion.resx">
       <DependentUpon>frmConciliacion.cs</DependentUpon>
