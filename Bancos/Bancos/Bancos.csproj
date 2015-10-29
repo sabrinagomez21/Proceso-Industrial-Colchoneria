@@ -82,13 +82,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
-    <EmbeddedResource Include="frmBancos.resx">
-      <DependentUpon>frmBancos.cs</DependentUpon>
-=======
     <EmbeddedResource Include="CreacionBancos.resx">
       <DependentUpon>CreacionBancos.cs</DependentUpon>
->>>>>>> Grupo2
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBancos.resx">
+      <DependentUpon>frmBancos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConciliacion.resx">
       <DependentUpon>frmConciliacion.cs</DependentUpon>
