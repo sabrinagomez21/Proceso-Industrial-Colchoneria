@@ -9,10 +9,16 @@ C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj
 C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.pdb
 C:\Users\DylanIsaac\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\bin\Debug\Bancos.exe.config
 C:\Users\DylanIsaac\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.pdb
-<<<<<<< HEAD
-C:\Users\Usuario\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\bin\Debug\Bancos.exe.config
-C:\Users\Usuario\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.pdb
-=======
 C:\Users\kevin\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\bin\Debug\Bancos.exe.config
 C:\Users\kevin\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.pdb
->>>>>>> Grupo2
+C:\Users\Diego\Documents\1universidad\octavo\diseno\2do proyecto\Proceso-Industrial-Colchoneria\Bancos\Bancos\bin\Debug\Bancos.exe.config
+C:\Users\Diego\Documents\1universidad\octavo\diseno\2do proyecto\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.pdb
+C:\Users\Diego\Documents\1universidad\octavo\diseno\2do proyecto\Proceso-Industrial-Colchoneria\Bancos\Bancos\bin\Debug\Bancos.exe
+C:\Users\Diego\Documents\1universidad\octavo\diseno\2do proyecto\Proceso-Industrial-Colchoneria\Bancos\Bancos\bin\Debug\Bancos.pdb
+C:\Users\Diego\Documents\1universidad\octavo\diseno\2do proyecto\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Documents\1universidad\octavo\diseno\2do proyecto\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.CreacionBancos.resources
+C:\Users\Diego\Documents\1universidad\octavo\diseno\2do proyecto\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.frmConciliacion.resources
+C:\Users\Diego\Documents\1universidad\octavo\diseno\2do proyecto\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.frmHistorialCuenta.resources
+C:\Users\Diego\Documents\1universidad\octavo\diseno\2do proyecto\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.Properties.Resources.resources
+C:\Users\Diego\Documents\1universidad\octavo\diseno\2do proyecto\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.csproj.GenerateResource.Cache
+C:\Users\Diego\Documents\1universidad\octavo\diseno\2do proyecto\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.exe
