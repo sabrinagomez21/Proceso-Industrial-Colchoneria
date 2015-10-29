@@ -7,3 +7,12 @@ C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj
 C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.csproj.GenerateResource.Cache
 C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.exe
 C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.pdb
+C:\Users\DylanIsaac\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\bin\Debug\Bancos.exe.config
+C:\Users\DylanIsaac\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.pdb
+<<<<<<< HEAD
+C:\Users\Usuario\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\bin\Debug\Bancos.exe.config
+C:\Users\Usuario\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.pdb
+=======
+C:\Users\kevin\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\bin\Debug\Bancos.exe.config
+C:\Users\kevin\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.pdb
+>>>>>>> Grupo2
