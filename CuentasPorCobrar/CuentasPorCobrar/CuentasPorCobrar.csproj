@@ -44,16 +44,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmTipoCobro.cs">
+    <Compile Include="frmConsultaCxC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTipoCobro.Designer.cs">
-      <DependentUpon>frmTipoCobro.cs</DependentUpon>
+    <Compile Include="frmConsultaCxC.Designer.cs">
+      <DependentUpon>frmConsultaCxC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalCxC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalCxC.Designer.cs">
+      <DependentUpon>frmPrincipalCxC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoTransaccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoTransaccion.Designer.cs">
+      <DependentUpon>MantenimientoTransaccion.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmTipoCobro.resx">
-      <DependentUpon>frmTipoCobro.cs</DependentUpon>
+    <EmbeddedResource Include="frmConsultaCxC.resx">
+      <DependentUpon>frmConsultaCxC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipalCxC.resx">
+      <DependentUpon>frmPrincipalCxC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoTransaccion.resx">
+      <DependentUpon>MantenimientoTransaccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
