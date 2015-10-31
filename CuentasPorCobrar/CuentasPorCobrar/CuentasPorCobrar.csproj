@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CAD.cs" />
+    <Compile Include="D_CxC.cs" />
+    <Compile Include="E_CxC.cs" />
     <Compile Include="frmConsultaCxC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +65,7 @@
     <Compile Include="MantenimientoTransaccion.Designer.cs">
       <DependentUpon>MantenimientoTransaccion.cs</DependentUpon>
     </Compile>
+    <Compile Include="N_CxC.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmConsultaCxC.resx">
