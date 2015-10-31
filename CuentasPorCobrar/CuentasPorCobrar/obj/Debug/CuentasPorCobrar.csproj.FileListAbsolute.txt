@@ -12,3 +12,5 @@ C:\Users\Josue\documents\visual studio 2013\Projects\CuentasPorCobrar\CuentasPor
 C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\CuentasPorCobrar.exe.config
 C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.exe
 C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.pdb
+C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\CuentasPorCobrar.exe.config
+C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.pdb
