@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="frmAutorizacionCobros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +63,14 @@
     <Compile Include="frmCuentasPorCobrar.Designer.cs">
       <DependentUpon>frmCuentasPorCobrar.cs</DependentUpon>
     </Compile>
+=======
+    <Compile Include="frmConsultaCxC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaCxC.Designer.cs">
+      <DependentUpon>frmConsultaCxC.cs</DependentUpon>
+    </Compile>
+>>>>>>> 5cebb7c213762530e423b8022598afec16fe8d18
     <Compile Include="frmPrincipalCxC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +85,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <EmbeddedResource Include="frmAutorizacionCobros.resx">
       <DependentUpon>frmAutorizacionCobros.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,6 +95,11 @@
     <EmbeddedResource Include="frmCuentasPorCobrar.resx">
       <DependentUpon>frmCuentasPorCobrar.cs</DependentUpon>
     </EmbeddedResource>
+=======
+    <EmbeddedResource Include="frmConsultaCxC.resx">
+      <DependentUpon>frmConsultaCxC.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> 5cebb7c213762530e423b8022598afec16fe8d18
     <EmbeddedResource Include="frmPrincipalCxC.resx">
       <DependentUpon>frmPrincipalCxC.cs</DependentUpon>
     </EmbeddedResource>

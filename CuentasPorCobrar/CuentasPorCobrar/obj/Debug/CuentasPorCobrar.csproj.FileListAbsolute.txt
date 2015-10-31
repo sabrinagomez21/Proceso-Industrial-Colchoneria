@@ -1,5 +1,6 @@
 c:\users\josue\documents\visual studio 2013\Projects\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\CuentasPorCobrar.exe.config
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\CuentasPorCobrar.exe.config
 =======
 C:\Users\DylanIsaac\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\CuentasPorCobrar.exe.config
@@ -37,3 +38,6 @@ C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\
 C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\CuentasPorCobrar.exe
 C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\CuentasPorCobrar.pdb
 C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.exe
+=======
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\CuentasPorCobrar.exe.config
+>>>>>>> 5cebb7c213762530e423b8022598afec16fe8d18
