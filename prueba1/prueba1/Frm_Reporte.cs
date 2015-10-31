@@ -15,58 +15,55 @@ using System.IO;
 
 namespace prueba1
 {
-
+    #region inicio clase
     public partial class Frm_Reporte : Form
     {
-        public Frm_Reporte(int modulo, int form, string nombre)
-        {
-            InitializeComponent();
-        }
-
-        #region Variables
+        
         string sNombreReporteGrid;
         string SNombreReporte;
-        int IModulo;
-        string SNom_Reporte;
-        string SUsuario;
+        public string SUsuario;
         string SFecha_Hora;
-        int Iid_Form;
         string STiempo;
         string ruta;
         string tiporeporte;
         string puntoreporte;
+        string Nreporte;
         #endregion
+        //public Frm_Reporte(string reporte, int modulo, string usuario, int form)
+
+        #region Variables
+        //public Frm_Reporte()
+        //public Frm_Reporte(string reporte, string usuario)
+        public Frm_Reporte(string reporte, string usuario)
+        {
+            InitializeComponent();
+            Nreporte = reporte;
+            SUsuario = usuario;
+        }
+        #endregion 
 
         #region Carga de Form
         public void Form1_Load(object sender, EventArgs e)
         {
-            
-            Fnc_Cargagrid();
-            Cbox_Modulo.Items.Add("reportes");
-            Cbox_Modulo.Items.Add("productos");
-            Cbox_Modulo.Items.Add("clientes");
-
-            #region Llamada de Variables externas (aun no se usan)
-            IModulo = 1;
-            SUsuario = "cristhiam";
+            //Nreporte = "productos";
+            //SUsuario = "criss";
             SFecha_Hora = DateTime.Now.ToString("G");
-            Iid_Form = 1;
             //ruta para guardar los reportes
             ruta = "C:\\Reportes";
-            #endregion
-
+            Fnc_Cargagrid();
+            panel1.Visible = true;
             toolStripStatusLabel1.Text = "Usuario: "+SUsuario;
             
 
         }
         #endregion
 
-        #region Carga de Datos a Reporte
+        #region Carga Reporte
         private void Fnc_Cargareporte()
         {
             // Cbox_Modulo.Text trae el nombre el reporte, tabla y modulo que se reporteara
             // string que trae la tabla para crear el reporte
-            string Squery = "Select * from " + Cbox_Modulo.Text + "";
+            string Squery = "Select * from " + sNombreReporteGrid + "";
             //LLamada a la dll de conexion
             dll_conexion.Conexion cConectar = new dll_conexion.Conexion();
             cConectar.cLocal();
@@ -75,7 +72,7 @@ namespace prueba1
             this.Rv_Reporte.LocalReport.DataSources.Clear();
             Rv_Reporte.Reset();
             //Se llama el reporte que se mostrara en el reportviewer
-            Rv_Reporte.LocalReport.ReportEmbeddedResource = "prueba1." + Cbox_Modulo.Text + ".rdlc";
+            Rv_Reporte.LocalReport.ReportEmbeddedResource = "prueba1." + sNombreReporteGrid + ".rdlc";
             //se crea el datatable que se llenara
             DataTable Dt_table = new DataTable();
             //Se cargan los valores en dt
@@ -90,10 +87,11 @@ namespace prueba1
             this.Rv_Reporte.LocalReport.DataSources.Add(RprtDS_Origen);
             //Refresca el reporte
             this.Rv_Reporte.RefreshReport();
+            this.Size = new Size(1030, 401);
         }
         #endregion
 
-        #region Funcion para cargar grid
+        #region Cargar Grid
         private void Fnc_Cargagrid()
         {
             //conexion por dll
@@ -114,28 +112,6 @@ namespace prueba1
         }
         #endregion
 
-        #region Seleccion de datos del Grid
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-                //recupera el valor de la columna 0 para ser usado como referencia de nombre
-                sNombreReporteGrid = Gv_Reporte[0, Gv_Reporte.CurrentCell.RowIndex].Value.ToString();
-                //Abre o ejecuta el pdf llamando con el nombre seleccionado del grid
-                System.Diagnostics.Process proc = new System.Diagnostics.Process();
-                proc.StartInfo.FileName = "C:/Reportes/" + sNombreReporteGrid;
-                proc.Start();
-                proc.Close();
-            
-        }
-        #endregion
-
-        #region Boton Salir
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        #endregion
-
         #region Crea Reporte
         private void CreaReporte()
         {
@@ -146,7 +122,7 @@ namespace prueba1
             //Condicion para crear la carpeta en disco c
             //si existe guarda los datos
             //lleva la direccion, nombre, fecha y hora, y el .pdf para crear el documento
-            SSave = "C:/Reportes/" + Cbox_Modulo.Text + "_" + STiempo + puntoreporte + "";
+            SSave = "C:/Reportes/" + sNombreReporteGrid + "_" + STiempo + puntoreporte + "";
             // crea el documento pdf
             byte[] Bytes = Rv_Reporte.LocalReport.Render(format: tiporeporte, deviceInfo: "");
             using (FileStream stream = new FileStream(SSave, FileMode.Create))
@@ -154,54 +130,24 @@ namespace prueba1
 
                     stream.Write(Bytes, 0, Bytes.Length);
                 }
-            //variable que lleva el nombre del archivo que se creo pdf.. para la inserccion en BD
-            SNom_Reporte = "" + Cbox_Modulo.Text + "_" + STiempo + puntoreporte + "";
-            //conexion por dll
-            dll_conexion.Conexion cConectar = new dll_conexion.Conexion();
-            cConectar.cLocal();
-            //query de inserccion
-            cConectar.sqlCmd = new MySqlCommand("INSERT INTO reportes (modulo, nom_reporte, usuario, fecha_hora, id_form) VALUES ('" + IModulo + "' , '" + SNom_Reporte + "' , '" + SUsuario + "' , '" + SFecha_Hora + "' , '" + Iid_Form + "')", cConectar.SqlConexion);
-            cConectar.sqlCmd.ExecuteNonQuery();
-            cConectar.SqlConexion.Close();
-            //mensaje de confirmacion
-             MessageBox.Show("Reporte Creado");
+            MessageBox.Show("Reporte Creado");
             //actualiza grid
-             this.Size = new Size(386, 492);
-            button1.Location = new Point(138, 399);
+            this.Size = new Size(390, 401);
             Fnc_Cargagrid();
         }
         #endregion
 
-        #region Llamada a cargar reporte por nombre del box
-        private void Cbox_Modulo_SelectedIndexChanged(object sender, EventArgs e)
+        #region timer
+
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            Fnc_Cargareporte();
-            panel1.Visible = true;
-            this.Size = new Size(1005, 492);
-            button1.Location = new Point(492, 418);
+            toolStripStatusLabel2.Text = "Fecha y Hora: "+DateTime.Now.ToString("G");
         }
+
         #endregion
 
-        #region Eliminar reporte
-        private void Btn_Eliminar_Click(object sender, EventArgs e)
-        {
-            //llamada a conexion dll
-            dll_conexion.Conexion cConectar = new dll_conexion.Conexion();
-            cConectar.cLocal();
-            //query de eliminacion segun el nombre del archivo o reporte
-            cConectar.sqlCmd = new MySqlCommand("DELETE FROM reportes WHERE nom_reporte='" + sNombreReporteGrid + "'", cConectar.SqlConexion);
-            cConectar.sqlCmd.ExecuteNonQuery();
-            cConectar.SqlConexion.Close();
-            Fnc_Cargagrid();
-            //metodo de eliminacion de archivos locales
-            System.IO.File.Delete("C:/Reportes/" + sNombreReporteGrid);
-            //confirmacion de eliminacion
-            MessageBox.Show("Registro Eliminado");
-        }
-        #endregion
-
-        #region Boton Crea Word
-        private void Btn_Word_Click(object sender, EventArgs e)
+        #region Botones
+        private void Btn_Word_Click_1(object sender, EventArgs e)
         {
             tiporeporte = "Word";
             puntoreporte = ".doc";
@@ -216,13 +162,10 @@ namespace prueba1
                 CreaReporte();
             }
             //envia el nombre del reporte
-            SNombreReporte = Cbox_Modulo.Text;
-            
+            SNombreReporte = Nreporte;
         }
-        #endregion
 
-        #region Boton Crea Pdf
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             tiporeporte = "PDF";
             puntoreporte = ".pdf";
@@ -237,12 +180,10 @@ namespace prueba1
                 CreaReporte();
             }
             //envia el nombre del reporte
-            SNombreReporte = Cbox_Modulo.Text;
+            SNombreReporte = Nreporte;
         }
-        #endregion
 
-        #region Boton Crea Excel
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click_1(object sender, EventArgs e)
         {
             tiporeporte = "Excel";
             puntoreporte = ".xls";
@@ -257,14 +198,34 @@ namespace prueba1
                 CreaReporte();
             }
             //envia el nombre del reporte
-            SNombreReporte = Cbox_Modulo.Text;
+            SNombreReporte = Nreporte;
+        }
+
+        #endregion
+
+        #region Seleccion de datos del Grid
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //recupera el valor de la columna 0 para ser usado como referencia de nombre
+            sNombreReporteGrid = Gv_Reporte[0, Gv_Reporte.CurrentCell.RowIndex].Value.ToString();
+            Fnc_Cargareporte();
         }
         #endregion
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Btn_AReporte_Click(object sender, EventArgs e)
         {
-            toolStripStatusLabel2.Text = "Fecha y Hora: "+DateTime.Now.ToString("G");
+            Frm_AdminReporte FrmAdmin = new Frm_AdminReporte(SUsuario);
+            FrmAdmin.Show();
         }
+
+        private void Btn_Actualizar_Click(object sender, EventArgs e)
+        {
+            Fnc_Cargagrid();
+        }
+
+
+
+
 
 
     }

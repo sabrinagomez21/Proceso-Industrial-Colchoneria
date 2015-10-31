@@ -16,9 +16,7 @@ namespace prueba1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           // Application.Run(new Frm_Reporte(int modulo, int form, string nombre));
-            Frm_Reporte FormCarga = new Frm_Reporte(1,1,"cris");
-            FormCarga.Show();
+            Application.Run(new Frm_Reporte());
         }
     }
 }

@@ -22,6 +22,7 @@ C:\Users\Cristhiam\Documents\Visual Studio 2013\Projects\prueba1\prueba1\obj\Rel
 C:\Users\Cristhiam\Documents\Visual Studio 2013\Projects\prueba1\prueba1\obj\Release\RdlCompile.cache
 C:\Users\Cristhiam\Documents\Visual Studio 2013\Projects\prueba1\prueba1\obj\Release\RdlCompile.compiled
 C:\Users\Cristhiam\Documents\Visual Studio 2013\Projects\prueba1\prueba1\obj\Release\prueba1.pdb
-C:\Users\Cristhiam\Documents\Visual Studio 2013\Projects\prueba1\prueba1\bin\Release\prueba1.dll.config
-C:\Users\Cristhiam\Documents\Visual Studio 2013\Projects\prueba1\prueba1\bin\Release\prueba1.dll
-C:\Users\Cristhiam\Documents\Visual Studio 2013\Projects\prueba1\prueba1\obj\Release\prueba1.dll
+C:\Users\Cristhiam\documents\visual studio 2013\Projects\prueba1\prueba1\obj\Release\prueba1.Frm_AdminReporte.resources
+C:\Users\Cristhiam\documents\visual studio 2013\Projects\prueba1\prueba1\bin\Release\prueba1.dll.config
+C:\Users\Cristhiam\documents\visual studio 2013\Projects\prueba1\prueba1\bin\Release\prueba1.dll
+C:\Users\Cristhiam\documents\visual studio 2013\Projects\prueba1\prueba1\obj\Release\prueba1.dll
