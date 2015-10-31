@@ -8,23 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CuentasPorCobrar
+namespace Bancos
 {
-    public partial class frmTipoCobro : Form
+    public partial class frmHistorialCuenta : Form
     {
-        public frmTipoCobro()
+        public frmHistorialCuenta()
         {
             InitializeComponent();
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabCheque_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
