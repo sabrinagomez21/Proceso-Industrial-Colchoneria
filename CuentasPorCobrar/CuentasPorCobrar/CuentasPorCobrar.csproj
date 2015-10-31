@@ -50,28 +50,46 @@
     <Compile Include="frmAutorizacionCobros.Designer.cs">
       <DependentUpon>frmAutorizacionCobros.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultaCxC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaCxC.designer.cs">
+      <DependentUpon>frmConsultaCxC.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCuentasPorCobrar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCuentasPorCobrar.Designer.cs">
       <DependentUpon>frmCuentasPorCobrar.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTipoCobro.cs">
+    <Compile Include="frmPrincipalCxC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTipoCobro.Designer.cs">
-      <DependentUpon>frmTipoCobro.cs</DependentUpon>
+    <Compile Include="frmPrincipalCxC.Designer.cs">
+      <DependentUpon>frmPrincipalCxC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoTransaccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoTransaccion.Designer.cs">
+      <DependentUpon>MantenimientoTransaccion.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAutorizacionCobros.resx">
       <DependentUpon>frmAutorizacionCobros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaCxC.resx">
+      <DependentUpon>frmConsultaCxC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCuentasPorCobrar.resx">
       <DependentUpon>frmCuentasPorCobrar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTipoCobro.resx">
-      <DependentUpon>frmTipoCobro.cs</DependentUpon>
+    <EmbeddedResource Include="frmPrincipalCxC.resx">
+      <DependentUpon>frmPrincipalCxC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoTransaccion.resx">
+      <DependentUpon>MantenimientoTransaccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
