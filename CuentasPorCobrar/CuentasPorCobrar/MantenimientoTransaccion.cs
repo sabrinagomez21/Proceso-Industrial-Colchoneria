@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace CuentasPorCobrar
 {
-    public partial class frmTipoCobro : Form
+    public partial class MantenimientoTransaccion : Form
     {
-        public frmTipoCobro()
+        public MantenimientoTransaccion()
         {
             InitializeComponent();
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabCheque_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

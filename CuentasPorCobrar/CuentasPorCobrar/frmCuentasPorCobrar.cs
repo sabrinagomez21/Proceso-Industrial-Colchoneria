@@ -21,8 +21,8 @@ namespace CuentasPorCobrar
 
         private void grdCuentasporcobrar_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            frmTipoCobro ver = new frmTipoCobro();
-            ver.Show();
+            //frmTipoCobro ver = new frmTipoCobro();
+            //ver.Show();
         }
     }
 }
