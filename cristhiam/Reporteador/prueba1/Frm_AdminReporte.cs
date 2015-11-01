@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using MySql.Data;
 using Microsoft.Reporting.WinForms;
+using ConexionODBC;
+using System.Data.Odbc;
 
 namespace prueba1
 {
@@ -63,14 +63,15 @@ namespace prueba1
             pReporte.fecha_hora = toolStripStatusLabel2.Text;
             new N_Reporte().Insert_Reporte(pReporte);
             ActualizarForm();
+            Txt_Nombre.Clear();
         }
 
         private void Btn_EReporte_Click(object sender, EventArgs e)
         {
             E_Reporte pReporte = new E_Reporte();
-            if (!string.IsNullOrWhiteSpace(label2.Text))
+            if (!string.IsNullOrWhiteSpace(Txt_Nombre.Text))
             {
-                pReporte.id = Convert.ToInt32(label2.Text);
+                pReporte.id = Txt_Nombre.Text.Trim();
                 new N_Reporte().Delete_Reporte(pReporte);
             }
             else
@@ -78,13 +79,25 @@ namespace prueba1
                 MessageBox.Show("No hay Codigo Disponible", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             ActualizarForm();
+            Txt_Nombre.Clear();
 
         }
 
         private void Gv_Reporte_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            label2.Text = Gv_Reporte[0, Gv_Reporte.CurrentCell.RowIndex].Value.ToString();
-            Txt_Nombre.Text = Gv_Reporte[1, Gv_Reporte.CurrentCell.RowIndex].Value.ToString();
+            Txt_Nombre.Text = Gv_Reporte[0, Gv_Reporte.CurrentCell.RowIndex].Value.ToString();
+        }
+        private static OdbcCommand mySqlComando;
+        private static OdbcDataAdapter mySqlDAdAdaptador;
+        private void Txt_Nombre_TextChanged(object sender, EventArgs e)
+        {
+            DataTable dtGrid = new DataTable();
+            mySqlComando = new OdbcCommand(string.Format("Select * from reportes where nom_reporte like ('" + Txt_Nombre.Text + "%') "), CAD.ObtenerConexion());
+            mySqlDAdAdaptador = new OdbcDataAdapter();
+            mySqlDAdAdaptador.SelectCommand = mySqlComando;
+            mySqlDAdAdaptador.Fill(dtGrid);
+            this.Gv_Reporte.DataSource = dtGrid;
+            CAD.ObtenerConexion().Close();
         }
     }
 }

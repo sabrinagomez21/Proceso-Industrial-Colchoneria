@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using MySql.Data;
 using Microsoft.Reporting.WinForms;
 using System.IO;
+using ConexionODBC;
+using System.Data.Odbc;
 
 
 namespace prueba1
@@ -82,35 +82,37 @@ namespace prueba1
         #endregion
 
         #region Carga Reporte
+        private static OdbcCommand mySqlComando;
+        private static OdbcDataAdapter mySqlDAdAdaptador;
         private void Fnc_Cargareporte()
         {
-            // Cbox_Modulo.Text trae el nombre el reporte, tabla y modulo que se reporteara
-            // string que trae la tabla para crear el reporte
-            string Squery = "Select * from " + sNombreReporteGrid + "";
-            //LLamada a la dll de conexion
-            dll_conexion.Conexion cConectar = new dll_conexion.Conexion();
-            cConectar.cLocal();
-            MySqlCommand comd = new MySqlCommand(Squery, cConectar.SqlConexion);
-            //Se limpia el datasource del reporte
-            this.Rv_Reporte.LocalReport.DataSources.Clear();
-            Rv_Reporte.Reset();
-            //Se llama el reporte que se mostrara en el reportviewer
-            Rv_Reporte.LocalReport.ReportEmbeddedResource = "prueba1." + sNombreReporteGrid + ".rdlc";
-            //se crea el datatable que se llenara
-            DataTable Dt_table = new DataTable();
-            //Se cargan los valores en dt
-            Dt_table.Load(comd.ExecuteReader());
-            //Termina la conexion
-            cConectar.SqlConexion.Close();
-            //Se crea una nueva llamada al reporte por medio del DataSet (se utiliza solo como referencia no conexion)
-            ReportDataSource RprtDS_Origen = new ReportDataSource();
-            RprtDS_Origen.Name = "DataSet1";
-            RprtDS_Origen.Value = Dt_table;
-            //Se cargan los datos al reporte
-            this.Rv_Reporte.LocalReport.DataSources.Add(RprtDS_Origen);
-            //Refresca el reporte
-            this.Rv_Reporte.RefreshReport();
-            this.Size = new Size(1030, 401);
+            try
+            {
+                DataTable dtReporte = new DataTable();
+                mySqlComando = new OdbcCommand(string.Format("SELECT * FROM " + sNombreReporteGrid + ""), CAD.ObtenerConexion());
+                mySqlDAdAdaptador = new OdbcDataAdapter();
+                mySqlDAdAdaptador.SelectCommand = mySqlComando;
+                mySqlDAdAdaptador.Fill(dtReporte);
+                CAD.ObtenerConexion().Close();
+                //Se limpia el datasource del reporte
+                this.Rv_Reporte.LocalReport.DataSources.Clear();
+                Rv_Reporte.Reset();
+                //Se llama el reporte que se mostrara en el reportviewer
+                Rv_Reporte.LocalReport.ReportEmbeddedResource = "prueba1." + sNombreReporteGrid + ".rdlc";
+                ReportDataSource RprtDS_Origen = new ReportDataSource();
+                RprtDS_Origen.Name = "DataSet1";
+                RprtDS_Origen.Value = dtReporte;
+                //Se cargan los datos al reporte
+                this.Rv_Reporte.LocalReport.DataSources.Add(RprtDS_Origen);
+                //Refresca el reporte
+                this.Rv_Reporte.RefreshReport();
+                this.Size = new Size(1030, 401);
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show("El Reporte No Existe, Contacte con el Administrador", "Error al Realizar la Consulta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
         }
         #endregion
 
@@ -180,7 +182,7 @@ namespace prueba1
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //recupera el valor de la columna 0 para ser usado como referencia de nombre
-            sNombreReporteGrid = Gv_Reporte[1, Gv_Reporte.CurrentCell.RowIndex].Value.ToString();
+            sNombreReporteGrid = Gv_Reporte[0, Gv_Reporte.CurrentCell.RowIndex].Value.ToString();
             Fnc_Cargareporte();
         }
         #endregion

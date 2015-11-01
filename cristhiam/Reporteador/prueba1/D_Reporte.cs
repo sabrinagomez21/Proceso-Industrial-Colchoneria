@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -46,26 +45,29 @@ namespace prueba1
         public static int Inserta(E_Reporte eReporte)
         {
             int iValorRetorno = 0;
-
-            mySqlComando = new OdbcCommand(
-                string.Format("Insert into reportes (nom_reporte, usuario, fecha_hora) values ('{0}','{1}','{2}')",
-                eReporte.nom_reporte, eReporte.usuario, eReporte.fecha_hora),
-                CAD.ObtenerConexion()
-            );
-
-            iValorRetorno = mySqlComando.ExecuteNonQuery();
+            try
+            {
+                mySqlComando = new OdbcCommand(
+                    string.Format("Insert into reportes (nom_reporte, usuario, fecha_hora) values ('{0}','{1}','{2}')",
+                    eReporte.nom_reporte, eReporte.usuario, eReporte.fecha_hora), CAD.ObtenerConexion());
+                iValorRetorno = mySqlComando.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("No es posible Insertar el Registro o Bien ya Existe", "Error al Insertar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
             return iValorRetorno;
         }
         #endregion
 
         #region Eliminar Registro
-        public static int Eliminar(int pId)
+        public static int Eliminar(string pId)
         {
             int iValorRetorno = 0;
 
             try
             {
-                mySqlComando = new OdbcCommand(string.Format("Delete From reportes where id={0}", pId), CAD.ObtenerConexion());
+                mySqlComando = new OdbcCommand(string.Format("Delete From reportes where nom_reporte='" + pId + "'"), CAD.ObtenerConexion());
                 iValorRetorno = mySqlComando.ExecuteNonQuery();
             }
             catch (Exception e)

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 using System.Data.Odbc;
 
 namespace prueba1
@@ -18,13 +17,6 @@ namespace prueba1
             conBD.Open();
             return conBD;
         }
-      /*  public static MySqlConnection ObtenerConexion()
-        {
-            mySqlConeccion = new MySqlConnection("server = localhost; username = root; database = Reportes;");
-            mySqlConeccion.Open();
-            return mySqlConeccion;
-        }*/
-
     }
     #endregion
 }

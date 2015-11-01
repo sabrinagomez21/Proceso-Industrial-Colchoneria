@@ -40,7 +40,6 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.Btn_Salir = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Gv_Reporte)).BeginInit();
             this.panel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -70,6 +69,7 @@
             this.Txt_Nombre.Name = "Txt_Nombre";
             this.Txt_Nombre.Size = new System.Drawing.Size(161, 20);
             this.Txt_Nombre.TabIndex = 2;
+            this.Txt_Nombre.TextChanged += new System.EventHandler(this.Txt_Nombre_TextChanged);
             // 
             // panel1
             // 
@@ -141,22 +141,11 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "label2";
-            this.label2.Visible = false;
-            // 
             // Frm_AdminReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(509, 282);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.Btn_Salir);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panel1);
@@ -188,6 +177,5 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label label2;
     }
 }

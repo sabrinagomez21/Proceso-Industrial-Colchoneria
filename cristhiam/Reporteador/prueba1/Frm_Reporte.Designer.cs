@@ -36,9 +36,7 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DataSet1 = new prueba1.DataSet1();
-            this.clienteTableAdapter = new prueba1.DataSet1TableAdapters.clienteTableAdapter();
-            this.panel1 = new System.Windows.Forms.Panel();
+this.panel1 = new System.Windows.Forms.Panel();
             this.Rv_Reporte = new Microsoft.Reporting.WinForms.ReportViewer();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -49,8 +47,7 @@
             this.Btn_Actualizar = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
-            this.panel1.SuspendLayout();
+this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Gv_Reporte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportesDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -103,17 +100,12 @@
             // clienteBindingSource
             // 
             this.clienteBindingSource.DataMember = "cliente";
-            this.clienteBindingSource.DataSource = this.DataSet1;
-            // 
+// 
             // DataSet1
-            // 
-            this.DataSet1.DataSetName = "DataSet1";
-            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
+// 
             // clienteTableAdapter
             // 
-            this.clienteTableAdapter.ClearBeforeFill = true;
-            // 
+// 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -228,8 +220,7 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();
-            this.panel1.ResumeLayout(false);
+ this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Gv_Reporte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportesDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -240,9 +231,7 @@
         #endregion
 
         private System.Windows.Forms.BindingSource clienteBindingSource;
-        private DataSet1 DataSet1;
-        private DataSet1TableAdapters.clienteTableAdapter clienteTableAdapter;
-        private System.Windows.Forms.BindingSource reportesDataSetBindingSource;
+private System.Windows.Forms.BindingSource reportesDataSetBindingSource;
         //private reportesDataSet reportesDataSet;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.StatusStrip statusStrip1;
