@@ -20,14 +20,13 @@ namespace prueba1
     {
         
         string sNombreReporteGrid;
-        string SNombreReporte;
         public string SUsuario;
         string SFecha_Hora;
-        string STiempo;
-        string ruta;
+        string filter;
+        string title;
         string tiporeporte;
-        string puntoreporte;
         string Nreporte;
+
         #endregion
         //public Frm_Reporte(string reporte, int modulo, string usuario, int form)
 
@@ -59,7 +58,6 @@ namespace prueba1
 
             SFecha_Hora = DateTime.Now.ToString("G");
             //ruta para guardar los reportes
-            ruta = "C:\\Reportes";
             ActualizarForm();
             panel1.Visible = true;
             toolStripStatusLabel1.Text = "Usuario: "+SUsuario;
@@ -119,23 +117,22 @@ namespace prueba1
         #region Crea Reporte
         private void CreaReporte()
         {
-            //variable que contiene el tiempo en formato para guardar en nombre del archivo
-            STiempo = DateTime.Now.ToString("yyyyMMddhhmmss");
-            //String que lleva la direccion de la carpeta contenedora de los reportes 
-            string SSave;
-            //Condicion para crear la carpeta en disco c
-            //si existe guarda los datos
-            //lleva la direccion, nombre, fecha y hora, y el .pdf para crear el documento
-            SSave = "C:/Reportes/" + sNombreReporteGrid + "_" + STiempo + puntoreporte + "";
-            // crea el documento pdf
-            byte[] Bytes = Rv_Reporte.LocalReport.Render(format: tiporeporte, deviceInfo: "");
-            using (FileStream stream = new FileStream(SSave, FileMode.Create))
+             SaveFileDialog saveFileDialog1;
+            saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Title = title;            
+            saveFileDialog1.Filter = filter;
+ 
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string ruta = saveFileDialog1.FileName;
+                byte[] Bytes = Rv_Reporte.LocalReport.Render(format: tiporeporte, deviceInfo: "");
+                using (FileStream stream = new FileStream(ruta, FileMode.Create))
                 {
 
                     stream.Write(Bytes, 0, Bytes.Length);
                 }
+            }
             MessageBox.Show("Reporte Creado");
-            //actualiza grid
             this.Size = new Size(390, 401);
             ActualizarForm();
         }
@@ -154,57 +151,29 @@ namespace prueba1
         private void Btn_Word_Click_1(object sender, EventArgs e)
         {
             tiporeporte = "Word";
-            puntoreporte = ".doc";
-            if (Directory.Exists(ruta))
-            {
-                CreaReporte();
+            title = "Guardar Reporte Word";
+            filter = "Word |*.doc";
+            CreaReporte();
+           
             }
-            else //si no existe
-            {
-                //crea carpeta para guardar.. y guarda documentos
-                Directory.CreateDirectory(ruta);
-                CreaReporte();
-            }
-            //envia el nombre del reporte
-            SNombreReporte = Nreporte;
-        }
+
 
         private void button2_Click_1(object sender, EventArgs e)
         {
             tiporeporte = "PDF";
-            puntoreporte = ".pdf";
-            if (Directory.Exists(ruta))
-            {
+            title = "Guardar Reporte PDF";
+            filter = "PDF |*.pdf";
                 CreaReporte();
-            }
-            else //si no existe
-            {
-                //crea carpeta para guardar.. y guarda documentos
-                Directory.CreateDirectory(ruta);
-                CreaReporte();
-            }
-            //envia el nombre del reporte
-            SNombreReporte = Nreporte;
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
             tiporeporte = "Excel";
-            puntoreporte = ".xls";
-            if (Directory.Exists(ruta))
-            {
+            title = "Guardar Reporte Excel";
+            filter = "Excel |*.xls";
                 CreaReporte();
-            }
-            else //si no existe
-            {
-                //crea carpeta para guardar.. y guarda documentos
-                Directory.CreateDirectory(ruta);
-                CreaReporte();
-            }
-            //envia el nombre del reporte
-            SNombreReporte = Nreporte;
         }
-
+        
         #endregion
 
         #region Seleccion de datos del Grid

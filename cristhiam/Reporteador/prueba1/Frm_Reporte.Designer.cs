@@ -74,7 +74,7 @@
             this.statusStrip1.Location = new System.Drawing.Point(0, 379);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.statusStrip1.Size = new System.Drawing.Size(390, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1007, 22);
             this.statusStrip1.TabIndex = 13;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -214,7 +214,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 401);
+            this.ClientSize = new System.Drawing.Size(1007, 401);
             this.Controls.Add(this.Btn_Actualizar);
             this.Controls.Add(this.Gv_Reporte);
             this.Controls.Add(this.Btn_AReporte);

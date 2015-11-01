@@ -6,15 +6,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ConexionODBC;
+using System.Data.Odbc;
 
 namespace prueba1
 {
 
     public class D_Reporte:CAD
     {
-        
-        private static MySqlCommand mySqlComando;
-        private static MySqlDataAdapter mySqlDAdAdaptador;
+
+        private static OdbcCommand mySqlComando;
+        private static OdbcDataAdapter mySqlDAdAdaptador;
         #region Consultar Registros
 
         public static DataTable ObtenerRegistros()
@@ -23,13 +25,11 @@ namespace prueba1
 
             try
             {
-                mySqlComando = new MySqlCommand(
-                     string.Format("SELECT * FROM reportes"),
-                     CAD.ObtenerConexion()
-                 );
-                mySqlDAdAdaptador = new MySqlDataAdapter();
+                mySqlComando = new OdbcCommand(string.Format("SELECT * FROM reportes"), CAD.ObtenerConexion());
+                mySqlDAdAdaptador = new OdbcDataAdapter();
                 mySqlDAdAdaptador.SelectCommand = mySqlComando;
                 mySqlDAdAdaptador.Fill(dtRegistros);
+                CAD.ObtenerConexion().Close();
 
             }
             catch (Exception Ex)
@@ -47,7 +47,7 @@ namespace prueba1
         {
             int iValorRetorno = 0;
 
-            mySqlComando = new MySqlCommand(
+            mySqlComando = new OdbcCommand(
                 string.Format("Insert into reportes (nom_reporte, usuario, fecha_hora) values ('{0}','{1}','{2}')",
                 eReporte.nom_reporte, eReporte.usuario, eReporte.fecha_hora),
                 CAD.ObtenerConexion()
@@ -65,8 +65,8 @@ namespace prueba1
 
             try
             {
-                MySqlCommand comando = new MySqlCommand(string.Format("Delete From reportes where id={0}", pId), CAD.ObtenerConexion());
-                iValorRetorno = comando.ExecuteNonQuery();
+                mySqlComando = new OdbcCommand(string.Format("Delete From reportes where id={0}", pId), CAD.ObtenerConexion());
+                iValorRetorno = mySqlComando.ExecuteNonQuery();
             }
             catch (Exception e)
             {
