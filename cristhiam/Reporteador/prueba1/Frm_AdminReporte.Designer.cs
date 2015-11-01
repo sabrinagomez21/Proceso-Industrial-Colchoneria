@@ -33,13 +33,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Txt_Nombre = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Btn_AReporte = new System.Windows.Forms.Button();
             this.Btn_EReporte = new System.Windows.Forms.Button();
+            this.Btn_AReporte = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.Btn_Salir = new System.Windows.Forms.Button();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.Btn_Salir = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Gv_Reporte)).BeginInit();
             this.panel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -82,16 +83,6 @@
             this.panel1.Size = new System.Drawing.Size(253, 109);
             this.panel1.TabIndex = 3;
             // 
-            // Btn_AReporte
-            // 
-            this.Btn_AReporte.Location = new System.Drawing.Point(18, 76);
-            this.Btn_AReporte.Name = "Btn_AReporte";
-            this.Btn_AReporte.Size = new System.Drawing.Size(98, 23);
-            this.Btn_AReporte.TabIndex = 3;
-            this.Btn_AReporte.Text = "Agregar Reporte";
-            this.Btn_AReporte.UseVisualStyleBackColor = true;
-            this.Btn_AReporte.Click += new System.EventHandler(this.Btn_AReporte_Click);
-            // 
             // Btn_EReporte
             // 
             this.Btn_EReporte.Location = new System.Drawing.Point(131, 76);
@@ -101,6 +92,16 @@
             this.Btn_EReporte.Text = "Eliminar Reporte";
             this.Btn_EReporte.UseVisualStyleBackColor = true;
             this.Btn_EReporte.Click += new System.EventHandler(this.Btn_EReporte_Click);
+            // 
+            // Btn_AReporte
+            // 
+            this.Btn_AReporte.Location = new System.Drawing.Point(18, 76);
+            this.Btn_AReporte.Name = "Btn_AReporte";
+            this.Btn_AReporte.Size = new System.Drawing.Size(98, 23);
+            this.Btn_AReporte.TabIndex = 3;
+            this.Btn_AReporte.Text = "Agregar Reporte";
+            this.Btn_AReporte.UseVisualStyleBackColor = true;
+            this.Btn_AReporte.Click += new System.EventHandler(this.Btn_AReporte_Click);
             // 
             // statusStrip1
             // 
@@ -112,16 +113,6 @@
             this.statusStrip1.Size = new System.Drawing.Size(509, 22);
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
-            // 
-            // Btn_Salir
-            // 
-            this.Btn_Salir.Location = new System.Drawing.Point(100, 221);
-            this.Btn_Salir.Name = "Btn_Salir";
-            this.Btn_Salir.Size = new System.Drawing.Size(75, 23);
-            this.Btn_Salir.TabIndex = 5;
-            this.Btn_Salir.Text = "Salir";
-            this.Btn_Salir.UseVisualStyleBackColor = true;
-            this.Btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
             // 
             // toolStripStatusLabel1
             // 
@@ -135,16 +126,37 @@
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel2.Text = "toolStripStatusLabel2";
             // 
+            // Btn_Salir
+            // 
+            this.Btn_Salir.Location = new System.Drawing.Point(100, 221);
+            this.Btn_Salir.Name = "Btn_Salir";
+            this.Btn_Salir.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Salir.TabIndex = 5;
+            this.Btn_Salir.Text = "Salir";
+            this.Btn_Salir.UseVisualStyleBackColor = true;
+            this.Btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
+            // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(31, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "label2";
+            this.label2.Visible = false;
             // 
             // Frm_AdminReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(509, 282);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.Btn_Salir);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panel1);
@@ -176,5 +188,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label2;
     }
 }

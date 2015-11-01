@@ -27,33 +27,28 @@ namespace prueba1
             this.Close();
         }
 
+        #region Acualizar Form
+        private void ActualizarForm()
+        {
+            try
+            {
+                Gv_Reporte.DataSource = new N_Reporte().GetAll();
+                Gv_Reporte.Refresh();
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
+        #endregion
+
         private void Frm_AdminReporte_Load(object sender, EventArgs e)
         {
-            Fnc_Cargagrid();
+            ActualizarForm();
             toolStripStatusLabel1.Text = "Usuario: " + SUsuario;
 
         }
 
-        #region Cargar Grid
-        private void Fnc_Cargagrid()
-        {
-            //conexion por dll
-            dll_conexion.Conexion cConectar = new dll_conexion.Conexion();
-            cConectar.cLocal();
-            //query de llamada de datos al grid
-            cConectar.sqlData = new MySqlDataAdapter("Select nom_reporte, usuario, fecha_hora from reportes", cConectar.SqlConexion);
-            DataTable DT_Table = new DataTable();
-            //Carga el grid
-            cConectar.sqlData.Fill(DT_Table);
-            Gv_Reporte.DataSource = DT_Table;
-            //Se renombran los headers de las columnas
-            Gv_Reporte.Columns[0].HeaderText = "Reporte";
-            Gv_Reporte.Columns[1].HeaderText = "Usuario";
-            Gv_Reporte.Columns[2].HeaderText = "Fecha de Creacion";
-            //Termina la conexion
-            cConectar.SqlConexion.Close();
-        }
-        #endregion
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -62,34 +57,34 @@ namespace prueba1
 
         private void Btn_AReporte_Click(object sender, EventArgs e)
         {
-            dll_conexion.Conexion cConectar = new dll_conexion.Conexion();
-            cConectar.cLocal();
-            cConectar.sqlCmd = new MySqlCommand("INSERT INTO reportes (nom_reporte, usuario, fecha_hora) VALUES ('" + Txt_Nombre.Text + "','" + SUsuario + "','" + toolStripStatusLabel2.Text + "');", cConectar.SqlConexion);
-            cConectar.sqlCmd.ExecuteNonQuery();
-            cConectar.SqlConexion.Close();
-            Fnc_Cargagrid();
-            Txt_Nombre.Clear();
-            MessageBox.Show("Reporte Ingresado");
+            E_Reporte pReporte = new E_Reporte();
+            pReporte.nom_reporte = Txt_Nombre.Text.Trim();
+            pReporte.usuario = SUsuario;
+            pReporte.fecha_hora = toolStripStatusLabel2.Text;
+            new N_Reporte().Insert_Reporte(pReporte);
+            ActualizarForm();
         }
 
         private void Btn_EReporte_Click(object sender, EventArgs e)
         {
-            //llamada a conexion dll
-            dll_conexion.Conexion cConectar = new dll_conexion.Conexion();
-            cConectar.cLocal();
-            //query de eliminacion segun el nombre del archivo o reporte
-            cConectar.sqlCmd = new MySqlCommand("DELETE FROM reportes WHERE nom_reporte='" + Txt_Nombre.Text + "'", cConectar.SqlConexion);
-            cConectar.sqlCmd.ExecuteNonQuery();
-            cConectar.SqlConexion.Close();
-            Fnc_Cargagrid();
-            Txt_Nombre.Clear();
-            //confirmacion de eliminacion
-            MessageBox.Show("Reporte Eliminado");
+            E_Reporte pReporte = new E_Reporte();
+            if (!string.IsNullOrWhiteSpace(label2.Text))
+            {
+                pReporte.id = Convert.ToInt32(label2.Text);
+                new N_Reporte().Delete_Reporte(pReporte);
+            }
+            else
+            {
+                MessageBox.Show("No hay Codigo Disponible", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            ActualizarForm();
+
         }
 
         private void Gv_Reporte_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Txt_Nombre.Text = Gv_Reporte[0, Gv_Reporte.CurrentCell.RowIndex].Value.ToString();
+            label2.Text = Gv_Reporte[0, Gv_Reporte.CurrentCell.RowIndex].Value.ToString();
+            Txt_Nombre.Text = Gv_Reporte[1, Gv_Reporte.CurrentCell.RowIndex].Value.ToString();
         }
     }
 }

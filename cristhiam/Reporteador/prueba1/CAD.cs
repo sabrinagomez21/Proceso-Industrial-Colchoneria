@@ -14,7 +14,7 @@ namespace prueba1
 
         public static MySqlConnection ObtenerConexion()
         {
-            mySqlConeccion = new MySqlConnection("server = localhost; username = root; password = 12345; database = Reportes");
+            mySqlConeccion = new MySqlConnection("server = localhost; username = root; database = Reportes;");
             mySqlConeccion.Open();
 
             return mySqlConeccion;

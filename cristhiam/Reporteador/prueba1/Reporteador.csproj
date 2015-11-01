@@ -40,8 +40,9 @@
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="dll_conexion">
-      <HintPath>..\..\Reporteador\Reporteador\dll_conexion.dll</HintPath>
+    <Reference Include="dll_conexion, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll_conexion\dll_conexion\bin\Debug\dll_conexion.dll</HintPath>
     </Reference>
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="itextsharp">
@@ -97,6 +98,7 @@
     <Compile Include="Frm_Reporte.Designer.cs">
       <DependentUpon>Frm_Reporte.cs</DependentUpon>
     </Compile>
+    <Compile Include="N_Reporte.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="reportesDataSet.Designer.cs">

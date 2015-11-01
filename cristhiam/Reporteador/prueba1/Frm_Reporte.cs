@@ -60,11 +60,26 @@ namespace prueba1
             SFecha_Hora = DateTime.Now.ToString("G");
             //ruta para guardar los reportes
             ruta = "C:\\Reportes";
-            Fnc_Cargagrid();
+            ActualizarForm();
             panel1.Visible = true;
             toolStripStatusLabel1.Text = "Usuario: "+SUsuario;
             
 
+        }
+        #endregion
+
+        #region Acualizar Form
+        private void ActualizarForm()
+        {
+            try
+            {
+                Gv_Reporte.DataSource = new N_Reporte().GetAll();
+                Gv_Reporte.Refresh();
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
         }
         #endregion
 
@@ -101,27 +116,6 @@ namespace prueba1
         }
         #endregion
 
-        #region Cargar Grid
-        private void Fnc_Cargagrid()
-        {
-            //conexion por dll
-            dll_conexion.Conexion cConectar = new dll_conexion.Conexion();
-            cConectar.cLocal();
-            //query de llamada de datos al grid
-            cConectar.sqlData = new MySqlDataAdapter("Select nom_reporte, usuario, fecha_hora from reportes", cConectar.SqlConexion);
-            DataTable DT_Table = new DataTable();
-            //Carga el grid
-            cConectar.sqlData.Fill(DT_Table);
-            Gv_Reporte.DataSource = DT_Table;
-            //Se renombran los headers de las columnas
-            Gv_Reporte.Columns[0].HeaderText = "Reporte";
-            Gv_Reporte.Columns[1].HeaderText = "Usuario";
-            Gv_Reporte.Columns[2].HeaderText = "Fecha de Creacion";
-            //Termina la conexion
-            cConectar.SqlConexion.Close();
-        }
-        #endregion
-
         #region Crea Reporte
         private void CreaReporte()
         {
@@ -143,7 +137,7 @@ namespace prueba1
             MessageBox.Show("Reporte Creado");
             //actualiza grid
             this.Size = new Size(390, 401);
-            Fnc_Cargagrid();
+            ActualizarForm();
         }
         #endregion
 
@@ -217,7 +211,7 @@ namespace prueba1
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //recupera el valor de la columna 0 para ser usado como referencia de nombre
-            sNombreReporteGrid = Gv_Reporte[0, Gv_Reporte.CurrentCell.RowIndex].Value.ToString();
+            sNombreReporteGrid = Gv_Reporte[1, Gv_Reporte.CurrentCell.RowIndex].Value.ToString();
             Fnc_Cargareporte();
         }
         #endregion
@@ -230,7 +224,7 @@ namespace prueba1
 
         private void Btn_Actualizar_Click(object sender, EventArgs e)
         {
-            Fnc_Cargagrid();
+            ActualizarForm();
         }
 
 
