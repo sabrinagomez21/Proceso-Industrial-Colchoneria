@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.label1 = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -37,21 +37,21 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Rv_Reporte = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Btn_Word = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.Btn_Word = new System.Windows.Forms.Button();
+            this.Rv_Reporte = new Microsoft.Reporting.WinForms.ReportViewer();
             this.Btn_AReporte = new System.Windows.Forms.Button();
             this.Gv_Reporte = new System.Windows.Forms.DataGridView();
             this.reportesDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Btn_Actualizar = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Gv_Reporte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportesDataSetBindingSource)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -73,7 +73,7 @@
             this.statusStrip1.Location = new System.Drawing.Point(0, 379);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.statusStrip1.Size = new System.Drawing.Size(396, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(389, 22);
             this.statusStrip1.TabIndex = 13;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -114,18 +114,30 @@
             this.panel1.Size = new System.Drawing.Size(644, 355);
             this.panel1.TabIndex = 15;
             // 
-            // Rv_Reporte
+            // panel2
             // 
-            this.Rv_Reporte.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            reportDataSource5.Name = "DataSet1";
-            reportDataSource5.Value = null;
-            this.Rv_Reporte.LocalReport.DataSources.Add(reportDataSource5);
-            this.Rv_Reporte.LocalReport.ReportEmbeddedResource = "prueba1.Report1.rdlc";
-            this.Rv_Reporte.Location = new System.Drawing.Point(3, 3);
-            this.Rv_Reporte.Name = "Rv_Reporte";
-            this.Rv_Reporte.ShowToolBar = false;
-            this.Rv_Reporte.Size = new System.Drawing.Size(487, 351);
-            this.Rv_Reporte.TabIndex = 1;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.Btn_Word);
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Location = new System.Drawing.Point(506, 24);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(120, 310);
+            this.panel2.TabIndex = 20;
+            // 
+            // Btn_Word
+            // 
+            this.Btn_Word.BackColor = System.Drawing.SystemColors.Control;
+            this.Btn_Word.Image = global::prueba1.Properties.Resources.word_icon;
+            this.Btn_Word.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Word.Location = new System.Drawing.Point(3, 12);
+            this.Btn_Word.Name = "Btn_Word";
+            this.Btn_Word.Size = new System.Drawing.Size(110, 50);
+            this.Btn_Word.TabIndex = 3;
+            this.Btn_Word.Text = "Word";
+            this.Btn_Word.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Btn_Word.UseVisualStyleBackColor = false;
+            this.Btn_Word.Click += new System.EventHandler(this.Btn_Word_Click_1);
             // 
             // button3
             // 
@@ -155,19 +167,18 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.Btn_Pdf_Click_1);
             // 
-            // Btn_Word
+            // Rv_Reporte
             // 
-            this.Btn_Word.BackColor = System.Drawing.SystemColors.Control;
-            this.Btn_Word.Image = global::prueba1.Properties.Resources.word_icon;
-            this.Btn_Word.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Word.Location = new System.Drawing.Point(3, 12);
-            this.Btn_Word.Name = "Btn_Word";
-            this.Btn_Word.Size = new System.Drawing.Size(110, 50);
-            this.Btn_Word.TabIndex = 3;
-            this.Btn_Word.Text = "Word";
-            this.Btn_Word.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Btn_Word.UseVisualStyleBackColor = false;
-            this.Btn_Word.Click += new System.EventHandler(this.Btn_Word_Click_1);
+            this.Rv_Reporte.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = null;
+            this.Rv_Reporte.LocalReport.DataSources.Add(reportDataSource1);
+            this.Rv_Reporte.LocalReport.ReportEmbeddedResource = "prueba1.Report1.rdlc";
+            this.Rv_Reporte.Location = new System.Drawing.Point(3, 3);
+            this.Rv_Reporte.Name = "Rv_Reporte";
+            this.Rv_Reporte.ShowToolBar = false;
+            this.Rv_Reporte.Size = new System.Drawing.Size(487, 351);
+            this.Rv_Reporte.TabIndex = 1;
             // 
             // Btn_AReporte
             // 
@@ -201,22 +212,11 @@
             this.Btn_Actualizar.UseVisualStyleBackColor = true;
             this.Btn_Actualizar.Click += new System.EventHandler(this.Btn_Actualizar_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.Btn_Word);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Location = new System.Drawing.Point(506, 24);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(120, 310);
-            this.panel2.TabIndex = 20;
-            // 
             // Frm_Reporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(396, 401);
+            this.ClientSize = new System.Drawing.Size(389, 401);
             this.Controls.Add(this.Btn_Actualizar);
             this.Controls.Add(this.Gv_Reporte);
             this.Controls.Add(this.Btn_AReporte);
@@ -231,9 +231,9 @@
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Gv_Reporte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportesDataSetBindingSource)).EndInit();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

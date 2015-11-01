@@ -95,7 +95,7 @@ namespace prueba1{
                 RprtDS_Origen.Value = dtReporte; //Valores del Reporte
                 this.Rv_Reporte.LocalReport.DataSources.Add(RprtDS_Origen);//Se cargan los datos al reporte
                 this.Rv_Reporte.RefreshReport();//Refresca el reporte
-                this.Size = new Size(1030, 401);//Cambia Tamaño del Form para Mostrar Reporte
+                this.Size = new Size(1053, 401);//Cambia Tamaño del Form para Mostrar Reporte
             }catch (Exception Ex){
                 //Muestra Error si el Reporte no Existe Fisicamente
                 MessageBox.Show("El Reporte No Existe, Contacte con el Administrador", "Error al Realizar la Consulta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
