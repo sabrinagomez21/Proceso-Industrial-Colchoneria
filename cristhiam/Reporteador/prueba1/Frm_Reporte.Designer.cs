@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.label1 = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.Rv_Reporte = new Microsoft.Reporting.WinForms.ReportViewer();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -45,11 +45,13 @@ this.panel1 = new System.Windows.Forms.Panel();
             this.Gv_Reporte = new System.Windows.Forms.DataGridView();
             this.reportesDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Btn_Actualizar = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
-this.panel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Gv_Reporte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportesDataSetBindingSource)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -64,14 +66,14 @@ this.panel1.SuspendLayout();
             // 
             // statusStrip1
             // 
-            this.statusStrip1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.statusStrip1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2});
             this.statusStrip1.Location = new System.Drawing.Point(0, 379);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.statusStrip1.Size = new System.Drawing.Size(1007, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(396, 22);
             this.statusStrip1.TabIndex = 13;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -100,35 +102,29 @@ this.panel1.SuspendLayout();
             // clienteBindingSource
             // 
             this.clienteBindingSource.DataMember = "cliente";
-// 
-            // DataSet1
-// 
-            // clienteTableAdapter
             // 
-// 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.Rv_Reporte);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.Btn_Word);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel1.Location = new System.Drawing.Point(403, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(616, 355);
+            this.panel1.Size = new System.Drawing.Size(644, 355);
             this.panel1.TabIndex = 15;
-            this.panel1.Visible = false;
             // 
             // Rv_Reporte
             // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = null;
-            this.Rv_Reporte.LocalReport.DataSources.Add(reportDataSource1);
+            this.Rv_Reporte.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            reportDataSource5.Name = "DataSet1";
+            reportDataSource5.Value = null;
+            this.Rv_Reporte.LocalReport.DataSources.Add(reportDataSource5);
             this.Rv_Reporte.LocalReport.ReportEmbeddedResource = "prueba1.Report1.rdlc";
-            this.Rv_Reporte.Location = new System.Drawing.Point(3, 11);
+            this.Rv_Reporte.Location = new System.Drawing.Point(3, 3);
             this.Rv_Reporte.Name = "Rv_Reporte";
-            this.Rv_Reporte.Size = new System.Drawing.Size(487, 343);
+            this.Rv_Reporte.ShowToolBar = false;
+            this.Rv_Reporte.Size = new System.Drawing.Size(487, 351);
             this.Rv_Reporte.TabIndex = 1;
             // 
             // button3
@@ -136,35 +132,35 @@ this.panel1.SuspendLayout();
             this.button3.BackColor = System.Drawing.SystemColors.Control;
             this.button3.Image = global::prueba1.Properties.Resources.excel_icon;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(496, 258);
+            this.button3.Location = new System.Drawing.Point(3, 224);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(110, 50);
             this.button3.TabIndex = 11;
             this.button3.Text = "Excel";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.button3.Click += new System.EventHandler(this.Btn_Excel_Click_1);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Control;
             this.button2.Image = global::prueba1.Properties.Resources.pdf_icon;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(496, 154);
+            this.button2.Location = new System.Drawing.Point(3, 120);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(110, 50);
             this.button2.TabIndex = 10;
             this.button2.Text = "PDF";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.button2.Click += new System.EventHandler(this.Btn_Pdf_Click_1);
             // 
             // Btn_Word
             // 
             this.Btn_Word.BackColor = System.Drawing.SystemColors.Control;
             this.Btn_Word.Image = global::prueba1.Properties.Resources.word_icon;
             this.Btn_Word.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Word.Location = new System.Drawing.Point(496, 46);
+            this.Btn_Word.Location = new System.Drawing.Point(3, 12);
             this.Btn_Word.Name = "Btn_Word";
             this.Btn_Word.Size = new System.Drawing.Size(110, 50);
             this.Btn_Word.TabIndex = 3;
@@ -186,8 +182,11 @@ this.panel1.SuspendLayout();
             // Gv_Reporte
             // 
             this.Gv_Reporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Gv_Reporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Gv_Reporte.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.Gv_Reporte.Location = new System.Drawing.Point(23, 51);
             this.Gv_Reporte.Name = "Gv_Reporte";
+            this.Gv_Reporte.ReadOnly = true;
             this.Gv_Reporte.Size = new System.Drawing.Size(343, 255);
             this.Gv_Reporte.TabIndex = 18;
             this.Gv_Reporte.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -202,11 +201,22 @@ this.panel1.SuspendLayout();
             this.Btn_Actualizar.UseVisualStyleBackColor = true;
             this.Btn_Actualizar.Click += new System.EventHandler(this.Btn_Actualizar_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.Btn_Word);
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Location = new System.Drawing.Point(506, 24);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(120, 310);
+            this.panel2.TabIndex = 20;
+            // 
             // Frm_Reporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1007, 401);
+            this.ClientSize = new System.Drawing.Size(396, 401);
             this.Controls.Add(this.Btn_Actualizar);
             this.Controls.Add(this.Gv_Reporte);
             this.Controls.Add(this.Btn_AReporte);
@@ -220,9 +230,10 @@ this.panel1.SuspendLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
- this.panel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Gv_Reporte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportesDataSetBindingSource)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,6 +257,7 @@ private System.Windows.Forms.BindingSource reportesDataSetBindingSource;
         private System.Windows.Forms.Button Btn_AReporte;
         private System.Windows.Forms.DataGridView Gv_Reporte;
         private System.Windows.Forms.Button Btn_Actualizar;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 

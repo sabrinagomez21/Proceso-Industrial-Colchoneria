@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace prueba1
 {
+    #region Class E_Reporte
     public class E_Reporte
     {
+    #endregion
         #region Atributos y Encapsulamiento
         public string id { get; set; }
         public string nom_reporte { get; set; }
@@ -16,10 +18,11 @@ namespace prueba1
 
         #endregion
 
+        #region E_Reporte
         public E_Reporte()
         {
 
         }
+        #endregion
 
-    }
-}
+    }}

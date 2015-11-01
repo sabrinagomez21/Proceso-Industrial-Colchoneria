@@ -5,17 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Odbc;
 
-namespace prueba1
-{
+namespace prueba1{
     #region Conexión A Datos - CAD
     public class CAD
     {
-        private static OdbcConnection conBD;
+        private static OdbcConnection conBD; //Variable ODBC
         public static OdbcConnection ObtenerConexion()
-        {
+        {   //String de Conexion
             conBD = new OdbcConnection("Driver={MySQL ODBC 5.3 ANSI Driver};server=localhost;uid=root;database=reportes;port=3306");
-            conBD.Open();
-            return conBD;
+            conBD.Open(); //Inicia la Conexion
+            return conBD; //Valor de Retorno
         }
     }
     #endregion

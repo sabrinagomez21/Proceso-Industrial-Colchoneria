@@ -1,5 +1,4 @@
 C:\Users\Cristhiam\Documents\Visual Studio 2013\Projects\prueba1\prueba1\bin\Release\prueba1.pdb
-C:\Users\Cristhiam\Documents\Visual Studio 2013\Projects\prueba1\prueba1\bin\Release\dll_conexion.dll
 C:\Users\Cristhiam\Documents\Visual Studio 2013\Projects\prueba1\prueba1\bin\Release\Microsoft.Expression.SourceControl.TFS.dll
 C:\Users\Cristhiam\Documents\Visual Studio 2013\Projects\prueba1\prueba1\bin\Release\System.Web.Http.dll
 C:\Users\Cristhiam\Documents\Visual Studio 2013\Projects\prueba1\prueba1\bin\Release\Microsoft.Expression.Framework.dll
@@ -26,7 +25,6 @@ C:\Users\Cristhiam\documents\visual studio 2013\Projects\prueba1\prueba1\obj\Rel
 C:\Users\Cristhiam\Documents\Visual Studio 2013\Projects\prueba1\prueba1\bin\Release\prueba1.exe.config
 C:\Users\Cristhiam\Documents\Visual Studio 2013\Projects\prueba1\prueba1\obj\Release\prueba1.exe
 C:\Users\Cristhiam\Documents\Visual Studio 2013\Projects\prueba1\prueba1\bin\Release\prueba1.exe
-C:\Users\Cristhiam\Documents\Visual Studio 2013\Projects\prueba1\prueba1\bin\Release\dll_conexion.pdb
 C:\Users\Cristhiam\documents\visual studio 2013\Projects\prueba1\prueba1\bin\Release\ConexionODBC.dll
 C:\Users\Cristhiam\Desktop\Reporteador\prueba1\bin\Release\prueba1.exe.config
 C:\Users\Cristhiam\Desktop\Reporteador\prueba1\obj\Release\prueba1.exe
