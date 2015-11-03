@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data;
-using MySql.Data.MySqlClient;
+using ConexionODBC;
+using System.Data.Odbc;
+
 
 namespace Inventario
 {
@@ -21,48 +22,49 @@ namespace Inventario
 
         private void Frm_MateriaPrima_Load(object sender, EventArgs e)
         {
-            Fnc_Cargagrid();
-        }
-        public void Fnc_Cargagrid()
-        {
-            //conexion por dll
-            dll_conexion.Conexion cConectar = new dll_conexion.Conexion();
-            cConectar.cLocal();
-            //query de llamada de datos al grid
-            cConectar.sqlData = new MySqlDataAdapter("Select id, producto, cantidad, descripcion from inventario", cConectar.SqlConexion);
-            DataTable DT_Table = new DataTable();
-            //Carga el grid
-            cConectar.sqlData.Fill(DT_Table);
-            DGV_Inventario.DataSource = DT_Table;
-            //Se renombran los headers de las columnas
-            DGV_Inventario.Columns[0].HeaderText = "Id";
-            DGV_Inventario.Columns[1].HeaderText = "Producto";
-            DGV_Inventario.Columns[2].HeaderText = "Cantidad";
-            DGV_Inventario.Columns[3].HeaderText = "Descripcion";
-            //Termina la conexion
-            cConectar.SqlConexion.Close();
+            Fnc_CargaGrid();
         }
 
+        #region Funcion CargaGrid
+        private void Fnc_CargaGrid()
+        {
+            try
+            {
+                DGV_Inventario.DataSource = new N_Inventario().GetMateria(); //llamada a cargar grid
+                //Headers de la Columnas
+                DGV_Inventario.Columns[0].HeaderText = "Producto";
+                DGV_Inventario.Columns[1].HeaderText = "Cantidad";
+                DGV_Inventario.Columns[2].HeaderText = "Descripcion";
+                DGV_Inventario.Refresh();
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
+        #endregion
+
+        //Variables de ODBC
+        private static OdbcCommand mySqlComando;
+        private static OdbcDataAdapter mySqlDAdAdaptador;
         private void Txt_Producto_TextChanged(object sender, EventArgs e)
         {
-            dll_conexion.Conexion cConectar = new dll_conexion.Conexion();
-            cConectar.cLocal();
-            cConectar.sqlData = new MySqlDataAdapter("Select * from inventario where producto like ('" + Txt_Producto.Text + "%') ", cConectar.SqlConexion);
-            DataTable DT_dat = new DataTable();
-            cConectar.sqlData.Fill(DT_dat);
-            this.DGV_Inventario.DataSource = DT_dat;
-            cConectar.SqlConexion.Close();
+            DataTable dtGrid = new DataTable(); //Tabla de datos
+            mySqlComando = new OdbcCommand(string.Format("Select * from inventario where producto like ('" + Txt_Producto.Text + "%') "), CAD.ObtenerConexion());
+            mySqlDAdAdaptador = new OdbcDataAdapter();
+            mySqlDAdAdaptador.SelectCommand = mySqlComando;
+            mySqlDAdAdaptador.Fill(dtGrid); //llena la Tabla dtGrid
+            this.DGV_Inventario.DataSource = dtGrid; //Envia los valores al Grid
+            CAD.ObtenerConexion().Close();//Termina la conexion
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            dll_conexion.Conexion cConectar = new dll_conexion.Conexion();
-            cConectar.cLocal();
-            cConectar.sqlCmd = new MySqlCommand("INSERT INTO inventario (producto, cantidad, descripcion) VALUES ('" + Txt_Producto.Text + "','" + Txt_Cantidad.Text + "','" + Txt_Descripcion.Text + "');", cConectar.SqlConexion);
-            cConectar.sqlCmd.ExecuteNonQuery();
-            cConectar.SqlConexion.Close();
-            Fnc_Cargagrid();
+            E_Inventario pInserta = new E_Inventario(); //constructor llamada de variables
+            pInserta.producto = Txt_Producto.Text;
+            pInserta.cantidad = Txt_Cantidad.Text;
+            pInserta.descripcion = Txt_Descripcion.Text;
+            new N_Inventario().Insert_Materia(pInserta); //envia las variables a capa para ingreso
             limpiar();
         }
 
@@ -77,6 +79,7 @@ namespace Inventario
             Txt_Cantidad.Clear();
             Txt_Descripcion.Clear();
         }
+
     }
 
 }

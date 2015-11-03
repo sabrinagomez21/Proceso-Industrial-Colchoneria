@@ -123,6 +123,7 @@
             this.DGV_Inventario.Name = "DGV_Inventario";
             this.DGV_Inventario.Size = new System.Drawing.Size(421, 150);
             this.DGV_Inventario.TabIndex = 15;
+//            this.DGV_Inventario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Inventario_CellContentClick);
             // 
             // button2
             // 

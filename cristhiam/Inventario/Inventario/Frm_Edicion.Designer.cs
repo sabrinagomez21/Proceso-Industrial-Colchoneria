@@ -37,14 +37,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Txt_Egresoingreso = new System.Windows.Forms.TextBox();
             this.Btn_ingreso = new System.Windows.Forms.Button();
-            this.Btn_Egreso = new System.Windows.Forms.Button();
             this.Txt_Descripcion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Cbox_tipo = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -113,23 +113,13 @@
             // 
             // Btn_ingreso
             // 
-            this.Btn_ingreso.Location = new System.Drawing.Point(16, 3);
+            this.Btn_ingreso.Location = new System.Drawing.Point(113, 261);
             this.Btn_ingreso.Name = "Btn_ingreso";
             this.Btn_ingreso.Size = new System.Drawing.Size(75, 23);
             this.Btn_ingreso.TabIndex = 8;
             this.Btn_ingreso.Text = "Ingreso";
             this.Btn_ingreso.UseVisualStyleBackColor = true;
             this.Btn_ingreso.Click += new System.EventHandler(this.Btn_ingreso_Click);
-            // 
-            // Btn_Egreso
-            // 
-            this.Btn_Egreso.Location = new System.Drawing.Point(184, 3);
-            this.Btn_Egreso.Name = "Btn_Egreso";
-            this.Btn_Egreso.Size = new System.Drawing.Size(75, 23);
-            this.Btn_Egreso.TabIndex = 9;
-            this.Btn_Egreso.Text = "Egreso";
-            this.Btn_Egreso.UseVisualStyleBackColor = true;
-            this.Btn_Egreso.Click += new System.EventHandler(this.Btn_Egreso_Click);
             // 
             // Txt_Descripcion
             // 
@@ -151,6 +141,9 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.Cbox_tipo);
             this.panel1.Controls.Add(this.Txt_Descripcion);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label1);
@@ -163,22 +156,38 @@
             this.panel1.Controls.Add(this.Txt_Orden);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(275, 198);
+            this.panel1.Size = new System.Drawing.Size(275, 243);
             this.panel1.TabIndex = 12;
+            //this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // panel2
+            // label7
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.Btn_ingreso);
-            this.panel2.Controls.Add(this.Btn_Egreso);
-            this.panel2.Location = new System.Drawing.Point(12, 223);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(274, 32);
-            this.panel2.TabIndex = 13;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(13, 195);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(103, 13);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Tipo de Movimiento:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 13);
+            this.label6.TabIndex = 13;
+            // 
+            // Cbox_tipo
+            // 
+            this.Cbox_tipo.FormattingEnabled = true;
+            this.Cbox_tipo.Location = new System.Drawing.Point(160, 187);
+            this.Cbox_tipo.Name = "Cbox_tipo";
+            this.Cbox_tipo.Size = new System.Drawing.Size(99, 21);
+            this.Cbox_tipo.TabIndex = 12;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(114, 261);
+            this.button1.Location = new System.Drawing.Point(113, 290);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 14;
@@ -190,9 +199,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(298, 299);
+            this.ClientSize = new System.Drawing.Size(298, 329);
+            this.Controls.Add(this.Btn_ingreso);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Edicion";
@@ -200,7 +209,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -216,11 +224,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox Txt_Egresoingreso;
         private System.Windows.Forms.Button Btn_ingreso;
-        private System.Windows.Forms.Button Btn_Egreso;
         private System.Windows.Forms.TextBox Txt_Descripcion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox Cbox_tipo;
     }
 }

@@ -7,8 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data;
-using MySql.Data.MySqlClient;
+
 
 namespace Inventario
 {
@@ -18,90 +17,62 @@ namespace Inventario
         string cantidad;
         string NoOrden;
         string descripcion;
-        string id;
-        int suma;
-        int cant;
-        int ingresoegreso;
-        int resta;
+        int id;
+        int operacion;
+        string cantIE;
         public Frm_Edicion(string Iid, string Iproducto, string Icantidad, string Idescripcion)
         {
             InitializeComponent();
             producto = Iproducto;
             cantidad = Icantidad;
             descripcion = Idescripcion;
-            id = Iid;
+            id = Convert.ToInt32(Iid);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Cbox_tipo.Items.Add("Ingreso");
+            Cbox_tipo.Items.Add("Egreso");
             Txt_Producto.Text = producto;
             Txt_Cantidad.Text = cantidad;
             Txt_Descripcion.Text = descripcion;
+            
         }
 
         private void Btn_ingreso_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro que desea ingresar esa cantidad al producto: " + Txt_Producto.Text, "Ingresar Producto", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (Txt_Egresoingreso.Text == "")
             {
-                suma = Convert.ToInt32(Txt_Cantidad.Text) + Convert.ToInt32(Txt_Egresoingreso.Text);
-                NoOrden = Txt_Orden.Text;
-
-                dll_conexion.Conexion cConectar = new dll_conexion.Conexion();
-                cConectar.cLocal();
-                cConectar.sqlCmd = new MySqlCommand("INSERT INTO compras (orden, cantidad) VALUES ('" + NoOrden + "','" + Txt_Egresoingreso.Text + "');", cConectar.SqlConexion);
-                cConectar.sqlCmd.ExecuteNonQuery();
-                cConectar.SqlConexion.Close();
-
-                cConectar.cLocal();
-                cConectar.sqlCmd = new MySqlCommand("UPDATE inventario SET cantidad = '" + suma + "',  descripcion = '" + Txt_Descripcion.Text + "' WHERE id = " + id + ";", cConectar.SqlConexion);
-                cConectar.sqlCmd.ExecuteNonQuery();
-                cConectar.SqlConexion.Close();
-                this.Close();
-
-                Frm_InvPrincipal form = new Frm_InvPrincipal();
-                form.MdiParent = Mdi_Form.ActiveForm;
-                form.Show();
+                MessageBox.Show("Complete los Campos requeridos");
             }
             else
             {
-                limpiar();
+                if (Cbox_tipo.Text == "Ingreso")
+                {
+                    operacion = Convert.ToInt32(Txt_Cantidad.Text) + Convert.ToInt32(Txt_Egresoingreso.Text);
+                }
+                else
+                {
+                    operacion = Convert.ToInt32(Txt_Cantidad.Text) - Convert.ToInt32(Txt_Egresoingreso.Text);
+                }
+                cantIE = Txt_Egresoingreso.Text;
+                NoOrden = Txt_Orden.Text.Trim();
+                E_Inventario pInserta = new E_Inventario(); //constructor llamada de variables
+                pInserta.DI_orden = NoOrden;
+                pInserta.producto = producto;
+                pInserta.DI_cantidad = cantIE;
+                pInserta.DI_tipo = Cbox_tipo.Text;
+                new N_Inventario().Insert_Inventario(pInserta); //envia las variables a capa para ingreso
+
+                E_Inventario pActualiza = new E_Inventario(); //constructor llamada de variables
+                pActualiza.id = id;
+                pActualiza.cantidad = Convert.ToString(operacion);
+                pActualiza.descripcion = Txt_Descripcion.Text;
+                new N_Inventario().Actualiza_Inventario(pActualiza); //envia las variables a capa para ingreso
             }
-
-        }
-
-        private void Btn_Egreso_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("¿Está seguro que desea remover esa cantidad al producto: " + Txt_Producto.Text, "Modificar Registro", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-            resta = Convert.ToInt32(Txt_Cantidad.Text) - Convert.ToInt32(Txt_Egresoingreso.Text);
-            NoOrden = Txt_Orden.Text;
-
-            dll_conexion.Conexion cConectar = new dll_conexion.Conexion();
-            cConectar.cLocal();
-            cConectar.sqlCmd = new MySqlCommand("INSERT INTO produccion (orden, cantidad) VALUES ('" + NoOrden + "','" + Txt_Egresoingreso.Text + "');", cConectar.SqlConexion);
-            cConectar.sqlCmd.ExecuteNonQuery();
-            cConectar.SqlConexion.Close();
-
-            cConectar.cLocal();
-            cConectar.sqlCmd = new MySqlCommand("UPDATE inventario SET cantidad = '" + resta + "',  descripcion = '" + Txt_Descripcion.Text + "' WHERE id = " + id + ";", cConectar.SqlConexion);
-            cConectar.sqlCmd.ExecuteNonQuery();
-            cConectar.SqlConexion.Close();
             this.Close();
+        }
 
-            Frm_InvPrincipal form = new Frm_InvPrincipal();
-            form.MdiParent = Mdi_Form.ActiveForm;
-            form.Show();
-            }
-            else
-            {
-                limpiar();
-            }
-        }
-        public void limpiar()
-        {
-            Txt_Orden.Clear();
-            Txt_Egresoingreso.Clear();
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -110,5 +81,6 @@ namespace Inventario
             form.MdiParent = Mdi_Form.ActiveForm;
             form.Show();
         }
+
     }
 }

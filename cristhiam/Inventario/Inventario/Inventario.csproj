@@ -32,12 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="dll_conexion">
-      <HintPath>..\..\Reporteador\Reporteador\dll_conexion.dll</HintPath>
-    </Reference>
-    <Reference Include="MySql.Data, Version=6.8.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Reporteador\Reporteador\MySql.Data.dll</HintPath>
+    <Reference Include="ConexionODBC">
+      <HintPath>.\ConexionODBC.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -51,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CAD.cs" />
+    <Compile Include="D_Inventario.cs" />
+    <Compile Include="E_Inventario.cs" />
     <Compile Include="Frm_Edicion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +74,7 @@
     <Compile Include="Mdi_Form.Designer.cs">
       <DependentUpon>Mdi_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="N_Inventario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_Edicion.resx">

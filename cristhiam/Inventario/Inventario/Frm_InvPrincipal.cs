@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data;
-using MySql.Data.MySqlClient;
+using ConexionODBC;
+using System.Data.Odbc;
 
 namespace Inventario
 {
@@ -35,43 +35,45 @@ namespace Inventario
             this.Close();
 
         }
-        #region Funcion para cargar grid
-        public void Fnc_Cargagrid()
+
+        #region Funcion CargaGrid
+        private void Fnc_CargaGrid()
         {
-            //conexion por dll
-            dll_conexion.Conexion cConectar = new dll_conexion.Conexion();
-            cConectar.cLocal();
-            //query de llamada de datos al grid
-            cConectar.sqlData = new MySqlDataAdapter("Select id, producto, cantidad, descripcion from inventario", cConectar.SqlConexion);
-            DataTable DT_Table = new DataTable();
-            //Carga el grid
-            cConectar.sqlData.Fill(DT_Table);
-            DGV_Inventario.DataSource = DT_Table;
-            //Se renombran los headers de las columnas
-            DGV_Inventario.Columns[0].HeaderText = "Id";
-            DGV_Inventario.Columns[1].HeaderText = "Producto";
-            DGV_Inventario.Columns[2].HeaderText = "Cantidad";
-            DGV_Inventario.Columns[3].HeaderText = "Descripcion";
-            //Termina la conexion
-            cConectar.SqlConexion.Close();
+            try
+            {
+                DGV_Inventario.DataSource = new N_Inventario().GetAll(); //llamada a cargar grid
+                //Headers de la Columnas
+                DGV_Inventario.Columns[0].HeaderText = "ID";
+                DGV_Inventario.Columns[1].HeaderText = "Producto";
+                DGV_Inventario.Columns[2].HeaderText = "Cantidad";
+                DGV_Inventario.Columns[2].HeaderText = "Descripcion";
+                DGV_Inventario.Refresh();
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
         }
         #endregion
 
+
         public void Frm_InvPrincipal_Load(object sender, EventArgs e)
         {
-            Fnc_Cargagrid();
+            Fnc_CargaGrid();
         }
 
+                //Variables de ODBC
+        private static OdbcCommand mySqlComando;
+        private static OdbcDataAdapter mySqlDAdAdaptador;
         private void Txt_Buscar_TextChanged(object sender, EventArgs e)
         {
-            dll_conexion.Conexion cConectar = new dll_conexion.Conexion();
-            cConectar.cLocal();
-            cConectar.sqlData = new MySqlDataAdapter("Select * from inventario where producto like ('" + Txt_Buscar.Text + "%') ", cConectar.SqlConexion);
-
-            DataTable DT_dat = new DataTable();
-            cConectar.sqlData.Fill(DT_dat);
-            this.DGV_Inventario.DataSource = DT_dat;
-            cConectar.SqlConexion.Close();
+            DataTable dtGrid = new DataTable(); //Tabla de datos
+            mySqlComando = new OdbcCommand(string.Format("Select * from inventario where producto like ('" + Txt_Buscar.Text + "%') "), CAD.ObtenerConexion());
+            mySqlDAdAdaptador = new OdbcDataAdapter();
+            mySqlDAdAdaptador.SelectCommand = mySqlComando;
+            mySqlDAdAdaptador.Fill(dtGrid); //llena la Tabla dtGrid
+            this.DGV_Inventario.DataSource = dtGrid; //Envia los valores al Grid
+            CAD.ObtenerConexion().Close();//Termina la conexion
         }
 
         private void button1_Click(object sender, EventArgs e)
