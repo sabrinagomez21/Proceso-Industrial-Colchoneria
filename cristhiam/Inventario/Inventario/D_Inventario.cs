@@ -8,8 +8,7 @@ using System.Windows.Forms;
 using ConexionODBC;
 using System.Data.Odbc;
 
-namespace Inventario
-{
+namespace Inventario{
     #region Inico de Class
     public class D_Inventario : CAD
     {
@@ -19,9 +18,9 @@ namespace Inventario
 
     #endregion
 
-        //Autor: Dennys Choy
-        //Fecha: 29/10/15
-        #region Consultar Registros
+        //Autor: David Barrios
+        //Fecha: 27/10/15
+        #region Obtener Registros para Frm_InvPrincipal
 
         public static DataTable ObtenerRegistros()
         {
@@ -41,7 +40,9 @@ namespace Inventario
         }
         #endregion
 
-        #region Consultar Registros
+        //Autor: David Barrios
+        //Fecha: 27/10/15
+        #region Obtener Registros para Frm_MateriaPrima
 
         public static DataTable ObtenerMateria()
         {
@@ -63,7 +64,7 @@ namespace Inventario
 
         //Autor: Cristhiam Duarte
         //Fecha: 29/10/15
-        #region Insertar Registro
+        #region Inserta Datos desde Frm_InvPrincipal
         public static int Inserta(E_Inventario eInventario)
         {
             int iValorRetorno = 0;
@@ -81,7 +82,9 @@ namespace Inventario
         }
         #endregion
 
-        #region Insertar Materia
+        //Autor: Cristhiam Duarte
+        //Fecha: 29/10/15
+        #region Insertar datos desde Frm_MateriaPrima
         public static int InsertaMateria(E_Inventario eInventario)
         {
             int iValorRetorno = 0;
@@ -101,7 +104,7 @@ namespace Inventario
 
         //Autor: Cristhiam Duarte
         //Fecha: 29/10/15
-        #region Actualiza Registro
+        #region Actualiza(update) datos desde Frm_invPrincipal
         public static int Actualiza(E_Inventario eInventario)
         {
             int iValorRetorno = 0;

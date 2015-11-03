@@ -22,26 +22,35 @@ namespace Inventario
             
         }
 
+        //Autor: Cristhiam Duarte
+        //Fecha: 23/10/15
+        #region Materia Prima
         private void materiaPrimaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
+        { 
             Frm_MateriaPrima materiaprima = new Frm_MateriaPrima();
             materiaprima.MdiParent = this;
-            materiaprima.Show();
-
-            
+            materiaprima.Show();   
         }
+        #endregion
 
+        //Autor: Cristhiam Duarte
+        //Fecha: 23/10/15
+        #region Inventario principal
         private void inventarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_InvPrincipal form = new Frm_InvPrincipal();
             form.MdiParent = this;
             form.Show();
         }
+        #endregion
 
+        //Autor: Cristhiam Duarte
+        //Fecha: 23/10/15
+        #region Salir
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        #endregion
     }
 }

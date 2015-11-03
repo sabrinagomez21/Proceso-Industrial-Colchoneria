@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Inventario
-{
+namespace Inventario{
     #region Class E_Reporte
     public class E_Inventario
     {

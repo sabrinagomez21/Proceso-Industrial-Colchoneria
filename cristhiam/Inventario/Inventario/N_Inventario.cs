@@ -5,23 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Inventario
-{
+namespace Inventario{
     #region Class N_Inventario
     class N_Inventario
     {
     #endregion
 
-        //Autor: Dennys Choy
-        //Fecha: 29/10/15
-        #region GetAll Toma todos los valores para grid
+        //Autor: David Barrios
+        //Fecha: 31/10/15
+        #region GetAll Toma todos los valores para grid Frm_InvPrincipal
         public System.Data.DataTable GetAll()
         {
             return D_Inventario.ObtenerRegistros();
         }
         #endregion
 
-        #region GetAll Toma todos los valores para grid
+        //Autor: Cristhiam Duarte
+        //Fecha: 30/10/15
+        #region GetAll Toma todos los valores para grid Materia Prima
         public System.Data.DataTable GetMateria()
         {
             return D_Inventario.ObtenerMateria();
@@ -30,7 +31,7 @@ namespace Inventario
 
         //Autor: Cristhiam Duarte
         //Fecha: 29/10/15
-        #region Inserta Reporte
+        #region Inserta Datos de Frm_Edicion 
         public void Insert_Inventario(E_Inventario pInventario)
         {
 
@@ -45,7 +46,9 @@ namespace Inventario
         }
         #endregion
 
-        #region Inserta Reporte
+        //Autor: Ricardo Von-Raynts
+        //Fecha: 29/10/15
+        #region Inserta Datos de Frm_MateriaPrima
         public void Insert_Materia(E_Inventario pInventario)
         {
             if (MessageBox.Show("Esta Seguro que desea ingresar el producto", "Estas Seguro??", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -74,7 +77,7 @@ namespace Inventario
 
         //Autor: Cristhiam Duarte
         //Fecha: 29/10/15
-        #region Actualiza Reporte
+        #region Actualiza Datos del Frm_Edicion
         public void Actualiza_Inventario(E_Inventario pActualiza)
         {
             if (MessageBox.Show("Esta Seguro que desea Realizar la operacion", "Estas Seguro??", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

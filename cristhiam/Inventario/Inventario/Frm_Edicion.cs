@@ -11,6 +11,9 @@ using System.Windows.Forms;
 
 namespace Inventario
 {
+    //Autor: Cristhiam Duarte
+    //Fecha: 31/10/15
+    #region inicia clase variables
     public partial class Frm_Edicion : Form
     {
         string producto;
@@ -20,6 +23,11 @@ namespace Inventario
         int id;
         int operacion;
         string cantIE;
+    #endregion
+
+        //Autor: Cristhiam Duarte
+        //Fecha: 31/10/15
+        #region Toma de Variables Frm_InvPrincipal
         public Frm_Edicion(string Iid, string Iproducto, string Icantidad, string Idescripcion)
         {
             InitializeComponent();
@@ -28,7 +36,11 @@ namespace Inventario
             descripcion = Idescripcion;
             id = Convert.ToInt32(Iid);
         }
+        #endregion
 
+        //Autor: Cristhiam Duarte
+        //Fecha: 31/10/15
+        #region LLenado de variables Load y Cbox
         private void Form1_Load(object sender, EventArgs e)
         {
             Cbox_tipo.Items.Add("Ingreso");
@@ -38,21 +50,19 @@ namespace Inventario
             Txt_Descripcion.Text = descripcion;
             
         }
+        #endregion
 
+        //Autor: Cristhiam Duarte
+        //Fecha: 31/10/15
+        #region Boton de Ingreso
         private void Btn_ingreso_Click(object sender, EventArgs e)
         {
-            if (Txt_Egresoingreso.Text == "")
-            {
-                MessageBox.Show("Complete los Campos requeridos");
-            }
-            else
-            {
+            if (Txt_Egresoingreso.Text == ""){MessageBox.Show("Complete los Campos requeridos");
+            }else{
                 if (Cbox_tipo.Text == "Ingreso")
                 {
                     operacion = Convert.ToInt32(Txt_Cantidad.Text) + Convert.ToInt32(Txt_Egresoingreso.Text);
-                }
-                else
-                {
+                }else{
                     operacion = Convert.ToInt32(Txt_Cantidad.Text) - Convert.ToInt32(Txt_Egresoingreso.Text);
                 }
                 cantIE = Txt_Egresoingreso.Text;
@@ -69,11 +79,13 @@ namespace Inventario
                 pActualiza.cantidad = Convert.ToString(operacion);
                 pActualiza.descripcion = Txt_Descripcion.Text;
                 new N_Inventario().Actualiza_Inventario(pActualiza); //envia las variables a capa para ingreso
-            }
-            this.Close();
+            }this.Close();
         }
+        #endregion
 
-
+        //Autor: Cristhiam Duarte
+        //Fecha: 31/10/15
+        #region Cierra Form y carga anterior
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -81,6 +93,6 @@ namespace Inventario
             form.MdiParent = Mdi_Form.ActiveForm;
             form.Show();
         }
-
+        #endregion
     }
 }

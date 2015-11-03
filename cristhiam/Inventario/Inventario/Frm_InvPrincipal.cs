@@ -10,8 +10,8 @@ using System.Windows.Forms;
 using ConexionODBC;
 using System.Data.Odbc;
 
-namespace Inventario
-{
+namespace Inventario{
+    #region inicia clase y variables
     public partial class Frm_InvPrincipal : Form
     {
         string producto;
@@ -22,7 +22,11 @@ namespace Inventario
         {
             InitializeComponent();
         }
+    #endregion
 
+        //Autor: David Barrios
+        //Fecha: 27/10/15
+        #region Selecciona datos del Grid
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             id = producto = DGV_Inventario[0, DGV_Inventario.CurrentCell.RowIndex].Value.ToString();
@@ -30,12 +34,13 @@ namespace Inventario
             cantidad = DGV_Inventario[2, DGV_Inventario.CurrentCell.RowIndex].Value.ToString();
             descripcion = DGV_Inventario[3, DGV_Inventario.CurrentCell.RowIndex].Value.ToString();
             Frm_Edicion form = new Frm_Edicion(id, producto, cantidad, descripcion);
-
             form.Show();
             this.Close();
-
         }
+        #endregion
 
+        //Autor: David Barrios
+        //Fecha: 27/10/15
         #region Funcion CargaGrid
         private void Fnc_CargaGrid()
         {
@@ -56,13 +61,19 @@ namespace Inventario
         }
         #endregion
 
-
+        //Autor: David Barrios
+        //Fecha: 27/10/15
+        #region load form
         public void Frm_InvPrincipal_Load(object sender, EventArgs e)
         {
             Fnc_CargaGrid();
         }
+        #endregion
 
-                //Variables de ODBC
+        //Autor: David Barrios
+        //Fecha: 27/10/15
+        #region Text Buscar
+        //Variables de ODBC
         private static OdbcCommand mySqlComando;
         private static OdbcDataAdapter mySqlDAdAdaptador;
         private void Txt_Buscar_TextChanged(object sender, EventArgs e)
@@ -75,10 +86,15 @@ namespace Inventario
             this.DGV_Inventario.DataSource = dtGrid; //Envia los valores al Grid
             CAD.ObtenerConexion().Close();//Termina la conexion
         }
+        #endregion
 
+        //Autor: David Barrios
+        //Fecha: 27/10/15
+        #region Boton cerrar
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        #endregion
     }
 }
