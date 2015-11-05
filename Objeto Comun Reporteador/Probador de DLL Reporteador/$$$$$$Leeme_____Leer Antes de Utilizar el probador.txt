@@ -1,0 +1,6 @@
+El probador del Reporteador tiene la X para cerrar el programa en la esquina superior Derecha
+
+al LLamar a la Dll no tendra boton de salir, ya que en el caso del objeto comun se utilizara el Objeto comun de la barra
+para cerrar este mismo, caso contrario se hara una actulizacion
+
+por el momento se ira a la barra de inicio de windows, click derecho sobre la aplicacion y cerrar
