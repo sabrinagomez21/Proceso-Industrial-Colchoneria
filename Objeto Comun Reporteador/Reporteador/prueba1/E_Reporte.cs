@@ -13,10 +13,11 @@ namespace prueba1
         //Autor: Cristhiam Duarte
         //Fecha: 29/10/15
         #region Atributos y Encapsulamiento
-        public string id { get; set; }
-        public string nom_reporte { get; set; }
-        public string usuario { get; set; }
-        public string fecha_hora { get; set; }
+        public string vnomreporte { get; set; }
+        public string dfechareporte { get; set; }
+        public int ncodaplicacion { get; set; }
+        public int ncodmodulo { get; set; }
+        public int ncodusuario { get; set; }
 
         #endregion
 

@@ -22,12 +22,15 @@ namespace prueba1{
     {
         //Variables
         string sNombreReporteGrid;
-        public string SUsuario;
-        string SFecha_Hora;
         string filter;
         string title;
         string tiporeporte;
-        string Nreporte;
+        string usuario;
+        string vnomreporte;
+        string dfechareporte;
+        int ncodaplicacion;
+        int ncodmodulo;
+        public int ncodusuario;
 
         #endregion
 
@@ -35,12 +38,15 @@ namespace prueba1{
         //Fecha: 30/10/15
         #region Cambio DLL a NO DLL
         //public Frm_Reporte()
-        //public Frm_Reporte(string reporte, string usuario)
+        //public Frm_Reporte(string reporte, int aplicacion, int modulo, int usuario)
         public Frm_Reporte()
         {
             InitializeComponent();
-            //Nreporte = reporte;
-            //SUsuario = usuario;
+            //vnomreporte = reporte;
+            //ncodaplicacion = aplicacion;
+            //ncodmodulo = modulo;
+            //ncodusuario = usuario;
+            
         }
         #endregion 
 
@@ -50,15 +56,18 @@ namespace prueba1{
         public void Form1_Load(object sender, EventArgs e)
         {
             //Variables para uso de proyecto no DLL
-            Nreporte = "productos";
-            SUsuario = "Administrador";
+            vnomreporte = "productos";
+            ncodaplicacion = 1;
+            ncodmodulo = 1;
+            ncodusuario = 1;
             //Condicion para mostrar boton de Administrar Reportes
-            if(SUsuario=="Administrador"){
+            if(ncodusuario == 1){
                 Btn_AReporte.Visible = true;
                 Lbl_Admin.Visible = true;
             }else{Btn_AReporte.Visible = false;}
-            SFecha_Hora = DateTime.Now.ToString("G"); //Fecha y hora en ToolStrip
-            toolStripStatusLabel1.Text = "Usuario: "+SUsuario; //Usuario en ToolStrip
+            Fnc_CargaUsuario();
+            dfechareporte = DateTime.Now.ToString("G"); //Fecha y hora en ToolStrip
+            toolStripStatusLabel1.Text = "Usuario: "+usuario; //Usuario en ToolStrip
             Fnc_CargaGrid(); //llamada de datos Grid
         }
         #endregion
@@ -73,8 +82,7 @@ namespace prueba1{
                 Gv_Reporte.DataSource = new N_Reporte().GetAll(); //llamada a cargar grid
                 //Headers de la Columnas
                 Gv_Reporte.Columns[0].HeaderText = "Reporte";
-                Gv_Reporte.Columns[1].HeaderText = "Usuario";
-                Gv_Reporte.Columns[2].HeaderText = "Fecha de Creacion";
+                Gv_Reporte.Columns[1].HeaderText = "Fecha de Creacion";
                 Gv_Reporte.Refresh();
             }
             catch (Exception Ex)
@@ -83,6 +91,31 @@ namespace prueba1{
             }
         }
         #endregion
+
+
+        //Autor: Cristhiam Duarte
+        //Fecha:1/11/15
+        #region Consulta Usuario
+        private void Fnc_CargaUsuario()
+        {
+            try { 
+            DataTable dtUsuario = new DataTable(); //Tabla de Datos
+            //Query
+            mySqlComando = new OdbcCommand(string.Format("SELECT vusuario FROM MaUsuario where ncodusuario = " + ncodusuario + ""), CAD.ObtenerConexion());
+            mySqlDAdAdaptador = new OdbcDataAdapter();
+            mySqlDAdAdaptador.SelectCommand = mySqlComando;
+            object objeto = mySqlComando.ExecuteScalar();
+            usuario = Convert.ToString(objeto);
+            CAD.ObtenerConexion().Close(); //Termina Conexion
+            }
+            catch (Exception Ex)
+            {
+                //Muestra Error si el Reporte no Existe Fisicamente
+                MessageBox.Show("Error al Referir Usuario", "Error al Realizar la Consulta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+        #endregion
+
 
         //Autor: Dennys Choy
         //Fecha: 20/10/15
@@ -202,7 +235,7 @@ namespace prueba1{
         #region Llamada a Formulario Administrador de Reportes
         private void Btn_AReporte_Click(object sender, EventArgs e)
         {   //LLamada a Formulario Administrador de Reportes
-            Frm_AdminReporte FrmAdmin = new Frm_AdminReporte(SUsuario);
+            Frm_AdminReporte FrmAdmin = new Frm_AdminReporte(usuario, ncodaplicacion,ncodmodulo,ncodusuario);
             FrmAdmin.Show();
         }
         #endregion

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-11-2015 a las 03:16:11
+-- Tiempo de generación: 05-11-2015 a las 05:30:52
 -- Versión del servidor: 5.6.26-log
 -- Versión de PHP: 5.6.12
 
@@ -51,6 +51,69 @@ INSERT INTO `clientes` (`cod_cliente`, `nombre`, `apellido`, `direccion`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `dt_inventario`
+--
+
+CREATE TABLE IF NOT EXISTS `dt_inventario` (
+  `id` int(11) NOT NULL,
+  `orden` char(20) NOT NULL,
+  `producto` char(20) NOT NULL,
+  `cantidad` char(20) NOT NULL,
+  `tipo` char(20) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `inventario`
+--
+
+CREATE TABLE IF NOT EXISTS `inventario` (
+  `producto` char(40) NOT NULL,
+  `cantidad` varchar(45) NOT NULL,
+  `Descripcion` varchar(45) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `inventario`
+--
+
+INSERT INTO `inventario` (`producto`, `cantidad`, `Descripcion`) VALUES
+('algodon', '110', 'Algodon para colchon'),
+('Esponja', '140', 'Esponja para cama'),
+('esponja espacial', '300', 'esponja con memoria'),
+('Nylon', '100', 'Recubrimiento de Camas'),
+('Resortes', '400', 'Resortes para Camas'),
+('Tablas', '200', 'Madera para madera'),
+('Tela', '100', 'Tela cobertora');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `mausuario`
+--
+
+CREATE TABLE IF NOT EXISTS `mausuario` (
+  `ncodusuario` int(11) NOT NULL,
+  `vnombreusuario` varchar(30) DEFAULT NULL,
+  `vapellidousuario` varchar(30) DEFAULT NULL,
+  `vemailusuario` varchar(45) DEFAULT NULL,
+  `vusuario` varchar(25) NOT NULL,
+  `vpassword` varchar(200) NOT NULL,
+  `ncodgrafica` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `mausuario`
+--
+
+INSERT INTO `mausuario` (`ncodusuario`, `vnombreusuario`, `vapellidousuario`, `vemailusuario`, `vusuario`, `vpassword`, `ncodgrafica`) VALUES
+(1, 'cristhiam', 'duarte', '@hotmail.com', 'criss', '12345', 1),
+(2, 'josue', 'duarte', '@gmail.com', 'josdua', '12345', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `productos`
 --
 
@@ -72,23 +135,25 @@ INSERT INTO `productos` (`cod_producto`, `nombre`, `descripcion`, `cantidad`) VA
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `reportes`
+-- Estructura de tabla para la tabla `trreporte`
 --
 
-CREATE TABLE IF NOT EXISTS `reportes` (
-  `nom_reporte` varchar(100) NOT NULL,
-  `usuario` varchar(45) NOT NULL,
-  `fecha_hora` varchar(45) DEFAULT NULL
+CREATE TABLE IF NOT EXISTS `trreporte` (
+  `vnomreporte` varchar(100) NOT NULL,
+  `dfechareporte` varchar(45) DEFAULT NULL,
+  `ncodaplicacion` int(100) NOT NULL,
+  `ncodmodulo` int(11) NOT NULL,
+  `ncodusuario` int(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `reportes`
+-- Volcado de datos para la tabla `trreporte`
 --
 
-INSERT INTO `reportes` (`nom_reporte`, `usuario`, `fecha_hora`) VALUES
-('clientes', 'criss', '01/11/2015 9:23:52'),
-('productos', 'criss', '01/11/2015 9:24:20'),
-('Reporte No Existe', 'Administrador', '01/11/2015 10:28:03');
+INSERT INTO `trreporte` (`vnomreporte`, `dfechareporte`, `ncodaplicacion`, `ncodmodulo`, `ncodusuario`) VALUES
+('clientes', '04/11/2015 21:33:18', 1, 1, 1),
+('productos', '04/11/2015 21:32:58', 1, 1, 1),
+('prueba', '04/11/2015 21:33:27', 1, 1, 1);
 
 --
 -- Índices para tablas volcadas
@@ -101,16 +166,34 @@ ALTER TABLE `clientes`
   ADD PRIMARY KEY (`cod_cliente`);
 
 --
+-- Indices de la tabla `dt_inventario`
+--
+ALTER TABLE `dt_inventario`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `inventario`
+--
+ALTER TABLE `inventario`
+  ADD PRIMARY KEY (`producto`);
+
+--
+-- Indices de la tabla `mausuario`
+--
+ALTER TABLE `mausuario`
+  ADD PRIMARY KEY (`ncodusuario`);
+
+--
 -- Indices de la tabla `productos`
 --
 ALTER TABLE `productos`
   ADD PRIMARY KEY (`cod_producto`);
 
 --
--- Indices de la tabla `reportes`
+-- Indices de la tabla `trreporte`
 --
-ALTER TABLE `reportes`
-  ADD PRIMARY KEY (`nom_reporte`);
+ALTER TABLE `trreporte`
+  ADD PRIMARY KEY (`vnomreporte`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -121,6 +204,16 @@ ALTER TABLE `reportes`
 --
 ALTER TABLE `clientes`
   MODIFY `cod_cliente` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT de la tabla `dt_inventario`
+--
+ALTER TABLE `dt_inventario`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+--
+-- AUTO_INCREMENT de la tabla `mausuario`
+--
+ALTER TABLE `mausuario`
+  MODIFY `ncodusuario` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
