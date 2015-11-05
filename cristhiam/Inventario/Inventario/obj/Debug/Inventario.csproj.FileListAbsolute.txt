@@ -1,0 +1,26 @@
+c:\users\cristhiam\documents\visual studio 2013\Projects\Inventario\Inventario\bin\Debug\Inventario.exe.config
+c:\users\cristhiam\documents\visual studio 2013\Projects\Inventario\Inventario\bin\Debug\Inventario.exe
+c:\users\cristhiam\documents\visual studio 2013\Projects\Inventario\Inventario\bin\Debug\Inventario.pdb
+c:\users\cristhiam\documents\visual studio 2013\Projects\Inventario\Inventario\obj\Debug\Inventario.csprojResolveAssemblyReference.cache
+c:\users\cristhiam\documents\visual studio 2013\Projects\Inventario\Inventario\obj\Debug\Inventario.Frm_InvPrincipal.resources
+c:\users\cristhiam\documents\visual studio 2013\Projects\Inventario\Inventario\obj\Debug\Inventario.Properties.Resources.resources
+c:\users\cristhiam\documents\visual studio 2013\Projects\Inventario\Inventario\obj\Debug\Inventario.csproj.GenerateResource.Cache
+c:\users\cristhiam\documents\visual studio 2013\Projects\Inventario\Inventario\obj\Debug\Inventario.exe
+c:\users\cristhiam\documents\visual studio 2013\Projects\Inventario\Inventario\obj\Debug\Inventario.pdb
+c:\users\cristhiam\documents\visual studio 2013\Projects\Inventario\Inventario\bin\Debug\dll_conexion.dll
+C:\Users\Cristhiam\documents\visual studio 2013\Projects\Inventario\Inventario\obj\Debug\Inventario.Mdi_Form.resources
+C:\Users\Cristhiam\documents\visual studio 2013\Projects\Inventario\Inventario\obj\Debug\Inventario.Frm_Edicion.resources
+C:\Users\Cristhiam\documents\visual studio 2013\Projects\Inventario\Inventario\obj\Debug\Inventario.Frm_MateriaPrima.resources
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\bin\Debug\Inventario.exe.config
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.exe
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.pdb
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\bin\Debug\Inventario.exe
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\bin\Debug\Inventario.pdb
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.csprojResolveAssemblyReference.cache
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.Frm_Edicion.resources
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.Frm_InvPrincipal.resources
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.Frm_MateriaPrima.resources
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.Mdi_Form.resources
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.Properties.Resources.resources
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.csproj.GenerateResource.Cache
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\bin\Debug\ConexionODBC.dll
