@@ -27,6 +27,8 @@ C:\Users\DylanIsaac\Desktop\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasP
 C:\Users\DylanIsaac\Desktop\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.csproj.GenerateResource.Cache
 C:\Users\DylanIsaac\Desktop\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\ConexionODBC.dll
 C:\Users\DylanIsaac\Desktop\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\Navegador.dll
+<<<<<<< HEAD
+=======
 C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.csprojResolveAssemblyReference.cache
 C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.frmConsultaCxC.resources
 C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.frmPrincipalCxC.resources
@@ -37,3 +39,4 @@ C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\
 C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\CuentasPorCobrar.pdb
 C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\ConexionODBC.dll
 C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\Navegador.dll
+>>>>>>> Josue
