@@ -7,8 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
+=======
 using Navegador;
 
+>>>>>>> Josue
 
 namespace CuentasPorCobrar
 {
@@ -21,6 +24,8 @@ namespace CuentasPorCobrar
 
         private void frmPrincipalCxC_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+=======
             funActualizarGrid();
             funActualizarCombo();
             funAgregarCheckBox();
@@ -33,6 +38,7 @@ namespace CuentasPorCobrar
 
         private void funAgregarCheckBox()
         {
+>>>>>>> Josue
             // Create new Checkbox Column
             DataGridViewCheckBoxColumn myCheckedColumn = new DataGridViewCheckBoxColumn()
             {
@@ -44,6 +50,8 @@ namespace CuentasPorCobrar
             // add the new column to your dataGridView 
             grdDocumentos.Columns.Add(myCheckedColumn);
         }
+<<<<<<< HEAD
+=======
 
         private void funActualizarGrid()
         {
@@ -59,6 +67,7 @@ namespace CuentasPorCobrar
             cnegocio.funconsultarRegistrosCombo("ncodtipotransaccion", "SELECT ncodtipotransaccion,vnombredocumento from matipotransaccion", "vnombredocumento", cmbTransaccion);
         }
         
+>>>>>>> Josue
         private void consultaRecibosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmConsultaCxC ver = new frmConsultaCxC();
@@ -71,6 +80,8 @@ namespace CuentasPorCobrar
             MantenimientoTransaccion ver = new MantenimientoTransaccion();
             ver.Show();
         }
+<<<<<<< HEAD
+=======
 
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
@@ -151,5 +162,6 @@ namespace CuentasPorCobrar
         {
 
         }
+>>>>>>> Josue
     }
 }
