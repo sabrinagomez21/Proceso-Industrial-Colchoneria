@@ -35,23 +35,10 @@
             this.txtNombreTr = new System.Windows.Forms.TextBox();
             this.cmbOperacionTr = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnImprimir = new System.Windows.Forms.Button();
-            this.btnRefrescar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-=======
->>>>>>> Josue
             this.btnIrUltimo = new System.Windows.Forms.Button();
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.btnAnterior = new System.Windows.Forms.Button();
             this.btnIrPrimero = new System.Windows.Forms.Button();
-<<<<<<< HEAD
-=======
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnRefrescar = new System.Windows.Forms.Button();
@@ -60,7 +47,6 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
->>>>>>> Josue
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtOperacionTr = new System.Windows.Forms.TextBox();
@@ -128,51 +114,6 @@
             this.panel1.Size = new System.Drawing.Size(680, 55);
             this.panel1.TabIndex = 4;
             // 
-<<<<<<< HEAD
-            // btnNuevo
-            // 
-            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.Location = new System.Drawing.Point(15, 4);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(48, 42);
-            this.btnNuevo.TabIndex = 5;
-            this.toolTip1.SetToolTip(this.btnNuevo, "Nuevo");
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.Location = new System.Drawing.Point(69, 4);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(48, 42);
-            this.btnEditar.TabIndex = 6;
-            this.toolTip1.SetToolTip(this.btnEditar, "Editar");
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.Location = new System.Drawing.Point(177, 4);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(48, 42);
-            this.btnGuardar.TabIndex = 8;
-            this.toolTip1.SetToolTip(this.btnGuardar, "Guardar");
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(123, 4);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(48, 42);
-            this.btnEliminar.TabIndex = 7;
-            this.toolTip1.SetToolTip(this.btnEliminar, "Eliminar");
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-=======
             // btnIrUltimo
             // 
             this.btnIrUltimo.Image = ((System.Drawing.Image)(resources.GetObject("btnIrUltimo.Image")));
@@ -212,7 +153,6 @@
             this.btnIrPrimero.TabIndex = 13;
             this.toolTip1.SetToolTip(this.btnIrPrimero, "Primero");
             this.btnIrPrimero.UseVisualStyleBackColor = true;
->>>>>>> Josue
             // 
             // btnBuscar
             // 
@@ -254,47 +194,6 @@
             this.toolTip1.SetToolTip(this.btnCancelar, "Cancelar");
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-<<<<<<< HEAD
-            // btnIrUltimo
-            // 
-            this.btnIrUltimo.Image = ((System.Drawing.Image)(resources.GetObject("btnIrUltimo.Image")));
-            this.btnIrUltimo.Location = new System.Drawing.Point(609, 4);
-            this.btnIrUltimo.Name = "btnIrUltimo";
-            this.btnIrUltimo.Size = new System.Drawing.Size(48, 42);
-            this.btnIrUltimo.TabIndex = 16;
-            this.toolTip1.SetToolTip(this.btnIrUltimo, "Ultimo");
-            this.btnIrUltimo.UseVisualStyleBackColor = true;
-            // 
-            // btnSiguiente
-            // 
-            this.btnSiguiente.Image = ((System.Drawing.Image)(resources.GetObject("btnSiguiente.Image")));
-            this.btnSiguiente.Location = new System.Drawing.Point(555, 4);
-            this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(48, 42);
-            this.btnSiguiente.TabIndex = 15;
-            this.toolTip1.SetToolTip(this.btnSiguiente, "Siguiente");
-            this.btnSiguiente.UseVisualStyleBackColor = true;
-            // 
-            // btnAnterior
-            // 
-            this.btnAnterior.Image = ((System.Drawing.Image)(resources.GetObject("btnAnterior.Image")));
-            this.btnAnterior.Location = new System.Drawing.Point(501, 4);
-            this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(48, 42);
-            this.btnAnterior.TabIndex = 14;
-            this.toolTip1.SetToolTip(this.btnAnterior, "Anterior");
-            this.btnAnterior.UseVisualStyleBackColor = true;
-            // 
-            // btnIrPrimero
-            // 
-            this.btnIrPrimero.Image = ((System.Drawing.Image)(resources.GetObject("btnIrPrimero.Image")));
-            this.btnIrPrimero.Location = new System.Drawing.Point(447, 4);
-            this.btnIrPrimero.Name = "btnIrPrimero";
-            this.btnIrPrimero.Size = new System.Drawing.Size(48, 42);
-            this.btnIrPrimero.TabIndex = 13;
-            this.toolTip1.SetToolTip(this.btnIrPrimero, "Primero");
-            this.btnIrPrimero.UseVisualStyleBackColor = true;
-=======
             // btnGuardar
             // 
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
@@ -338,7 +237,6 @@
             this.toolTip1.SetToolTip(this.btnNuevo, "Nuevo");
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
->>>>>>> Josue
             // 
             // dataGridView1
             // 

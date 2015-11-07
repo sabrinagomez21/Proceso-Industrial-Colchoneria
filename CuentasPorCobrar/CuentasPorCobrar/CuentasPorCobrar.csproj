@@ -33,17 +33,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ConexionODBC">
-<<<<<<< HEAD
-      <HintPath>..\..\8vo Ciclo\Diseño de Sistemas\ESTANDARIZACION\Objeto Común Navegador\ConexionODBC.dll</HintPath>
-    </Reference>
-    <Reference Include="Navegador">
-      <HintPath>..\..\8vo Ciclo\Diseño de Sistemas\ESTANDARIZACION\Objeto Común Navegador\Navegador.dll</HintPath>
-=======
       <HintPath>obj\ConexionODBC.dll</HintPath>
     </Reference>
     <Reference Include="Navegador">
       <HintPath>obj\Navegador.dll</HintPath>
->>>>>>> Josue
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -57,12 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Include="CAD.cs" />
-    <Compile Include="D_CxC.cs" />
-    <Compile Include="E_CxC.cs" />
-=======
->>>>>>> Josue
     <Compile Include="frmConsultaCxC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,10 +68,6 @@
     <Compile Include="MantenimientoTransaccion.Designer.cs">
       <DependentUpon>MantenimientoTransaccion.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <Compile Include="N_CxC.cs" />
-=======
->>>>>>> Josue
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmConsultaCxC.resx">
@@ -98,31 +81,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-<<<<<<< HEAD
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-=======
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
->>>>>>> Josue
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-<<<<<<< HEAD
-=======
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
->>>>>>> Josue
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -132,15 +102,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-<<<<<<< HEAD
-=======
   <ItemGroup>
     <Folder Include="obj\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\1446925477_checkout.png" />
   </ItemGroup>
->>>>>>> Josue
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
