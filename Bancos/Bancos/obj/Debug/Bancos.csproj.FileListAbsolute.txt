@@ -25,3 +25,9 @@ C:\Users\Diego\Documents\1universidad\octavo\diseno\2do proyecto\Proceso-Industr
 C:\Users\Diego\Desktop\Bancos\Bancos\bin\Debug\Bancos.exe.config
 C:\Users\Diego\Desktop\Bancos\Bancos\obj\Debug\Bancos.exe
 C:\Users\Diego\Desktop\Bancos\Bancos\obj\Debug\Bancos.pdb
+C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\bin\Debug\ConexionODBC.dll
+C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\bin\Debug\Navegador.dll
+C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.CreacionBancos.resources
+C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.frmBancos.resources
+C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.frmHistorialCuenta.resources
+C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.frmPagos.resources

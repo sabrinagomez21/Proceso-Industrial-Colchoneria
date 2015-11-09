@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Navegador;
 
 namespace Bancos
 {
@@ -15,6 +16,14 @@ namespace Bancos
         public frmConciliacion()
         {
             InitializeComponent();
+            DateTime fecha = DateTime.Today;
+            lblfeha.Text = fecha.Year.ToString() + "/" + fecha.Month.ToString() + "/" + fecha.Day.ToString();
+            funBuscarCuentas();
+        }
+        private void funBuscarCuentas()
+        {
+            clasnegocio cnegocio = new clasnegocio();
+            cnegocio.funconsultarRegistrosCombo("ncodcuenta", "SELECT ncodcuenta from macuenta ", "ncodcuenta", cmbCuenta);
         }
 
         private void grbConciliacion_Enter(object sender, EventArgs e)
@@ -30,6 +39,37 @@ namespace Bancos
         private void lblTotal_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtCuenta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            clasnegocio cnegocio = new clasnegocio();
+            cnegocio.funactivarDesactivarTextbox(txtEncargado, true);
+            cnegocio.funactivarDesactivarCombobox(cmbCuenta, true);
+            cnegocio.funactivarDesactivarCombobox(cmbMes, true);
+
+        }
+
+        private void pnlInformacion_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnGenerar_Click(object sender, EventArgs e)
+        {
+            txtcuenta.Text = cmbCuenta.SelectedItem.ToString();
+            txtFecha.Text = lblfeha.Text;
+            System.Console.Write(txtFecha.Text+" -- "+ lblfeha.Text +"--->"+cmbCuenta.SelectedItem.ToString()+"<----");
+            TextBox[] datos = { txtFecha, txtEncargado, txtEstado, txtcuenta };
+            string tabla = "maencabezadoconciliacion";
+            Boolean permiso = true;
+            clasnegocio cn = new clasnegocio(); 
+            cn.AsignarObjetos(tabla, permiso, datos);
         }
     }
 }

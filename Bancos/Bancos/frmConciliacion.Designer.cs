@@ -30,15 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConciliacion));
             this.pnlInformacion = new System.Windows.Forms.Panel();
-            this.btnGenerar = new System.Windows.Forms.Button();
-            this.lblConciliacion = new System.Windows.Forms.Label();
+            this.lblMes = new System.Windows.Forms.Label();
             this.lblEncargado = new System.Windows.Forms.Label();
             this.txtEncargado = new System.Windows.Forms.TextBox();
-            this.cmbBanco = new System.Windows.Forms.ComboBox();
             this.lblFecha = new System.Windows.Forms.Label();
-            this.lblBanco = new System.Windows.Forms.Label();
-            this.txtConciliacion = new System.Windows.Forms.TextBox();
-            this.txtCuenta = new System.Windows.Forms.TextBox();
             this.lblCuenta = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Verificacion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -62,6 +57,13 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.cmbMes = new System.Windows.Forms.ComboBox();
+            this.lblfeha = new System.Windows.Forms.Label();
+            this.btnGenerar = new System.Windows.Forms.Button();
+            this.txtFecha = new System.Windows.Forms.TextBox();
+            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.cmbCuenta = new System.Windows.Forms.ComboBox();
+            this.txtcuenta = new System.Windows.Forms.TextBox();
             this.pnlInformacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -70,38 +72,32 @@
             // pnlInformacion
             // 
             this.pnlInformacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlInformacion.Controls.Add(this.txtcuenta);
+            this.pnlInformacion.Controls.Add(this.cmbCuenta);
+            this.pnlInformacion.Controls.Add(this.txtEstado);
+            this.pnlInformacion.Controls.Add(this.txtFecha);
+            this.pnlInformacion.Controls.Add(this.lblfeha);
+            this.pnlInformacion.Controls.Add(this.cmbMes);
             this.pnlInformacion.Controls.Add(this.btnGenerar);
-            this.pnlInformacion.Controls.Add(this.lblConciliacion);
+            this.pnlInformacion.Controls.Add(this.lblMes);
             this.pnlInformacion.Controls.Add(this.lblEncargado);
             this.pnlInformacion.Controls.Add(this.txtEncargado);
-            this.pnlInformacion.Controls.Add(this.cmbBanco);
             this.pnlInformacion.Controls.Add(this.lblFecha);
-            this.pnlInformacion.Controls.Add(this.lblBanco);
-            this.pnlInformacion.Controls.Add(this.txtConciliacion);
-            this.pnlInformacion.Controls.Add(this.txtCuenta);
             this.pnlInformacion.Controls.Add(this.lblCuenta);
             this.pnlInformacion.Location = new System.Drawing.Point(57, 65);
             this.pnlInformacion.Name = "pnlInformacion";
             this.pnlInformacion.Size = new System.Drawing.Size(847, 100);
             this.pnlInformacion.TabIndex = 12;
+            this.pnlInformacion.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlInformacion_Paint);
             // 
-            // btnGenerar
+            // lblMes
             // 
-            this.btnGenerar.Location = new System.Drawing.Point(650, 58);
-            this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(97, 26);
-            this.btnGenerar.TabIndex = 22;
-            this.btnGenerar.Text = "Generar";
-            this.btnGenerar.UseVisualStyleBackColor = true;
-            // 
-            // lblConciliacion
-            // 
-            this.lblConciliacion.AutoSize = true;
-            this.lblConciliacion.Location = new System.Drawing.Point(429, 27);
-            this.lblConciliacion.Name = "lblConciliacion";
-            this.lblConciliacion.Size = new System.Drawing.Size(90, 13);
-            this.lblConciliacion.TabIndex = 14;
-            this.lblConciliacion.Text = "No. Conciliacion: ";
+            this.lblMes.AutoSize = true;
+            this.lblMes.Location = new System.Drawing.Point(429, 27);
+            this.lblMes.Name = "lblMes";
+            this.lblMes.Size = new System.Drawing.Size(33, 13);
+            this.lblMes.TabIndex = 14;
+            this.lblMes.Text = "Mes: ";
             // 
             // lblEncargado
             // 
@@ -114,50 +110,21 @@
             // 
             // txtEncargado
             // 
+            this.txtEncargado.Enabled = false;
             this.txtEncargado.Location = new System.Drawing.Point(149, 24);
             this.txtEncargado.Name = "txtEncargado";
             this.txtEncargado.Size = new System.Drawing.Size(257, 20);
             this.txtEncargado.TabIndex = 12;
-            // 
-            // cmbBanco
-            // 
-            this.cmbBanco.FormattingEnabled = true;
-            this.cmbBanco.Location = new System.Drawing.Point(382, 55);
-            this.cmbBanco.Name = "cmbBanco";
-            this.cmbBanco.Size = new System.Drawing.Size(187, 21);
-            this.cmbBanco.TabIndex = 19;
+            this.txtEncargado.Tag = "encargado";
             // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(672, 27);
+            this.lblFecha.Location = new System.Drawing.Point(647, 27);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(43, 13);
             this.lblFecha.TabIndex = 13;
             this.lblFecha.Text = "Fecha: ";
-            // 
-            // lblBanco
-            // 
-            this.lblBanco.AutoSize = true;
-            this.lblBanco.Location = new System.Drawing.Point(329, 58);
-            this.lblBanco.Name = "lblBanco";
-            this.lblBanco.Size = new System.Drawing.Size(41, 13);
-            this.lblBanco.TabIndex = 18;
-            this.lblBanco.Text = "Banco:";
-            // 
-            // txtConciliacion
-            // 
-            this.txtConciliacion.Location = new System.Drawing.Point(520, 24);
-            this.txtConciliacion.Name = "txtConciliacion";
-            this.txtConciliacion.Size = new System.Drawing.Size(126, 20);
-            this.txtConciliacion.TabIndex = 15;
-            // 
-            // txtCuenta
-            // 
-            this.txtCuenta.Location = new System.Drawing.Point(149, 55);
-            this.txtCuenta.Name = "txtCuenta";
-            this.txtCuenta.Size = new System.Drawing.Size(163, 20);
-            this.txtCuenta.TabIndex = 17;
             // 
             // lblCuenta
             // 
@@ -375,6 +342,84 @@
             this.btnNuevo.Size = new System.Drawing.Size(48, 42);
             this.btnNuevo.TabIndex = 5;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // cmbMes
+            // 
+            this.cmbMes.Enabled = false;
+            this.cmbMes.FormattingEnabled = true;
+            this.cmbMes.Items.AddRange(new object[] {
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"});
+            this.cmbMes.Location = new System.Drawing.Point(468, 24);
+            this.cmbMes.Name = "cmbMes";
+            this.cmbMes.Size = new System.Drawing.Size(131, 21);
+            this.cmbMes.TabIndex = 23;
+            // 
+            // lblfeha
+            // 
+            this.lblfeha.AutoSize = true;
+            this.lblfeha.Location = new System.Drawing.Point(705, 27);
+            this.lblfeha.Name = "lblfeha";
+            this.lblfeha.Size = new System.Drawing.Size(0, 13);
+            this.lblfeha.TabIndex = 24;
+            // 
+            // btnGenerar
+            // 
+            this.btnGenerar.Location = new System.Drawing.Point(468, 51);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(131, 26);
+            this.btnGenerar.TabIndex = 22;
+            this.btnGenerar.Text = "Generar";
+            this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.Location = new System.Drawing.Point(776, 24);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(24, 20);
+            this.txtFecha.TabIndex = 25;
+            this.txtFecha.Tag = "dfecha";
+            this.txtFecha.Visible = false;
+            // 
+            // txtEstado
+            // 
+            this.txtEstado.Location = new System.Drawing.Point(776, 62);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(24, 20);
+            this.txtEstado.TabIndex = 26;
+            this.txtEstado.Tag = "cestado";
+            this.txtEstado.Text = "activo";
+            this.txtEstado.Visible = false;
+            // 
+            // cmbCuenta
+            // 
+            this.cmbCuenta.Enabled = false;
+            this.cmbCuenta.FormattingEnabled = true;
+            this.cmbCuenta.Location = new System.Drawing.Point(149, 55);
+            this.cmbCuenta.Name = "cmbCuenta";
+            this.cmbCuenta.Size = new System.Drawing.Size(257, 21);
+            this.cmbCuenta.TabIndex = 27;
+            // 
+            // txtcuenta
+            // 
+            this.txtcuenta.Location = new System.Drawing.Point(422, 57);
+            this.txtcuenta.Name = "txtcuenta";
+            this.txtcuenta.Size = new System.Drawing.Size(19, 20);
+            this.txtcuenta.TabIndex = 28;
+            this.txtcuenta.Tag = "ncodcuenta";
+            this.txtcuenta.Visible = false;
             // 
             // frmConciliacion
             // 
@@ -401,17 +446,12 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlInformacion;
-        private System.Windows.Forms.Label lblConciliacion;
+        private System.Windows.Forms.Label lblMes;
         private System.Windows.Forms.Label lblEncargado;
         private System.Windows.Forms.TextBox txtEncargado;
-        private System.Windows.Forms.ComboBox cmbBanco;
         private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.Label lblBanco;
-        private System.Windows.Forms.TextBox txtConciliacion;
-        private System.Windows.Forms.TextBox txtCuenta;
         private System.Windows.Forms.Label lblCuenta;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnGenerar;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Verificacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn NoDocumento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
@@ -433,6 +473,13 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.ComboBox cmbMes;
+        private System.Windows.Forms.Label lblfeha;
+        private System.Windows.Forms.Button btnGenerar;
+        private System.Windows.Forms.ComboBox cmbCuenta;
+        private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.TextBox txtFecha;
+        private System.Windows.Forms.TextBox txtcuenta;
 
     }
 }
