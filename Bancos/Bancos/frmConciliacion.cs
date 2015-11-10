@@ -23,7 +23,7 @@ namespace Bancos
         private void funBuscarCuentas()
         {
             clasnegocio cnegocio = new clasnegocio();
-            cnegocio.funconsultarRegistrosCombo("ncodcuenta", "SELECT ncodcuenta from macuenta ", "ncodcuenta", cmbCuenta);
+            cnegocio.funconsultarRegistrosCombo("ncodcuenta", "SELECT ncodcuenta from macuenta ", "ncodcuenta", cmbcuenta);
         }
 
         private void grbConciliacion_Enter(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace Bancos
         {
             clasnegocio cnegocio = new clasnegocio();
             cnegocio.funactivarDesactivarTextbox(txtEncargado, true);
-            cnegocio.funactivarDesactivarCombobox(cmbCuenta, true);
+            cnegocio.funactivarDesactivarCombobox(cmbcuenta, true);
             cnegocio.funactivarDesactivarCombobox(cmbMes, true);
 
         }
@@ -62,14 +62,32 @@ namespace Bancos
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            txtcuenta.Text = cmbCuenta.SelectedItem.ToString();
+            txtcuenta.Text = cmbcuenta.Text;
             txtFecha.Text = lblfeha.Text;
-            System.Console.Write(txtFecha.Text+" -- "+ lblfeha.Text +"--->"+cmbCuenta.SelectedItem.ToString()+"<----");
+            //System.Console.Write(txtFecha.Text+" -- "+ lblfeha.Text +"--->"+cmbcuenta.Text+"<----");
             TextBox[] datos = { txtFecha, txtEncargado, txtEstado, txtcuenta };
             string tabla = "maencabezadoconciliacion";
             Boolean permiso = true;
             clasnegocio cn = new clasnegocio(); 
             cn.AsignarObjetos(tabla, permiso, datos);
+        }
+
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            txtcuenta.Text = cmbcuenta.Text;
+            txtFecha.Text = lblfeha.Text;
+            //System.Console.Write(txtFecha.Text+" -- "+ lblfeha.Text +"--->"+cmbcuenta.Text+"<----");
+            TextBox[] datos = { txtFecha, txtEncargado, txtEstado, txtcuenta };
+            string tabla = "maencabezadoconciliacion";
+            Boolean permiso = true;
+            clasnegocio cn = new clasnegocio();
+            cn.AsignarObjetos(tabla, permiso, datos);
+
+        }
+
+        private void funLlenarTabla(string mes)
+        {
+
         }
     }
 }

@@ -30,6 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConciliacion));
             this.pnlInformacion = new System.Windows.Forms.Panel();
+            this.txtcuenta = new System.Windows.Forms.TextBox();
+            this.cmbcuenta = new System.Windows.Forms.ComboBox();
+            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.txtFecha = new System.Windows.Forms.TextBox();
+            this.lblfeha = new System.Windows.Forms.Label();
+            this.cmbMes = new System.Windows.Forms.ComboBox();
+            this.btnGenerar = new System.Windows.Forms.Button();
             this.lblMes = new System.Windows.Forms.Label();
             this.lblEncargado = new System.Windows.Forms.Label();
             this.txtEncargado = new System.Windows.Forms.TextBox();
@@ -57,13 +64,6 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.cmbMes = new System.Windows.Forms.ComboBox();
-            this.lblfeha = new System.Windows.Forms.Label();
-            this.btnGenerar = new System.Windows.Forms.Button();
-            this.txtFecha = new System.Windows.Forms.TextBox();
-            this.txtEstado = new System.Windows.Forms.TextBox();
-            this.cmbCuenta = new System.Windows.Forms.ComboBox();
-            this.txtcuenta = new System.Windows.Forms.TextBox();
             this.pnlInformacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -73,7 +73,7 @@
             // 
             this.pnlInformacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlInformacion.Controls.Add(this.txtcuenta);
-            this.pnlInformacion.Controls.Add(this.cmbCuenta);
+            this.pnlInformacion.Controls.Add(this.cmbcuenta);
             this.pnlInformacion.Controls.Add(this.txtEstado);
             this.pnlInformacion.Controls.Add(this.txtFecha);
             this.pnlInformacion.Controls.Add(this.lblfeha);
@@ -89,6 +89,83 @@
             this.pnlInformacion.Size = new System.Drawing.Size(847, 100);
             this.pnlInformacion.TabIndex = 12;
             this.pnlInformacion.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlInformacion_Paint);
+            // 
+            // txtcuenta
+            // 
+            this.txtcuenta.Location = new System.Drawing.Point(392, 55);
+            this.txtcuenta.Name = "txtcuenta";
+            this.txtcuenta.Size = new System.Drawing.Size(24, 20);
+            this.txtcuenta.TabIndex = 28;
+            this.txtcuenta.Tag = "ncodcuenta";
+            this.txtcuenta.Visible = false;
+            // 
+            // cmbcuenta
+            // 
+            this.cmbcuenta.Enabled = false;
+            this.cmbcuenta.FormattingEnabled = true;
+            this.cmbcuenta.Location = new System.Drawing.Point(149, 55);
+            this.cmbcuenta.Name = "cmbcuenta";
+            this.cmbcuenta.Size = new System.Drawing.Size(121, 21);
+            this.cmbcuenta.TabIndex = 27;
+            // 
+            // txtEstado
+            // 
+            this.txtEstado.Location = new System.Drawing.Point(776, 62);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(24, 20);
+            this.txtEstado.TabIndex = 26;
+            this.txtEstado.Tag = "cestado";
+            this.txtEstado.Text = "activo";
+            this.txtEstado.Visible = false;
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.Location = new System.Drawing.Point(776, 24);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(24, 20);
+            this.txtFecha.TabIndex = 25;
+            this.txtFecha.Tag = "dfecha";
+            this.txtFecha.Visible = false;
+            // 
+            // lblfeha
+            // 
+            this.lblfeha.AutoSize = true;
+            this.lblfeha.Location = new System.Drawing.Point(705, 27);
+            this.lblfeha.Name = "lblfeha";
+            this.lblfeha.Size = new System.Drawing.Size(0, 13);
+            this.lblfeha.TabIndex = 24;
+            // 
+            // cmbMes
+            // 
+            this.cmbMes.Enabled = false;
+            this.cmbMes.FormattingEnabled = true;
+            this.cmbMes.Items.AddRange(new object[] {
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"});
+            this.cmbMes.Location = new System.Drawing.Point(468, 24);
+            this.cmbMes.Name = "cmbMes";
+            this.cmbMes.Size = new System.Drawing.Size(131, 21);
+            this.cmbMes.TabIndex = 23;
+            // 
+            // btnGenerar
+            // 
+            this.btnGenerar.Location = new System.Drawing.Point(468, 51);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(131, 26);
+            this.btnGenerar.TabIndex = 22;
+            this.btnGenerar.Text = "Generar";
+            this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
             // lblMes
             // 
@@ -115,7 +192,7 @@
             this.txtEncargado.Name = "txtEncargado";
             this.txtEncargado.Size = new System.Drawing.Size(257, 20);
             this.txtEncargado.TabIndex = 12;
-            this.txtEncargado.Tag = "encargado";
+            this.txtEncargado.Tag = "cencargado";
             // 
             // lblFecha
             // 
@@ -297,6 +374,7 @@
             this.btnRefrescar.Size = new System.Drawing.Size(48, 42);
             this.btnRefrescar.TabIndex = 10;
             this.btnRefrescar.UseVisualStyleBackColor = true;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // btnCancelar
             // 
@@ -343,83 +421,6 @@
             this.btnNuevo.TabIndex = 5;
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // cmbMes
-            // 
-            this.cmbMes.Enabled = false;
-            this.cmbMes.FormattingEnabled = true;
-            this.cmbMes.Items.AddRange(new object[] {
-            "Enero",
-            "Febrero",
-            "Marzo",
-            "Abril",
-            "Mayo",
-            "Junio",
-            "Julio",
-            "Agosto",
-            "Septiembre",
-            "Octubre",
-            "Noviembre",
-            "Diciembre"});
-            this.cmbMes.Location = new System.Drawing.Point(468, 24);
-            this.cmbMes.Name = "cmbMes";
-            this.cmbMes.Size = new System.Drawing.Size(131, 21);
-            this.cmbMes.TabIndex = 23;
-            // 
-            // lblfeha
-            // 
-            this.lblfeha.AutoSize = true;
-            this.lblfeha.Location = new System.Drawing.Point(705, 27);
-            this.lblfeha.Name = "lblfeha";
-            this.lblfeha.Size = new System.Drawing.Size(0, 13);
-            this.lblfeha.TabIndex = 24;
-            // 
-            // btnGenerar
-            // 
-            this.btnGenerar.Location = new System.Drawing.Point(468, 51);
-            this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(131, 26);
-            this.btnGenerar.TabIndex = 22;
-            this.btnGenerar.Text = "Generar";
-            this.btnGenerar.UseVisualStyleBackColor = true;
-            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
-            // 
-            // txtFecha
-            // 
-            this.txtFecha.Location = new System.Drawing.Point(776, 24);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(24, 20);
-            this.txtFecha.TabIndex = 25;
-            this.txtFecha.Tag = "dfecha";
-            this.txtFecha.Visible = false;
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(776, 62);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(24, 20);
-            this.txtEstado.TabIndex = 26;
-            this.txtEstado.Tag = "cestado";
-            this.txtEstado.Text = "activo";
-            this.txtEstado.Visible = false;
-            // 
-            // cmbCuenta
-            // 
-            this.cmbCuenta.Enabled = false;
-            this.cmbCuenta.FormattingEnabled = true;
-            this.cmbCuenta.Location = new System.Drawing.Point(149, 55);
-            this.cmbCuenta.Name = "cmbCuenta";
-            this.cmbCuenta.Size = new System.Drawing.Size(257, 21);
-            this.cmbCuenta.TabIndex = 27;
-            // 
-            // txtcuenta
-            // 
-            this.txtcuenta.Location = new System.Drawing.Point(422, 57);
-            this.txtcuenta.Name = "txtcuenta";
-            this.txtcuenta.Size = new System.Drawing.Size(19, 20);
-            this.txtcuenta.TabIndex = 28;
-            this.txtcuenta.Tag = "ncodcuenta";
-            this.txtcuenta.Visible = false;
             // 
             // frmConciliacion
             // 
@@ -476,10 +477,10 @@
         private System.Windows.Forms.ComboBox cmbMes;
         private System.Windows.Forms.Label lblfeha;
         private System.Windows.Forms.Button btnGenerar;
-        private System.Windows.Forms.ComboBox cmbCuenta;
         private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.TextBox txtcuenta;
+        private System.Windows.Forms.ComboBox cmbcuenta;
 
     }
 }
