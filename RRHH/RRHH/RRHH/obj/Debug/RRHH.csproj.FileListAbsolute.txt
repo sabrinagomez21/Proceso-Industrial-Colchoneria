@@ -1,0 +1,81 @@
+c:\users\jgerardo\documents\visual studio 2013\Projects\RRHH\RRHH\bin\Debug\RRHH.exe.config
+c:\users\jgerardo\documents\visual studio 2013\Projects\RRHH\RRHH\bin\Debug\RRHH.exe
+c:\users\jgerardo\documents\visual studio 2013\Projects\RRHH\RRHH\bin\Debug\RRHH.pdb
+c:\users\jgerardo\documents\visual studio 2013\Projects\RRHH\RRHH\obj\Debug\RRHH.csprojResolveAssemblyReference.cache
+c:\users\jgerardo\documents\visual studio 2013\Projects\RRHH\RRHH\obj\Debug\RRHH.frmEvaluacionDesempeño.resources
+c:\users\jgerardo\documents\visual studio 2013\Projects\RRHH\RRHH\obj\Debug\RRHH.Properties.Resources.resources
+c:\users\jgerardo\documents\visual studio 2013\Projects\RRHH\RRHH\obj\Debug\RRHH.csproj.GenerateResource.Cache
+c:\users\jgerardo\documents\visual studio 2013\Projects\RRHH\RRHH\obj\Debug\RRHH.exe
+c:\users\jgerardo\documents\visual studio 2013\Projects\RRHH\RRHH\obj\Debug\RRHH.pdb
+c:\users\jgerardo\documents\visual studio 2013\Projects\RRHH\RRHH\obj\Debug\RRHH.frmReclutamiento.resources
+C:\Users\Gomez\Desktop\RRHH\RRHH\bin\Debug\RRHH.exe.config
+C:\Users\Gomez\Desktop\RRHH\RRHH\obj\Debug\RRHH.exe
+C:\Users\Gomez\Desktop\RRHH\RRHH\obj\Debug\RRHH.pdb
+C:\Users\Gomez\Desktop\RRHH\RRHH\obj\Debug\RRHH.csprojResolveAssemblyReference.cache
+C:\Users\Gomez\Desktop\RRHH\RRHH\obj\Debug\RRHH.frmCapacitacion.resources
+C:\Users\Gomez\Desktop\RRHH\RRHH\obj\Debug\RRHH.frmPRINCIPAL.resources
+C:\Users\Gomez\Desktop\RRHH\RRHH\obj\Debug\RRHH.frmContrato.resources
+C:\Users\Gomez\Desktop\RRHH\RRHH\obj\Debug\RRHH.frmEvaluacionDesempeño.resources
+C:\Users\Gomez\Desktop\RRHH\RRHH\obj\Debug\RRHH.frmReclutamiento.resources
+C:\Users\Gomez\Desktop\RRHH\RRHH\obj\Debug\RRHH.Properties.Resources.resources
+C:\Users\Gomez\Desktop\RRHH\RRHH\obj\Debug\RRHH.csproj.GenerateResource.Cache
+C:\Users\Gomez\Desktop\RRHH\RRHH\bin\Debug\RRHH.exe
+C:\Users\Gomez\Desktop\RRHH\RRHH\bin\Debug\RRHH.pdb
+C:\Users\Gomez\Desktop\RRHH\RRHH\obj\Debug\RRHH.frmCondicionesPuesto.resources
+C:\Users\Gomez\Desktop\RRHH\RRHH\obj\Debug\RRHH.frmLLenaContrato.resources
+C:\Users\Gomez\Desktop\RRHH\RRHH\obj\Debug\RRHH.frmReqPuesto.resources
+C:\Users\Gomez\Desktop\RRHH\RRHH\obj\Debug\RRHH.frmPlanilla.resources
+C:\Users\Pamela\Dropbox\Octavo Semestre\Diseño de Sistemas\Grupo 3 DS\RRHH\RRHH\RRHH\RRHH\bin\Debug\RRHH.exe.config
+C:\Users\Pamela\Dropbox\Octavo Semestre\Diseño de Sistemas\Grupo 3 DS\RRHH\RRHH\RRHH\RRHH\obj\Debug\RRHH.exe
+C:\Users\Pamela\Dropbox\Octavo Semestre\Diseño de Sistemas\Grupo 3 DS\RRHH\RRHH\RRHH\RRHH\obj\Debug\RRHH.pdb
+C:\Users\Gomez\Dropbox\NAVEGADOR 2DO PROYECTO\RRHH\RRHH\RRHH\RRHH\bin\Debug\RRHH.exe.config
+C:\Users\Gomez\Dropbox\NAVEGADOR 2DO PROYECTO\RRHH\RRHH\RRHH\RRHH\obj\Debug\RRHH.exe
+C:\Users\Gomez\Dropbox\NAVEGADOR 2DO PROYECTO\RRHH\RRHH\RRHH\RRHH\obj\Debug\RRHH.pdb
+C:\Users\Gomez\Dropbox\NAVEGADOR 2DO PROYECTO\RRHH\RRHH\RRHH\RRHH\bin\Debug\RRHH.exe
+C:\Users\Gomez\Dropbox\NAVEGADOR 2DO PROYECTO\RRHH\RRHH\RRHH\RRHH\bin\Debug\RRHH.pdb
+C:\Users\Gomez\Dropbox\NAVEGADOR 2DO PROYECTO\RRHH\RRHH\RRHH\RRHH\obj\Debug\RRHH.csprojResolveAssemblyReference.cache
+C:\Users\Gomez\Dropbox\NAVEGADOR 2DO PROYECTO\RRHH\RRHH\RRHH\RRHH\obj\Debug\RRHH.frmCapacitacion.resources
+C:\Users\Gomez\Dropbox\NAVEGADOR 2DO PROYECTO\RRHH\RRHH\RRHH\RRHH\obj\Debug\RRHH.frmPlanilla.resources
+C:\Users\Gomez\Dropbox\NAVEGADOR 2DO PROYECTO\RRHH\RRHH\RRHH\RRHH\obj\Debug\RRHH.frmPRINCIPAL.resources
+C:\Users\Gomez\Dropbox\NAVEGADOR 2DO PROYECTO\RRHH\RRHH\RRHH\RRHH\obj\Debug\RRHH.frmContrato.resources
+C:\Users\Gomez\Dropbox\NAVEGADOR 2DO PROYECTO\RRHH\RRHH\RRHH\RRHH\obj\Debug\RRHH.frmEvaluacionDesempeño.resources
+C:\Users\Gomez\Dropbox\NAVEGADOR 2DO PROYECTO\RRHH\RRHH\RRHH\RRHH\obj\Debug\RRHH.frmReclutamiento.resources
+C:\Users\Gomez\Dropbox\NAVEGADOR 2DO PROYECTO\RRHH\RRHH\RRHH\RRHH\obj\Debug\RRHH.frmReqPuesto.resources
+C:\Users\Gomez\Dropbox\NAVEGADOR 2DO PROYECTO\RRHH\RRHH\RRHH\RRHH\obj\Debug\RRHH.Properties.Resources.resources
+C:\Users\Gomez\Dropbox\NAVEGADOR 2DO PROYECTO\RRHH\RRHH\RRHH\RRHH\obj\Debug\RRHH.csproj.GenerateResource.Cache
+C:\Users\Gomez\Downloads\RRHH\RRHH\bin\Debug\RRHH.exe.config
+C:\Users\Gomez\Downloads\RRHH\RRHH\obj\Debug\RRHH.exe
+C:\Users\Gomez\Downloads\RRHH\RRHH\obj\Debug\RRHH.pdb
+C:\Users\Gomez\Downloads\RRHH\RRHH\bin\Debug\RRHH.exe
+C:\Users\Gomez\Downloads\RRHH\RRHH\bin\Debug\RRHH.pdb
+C:\Users\Gomez\Downloads\RRHH\RRHH\obj\Debug\RRHH.csprojResolveAssemblyReference.cache
+C:\Users\Gomez\Downloads\RRHH\RRHH\obj\Debug\RRHH.frmCapacitacion.resources
+C:\Users\Gomez\Downloads\RRHH\RRHH\obj\Debug\RRHH.frmPlanilla.resources
+C:\Users\Gomez\Downloads\RRHH\RRHH\obj\Debug\RRHH.frmPRINCIPAL.resources
+C:\Users\Gomez\Downloads\RRHH\RRHH\obj\Debug\RRHH.frmContrato.resources
+C:\Users\Gomez\Downloads\RRHH\RRHH\obj\Debug\RRHH.frmEvaluacionDesempeño.resources
+C:\Users\Gomez\Downloads\RRHH\RRHH\obj\Debug\RRHH.frmReclutamiento.resources
+C:\Users\Gomez\Downloads\RRHH\RRHH\obj\Debug\RRHH.frmReqPuesto.resources
+C:\Users\Gomez\Downloads\RRHH\RRHH\obj\Debug\RRHH.Properties.Resources.resources
+C:\Users\Gomez\Downloads\RRHH\RRHH\obj\Debug\RRHH.csproj.GenerateResource.Cache
+C:\Users\Gomez\Downloads\RRHH\RRHH\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\Gomez\Downloads\RRHH\RRHH\obj\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\Gomez\Downloads\RRHH\RRHH\obj\Debug\RRHH.csproj.ResolveComReference.cache
+C:\Users\Gomez\Downloads\RRHH\RRHH\obj\Debug\RRHH.frmExtra1.resources
+C:\Users\Gomez\Downloads\RRHH\RRHH\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\Gomez\Downloads\RRHH\RRHH\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\Gomez\Downloads\RRHH\RRHH\bin\Debug\ConexionODBC.dll
+C:\Users\Gomez\Downloads\RRHH\RRHH\bin\Debug\Navegador.dll
+C:\Users\Gomez\Downloads\RRHH\RRHH\obj\Debug\Navegador.buscar.resources
+C:\Users\JGerardo\Documents\Visual Studio 2013\Projects\RRHH\RRHH\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\JGerardo\Documents\Visual Studio 2013\Projects\RRHH\RRHH\obj\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\JGerardo\Documents\Visual Studio 2013\Projects\RRHH\RRHH\obj\Debug\RRHH.csproj.ResolveComReference.cache
+C:\Users\JGerardo\Documents\Visual Studio 2013\Projects\RRHH\RRHH\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\JGerardo\Documents\Visual Studio 2013\Projects\RRHH\RRHH\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\JGerardo\Documents\Visual Studio 2013\Projects\RRHH\RRHH\obj\Debug\Navegador.buscar.resources
+C:\Users\JGerardo\Documents\Visual Studio 2013\Projects\RRHH\RRHH\obj\Debug\RRHH.frmCapacitacion.resources
+C:\Users\JGerardo\Documents\Visual Studio 2013\Projects\RRHH\RRHH\obj\Debug\RRHH.frmExtra1.resources
+C:\Users\JGerardo\Documents\Visual Studio 2013\Projects\RRHH\RRHH\obj\Debug\RRHH.frmPlanilla.resources
+C:\Users\JGerardo\Documents\Visual Studio 2013\Projects\RRHH\RRHH\obj\Debug\RRHH.frmPRINCIPAL.resources
+C:\Users\JGerardo\Documents\Visual Studio 2013\Projects\RRHH\RRHH\obj\Debug\RRHH.frmContrato.resources
+C:\Users\JGerardo\Documents\Visual Studio 2013\Projects\RRHH\RRHH\obj\Debug\RRHH.frmReqPuesto.resources
