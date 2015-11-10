@@ -44,6 +44,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.txtCodigoSolicitud = new System.Windows.Forms.TextBox();
             this.txtCodigoEmpresa = new System.Windows.Forms.TextBox();
             this.cmbSolicitud = new System.Windows.Forms.ComboBox();
@@ -64,10 +65,10 @@
             this.grdReclutamiento = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lblCodigoPlaza = new System.Windows.Forms.Label();
-            this.cmbCodigoSeleccionado = new System.Windows.Forms.ComboBox();
-            this.txtCodigoSeleccionado = new System.Windows.Forms.TextBox();
             this.txtImprimir = new System.Windows.Forms.TextBox();
+            this.txtCodigoSeleccionado = new System.Windows.Forms.TextBox();
+            this.cmbCodigoSeleccionado = new System.Windows.Forms.ComboBox();
+            this.lblCodigoPlaza = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdReclutamiento)).BeginInit();
@@ -93,6 +94,7 @@
             this.btneliminar.Size = new System.Drawing.Size(47, 50);
             this.btneliminar.TabIndex = 1;
             this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // btnbuscar
             // 
@@ -102,6 +104,7 @@
             this.btnbuscar.Size = new System.Drawing.Size(47, 50);
             this.btnbuscar.TabIndex = 2;
             this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // btnrefrescar
             // 
@@ -131,6 +134,7 @@
             this.btneditar.Size = new System.Drawing.Size(47, 50);
             this.btneditar.TabIndex = 5;
             this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // btnirprimero
             // 
@@ -140,6 +144,7 @@
             this.btnirprimero.Size = new System.Drawing.Size(47, 50);
             this.btnirprimero.TabIndex = 6;
             this.btnirprimero.UseVisualStyleBackColor = true;
+            this.btnirprimero.Click += new System.EventHandler(this.btnirprimero_Click);
             // 
             // btnanterior
             // 
@@ -149,6 +154,7 @@
             this.btnanterior.Size = new System.Drawing.Size(47, 50);
             this.btnanterior.TabIndex = 7;
             this.btnanterior.UseVisualStyleBackColor = true;
+            this.btnanterior.Click += new System.EventHandler(this.btnanterior_Click);
             // 
             // btnsiguiente
             // 
@@ -158,6 +164,7 @@
             this.btnsiguiente.Size = new System.Drawing.Size(47, 50);
             this.btnsiguiente.TabIndex = 8;
             this.btnsiguiente.UseVisualStyleBackColor = true;
+            this.btnsiguiente.Click += new System.EventHandler(this.btnsiguiente_Click);
             // 
             // btnirultimo
             // 
@@ -167,6 +174,7 @@
             this.btnirultimo.Size = new System.Drawing.Size(47, 50);
             this.btnirultimo.TabIndex = 9;
             this.btnirultimo.UseVisualStyleBackColor = true;
+            this.btnirultimo.Click += new System.EventHandler(this.btnirultimo_Click);
             // 
             // btnnuevo
             // 
@@ -186,6 +194,7 @@
             this.btnimprimir.Size = new System.Drawing.Size(47, 50);
             this.btnimprimir.TabIndex = 11;
             this.btnimprimir.UseVisualStyleBackColor = true;
+            this.btnimprimir.Click += new System.EventHandler(this.btnimprimir_Click);
             // 
             // panel3
             // 
@@ -221,6 +230,7 @@
             // groupBox1
             // 
             this.groupBox1.CausesValidation = false;
+            this.groupBox1.Controls.Add(this.cmbEstado);
             this.groupBox1.Controls.Add(this.txtCodigoSolicitud);
             this.groupBox1.Controls.Add(this.txtCodigoEmpresa);
             this.groupBox1.Controls.Add(this.cmbSolicitud);
@@ -245,6 +255,18 @@
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Plaza";
+            // 
+            // cmbEstado
+            // 
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "ACTIVO",
+            "INACTIVO"});
+            this.cmbEstado.Location = new System.Drawing.Point(85, 81);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(100, 21);
+            this.cmbEstado.TabIndex = 18;
+            this.cmbEstado.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // txtCodigoSolicitud
             // 
@@ -382,9 +404,9 @@
             this.lbltipo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltipo.Location = new System.Drawing.Point(25, 86);
             this.lbltipo.Name = "lbltipo";
-            this.lbltipo.Size = new System.Drawing.Size(75, 19);
+            this.lbltipo.Size = new System.Drawing.Size(53, 19);
             this.lbltipo.TabIndex = 2;
-            this.lbltipo.Text = "Tipo Plaza";
+            this.lbltipo.Text = "Estado";
             // 
             // txtCodigo
             // 
@@ -397,11 +419,12 @@
             // 
             // txtTipo
             // 
-            this.txtTipo.Location = new System.Drawing.Point(106, 85);
+            this.txtTipo.Location = new System.Drawing.Point(191, 83);
             this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(100, 20);
+            this.txtTipo.Size = new System.Drawing.Size(34, 20);
             this.txtTipo.TabIndex = 3;
             this.txtTipo.Tag = "vtipo";
+            this.txtTipo.Visible = false;
             // 
             // grdReclutamiento
             // 
@@ -410,6 +433,7 @@
             this.grdReclutamiento.Name = "grdReclutamiento";
             this.grdReclutamiento.Size = new System.Drawing.Size(806, 194);
             this.grdReclutamiento.TabIndex = 60;
+            this.grdReclutamiento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdReclutamiento_CellContentClick);
             // 
             // groupBox2
             // 
@@ -434,23 +458,13 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Eliminar, Modificar";
             // 
-            // lblCodigoPlaza
+            // txtImprimir
             // 
-            this.lblCodigoPlaza.AutoSize = true;
-            this.lblCodigoPlaza.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoPlaza.Location = new System.Drawing.Point(11, 36);
-            this.lblCodigoPlaza.Name = "lblCodigoPlaza";
-            this.lblCodigoPlaza.Size = new System.Drawing.Size(78, 15);
-            this.lblCodigoPlaza.TabIndex = 0;
-            this.lblCodigoPlaza.Text = "Codigo Plaza";
-            // 
-            // cmbCodigoSeleccionado
-            // 
-            this.cmbCodigoSeleccionado.FormattingEnabled = true;
-            this.cmbCodigoSeleccionado.Location = new System.Drawing.Point(69, 54);
-            this.cmbCodigoSeleccionado.Name = "cmbCodigoSeleccionado";
-            this.cmbCodigoSeleccionado.Size = new System.Drawing.Size(121, 21);
-            this.cmbCodigoSeleccionado.TabIndex = 1;
+            this.txtImprimir.Location = new System.Drawing.Point(69, 106);
+            this.txtImprimir.Name = "txtImprimir";
+            this.txtImprimir.Size = new System.Drawing.Size(121, 20);
+            this.txtImprimir.TabIndex = 3;
+            this.txtImprimir.Visible = false;
             // 
             // txtCodigoSeleccionado
             // 
@@ -461,13 +475,24 @@
             this.txtCodigoSeleccionado.Tag = "vtipo";
             this.txtCodigoSeleccionado.Visible = false;
             // 
-            // txtImprimir
+            // cmbCodigoSeleccionado
             // 
-            this.txtImprimir.Location = new System.Drawing.Point(69, 106);
-            this.txtImprimir.Name = "txtImprimir";
-            this.txtImprimir.Size = new System.Drawing.Size(121, 20);
-            this.txtImprimir.TabIndex = 3;
-            this.txtImprimir.Visible = false;
+            this.cmbCodigoSeleccionado.FormattingEnabled = true;
+            this.cmbCodigoSeleccionado.Location = new System.Drawing.Point(69, 54);
+            this.cmbCodigoSeleccionado.Name = "cmbCodigoSeleccionado";
+            this.cmbCodigoSeleccionado.Size = new System.Drawing.Size(121, 21);
+            this.cmbCodigoSeleccionado.TabIndex = 1;
+            this.cmbCodigoSeleccionado.SelectedIndexChanged += new System.EventHandler(this.cmbCodigoSeleccionado_SelectedIndexChanged);
+            // 
+            // lblCodigoPlaza
+            // 
+            this.lblCodigoPlaza.AutoSize = true;
+            this.lblCodigoPlaza.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoPlaza.Location = new System.Drawing.Point(11, 36);
+            this.lblCodigoPlaza.Name = "lblCodigoPlaza";
+            this.lblCodigoPlaza.Size = new System.Drawing.Size(78, 15);
+            this.lblCodigoPlaza.TabIndex = 0;
+            this.lblCodigoPlaza.Text = "Codigo Plaza";
             // 
             // frmReclutamiento
             // 
@@ -538,6 +563,7 @@
         private System.Windows.Forms.TextBox txtCodigoSeleccionado;
         private System.Windows.Forms.ComboBox cmbCodigoSeleccionado;
         private System.Windows.Forms.Label lblCodigoPlaza;
+        private System.Windows.Forms.ComboBox cmbEstado;
 
 
 
