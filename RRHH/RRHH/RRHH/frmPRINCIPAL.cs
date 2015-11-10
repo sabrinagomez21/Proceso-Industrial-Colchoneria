@@ -156,6 +156,19 @@ namespace RRHH
            
             
         }
+
+        private void empresasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void eMPRESASToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmEmpresa empresa = new frmEmpresa();
+            empresa.MdiParent = this;
+            empresa.Show();
+        }
     }
 }
 
