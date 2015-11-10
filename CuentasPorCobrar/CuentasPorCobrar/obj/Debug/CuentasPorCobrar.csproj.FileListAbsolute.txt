@@ -40,3 +40,4 @@ C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\
 C:\Users\Josue\Desktop\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\CuentasPorCobrar.exe.config
 C:\Users\Josue\Desktop\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.exe
 C:\Users\Josue\Desktop\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.pdb
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\facturacion.frmClientes.resources

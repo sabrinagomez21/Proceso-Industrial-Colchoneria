@@ -85,6 +85,8 @@
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(246, 20);
             this.txtCliente.TabIndex = 1;
+            this.txtCliente.Enter += new System.EventHandler(this.txtCliente_Enter);
+            this.txtCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCliente_KeyPress);
             this.txtCliente.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCliente_KeyUp);
             // 
             // panel1
@@ -158,6 +160,8 @@
             this.txtDocto.Name = "txtDocto";
             this.txtDocto.Size = new System.Drawing.Size(246, 20);
             this.txtDocto.TabIndex = 2;
+            this.txtDocto.Enter += new System.EventHandler(this.txtDocto_Enter);
+            this.txtDocto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDocto_KeyPress);
             this.txtDocto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDocto_KeyUp);
             // 
             // panel2
@@ -176,6 +180,7 @@
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(100, 20);
             this.txtValor.TabIndex = 1;
+            this.txtValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValor_KeyPress);
             // 
             // label5
             // 
