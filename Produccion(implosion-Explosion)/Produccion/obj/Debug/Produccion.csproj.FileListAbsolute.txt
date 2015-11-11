@@ -1,0 +1,26 @@
+C:\Users\Wilfredo\Desktop\no funcionales\produccion\Produccion\Produccion\bin\Debug\Produccion.exe.config
+C:\Users\Wilfredo\Desktop\no funcionales\produccion\Produccion\Produccion\bin\Debug\Produccion.exe
+C:\Users\Wilfredo\Desktop\no funcionales\produccion\Produccion\Produccion\bin\Debug\Produccion.pdb
+C:\Users\Wilfredo\Desktop\no funcionales\produccion\Produccion\Produccion\obj\Debug\Produccion.csprojResolveAssemblyReference.cache
+C:\Users\Wilfredo\Desktop\no funcionales\produccion\Produccion\Produccion\obj\Debug\Produccion.frmOrden.resources
+C:\Users\Wilfredo\Desktop\no funcionales\produccion\Produccion\Produccion\obj\Debug\Produccion.Properties.Resources.resources
+C:\Users\Wilfredo\Desktop\no funcionales\produccion\Produccion\Produccion\obj\Debug\Produccion.csproj.GenerateResource.Cache
+C:\Users\Wilfredo\Desktop\no funcionales\produccion\Produccion\Produccion\obj\Debug\Produccion.exe
+C:\Users\Wilfredo\Desktop\no funcionales\produccion\Produccion\Produccion\obj\Debug\Produccion.pdb
+C:\Users\Wilfredo\Desktop\no funcionales\produccion\Produccion\Produccion\obj\Debug\Produccion.frmEntregasParciales.resources
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Produccion\Produccion\bin\Debug\Produccion.exe.config
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Produccion\Produccion\obj\Debug\Produccion.pdb
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Produccion\Produccion\bin\Debug\Produccion.exe
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Produccion\Produccion\bin\Debug\Produccion.pdb
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Produccion\Produccion\obj\Debug\Produccion.csprojResolveAssemblyReference.cache
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Produccion\Produccion\obj\Debug\Produccion.frmBodega.resources
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Produccion\Produccion\obj\Debug\Produccion.frmEntregasParciales.resources
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Produccion\Produccion\obj\Debug\Produccion.frmExplosionMateriales.resources
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Produccion\Produccion\obj\Debug\Produccion.frmImplosionMateriales.resources
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Produccion\Produccion\obj\Debug\Produccion.frmOrden.resources
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Produccion\Produccion\obj\Debug\Produccion.frmProductosTerminados.resources
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Produccion\Produccion\obj\Debug\Produccion.Properties.Resources.resources
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Produccion\Produccion\obj\Debug\Produccion.csproj.GenerateResource.Cache
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Produccion\Produccion\obj\Debug\Produccion.exe
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Produccion\Produccion\bin\Debug\ConexionODBC.dll
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Produccion\Produccion\bin\Debug\ConexionODBC.pdb
