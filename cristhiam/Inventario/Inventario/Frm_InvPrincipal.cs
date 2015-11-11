@@ -7,94 +7,160 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ConexionODBC;
 using System.Data.Odbc;
+using Navegador;
+using prueba1;
 
-namespace Inventario{
-    #region inicia clase y variables
+namespace Inventario
+{
     public partial class Frm_InvPrincipal : Form
     {
+        int idusuario; 
+        string nomformulario; 
+        int idaplicacion; //id que se le asigno al formulario 
+        int idmodulo;
         string producto;
         string cantidad;
         string descripcion;
         string id;
-        public Frm_InvPrincipal()
+        string privilegio;
+        public Frm_InvPrincipal(int idtoma, string priv)
         {
+            idusuario = idtoma;
+            privilegio = priv;
             InitializeComponent();
         }
-    #endregion
 
-        //Autor: David Barrios
-        //Fecha: 27/10/15
-        #region Selecciona datos del Grid
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            id = producto = DGV_Inventario[0, DGV_Inventario.CurrentCell.RowIndex].Value.ToString();
-            producto = DGV_Inventario[1, DGV_Inventario.CurrentCell.RowIndex].Value.ToString();
-            cantidad = DGV_Inventario[2, DGV_Inventario.CurrentCell.RowIndex].Value.ToString();
-            descripcion = DGV_Inventario[3, DGV_Inventario.CurrentCell.RowIndex].Value.ToString();
-            Frm_Edicion form = new Frm_Edicion(id, producto, cantidad, descripcion);
-            form.Show();
-            this.Close();
+            
+            Txt_Id.Text = DGV_Inventario[0, DGV_Inventario.CurrentCell.RowIndex].Value.ToString();
+            Txt_Nombre.Text = DGV_Inventario[1, DGV_Inventario.CurrentCell.RowIndex].Value.ToString();
+            Txt_Cantidad.Text = DGV_Inventario[2, DGV_Inventario.CurrentCell.RowIndex].Value.ToString();
         }
+        #region Funcion para cargar grid
+
+        public void Fnc_Cargagrid()
+        {
+            clasnegocio cnegocio = new clasnegocio();
+            cnegocio.funconsultarRegistros("mamaterial", "SELECT ncodmaterial, vnombre, ncantidad from mamaterial WHERE vestatus='ACTIVO'", "consulta", DGV_Inventario);
+            }
         #endregion
 
-        //Autor: David Barrios
-        //Fecha: 27/10/15
-        #region Funcion CargaGrid
-        private void Fnc_CargaGrid()
-        {
-            try
-            {
-                DGV_Inventario.DataSource = new N_Inventario().GetAll(); //llamada a cargar grid
-                //Headers de la Columnas
-                DGV_Inventario.Columns[0].HeaderText = "ID";
-                DGV_Inventario.Columns[1].HeaderText = "Producto";
-                DGV_Inventario.Columns[2].HeaderText = "Cantidad";
-                DGV_Inventario.Columns[2].HeaderText = "Descripcion";
-                DGV_Inventario.Refresh();
-            }
-            catch (Exception Ex)
-            {
-                MessageBox.Show(Ex.Message);
-            }
-        }
-        #endregion
-
-        //Autor: David Barrios
-        //Fecha: 27/10/15
-        #region load form
         public void Frm_InvPrincipal_Load(object sender, EventArgs e)
         {
-            Fnc_CargaGrid();
+            Fnc_Cargagrid();
         }
-        #endregion
 
-        //Autor: David Barrios
-        //Fecha: 27/10/15
-        #region Text Buscar
-        //Variables de ODBC
-        private static OdbcCommand mySqlComando;
-        private static OdbcDataAdapter mySqlDAdAdaptador;
         private void Txt_Buscar_TextChanged(object sender, EventArgs e)
         {
-            DataTable dtGrid = new DataTable(); //Tabla de datos
-            mySqlComando = new OdbcCommand(string.Format("Select * from inventario where producto like ('" + Txt_Buscar.Text + "%') "), CAD.ObtenerConexion());
-            mySqlDAdAdaptador = new OdbcDataAdapter();
-            mySqlDAdAdaptador.SelectCommand = mySqlComando;
-            mySqlDAdAdaptador.Fill(dtGrid); //llena la Tabla dtGrid
-            this.DGV_Inventario.DataSource = dtGrid; //Envia los valores al Grid
-            CAD.ObtenerConexion().Close();//Termina la conexion
-        }
-        #endregion
 
-        //Autor: David Barrios
-        //Fecha: 27/10/15
-        #region Boton cerrar
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        #endregion
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            Txt_Status.Text = "ACTIVO";
+            TextBox[] aDatos = { Txt_Nombre, Txt_Cantidad, Txt_Status };
+            string sTabla = "mamaterial";
+            Boolean bPermiso = true;
+            clasnegocio cn = new clasnegocio();
+            cn.AsignarObjetos(sTabla, bPermiso, aDatos);
+            MessageBox.Show("Registro Guardado");
+            Fnc_Cargagrid();
+            Txt_Cantidad.Clear();
+            Txt_Nombre.Clear();
+
+        }
+
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            Fnc_Cargagrid();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            clasnegocio cnegocio = new clasnegocio(); 
+            string tabla, codEliminar, campoLlavePrimaria, campoEstado; 
+            tabla = "mamaterial"; 
+            codEliminar = Txt_Id.Text; 
+            campoLlavePrimaria = "ncodmaterial"; 
+            campoEstado = "vestatus"; 
+            cnegocio.funeliminarRegistro(tabla, codEliminar, campoLlavePrimaria, campoEstado);
+            Fnc_Cargagrid();
+            Txt_Cantidad.Clear();
+            Txt_Nombre.Clear();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            TextBox[] arraytexto = { Txt_Nombre, Txt_Cantidad};  
+            clasnegocio cn = new clasnegocio();             
+            string tabla = "mamaterial";             
+            Boolean permiso = true;
+            string codigo = Txt_Id.Text;
+            cn.EditarObjetos("mamaterial", permiso, arraytexto, codigo, "ncodmaterial");
+            MessageBox.Show("Registro Actualizado");
+            Fnc_Cargagrid();
+            Txt_Cantidad.Clear();
+            Txt_Nombre.Clear();
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            clasnegocio cnegocio = new clasnegocio(); 
+            cnegocio.funactivarDesactivarTextbox(Txt_Cantidad, true); 
+            cnegocio.funactivarDesactivarTextbox(Txt_Nombre, true); 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            clasnegocio cnegocio = new clasnegocio();
+            cnegocio.funactivarDesactivarTextbox(Txt_Cantidad, false);
+            cnegocio.funactivarDesactivarTextbox(Txt_Nombre, false);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            buscar busc = new buscar(); 
+            busc.Show(); 
+        }
+
+        private void btnIrPrimero_Click(object sender, EventArgs e)
+        {
+            clasnegocio cnegocio = new clasnegocio(); 
+            cnegocio.funPrimero(DGV_Inventario); 
+        }
+
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            clasnegocio cnegocio = new clasnegocio();
+            cnegocio.funAnterior(DGV_Inventario);
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            clasnegocio cnegocio = new clasnegocio(); 
+            cnegocio.funSiguiente(DGV_Inventario); 
+        }
+
+        private void btnIrUltimo_Click(object sender, EventArgs e)
+        {
+            clasnegocio cnegocio = new clasnegocio(); 
+            cnegocio.funUltimo(DGV_Inventario);
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            nomformulario = "nombre de su formulario"; 
+            idaplicacion = 1; //id que se le asigno al formulario 
+            idmodulo = 1; // id que se le asigno a su modulo 
+            prueba1.Frm_Reporte FormCarga = new prueba1.Frm_Reporte(nomformulario,idaplicacion,idmodulo,idusuario,privilegio); 
+            FormCarga.Show();
+        }
     }
 }

@@ -11,16 +11,22 @@ c:\users\cristhiam\documents\visual studio 2013\Projects\Inventario\Inventario\b
 C:\Users\Cristhiam\documents\visual studio 2013\Projects\Inventario\Inventario\obj\Debug\Inventario.Mdi_Form.resources
 C:\Users\Cristhiam\documents\visual studio 2013\Projects\Inventario\Inventario\obj\Debug\Inventario.Frm_Edicion.resources
 C:\Users\Cristhiam\documents\visual studio 2013\Projects\Inventario\Inventario\obj\Debug\Inventario.Frm_MateriaPrima.resources
-C:\Users\Cristhiam\Desktop\Inventario\Inventario\bin\Debug\Inventario.exe.config
-C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.exe
-C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.pdb
-C:\Users\Cristhiam\Desktop\Inventario\Inventario\bin\Debug\Inventario.exe
-C:\Users\Cristhiam\Desktop\Inventario\Inventario\bin\Debug\Inventario.pdb
-C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.csprojResolveAssemblyReference.cache
-C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.Frm_Edicion.resources
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Navegador.buscar.resources
 C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.Frm_InvPrincipal.resources
-C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.Frm_MateriaPrima.resources
 C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.Mdi_Form.resources
 C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.Properties.Resources.resources
 C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.csproj.GenerateResource.Cache
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\RdlCompile.cache
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\RdlCompile.compiled
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\bin\Debug\Inventario.exe.config
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\bin\Debug\Inventario.exe
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\bin\Debug\Inventario.pdb
 C:\Users\Cristhiam\Desktop\Inventario\Inventario\bin\Debug\ConexionODBC.dll
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\bin\Debug\DllSeguridad.dll
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\bin\Debug\Navegador.dll
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\bin\Debug\prueba1.dll
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.Frm_Logueo.resources
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.exe
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.pdb
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.csprojResolveAssemblyReference.cache
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.Frm_OrdenDeCompra.resources

@@ -35,8 +35,25 @@
     <Reference Include="ConexionODBC">
       <HintPath>.\ConexionODBC.dll</HintPath>
     </Reference>
+    <Reference Include="DllSeguridad">
+      <HintPath>.\DllSeguridad.dll</HintPath>
+    </Reference>
+    <Reference Include="dll_conexion">
+      <HintPath>..\..\Reporteador\Reporteador\dll_conexion.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.8.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Navegador">
+      <HintPath>.\Navegador.dll</HintPath>
+    </Reference>
+    <Reference Include="prueba1">
+      <HintPath>.\prueba1.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,26 +64,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CAD.cs" />
-    <Compile Include="D_Inventario.cs" />
-    <Compile Include="E_Inventario.cs" />
-    <Compile Include="Frm_Edicion.cs">
+    <Compile Include="buscar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Edicion.Designer.cs">
-      <DependentUpon>Frm_Edicion.cs</DependentUpon>
+    <Compile Include="buscar.designer.cs">
+      <DependentUpon>buscar.cs</DependentUpon>
     </Compile>
+    <Compile Include="CAD.cs" />
+    <Compile Include="colchoneriaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>colchoneriaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="D_Rol.cs" />
+    <Compile Include="E_Rol.cs" />
     <Compile Include="Frm_InvPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_InvPrincipal.Designer.cs">
       <DependentUpon>Frm_InvPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_MateriaPrima.cs">
+    <Compile Include="Frm_Logueo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_MateriaPrima.Designer.cs">
-      <DependentUpon>Frm_MateriaPrima.cs</DependentUpon>
+    <Compile Include="Frm_Logueo.Designer.cs">
+      <DependentUpon>Frm_Logueo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_OrdenDeCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_OrdenDeCompra.Designer.cs">
+      <DependentUpon>Frm_OrdenDeCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="Mdi_Form.cs">
       <SubType>Form</SubType>
@@ -74,18 +102,22 @@
     <Compile Include="Mdi_Form.Designer.cs">
       <DependentUpon>Mdi_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="N_Inventario.cs" />
+    <Compile Include="N_Rol.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Frm_Edicion.resx">
-      <DependentUpon>Frm_Edicion.cs</DependentUpon>
+    <EmbeddedResource Include="buscar.resx">
+      <DependentUpon>buscar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_InvPrincipal.resx">
       <DependentUpon>Frm_InvPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_MateriaPrima.resx">
-      <DependentUpon>Frm_MateriaPrima.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_Logueo.resx">
+      <DependentUpon>Frm_Logueo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_OrdenDeCompra.resx">
+      <DependentUpon>Frm_OrdenDeCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mamaterial.rdlc" />
     <EmbeddedResource Include="Mdi_Form.resx">
       <DependentUpon>Mdi_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +130,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="colchoneriaDataSet.xsc">
+      <DependentUpon>colchoneriaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="colchoneriaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>colchoneriaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="colchoneriaDataSet.xss">
+      <DependentUpon>colchoneriaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -110,6 +153,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

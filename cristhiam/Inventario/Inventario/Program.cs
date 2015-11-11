@@ -16,7 +16,7 @@ namespace Inventario
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Mdi_Form());
+            Application.Run(new Frm_Logueo());
         }
     }
 }
