@@ -18,13 +18,15 @@ namespace prueba1{
 
     #endregion
 
+        //Autor: Dennys Choy
+        //Fecha: 29/10/15
         #region Consultar Registros
 
         public static DataTable ObtenerRegistros()
         {
             DataTable dtRegistros = new DataTable();//Tabla de datos
             try{//Llamada de Conexion y Query
-                mySqlComando = new OdbcCommand(string.Format("SELECT * FROM reportes"), CAD.ObtenerConexion());
+                mySqlComando = new OdbcCommand(string.Format("SELECT vnomreporte, dfechareporte FROM TrREPORTE"), CAD.ObtenerConexion());
                 mySqlDAdAdaptador = new OdbcDataAdapter();
                 mySqlDAdAdaptador.SelectCommand = mySqlComando;
                 mySqlDAdAdaptador.Fill(dtRegistros);//Llena la tabla dtRegistros
@@ -35,14 +37,16 @@ namespace prueba1{
         }
         #endregion
 
+        //Autor: Cristhiam Duarte
+        //Fecha: 29/10/15
         #region Insertar Registro
         public static int Inserta(E_Reporte eReporte)
         {
             int iValorRetorno = 0;
             try{//Conexion y Inserccion
                 mySqlComando = new OdbcCommand(
-                string.Format("Insert into reportes (nom_reporte, usuario, fecha_hora) values ('{0}','{1}','{2}')",
-                eReporte.nom_reporte, eReporte.usuario, eReporte.fecha_hora), CAD.ObtenerConexion());
+                string.Format("Insert into TrREPORTE (vnomreporte, dfechareporte, ncodaplicacion, ncodmodulo, ncodusuario) values ('{0}','{1}','{2}','{3}','{4}')",
+                eReporte.vnomreporte, eReporte.dfechareporte, eReporte.ncodaplicacion, eReporte.ncodmodulo, eReporte.ncodusuario), CAD.ObtenerConexion());
                 iValorRetorno = mySqlComando.ExecuteNonQuery();
             }catch (Exception e){
                 MessageBox.Show("No es posible Insertar el Reporte o Bien ya Existe", "Error al Insertar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -50,12 +54,14 @@ namespace prueba1{
         }
         #endregion
 
+        //Autor: Cristhiam Duarte
+        //Fecha: 29/10/15
         #region Eliminar Registro
         public static int Eliminar(string pId)
         {
             int iValorRetorno = 0;
             try{//Conexion y Envio de Query eliminar
-                mySqlComando = new OdbcCommand(string.Format("Delete From reportes where nom_reporte='" + pId + "'"), CAD.ObtenerConexion());
+                mySqlComando = new OdbcCommand(string.Format("Delete From TrREPORTE where vnomreporte='" + pId + "'"), CAD.ObtenerConexion());
                 iValorRetorno = mySqlComando.ExecuteNonQuery();
             }catch (Exception e){
                 MessageBox.Show("No es posible Eliminar el Registro", "Error al Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
