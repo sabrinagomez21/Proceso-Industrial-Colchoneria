@@ -22,9 +22,8 @@ namespace RRHH
         {
             clasnegocio cnegocio = new clasnegocio();
             cnegocio.funconsultarRegistrosCombo("ncodempresa", "SELECT ncodempresa from MaEmpresa", "ncodempresa", cmbCodEmpresa);
-            cnegocio.funconsultarRegistrosCombo("ncodsolicitud", "SELECT ncodsolicitud from TrSolicitud", "ncodsolicitud", cmbSolicitud);
             cnegocio.funconsultarRegistrosCombo("ncodplaza", "SELECT ncodplaza from MaPlaza", "ncodplaza", cmbCodigoSeleccionado);
-            cnegocio.funconsultarRegistros("MaPlaza", "SELECT ncodplaza as Codigo, vtipo as Tipo, vdescripcion as Descripcion, vsueldomin as SueldoMinimo, vsueldomax as SueldoMaximo, vhorario as Horario, ncodempresa as CodigoEmpresa, ncodsolicitud as CodigoSolicitud from MaPLAZA", "consulta", grdReclutamiento);
+            cnegocio.funconsultarRegistros("MaPlaza", "SELECT ncodplaza as Codigo, vdepartamento as Departamento, vcausasolicitud as CausaSolicitud, vtipoempleado as Empleado, vcapacidadesrequeridas as CapacidadesRequeridas, vhorario as Horario, vtipo as Estado, vdescripcion as Descripcion, dsueldomin as SueldoMinimo, dsueldomax as SueldoMaximo, ncodempresa as CodigoEmpresa from MaPLAZA", "consulta", grdReclutamiento);
         }
 
         private void lblCodigo_Click(object sender, EventArgs e)
@@ -41,33 +40,36 @@ namespace RRHH
         {
             //finaliza cambio de richtextbox a textbox para enviar a BD
             clasnegocio cnegocio = new clasnegocio();
-            cnegocio.funactivarDesactivarTextbox(txtCodigo, true);
-            cnegocio.funactivarDesactivarTextbox(txtDescripcion, true);
+            cnegocio.funactivarDesactivarTextbox(txtDepartamento, true);
+            cnegocio.funactivarDesactivarTextbox(txtCausa, true);
+            cnegocio.funactivarDesactivarTextbox(txtEmpleado, true);
+            cnegocio.funactivarDesactivarTextbox(txtCapacidades, true);
+            cnegocio.funactivarDesactivarTextbox(txtHorario, true);
             cnegocio.funactivarDesactivarTextbox(txtTipo, true);
+            cnegocio.funactivarDesactivarTextbox(txtDescripcion, true);
             cnegocio.funactivarDesactivarTextbox(txtSueldoMin, true);
             cnegocio.funactivarDesactivarTextbox(txtSueldoMax, true);
-            cnegocio.funactivarDesactivarTextbox(txtHorario, true);
             cnegocio.funactivarDesactivarCombobox(cmbCodEmpresa, true);
-            cnegocio.funactivarDesactivarCombobox(cmbSolicitud, true);
-            cnegocio.funactivarDesactivarCombobox(cmbEstado, false);
+            cnegocio.funactivarDesactivarCombobox(cmbEstado, true);
         }
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            TextBox[] datos = { txtCodigo, txtTipo, txtDescripcion, txtSueldoMin, txtSueldoMax, txtHorario, txtCodigoEmpresa, txtCodigoSolicitud };
+            TextBox[] datos = {  txtDepartamento, txtCausa, txtEmpleado, txtCapacidades, txtHorario, txtTipo, txtDescripcion, txtSueldoMin, txtSueldoMax, txtCodigoEmpresa};
             string tabla = "MaPLAZA";
             Boolean permiso = true;
             clasnegocio cn = new clasnegocio();
             cn.AsignarObjetos(tabla, permiso, datos);
-            txtCodigo.Text = "";
+            txtDepartamento.Text = "";
+            txtCausa.Text = "";
+            txtEmpleado.Text = "";
+            txtCapacidades.Text = "";
+            txtHorario.Text = "";
             txtTipo.Text = "";
             txtDescripcion.Text = "";
             txtSueldoMin.Text = "";
             txtSueldoMax.Text = "";
-            txtHorario.Text = "";
             txtCodigoEmpresa.Text = "";
-            txtCodigoSolicitud.Text = "";
-            
  
         }
 
@@ -75,24 +77,25 @@ namespace RRHH
         {
             clasnegocio cnegocio = new clasnegocio();
             cnegocio.funconsultarRegistrosCombo("ncodempresa", "SELECT ncodempresa from MaEmpresa", "ncodempresa", cmbCodEmpresa);
-            cnegocio.funconsultarRegistrosCombo("ncodsolicitud", "SELECT ncodsolicitud from TrSolicitud", "ncodsolicitud", cmbSolicitud);
             cnegocio.funconsultarRegistrosCombo("ncodplaza", "SELECT ncodplaza from MaPlaza", "ncodplaza", cmbCodigoSeleccionado);
-            cnegocio.funconsultarRegistros("MaPlaza", "SELECT ncodplaza as Codigo, vtipo as Tipo, vdescripcion as Descripcion, vsueldomin as SueldoMinimo, vsueldomax as SueldoMaximo, vhorario as Horario, ncodempresa as CodigoEmpresa, ncodsolicitud as CodigoSolicitud from MaPLAZA", "consulta", grdReclutamiento);
+            cnegocio.funconsultarRegistros("MaPlaza", "SELECT ncodplaza as Codigo, vdepartamento as Departamento, vcausasolicitud as CausaSolicitud, vtipoempleado as Empleado, vcapacidadesrequeridas as CapacidadesRequeridas, vhorario as Horario, vtipo as Estado, vdescripcion as Descripcion, dsueldomin as SueldoMinimo, dsueldomax as SueldoMaximo, ncodempresa as CodigoEmpresa from MaPLAZA", "consulta", grdReclutamiento);
         }
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
             clasnegocio cnegocio = new clasnegocio();
-            cnegocio.funactivarDesactivarTextbox(txtCodigo, false);
-            cnegocio.funactivarDesactivarTextbox(txtDescripcion, false);
+            //finaliza cambio de richtextbox a textbox para enviar a BD
+            cnegocio.funactivarDesactivarTextbox(txtDepartamento, false);
+            cnegocio.funactivarDesactivarTextbox(txtCausa, false);
+            cnegocio.funactivarDesactivarTextbox(txtEmpleado, false);
+            cnegocio.funactivarDesactivarTextbox(txtCapacidades, false);
+            cnegocio.funactivarDesactivarTextbox(txtHorario, false);
             cnegocio.funactivarDesactivarTextbox(txtTipo, false);
+            cnegocio.funactivarDesactivarTextbox(txtDescripcion, false);
             cnegocio.funactivarDesactivarTextbox(txtSueldoMin, false);
             cnegocio.funactivarDesactivarTextbox(txtSueldoMax, false);
-            cnegocio.funactivarDesactivarTextbox(txtHorario, false);
             cnegocio.funactivarDesactivarCombobox(cmbCodEmpresa, false);
-            cnegocio.funactivarDesactivarCombobox(cmbSolicitud, false);
             cnegocio.funactivarDesactivarCombobox(cmbEstado, false);
-            
         }
 
         private void cmbCodEmpresa_SelectedIndexChanged(object sender, EventArgs e)
@@ -102,7 +105,7 @@ namespace RRHH
 
         private void cmbSolicitud_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtCodigoSolicitud.Text = cmbSolicitud.Text;
+          
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -113,20 +116,23 @@ namespace RRHH
         private void btneditar_Click(object sender, EventArgs e)
         {
             clasnegocio cn = new clasnegocio();
-            TextBox[] datos = { txtCodigo, txtTipo, txtDescripcion, txtSueldoMin, txtSueldoMax, txtHorario, txtCodigoEmpresa, txtCodigoSolicitud };
+            TextBox[] datos = { txtDepartamento, txtCausa, txtEmpleado, txtCapacidades, txtHorario, txtTipo, txtDescripcion, txtSueldoMin, txtSueldoMax, txtCodigoEmpresa };
             string tabla = "MaPLAZA";
             Boolean permiso = true;
             string codigo = cmbCodigoSeleccionado.SelectedValue.ToString();
             cn.EditarObjetos(tabla, permiso, datos, codigo, "ncodplaza");
             cmbCodigoSeleccionado.Enabled = true;
-            txtCodigo.Text = "";
+            txtDepartamento.Text = "";
+            txtCausa.Text = "";
+            txtEmpleado.Text = "";
+            txtCapacidades.Text = "";
+            txtHorario.Text = "";
             txtTipo.Text = "";
             txtDescripcion.Text = "";
             txtSueldoMin.Text = "";
             txtSueldoMax.Text = "";
-            txtHorario.Text = "";
             txtCodigoEmpresa.Text = "";
-            txtCodigoSolicitud.Text = "";
+            
         }
 
         private void btneliminar_Click(object sender, EventArgs e)
@@ -157,16 +163,16 @@ namespace RRHH
             DataGridViewRow row = grdReclutamiento.Rows[e.RowIndex];
             cmbCodigoSeleccionado.SelectedValue = row.Cells[0].Value.ToString();
             cmbCodigoSeleccionado.Enabled = false;
-            txtCodigo.Text = row.Cells[1].Value.ToString();
-            txtTipo.Text = row.Cells[2].Value.ToString();
-            txtDescripcion.Text = row.Cells[3].Value.ToString();
-            txtSueldoMin.Text = row.Cells[4].Value.ToString();
-            txtSueldoMax.Text = row.Cells[5].Value.ToString();
-            txtHorario.Text = row.Cells[6].Value.ToString();
-            cmbCodEmpresa.Text = row.Cells[6].Value.ToString();
-            cmbSolicitud.Text = row.Cells[7].Value.ToString();
-
-
+            txtDepartamento.Text = row.Cells[1].Value.ToString();
+            txtCausa.Text = row.Cells[2].Value.ToString();
+            txtEmpleado.Text = row.Cells[3].Value.ToString();
+            txtCapacidades.Text=row.Cells[4].Value.ToString();
+            txtHorario.Text = row.Cells[5].Value.ToString();
+            txtTipo.Text = row.Cells[6].Value.ToString();
+            txtDescripcion.Text = row.Cells[7].Value.ToString();
+            txtSueldoMin.Text = row.Cells[8].Value.ToString();
+            txtSueldoMax.Text = row.Cells[9].Value.ToString();
+            cmbCodEmpresa.Text = row.Cells[10].Value.ToString();
         }
 
         private void btnimprimir_Click(object sender, EventArgs e)

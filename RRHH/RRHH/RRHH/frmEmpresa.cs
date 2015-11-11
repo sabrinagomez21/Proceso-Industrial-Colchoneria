@@ -22,7 +22,7 @@ namespace RRHH
         {
             clasnegocio cnegocio = new clasnegocio();
             cnegocio.funconsultarRegistrosCombo("ncodempresa", "SELECT ncodempresa from MaEmpresa", "ncodempresa", cmbSeleccionado);
-            cnegocio.funconsultarRegistros("MaEmpresa", "SELECT ncodempresa as Codigo, vtipoempresa as Tipo, vnomempresa as Nombre, vdireccion as Direccion, ntelefono as Telefono, vdescripcion as Descripcion from MaEmpresa", "consulta", grdEmpresa);
+            cnegocio.funconsultarRegistros("MaEmpresa", "SELECT ncodempresa as Codigo, vpuestovacante as PuestoVacante,  vnomempresa as Nombre, vdescripcion as Descripcion, vtipoempresa as Estado, vdireccion as Direccion, dtelefono as Telefono from MaEmpresa", "consulta", grdEmpresa);
         }
         private void btnirprimero_Click(object sender, EventArgs e)
         {
@@ -59,7 +59,7 @@ namespace RRHH
         {
             clasnegocio cnegocio = new clasnegocio();
             cnegocio.funconsultarRegistrosCombo("ncodempresa", "SELECT ncodempresa from MaEmpresa", "ncodempresa", cmbSeleccionado);
-            cnegocio.funconsultarRegistros("MaEmpresa", "SELECT ncodempresa as Codigo, vtipoempresa as Tipo, vnomempresa as Nombre, vdireccion as Direccion, ntelefono as Telefono, vdescripcion as Descripcion from MaEmpresa", "consulta", grdEmpresa);
+            cnegocio.funconsultarRegistros("MaEmpresa", "SELECT ncodempresa as Codigo, vpuestovacante as PuestoVacante,  vnomempresa as Nombre, vdescripcion as Descripcion, vtipoempresa as Estado, vdireccion as Direccion, dtelefono as Telefono from MaEmpresa", "consulta", grdEmpresa);
         }
 
         private void btnimprimir_Click(object sender, EventArgs e)
@@ -71,6 +71,7 @@ namespace RRHH
         private void btncancelar_Click(object sender, EventArgs e)
         {
             clasnegocio cnegocio = new clasnegocio();
+            cnegocio.funactivarDesactivarTextbox(txtPuesto, false);
             cnegocio.funactivarDesactivarTextbox(txtNombre, false);
             cnegocio.funactivarDesactivarTextbox(txtDireccion, false);
             cnegocio.funactivarDesactivarTextbox(txtTelefono, false);
@@ -82,6 +83,7 @@ namespace RRHH
         private void btnnuevo_Click(object sender, EventArgs e)
         {
             clasnegocio cnegocio = new clasnegocio();
+            cnegocio.funactivarDesactivarTextbox(txtPuesto, true);
             cnegocio.funactivarDesactivarTextbox(txtNombre, true);
             cnegocio.funactivarDesactivarTextbox(txtDireccion, true);
             cnegocio.funactivarDesactivarTextbox(txtTelefono, true);
@@ -92,15 +94,16 @@ namespace RRHH
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            TextBox[] datos = { txtEstado, txtNombre, txtDireccion, txtTelefono, txtDescripcion };
+            TextBox[] datos = { txtPuesto, txtNombre, txtDescripcion, txtEstado,  txtDireccion, txtTelefono  };
             string tabla = "MaEMPRESA";
             Boolean permiso = true;
             clasnegocio cn = new clasnegocio();
             cn.AsignarObjetos(tabla, permiso, datos);
-            txtEstado.Text = "";
+            txtPuesto.Text = "";
             txtNombre.Text = "";
-            txtDireccion.Text = "";
             txtDescripcion.Text = "";
+            txtEstado.Text = "";
+            txtDireccion.Text = "";
             txtTelefono.Text = "";
            
         }
@@ -131,16 +134,17 @@ namespace RRHH
         private void btneditar_Click(object sender, EventArgs e)
         {
             clasnegocio cn = new clasnegocio();
-            TextBox[] datos = { txtEstado, txtNombre, txtDireccion, txtTelefono, txtDescripcion };
+            TextBox[] datos = { txtPuesto, txtNombre, txtDescripcion, txtEstado, txtDireccion, txtTelefono };
             string tabla = "MaEMPRESA";
             Boolean permiso = true;
             string codigo = cmbSeleccionado.SelectedValue.ToString();
             cn.EditarObjetos(tabla, permiso, datos, codigo, "ncodempresa");
             cmbSeleccionado.Enabled = true;
-            txtEstado.Text = "";
+            txtPuesto.Text = "";
             txtNombre.Text = "";
-            txtDireccion.Text = "";
             txtDescripcion.Text = "";
+            txtEstado.Text = "";
+            txtDireccion.Text = "";
             txtTelefono.Text = "";
         }
 

@@ -42,13 +42,9 @@
             this.btnnuevo = new System.Windows.Forms.Button();
             this.btnimprimir = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblCodigo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
-            this.txtCodigoSolicitud = new System.Windows.Forms.TextBox();
             this.txtCodigoEmpresa = new System.Windows.Forms.TextBox();
-            this.cmbSolicitud = new System.Windows.Forms.ComboBox();
-            this.lblSolicitud = new System.Windows.Forms.Label();
             this.cmbCodEmpresa = new System.Windows.Forms.ComboBox();
             this.lblEmpresa = new System.Windows.Forms.Label();
             this.txtHorario = new System.Windows.Forms.TextBox();
@@ -60,7 +56,6 @@
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lbltipo = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtTipo = new System.Windows.Forms.TextBox();
             this.grdReclutamiento = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -69,6 +64,14 @@
             this.txtCodigoSeleccionado = new System.Windows.Forms.TextBox();
             this.cmbCodigoSeleccionado = new System.Windows.Forms.ComboBox();
             this.lblCodigoPlaza = new System.Windows.Forms.Label();
+            this.lblDepartamento = new System.Windows.Forms.Label();
+            this.txtDepartamento = new System.Windows.Forms.TextBox();
+            this.lblCausaSolicitud = new System.Windows.Forms.Label();
+            this.txtCausa = new System.Windows.Forms.TextBox();
+            this.lblEmpleado = new System.Windows.Forms.Label();
+            this.txtEmpleado = new System.Windows.Forms.TextBox();
+            this.lblCapacidades = new System.Windows.Forms.Label();
+            this.txtCapacidades = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdReclutamiento)).BeginInit();
@@ -211,47 +214,40 @@
             this.panel3.Controls.Add(this.btnbuscar);
             this.panel3.Controls.Add(this.btneliminar);
             this.panel3.Controls.Add(this.btnguardar);
-            this.panel3.Location = new System.Drawing.Point(65, 18);
+            this.panel3.Location = new System.Drawing.Point(147, 12);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(650, 67);
             this.panel3.TabIndex = 58;
             // 
-            // lblCodigo
-            // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(25, 43);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(54, 19);
-            this.lblCodigo.TabIndex = 0;
-            this.lblCodigo.Text = "Codigo";
-            this.lblCodigo.Click += new System.EventHandler(this.lblCodigo_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.CausesValidation = false;
+            this.groupBox1.Controls.Add(this.groupBox3);
+            this.groupBox1.Controls.Add(this.txtCapacidades);
+            this.groupBox1.Controls.Add(this.lblCapacidades);
             this.groupBox1.Controls.Add(this.cmbEstado);
-            this.groupBox1.Controls.Add(this.txtCodigoSolicitud);
             this.groupBox1.Controls.Add(this.txtCodigoEmpresa);
-            this.groupBox1.Controls.Add(this.cmbSolicitud);
-            this.groupBox1.Controls.Add(this.lblSolicitud);
+            this.groupBox1.Controls.Add(this.txtEmpleado);
             this.groupBox1.Controls.Add(this.cmbCodEmpresa);
+            this.groupBox1.Controls.Add(this.lblDescripcion);
             this.groupBox1.Controls.Add(this.lblEmpresa);
-            this.groupBox1.Controls.Add(this.txtHorario);
-            this.groupBox1.Controls.Add(this.lblHorario);
+            this.groupBox1.Controls.Add(this.txtDescripcion);
             this.groupBox1.Controls.Add(this.txtSueldoMax);
             this.groupBox1.Controls.Add(this.lblSueldoMax);
             this.groupBox1.Controls.Add(this.txtSueldoMin);
             this.groupBox1.Controls.Add(this.lblmin);
-            this.groupBox1.Controls.Add(this.txtDescripcion);
-            this.groupBox1.Controls.Add(this.lblDescripcion);
-            this.groupBox1.Controls.Add(this.lbltipo);
-            this.groupBox1.Controls.Add(this.txtCodigo);
-            this.groupBox1.Controls.Add(this.lblCodigo);
             this.groupBox1.Controls.Add(this.txtTipo);
+            this.groupBox1.Controls.Add(this.lblEmpleado);
+            this.groupBox1.Controls.Add(this.txtCausa);
+            this.groupBox1.Controls.Add(this.lbltipo);
+            this.groupBox1.Controls.Add(this.lblCausaSolicitud);
+            this.groupBox1.Controls.Add(this.txtDepartamento);
+            this.groupBox1.Controls.Add(this.lblDepartamento);
+            this.groupBox1.Controls.Add(this.lblHorario);
+            this.groupBox1.Controls.Add(this.txtHorario);
             this.groupBox1.Location = new System.Drawing.Point(12, 91);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(544, 238);
+            this.groupBox1.Size = new System.Drawing.Size(863, 238);
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Plaza";
@@ -262,53 +258,25 @@
             this.cmbEstado.Items.AddRange(new object[] {
             "ACTIVO",
             "INACTIVO"});
-            this.cmbEstado.Location = new System.Drawing.Point(85, 81);
+            this.cmbEstado.Location = new System.Drawing.Point(424, 112);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(100, 21);
             this.cmbEstado.TabIndex = 18;
             this.cmbEstado.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // txtCodigoSolicitud
-            // 
-            this.txtCodigoSolicitud.Location = new System.Drawing.Point(496, 184);
-            this.txtCodigoSolicitud.Name = "txtCodigoSolicitud";
-            this.txtCodigoSolicitud.Size = new System.Drawing.Size(17, 20);
-            this.txtCodigoSolicitud.TabIndex = 17;
-            this.txtCodigoSolicitud.Tag = "ncodsolicitud";
-            this.txtCodigoSolicitud.Visible = false;
-            // 
             // txtCodigoEmpresa
             // 
-            this.txtCodigoEmpresa.Location = new System.Drawing.Point(496, 151);
+            this.txtCodigoEmpresa.Location = new System.Drawing.Point(840, 125);
             this.txtCodigoEmpresa.Name = "txtCodigoEmpresa";
             this.txtCodigoEmpresa.Size = new System.Drawing.Size(17, 20);
             this.txtCodigoEmpresa.TabIndex = 16;
             this.txtCodigoEmpresa.Tag = "ncodempresa";
             this.txtCodigoEmpresa.Visible = false;
             // 
-            // cmbSolicitud
-            // 
-            this.cmbSolicitud.FormattingEnabled = true;
-            this.cmbSolicitud.Location = new System.Drawing.Point(360, 184);
-            this.cmbSolicitud.Name = "cmbSolicitud";
-            this.cmbSolicitud.Size = new System.Drawing.Size(121, 21);
-            this.cmbSolicitud.TabIndex = 15;
-            this.cmbSolicitud.SelectedIndexChanged += new System.EventHandler(this.cmbSolicitud_SelectedIndexChanged);
-            // 
-            // lblSolicitud
-            // 
-            this.lblSolicitud.AutoSize = true;
-            this.lblSolicitud.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSolicitud.Location = new System.Drawing.Point(247, 186);
-            this.lblSolicitud.Name = "lblSolicitud";
-            this.lblSolicitud.Size = new System.Drawing.Size(113, 19);
-            this.lblSolicitud.TabIndex = 14;
-            this.lblSolicitud.Text = "Codigo Solicitud";
-            // 
             // cmbCodEmpresa
             // 
             this.cmbCodEmpresa.FormattingEnabled = true;
-            this.cmbCodEmpresa.Location = new System.Drawing.Point(360, 151);
+            this.cmbCodEmpresa.Location = new System.Drawing.Point(736, 98);
             this.cmbCodEmpresa.Name = "cmbCodEmpresa";
             this.cmbCodEmpresa.Size = new System.Drawing.Size(121, 21);
             this.cmbCodEmpresa.TabIndex = 13;
@@ -318,7 +286,7 @@
             // 
             this.lblEmpresa.AutoSize = true;
             this.lblEmpresa.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpresa.Location = new System.Drawing.Point(247, 151);
+            this.lblEmpresa.Location = new System.Drawing.Point(621, 97);
             this.lblEmpresa.Name = "lblEmpresa";
             this.lblEmpresa.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblEmpresa.Size = new System.Drawing.Size(114, 19);
@@ -327,7 +295,7 @@
             // 
             // txtHorario
             // 
-            this.txtHorario.Location = new System.Drawing.Point(358, 118);
+            this.txtHorario.Location = new System.Drawing.Point(424, 78);
             this.txtHorario.Name = "txtHorario";
             this.txtHorario.Size = new System.Drawing.Size(100, 20);
             this.txtHorario.TabIndex = 11;
@@ -337,7 +305,7 @@
             // 
             this.lblHorario.AutoSize = true;
             this.lblHorario.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorario.Location = new System.Drawing.Point(247, 117);
+            this.lblHorario.Location = new System.Drawing.Point(240, 77);
             this.lblHorario.Name = "lblHorario";
             this.lblHorario.Size = new System.Drawing.Size(57, 19);
             this.lblHorario.TabIndex = 10;
@@ -345,17 +313,17 @@
             // 
             // txtSueldoMax
             // 
-            this.txtSueldoMax.Location = new System.Drawing.Point(358, 83);
+            this.txtSueldoMax.Location = new System.Drawing.Point(741, 54);
             this.txtSueldoMax.Name = "txtSueldoMax";
             this.txtSueldoMax.Size = new System.Drawing.Size(100, 20);
             this.txtSueldoMax.TabIndex = 9;
-            this.txtSueldoMax.Tag = "vsueldomax";
+            this.txtSueldoMax.Tag = "dsueldomax";
             // 
             // lblSueldoMax
             // 
             this.lblSueldoMax.AutoSize = true;
             this.lblSueldoMax.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSueldoMax.Location = new System.Drawing.Point(247, 84);
+            this.lblSueldoMax.Location = new System.Drawing.Point(630, 53);
             this.lblSueldoMax.Name = "lblSueldoMax";
             this.lblSueldoMax.Size = new System.Drawing.Size(108, 19);
             this.lblSueldoMax.TabIndex = 8;
@@ -363,17 +331,17 @@
             // 
             // txtSueldoMin
             // 
-            this.txtSueldoMin.Location = new System.Drawing.Point(358, 40);
+            this.txtSueldoMin.Location = new System.Drawing.Point(741, 15);
             this.txtSueldoMin.Name = "txtSueldoMin";
             this.txtSueldoMin.Size = new System.Drawing.Size(100, 20);
             this.txtSueldoMin.TabIndex = 7;
-            this.txtSueldoMin.Tag = "vsueldomin";
+            this.txtSueldoMin.Tag = "dsueldomin";
             // 
             // lblmin
             // 
             this.lblmin.AutoSize = true;
             this.lblmin.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmin.Location = new System.Drawing.Point(247, 41);
+            this.lblmin.Location = new System.Drawing.Point(630, 15);
             this.lblmin.Name = "lblmin";
             this.lblmin.Size = new System.Drawing.Size(105, 19);
             this.lblmin.TabIndex = 6;
@@ -381,7 +349,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(25, 139);
+            this.txtDescripcion.Location = new System.Drawing.Point(424, 148);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(181, 66);
@@ -392,7 +360,7 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(25, 117);
+            this.lblDescripcion.Location = new System.Drawing.Point(240, 147);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(123, 19);
             this.lblDescripcion.TabIndex = 4;
@@ -402,24 +370,15 @@
             // 
             this.lbltipo.AutoSize = true;
             this.lbltipo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltipo.Location = new System.Drawing.Point(25, 86);
+            this.lbltipo.Location = new System.Drawing.Point(240, 114);
             this.lbltipo.Name = "lbltipo";
             this.lbltipo.Size = new System.Drawing.Size(53, 19);
             this.lbltipo.TabIndex = 2;
             this.lbltipo.Text = "Estado";
             // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(85, 42);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
-            this.txtCodigo.TabIndex = 1;
-            this.txtCodigo.Tag = "ncodplaza";
-            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
-            // 
             // txtTipo
             // 
-            this.txtTipo.Location = new System.Drawing.Point(191, 83);
+            this.txtTipo.Location = new System.Drawing.Point(530, 115);
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(34, 20);
             this.txtTipo.TabIndex = 3;
@@ -431,7 +390,7 @@
             this.grdReclutamiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdReclutamiento.Location = new System.Drawing.Point(6, 19);
             this.grdReclutamiento.Name = "grdReclutamiento";
-            this.grdReclutamiento.Size = new System.Drawing.Size(806, 194);
+            this.grdReclutamiento.Size = new System.Drawing.Size(882, 194);
             this.grdReclutamiento.TabIndex = 60;
             this.grdReclutamiento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdReclutamiento_CellContentClick);
             // 
@@ -440,7 +399,7 @@
             this.groupBox2.Controls.Add(this.grdReclutamiento);
             this.groupBox2.Location = new System.Drawing.Point(12, 335);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(818, 219);
+            this.groupBox2.Size = new System.Drawing.Size(902, 219);
             this.groupBox2.TabIndex = 61;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Plazas Disponibles";
@@ -451,16 +410,16 @@
             this.groupBox3.Controls.Add(this.txtCodigoSeleccionado);
             this.groupBox3.Controls.Add(this.cmbCodigoSeleccionado);
             this.groupBox3.Controls.Add(this.lblCodigoPlaza);
-            this.groupBox3.Location = new System.Drawing.Point(563, 102);
+            this.groupBox3.Location = new System.Drawing.Point(661, 125);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(261, 194);
+            this.groupBox3.Size = new System.Drawing.Size(173, 99);
             this.groupBox3.TabIndex = 62;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Eliminar, Modificar";
             // 
             // txtImprimir
             // 
-            this.txtImprimir.Location = new System.Drawing.Point(69, 106);
+            this.txtImprimir.Location = new System.Drawing.Point(15, 68);
             this.txtImprimir.Name = "txtImprimir";
             this.txtImprimir.Size = new System.Drawing.Size(121, 20);
             this.txtImprimir.TabIndex = 3;
@@ -468,7 +427,7 @@
             // 
             // txtCodigoSeleccionado
             // 
-            this.txtCodigoSeleccionado.Location = new System.Drawing.Point(196, 55);
+            this.txtCodigoSeleccionado.Location = new System.Drawing.Point(142, 41);
             this.txtCodigoSeleccionado.Name = "txtCodigoSeleccionado";
             this.txtCodigoSeleccionado.Size = new System.Drawing.Size(20, 20);
             this.txtCodigoSeleccionado.TabIndex = 2;
@@ -478,7 +437,7 @@
             // cmbCodigoSeleccionado
             // 
             this.cmbCodigoSeleccionado.FormattingEnabled = true;
-            this.cmbCodigoSeleccionado.Location = new System.Drawing.Point(69, 54);
+            this.cmbCodigoSeleccionado.Location = new System.Drawing.Point(15, 41);
             this.cmbCodigoSeleccionado.Name = "cmbCodigoSeleccionado";
             this.cmbCodigoSeleccionado.Size = new System.Drawing.Size(121, 21);
             this.cmbCodigoSeleccionado.TabIndex = 1;
@@ -488,11 +447,85 @@
             // 
             this.lblCodigoPlaza.AutoSize = true;
             this.lblCodigoPlaza.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoPlaza.Location = new System.Drawing.Point(11, 36);
+            this.lblCodigoPlaza.Location = new System.Drawing.Point(17, 24);
             this.lblCodigoPlaza.Name = "lblCodigoPlaza";
             this.lblCodigoPlaza.Size = new System.Drawing.Size(78, 15);
             this.lblCodigoPlaza.TabIndex = 0;
             this.lblCodigoPlaza.Text = "Codigo Plaza";
+            // 
+            // lblDepartamento
+            // 
+            this.lblDepartamento.AutoSize = true;
+            this.lblDepartamento.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDepartamento.Location = new System.Drawing.Point(10, 21);
+            this.lblDepartamento.Name = "lblDepartamento";
+            this.lblDepartamento.Size = new System.Drawing.Size(102, 19);
+            this.lblDepartamento.TabIndex = 19;
+            this.lblDepartamento.Text = "Departamento";
+            // 
+            // txtDepartamento
+            // 
+            this.txtDepartamento.Location = new System.Drawing.Point(118, 20);
+            this.txtDepartamento.Name = "txtDepartamento";
+            this.txtDepartamento.Size = new System.Drawing.Size(100, 20);
+            this.txtDepartamento.TabIndex = 20;
+            this.txtDepartamento.Tag = "vdepartamento";
+            // 
+            // lblCausaSolicitud
+            // 
+            this.lblCausaSolicitud.AutoSize = true;
+            this.lblCausaSolicitud.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCausaSolicitud.Location = new System.Drawing.Point(10, 60);
+            this.lblCausaSolicitud.Name = "lblCausaSolicitud";
+            this.lblCausaSolicitud.Size = new System.Drawing.Size(108, 19);
+            this.lblCausaSolicitud.TabIndex = 21;
+            this.lblCausaSolicitud.Text = "Causa Solicitud";
+            // 
+            // txtCausa
+            // 
+            this.txtCausa.Location = new System.Drawing.Point(18, 82);
+            this.txtCausa.Multiline = true;
+            this.txtCausa.Name = "txtCausa";
+            this.txtCausa.Size = new System.Drawing.Size(200, 51);
+            this.txtCausa.TabIndex = 22;
+            this.txtCausa.Tag = "vcausasolicitud";
+            // 
+            // lblEmpleado
+            // 
+            this.lblEmpleado.AutoSize = true;
+            this.lblEmpleado.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpleado.Location = new System.Drawing.Point(14, 145);
+            this.lblEmpleado.Name = "lblEmpleado";
+            this.lblEmpleado.Size = new System.Drawing.Size(73, 19);
+            this.lblEmpleado.TabIndex = 23;
+            this.lblEmpleado.Text = "Empleado";
+            // 
+            // txtEmpleado
+            // 
+            this.txtEmpleado.Location = new System.Drawing.Point(125, 146);
+            this.txtEmpleado.Name = "txtEmpleado";
+            this.txtEmpleado.Size = new System.Drawing.Size(100, 20);
+            this.txtEmpleado.TabIndex = 24;
+            this.txtEmpleado.Tag = "vtipoempleado";
+            // 
+            // lblCapacidades
+            // 
+            this.lblCapacidades.AutoSize = true;
+            this.lblCapacidades.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCapacidades.Location = new System.Drawing.Point(240, 20);
+            this.lblCapacidades.Name = "lblCapacidades";
+            this.lblCapacidades.Size = new System.Drawing.Size(169, 19);
+            this.lblCapacidades.TabIndex = 25;
+            this.lblCapacidades.Text = "Capacidades Requeridas";
+            // 
+            // txtCapacidades
+            // 
+            this.txtCapacidades.Location = new System.Drawing.Point(424, 15);
+            this.txtCapacidades.Multiline = true;
+            this.txtCapacidades.Name = "txtCapacidades";
+            this.txtCapacidades.Size = new System.Drawing.Size(200, 57);
+            this.txtCapacidades.TabIndex = 26;
+            this.txtCapacidades.Tag = "vcapacidadesrequeridas";
             // 
             // frmReclutamiento
             // 
@@ -500,8 +533,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(842, 566);
-            this.Controls.Add(this.groupBox3);
+            this.ClientSize = new System.Drawing.Size(922, 591);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel3);
@@ -537,16 +569,12 @@
         private System.Windows.Forms.Button btnnuevo;
         private System.Windows.Forms.Button btnimprimir;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView grdReclutamiento;
         private System.Windows.Forms.Label lbltipo;
-        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lblDescripcion;
-        private System.Windows.Forms.ComboBox cmbSolicitud;
-        private System.Windows.Forms.Label lblSolicitud;
         private System.Windows.Forms.ComboBox cmbCodEmpresa;
         private System.Windows.Forms.Label lblEmpresa;
         private System.Windows.Forms.TextBox txtHorario;
@@ -555,7 +583,6 @@
         private System.Windows.Forms.Label lblSueldoMax;
         private System.Windows.Forms.TextBox txtSueldoMin;
         private System.Windows.Forms.Label lblmin;
-        private System.Windows.Forms.TextBox txtCodigoSolicitud;
         private System.Windows.Forms.TextBox txtCodigoEmpresa;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -564,6 +591,14 @@
         private System.Windows.Forms.ComboBox cmbCodigoSeleccionado;
         private System.Windows.Forms.Label lblCodigoPlaza;
         private System.Windows.Forms.ComboBox cmbEstado;
+        private System.Windows.Forms.TextBox txtCapacidades;
+        private System.Windows.Forms.Label lblCapacidades;
+        private System.Windows.Forms.TextBox txtEmpleado;
+        private System.Windows.Forms.Label lblEmpleado;
+        private System.Windows.Forms.TextBox txtCausa;
+        private System.Windows.Forms.Label lblCausaSolicitud;
+        private System.Windows.Forms.TextBox txtDepartamento;
+        private System.Windows.Forms.Label lblDepartamento;
 
 
 

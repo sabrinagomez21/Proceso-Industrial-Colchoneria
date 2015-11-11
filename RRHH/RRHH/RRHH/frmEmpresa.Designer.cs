@@ -61,6 +61,8 @@
             this.cmbSeleccionado = new System.Windows.Forms.ComboBox();
             this.txtCodigoSeleccionado = new System.Windows.Forms.TextBox();
             this.txtImprimir = new System.Windows.Forms.TextBox();
+            this.lblPuesto = new System.Windows.Forms.Label();
+            this.txtPuesto = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpresa)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -228,6 +230,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtPuesto);
+            this.groupBox2.Controls.Add(this.lblPuesto);
             this.groupBox2.Controls.Add(this.lblNombre);
             this.groupBox2.Controls.Add(this.txtNombre);
             this.groupBox2.Controls.Add(this.txtEstado);
@@ -241,7 +245,7 @@
             this.groupBox2.Controls.Add(this.lblDireccion);
             this.groupBox2.Location = new System.Drawing.Point(18, 85);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(449, 157);
+            this.groupBox2.Size = new System.Drawing.Size(483, 157);
             this.groupBox2.TabIndex = 62;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Empresa";
@@ -260,7 +264,7 @@
             // 
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccion.Location = new System.Drawing.Point(18, 77);
+            this.lblDireccion.Location = new System.Drawing.Point(258, 56);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(60, 15);
             this.lblDireccion.TabIndex = 1;
@@ -270,7 +274,7 @@
             // 
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(18, 110);
+            this.lblTelefono.Location = new System.Drawing.Point(259, 94);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(53, 15);
             this.lblTelefono.TabIndex = 2;
@@ -286,25 +290,25 @@
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(124, 77);
+            this.txtDireccion.Location = new System.Drawing.Point(318, 54);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(101, 20);
+            this.txtDireccion.Size = new System.Drawing.Size(121, 20);
             this.txtDireccion.TabIndex = 4;
             this.txtDireccion.Tag = "vdireccion";
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(124, 110);
+            this.txtTelefono.Location = new System.Drawing.Point(318, 92);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(101, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(121, 20);
             this.txtTelefono.TabIndex = 5;
-            this.txtTelefono.Tag = "ntelefono";
+            this.txtTelefono.Tag = "dtelefono";
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(245, 53);
+            this.lblDescripcion.Location = new System.Drawing.Point(6, 79);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(73, 15);
             this.lblDescripcion.TabIndex = 6;
@@ -312,7 +316,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(248, 75);
+            this.txtDescripcion.Location = new System.Drawing.Point(48, 94);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(195, 57);
@@ -323,7 +327,7 @@
             // 
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(18, 21);
+            this.lblEstado.Location = new System.Drawing.Point(268, 20);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(44, 15);
             this.lblEstado.TabIndex = 8;
@@ -335,7 +339,7 @@
             this.cmbEstado.Items.AddRange(new object[] {
             "ACTIVO",
             "INACTIVO"});
-            this.cmbEstado.Location = new System.Drawing.Point(118, 19);
+            this.cmbEstado.Location = new System.Drawing.Point(318, 18);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(121, 21);
             this.cmbEstado.TabIndex = 9;
@@ -343,7 +347,7 @@
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(246, 21);
+            this.txtEstado.Location = new System.Drawing.Point(445, 20);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(19, 20);
             this.txtEstado.TabIndex = 10;
@@ -356,9 +360,9 @@
             this.groupBox3.Controls.Add(this.txtCodigoSeleccionado);
             this.groupBox3.Controls.Add(this.cmbSeleccionado);
             this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Location = new System.Drawing.Point(473, 91);
+            this.groupBox3.Location = new System.Drawing.Point(519, 91);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 151);
+            this.groupBox3.Size = new System.Drawing.Size(158, 151);
             this.groupBox3.TabIndex = 63;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Modificar, Eliminar";
@@ -376,14 +380,14 @@
             // cmbSeleccionado
             // 
             this.cmbSeleccionado.FormattingEnabled = true;
-            this.cmbSeleccionado.Location = new System.Drawing.Point(26, 52);
+            this.cmbSeleccionado.Location = new System.Drawing.Point(12, 51);
             this.cmbSeleccionado.Name = "cmbSeleccionado";
             this.cmbSeleccionado.Size = new System.Drawing.Size(121, 21);
             this.cmbSeleccionado.TabIndex = 11;
             // 
             // txtCodigoSeleccionado
             // 
-            this.txtCodigoSeleccionado.Location = new System.Drawing.Point(153, 52);
+            this.txtCodigoSeleccionado.Location = new System.Drawing.Point(114, 29);
             this.txtCodigoSeleccionado.Name = "txtCodigoSeleccionado";
             this.txtCodigoSeleccionado.Size = new System.Drawing.Size(19, 20);
             this.txtCodigoSeleccionado.TabIndex = 11;
@@ -392,18 +396,36 @@
             // 
             // txtImprimir
             // 
-            this.txtImprimir.Location = new System.Drawing.Point(25, 80);
+            this.txtImprimir.Location = new System.Drawing.Point(12, 83);
             this.txtImprimir.Name = "txtImprimir";
             this.txtImprimir.Size = new System.Drawing.Size(101, 20);
             this.txtImprimir.TabIndex = 11;
             this.txtImprimir.Tag = "";
             this.txtImprimir.Visible = false;
             // 
+            // lblPuesto
+            // 
+            this.lblPuesto.AutoSize = true;
+            this.lblPuesto.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPuesto.Location = new System.Drawing.Point(6, 25);
+            this.lblPuesto.Name = "lblPuesto";
+            this.lblPuesto.Size = new System.Drawing.Size(90, 15);
+            this.lblPuesto.TabIndex = 11;
+            this.lblPuesto.Text = "Puesto Vacante";
+            // 
+            // txtPuesto
+            // 
+            this.txtPuesto.Location = new System.Drawing.Point(124, 19);
+            this.txtPuesto.Name = "txtPuesto";
+            this.txtPuesto.Size = new System.Drawing.Size(101, 20);
+            this.txtPuesto.TabIndex = 12;
+            this.txtPuesto.Tag = "vpuestovacante";
+            // 
             // frmEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 450);
+            this.ClientSize = new System.Drawing.Size(697, 479);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -459,5 +481,7 @@
         private System.Windows.Forms.TextBox txtCodigoSeleccionado;
         private System.Windows.Forms.ComboBox cmbSeleccionado;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtPuesto;
+        private System.Windows.Forms.Label lblPuesto;
     }
 }
