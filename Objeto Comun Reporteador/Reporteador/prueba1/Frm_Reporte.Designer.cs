@@ -190,7 +190,7 @@
             this.Gv_Reporte.ReadOnly = true;
             this.Gv_Reporte.Size = new System.Drawing.Size(343, 351);
             this.Gv_Reporte.TabIndex = 18;
-            this.Gv_Reporte.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.Gv_Reporte.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Lbl_Admin
             // 

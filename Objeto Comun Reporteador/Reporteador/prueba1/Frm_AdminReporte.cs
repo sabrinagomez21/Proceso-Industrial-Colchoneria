@@ -107,7 +107,7 @@ namespace prueba1{
         #endregion
 
         #region Datos seleccionados del Grid
-        private void Gv_Reporte_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Gv_Reporte_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Txt_Nombre.Text = Gv_Reporte[0, Gv_Reporte.CurrentCell.RowIndex].Value.ToString();
         }

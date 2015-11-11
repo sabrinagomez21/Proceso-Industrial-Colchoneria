@@ -138,6 +138,3 @@ C:\Users\Cristhiam\Desktop\Objeto Comun Reporteador1\Objeto Comun Reporteador\Re
 C:\Users\Cristhiam\Desktop\Objeto Comun Reporteador1\Objeto Comun Reporteador\Reporteador\prueba1\bin\Release\prueba1.exe.config
 C:\Users\Cristhiam\Desktop\Objeto Comun Reporteador1\Objeto Comun Reporteador\Reporteador\prueba1\bin\Release\prueba1.exe
 C:\Users\Cristhiam\Desktop\Objeto Comun Reporteador1\Objeto Comun Reporteador\Reporteador\prueba1\obj\Release\prueba1.exe
-C:\Users\Cristhiam\Documents\GitHub\Proceso-Industrial-Colchoneria\Objeto Comun Reporteador\Reporteador\prueba1\bin\Release\prueba1.exe.config
-C:\Users\Cristhiam\Documents\GitHub\Proceso-Industrial-Colchoneria\Objeto Comun Reporteador\Reporteador\prueba1\obj\Release\prueba1.exe
-C:\Users\Cristhiam\Documents\GitHub\Proceso-Industrial-Colchoneria\Objeto Comun Reporteador\Reporteador\prueba1\obj\Release\prueba1.pdb

@@ -42,10 +42,10 @@ namespace prueba1{
         public Frm_Reporte()
         {
             InitializeComponent();
-            //vnomreporte = reporte;
-            //ncodaplicacion = aplicacion;
-            //ncodmodulo = modulo;
-            //ncodusuario = usuario;
+            /*vnomreporte = reporte;
+            ncodaplicacion = aplicacion;
+            ncodmodulo = modulo;
+            ncodusuario = usuario;*/
             
         }
         #endregion 
@@ -117,6 +117,42 @@ namespace prueba1{
         #endregion
 
 
+        //Autor: Cristhiam Duarte
+        //Fecha:1/11/15
+        #region Consulta Carga Rol
+        private void Fnc_CargaRol()
+        {
+            try
+            {
+                //asignamos el query a odbccommand
+                mySqlComando = new OdbcCommand(
+                     string.Format("SELECT MaROLUSUARIO.vnombreRole FROM MaUSUARIO" +
+                                    " INNER JOIN TrUSUARIOTOROLE ON MaUSUARIO.ncodUsuario = TrUSUARIOTOROLE.ncodUsuario" +
+                                    " INNER JOIN MaROLUSUARIO ON MaROLUSUARIO.ncodRole = TrUSUARIOTOROLE.ncodRole" +
+                                    " WHERE MaUSUARIO.ncodUsuario ='" + ncodusuario + "'"),
+                     ConexionODBC.Conexion.ObtenerConexion()
+                 );
+                //ejecutamos el query y lo asignamos a un datareader
+                OdbcDataReader mySqlDLector = mySqlComando.ExecuteReader();
+                //si el datareader lee
+                if (mySqlDLector.Read())
+                {
+                    //si el datareader tiene filas
+                    if (mySqlDLector.HasRows)
+                    {
+                        //asigna el nombre del rol ala variable name
+                        Name = Convert.ToString(mySqlDLector["vnombreRole"]);
+                    }
+                }
+            }
+            catch (Exception Ex)
+            {
+                //Muestra Error si el Reporte no Existe Fisicamente
+                MessageBox.Show("Error al Referir Usuario", "Error al Realizar la Consulta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+        #endregion
+
         //Autor: Dennys Choy
         //Fecha: 20/10/15
         #region Carga Reporte
@@ -136,7 +172,8 @@ namespace prueba1{
                 this.Rv_Reporte.LocalReport.DataSources.Clear();//Se limpia el datasource del reporte
                 Rv_Reporte.Reset();
                 //Se llama el reporte que se mostrara en el reportviewer
-                Rv_Reporte.LocalReport.ReportEmbeddedResource = "prueba1." + sNombreReporteGrid + ".rdlc";
+                Rv_Reporte.LocalReport.ReportPath = "..\\..\\"+ sNombreReporteGrid +".rdlc";
+                //Rv_Reporte.LocalReport.ReportEmbeddedResource = ""+ nombreSolucion + "" + sNombreReporteGrid + ".rdlc";
                 ReportDataSource RprtDS_Origen = new ReportDataSource(); //Origen de Datos
                 RprtDS_Origen.Name = "DataSet1"; //Unicamente nombre no utiliza DATASET en el proyecto
                 RprtDS_Origen.Value = dtReporte; //Valores del Reporte
@@ -222,7 +259,7 @@ namespace prueba1{
         //Autor: Cristhiam Duarte
         //Fecha: 20/10/15
         #region Seleccion de datos del Grid
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //recupera el valor de la columna 0 para ser usado como referencia de nombre
             sNombreReporteGrid = Gv_Reporte[0, Gv_Reporte.CurrentCell.RowIndex].Value.ToString();
