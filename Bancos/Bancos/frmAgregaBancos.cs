@@ -11,27 +11,26 @@ using Navegador;
 
 namespace Bancos
 {
-    public partial class frmCrearBancos : Form
+    public partial class frmAgregaBancos : Form
     {
         string estado = "";
         string sCod;
-        public frmCrearBancos()
+        public frmAgregaBancos()
         {
             InitializeComponent();
+            cmbEstado.SelectedIndex = 0;
+            funLlenarTabla();
             btnGuardar.Enabled = false;
             btnCancelar.Enabled = false;
             btnImprimir.Enabled = false;
-            funLlenarcmbBancos();
-            //funLlenarTabla();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             clasnegocio cnegocio = new clasnegocio();
-            cnegocio.funactivarDesactivarTextbox(txtSaldo, true); 
-            cnegocio.funactivarDesactivarTextbox(txtNoCuenta, true);
-            cnegocio.funactivarDesactivarCombobox(cmbBanco, true);
-            //lblAgregar.Enabled = true;
+            cnegocio.funactivarDesactivarTextbox(txtNombre, true);
+            cnegocio.funactivarDesactivarTextbox(txtDireccion, true);
+            cnegocio.funactivarDesactivarTextbox(txtEstado, true);
             btnGuardar.Enabled = true;
             btnCancelar.Enabled = true;
             btnNuevo.Enabled = false;
@@ -43,20 +42,17 @@ namespace Bancos
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //string tabla = "macuenta";
-            //Boolean permiso = true;
-
-            string sTabla = "macuenta";
+            string sTabla = "mabanco";
             clasnegocio cn = new clasnegocio();
             Boolean bPermiso = true;
             txtEstado.Text = cmbEstado.SelectedItem.ToString();
-
-
-
+            
+                       
+            
 
             if (estado.Equals("editar"))
-            {
-                TextBox[] aDatosEdit = { txtSaldo, txtNoCuenta, txtEstado, txtBancos };
+            {                
+                TextBox[] aDatosEdit = { txtNombre, txtDireccion, txtEstado };                
                 string sCodigo = "ncodbanco";
 
                 cn.EditarObjetos(sTabla, bPermiso, aDatosEdit, sCod, sCodigo);
@@ -72,20 +68,20 @@ namespace Bancos
                 cn.funeliminarRegistro(sTabla, sCod, sCampoLlavePrimaria, sCampoEstado);
             }
             else if (estado.Equals(""))
-            {                
-                txtEstado.Text = "Activo";                
-                TextBox[] datos = { txtSaldo, txtNoCuenta, txtEstado, txtBancos };
-                
-                cn.AsignarObjetos(sTabla, bPermiso, datos);                
+            {                                
+                //string sTabla = "matipotransaccion";
+                txtEstado.Text = "Activo";
+                TextBox[] datos = { txtNombre, txtDireccion, txtEstado };
+                cn.AsignarObjetos(sTabla, bPermiso, datos);
 
                 funLimpiar();
                 funLlenarTabla();
             }
 
             estado = "";
-            cn.funactivarDesactivarTextbox(txtSaldo, false);
-            cn.funactivarDesactivarTextbox(txtNoCuenta, false);
-            cn.funactivarDesactivarCombobox(cmbBanco, false);
+            cn.funactivarDesactivarTextbox(txtNombre, false);
+            cn.funactivarDesactivarTextbox(txtDireccion, false);
+            cn.funactivarDesactivarCombobox(cmbEstado, false);                        
             btnGuardar.Enabled = false;
             btnCancelar.Enabled = false;
             btnImprimir.Enabled = false;
@@ -98,38 +94,71 @@ namespace Bancos
             txtEstado.Visible = false;
             funLimpiar();
             funLlenarTabla(); 
-
-
-
-            
         }
 
-        void funLimpiar(){
-            txtNoCuenta.Text = "";
-            txtSaldo.Text = "";
+        void funLimpiar()
+        {
+            txtNombre.Text = "";
+            txtDireccion.Text = "";
             txtEstado.Text = "";
             cmbEstado.SelectedIndex = 0;
         }
 
+        void funLlenarTabla()
+        {
+            clasnegocio cnegocio = new clasnegocio();
+            cnegocio.funconsultarRegistros("mabanco", "SELECT ncodbanco as No, vnombrebanco as Nombre, vdireccion as Direccion, cestado as Estado from mabanco", "consulta", grdDatos);
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            estado = "editar";
+            txtNombre.Clear();
+            txtDireccion.Clear();
+            btnGuardar.Enabled = true;
+            btnCancelar.Enabled = true;
+            btnNuevo.Enabled = false;
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnRefrescar.Enabled = false;
+            btnBuscar.Enabled = false;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            estado = "eliminar";
+            clasnegocio cn = new clasnegocio();
+            cn.funactivarDesactivarTextbox(txtNombre, false);
+            cn.funactivarDesactivarTextbox(txtDireccion, false);
+            cn.funactivarDesactivarCombobox(cmbEstado, false);
+            btnGuardar.Enabled = true;
+            btnCancelar.Enabled = true;
+            btnNuevo.Enabled = false;
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnRefrescar.Enabled = false;
+            btnBuscar.Enabled = false;
+            btnAnterior.Enabled = false;
+            btnIrPrimero.Enabled = false;
+            btnSiguiente.Enabled = false;
+            btnIrUltimo.Enabled = false;
+        }
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            funLimpiar();
-            clasnegocio cnegocio = new clasnegocio();
-            cnegocio.funactivarDesactivarTextbox(txtSaldo, false);
-            cnegocio.funactivarDesactivarTextbox(txtNoCuenta, false);
-            cnegocio.funactivarDesactivarCombobox(cmbBanco, false);
-            cnegocio.funactivarDesactivarCombobox(cmbEstado, false);
-            lblAgregar.Enabled = false;
-
+            clasnegocio cn = new clasnegocio();
+            cn.funactivarDesactivarTextbox(txtNombre, false);
+            cn.funactivarDesactivarTextbox(txtDireccion, false);
+            cn.funactivarDesactivarCombobox(cmbEstado, false);
             txtBuscar.Visible = false;
             //lblBuscar.Visible = false;
-            lblNoCuenta.Visible = true;
-            lblSaldo.Visible = true;
-            //lblEstado.Visible = true;
-            txtNoCuenta.Visible = true;
-            txtSaldo.Visible = true;
-            txtSaldo.Clear();
-            txtNoCuenta.Clear();            
+            lblNombre.Visible = true;
+            lblDireccion.Visible = true;
+            lblEstado.Visible = true;
+            txtNombre.Visible = true;
+            txtDireccion.Visible = true;           
+            txtNombre.Clear();
+            txtDireccion.Clear();
             cmbEstado.SelectedIndex = 0;
             cmbEstado.Enabled = false;
             cmbEstado.Visible = false;
@@ -147,81 +176,9 @@ namespace Bancos
             funLlenarTabla();
         }
 
-        void funLlenarTabla()
-        {
-            clasnegocio cnegocio = new clasnegocio();
-            cnegocio.funconsultarRegistros("macuenta", "SELECT nsaldo as Saldo, nnocuenta as No.Cuenta, cestado as Estado, ncodbanco as Banco from macuenta", "consulta", grdDatos);
-        }
-        void funLlenarcmbBancos()
-        {
-            clasnegocio cnegocio = new clasnegocio();
-            cnegocio.funconsultarRegistrosCombo("ncodbanco", "SELECT concat(ncodbanco, '.', vnombrebanco) as nombre from mabanco WHERE cestado='Activo'", "nombre", cmbBanco);
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            estado = "editar";
-            txtNoCuenta.Clear();
-            txtSaldo.Clear();
-            btnGuardar.Enabled = true;
-            btnCancelar.Enabled = true;
-            btnNuevo.Enabled = false;
-            btnEditar.Enabled = false;
-            btnEliminar.Enabled = false;
-            btnRefrescar.Enabled = false;
-            btnBuscar.Enabled = false;
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            estado = "eliminar";
-            clasnegocio cn = new clasnegocio();
-            cn.funactivarDesactivarTextbox(txtNoCuenta, false);
-            cn.funactivarDesactivarTextbox(txtSaldo, false);
-            cn.funactivarDesactivarCombobox(cmbEstado, false);
-            cn.funactivarDesactivarCombobox(cmbBanco, false);
-            btnGuardar.Enabled = true;
-            btnCancelar.Enabled = true;
-            btnNuevo.Enabled = false;
-            btnEditar.Enabled = false;
-            btnEliminar.Enabled = false;
-            btnRefrescar.Enabled = false;
-            btnBuscar.Enabled = false;
-            btnAnterior.Enabled = false;
-            btnIrPrimero.Enabled = false;
-            btnSiguiente.Enabled = false;
-            btnIrUltimo.Enabled = false;
-        }
-
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
             funLlenarTabla();
-        }
-
-        private void btnImprimir_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            txtNoCuenta.Visible = false;
-            lblSaldo.Visible = false;
-            txtSaldo.Visible = false;
-            cmbEstado.Visible = false;
-            lblEstado.Visible = false;
-            lblBancos.Enabled = false;
-            cmbBanco.Visible = false;
-            txtBuscar.Visible = true;
-            txtBuscar.Enabled = true;
-            //lblBuscar.Visible = true;
-            btnGuardar.Enabled = false;
-            btnCancelar.Enabled = true;
-            btnNuevo.Enabled = false;
-            btnEditar.Enabled = false;
-            btnEliminar.Enabled = false;
-            btnRefrescar.Enabled = false;
-            btnBuscar.Enabled = false;
         }
 
         private void btnIrPrimero_Click(object sender, EventArgs e)
@@ -253,15 +210,14 @@ namespace Bancos
             if (estado.Equals("editar"))
             {
                 clasnegocio cn = new clasnegocio();
-                cn.funactivarDesactivarTextbox(txtNoCuenta, true);
-                cn.funactivarDesactivarTextbox(txtSaldo, true);
+                cn.funactivarDesactivarTextbox(txtNombre, true);
+                cn.funactivarDesactivarTextbox(txtDireccion, true);
                 cn.funactivarDesactivarCombobox(cmbEstado, true);
-                cn.funactivarDesactivarCombobox(cmbBanco, true);
                 sCod = grdDatos.Rows[grdDatos.CurrentCell.RowIndex].Cells[0].Value.ToString();
-                txtSaldo.Text = grdDatos.Rows[grdDatos.CurrentCell.RowIndex].Cells[1].Value.ToString();
-                txtNoCuenta.Text = grdDatos.Rows[grdDatos.CurrentCell.RowIndex].Cells[2].Value.ToString();
+                txtNombre.Text = grdDatos.Rows[grdDatos.CurrentCell.RowIndex].Cells[1].Value.ToString();
+                txtDireccion.Text = grdDatos.Rows[grdDatos.CurrentCell.RowIndex].Cells[2].Value.ToString();
                 cmbEstado.Visible = true;
-                txtNoCuenta.Enabled = true;
+                txtNombre.Enabled = true;
                 lblEstado.Visible = true;
                 cmbEstado.Enabled = true;
                 string sCmb = grdDatos.Rows[grdDatos.CurrentCell.RowIndex].Cells[3].Value.ToString();
@@ -274,8 +230,8 @@ namespace Bancos
                 }
                 else if (sCmb.Equals("Inactivo"))
                 {
-                    cmbEstado.SelectedIndex = 1;
-                }             
+                    cmbEstado.SelectedIndex = 1;                    
+                }
 
             } if (estado.Equals("eliminar"))
             {
@@ -283,10 +239,29 @@ namespace Bancos
             }
         }
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            txtNombre.Visible = false;
+            lblDireccion.Visible = false;
+            txtDireccion.Visible = false;
+            cmbEstado.Visible = false;
+            lblEstado.Visible = false;
+            txtBuscar.Visible = true;
+            txtBuscar.Enabled = true;
+            //lblBuscar.Visible = true;
+            btnGuardar.Enabled = false;
+            btnCancelar.Enabled = true;
+            btnNuevo.Enabled = false;
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnRefrescar.Enabled = false;
+            btnBuscar.Enabled = false;
+        }
+
         private void txtBuscar_KeyUp(object sender, KeyEventArgs e)
         {
             clasnegocio cnegocio = new clasnegocio();
-            cnegocio.funconsultarRegistros("macuenta", "SELECT ncodcuenta as Codigo, nsaldo as Saldo ,nnocuenta as No.Cuenta, cestado as Estado, ncodbanco as Banco  from macuenta WHERE nnocuenta LIKE '" + txtBuscar.Text + "%'", "consulta", grdDatos);
+            cnegocio.funconsultarRegistros("mabanco", "SELECT ncodbanco as Codigo, vnombrebanco as Nombre ,vdireccion as Operacion, cestado as Estado  from mabanco WHERE vnombrebanco LIKE '" + txtBuscar.Text + "%'", "consulta", grdDatos);
         }
     }
 }

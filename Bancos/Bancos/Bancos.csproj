@@ -35,8 +35,9 @@
     <Reference Include="ConexionODBC">
       <HintPath>..\ConexionODBC.dll</HintPath>
     </Reference>
-    <Reference Include="Navegador">
-      <HintPath>..\Navegador.dll</HintPath>
+    <Reference Include="Navegador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\DLL's\Navegador.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -64,6 +65,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregaBancos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregaBancos.Designer.cs">
+      <DependentUpon>frmAgregaBancos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBancos.cs">
       <SubType>Form</SubType>
@@ -100,6 +107,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CreacionBancos.resx">
       <DependentUpon>CreacionBancos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregaBancos.resx">
+      <DependentUpon>frmAgregaBancos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBancos.resx">
       <DependentUpon>frmBancos.cs</DependentUpon>

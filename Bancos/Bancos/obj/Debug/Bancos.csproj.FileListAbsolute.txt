@@ -39,3 +39,4 @@ C:\Users\kevin\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj
 C:\Users\kevin\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.Properties.Resources.resources
 C:\Users\kevin\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.csproj.GenerateResource.Cache
 C:\Users\kevin\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.exe
+C:\Users\kevin\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.frmAgregaBancos.resources

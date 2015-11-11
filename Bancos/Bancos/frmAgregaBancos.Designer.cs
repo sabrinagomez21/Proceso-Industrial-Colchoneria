@@ -1,6 +1,6 @@
 ﻿namespace Bancos
 {
-    partial class frmCrearBancos
+    partial class frmAgregaBancos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCrearBancos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregaBancos));
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnIrUltimo = new System.Windows.Forms.Button();
             this.btnSiguiente = new System.Windows.Forms.Button();
@@ -45,16 +45,12 @@
             this.grdDatos = new System.Windows.Forms.DataGridView();
             this.pnlInformacion = new System.Windows.Forms.Panel();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
-            this.lblNoCuenta = new System.Windows.Forms.Label();
-            this.lblSaldo = new System.Windows.Forms.Label();
-            this.txtSaldo = new System.Windows.Forms.TextBox();
-            this.txtNoCuenta = new System.Windows.Forms.TextBox();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.lblEstado = new System.Windows.Forms.Label();
-            this.cmbBanco = new System.Windows.Forms.ComboBox();
-            this.txtBancos = new System.Windows.Forms.TextBox();
-            this.lblBancos = new System.Windows.Forms.Label();
-            this.lblAgregar = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
@@ -76,10 +72,10 @@
             this.panel3.Controls.Add(this.btnEliminar);
             this.panel3.Controls.Add(this.btnEditar);
             this.panel3.Controls.Add(this.btnNuevo);
-            this.panel3.Location = new System.Drawing.Point(135, 12);
+            this.panel3.Location = new System.Drawing.Point(117, 27);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(653, 51);
-            this.panel3.TabIndex = 16;
+            this.panel3.TabIndex = 17;
             // 
             // btnIrUltimo
             // 
@@ -139,7 +135,6 @@
             this.btnImprimir.Size = new System.Drawing.Size(48, 42);
             this.btnImprimir.TabIndex = 11;
             this.btnImprimir.UseVisualStyleBackColor = true;
-            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnRefrescar
             // 
@@ -204,33 +199,29 @@
             // grdDatos
             // 
             this.grdDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdDatos.Location = new System.Drawing.Point(40, 198);
+            this.grdDatos.Location = new System.Drawing.Point(12, 199);
             this.grdDatos.Name = "grdDatos";
             this.grdDatos.ReadOnly = true;
             this.grdDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdDatos.Size = new System.Drawing.Size(847, 261);
-            this.grdDatos.TabIndex = 18;
+            this.grdDatos.TabIndex = 20;
             this.grdDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDatos_CellContentClick);
             // 
             // pnlInformacion
             // 
             this.pnlInformacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlInformacion.Controls.Add(this.txtBuscar);
-            this.pnlInformacion.Controls.Add(this.lblAgregar);
-            this.pnlInformacion.Controls.Add(this.cmbBanco);
-            this.pnlInformacion.Controls.Add(this.txtBancos);
-            this.pnlInformacion.Controls.Add(this.lblBancos);
             this.pnlInformacion.Controls.Add(this.cmbEstado);
-            this.pnlInformacion.Controls.Add(this.lblNoCuenta);
-            this.pnlInformacion.Controls.Add(this.lblSaldo);
-            this.pnlInformacion.Controls.Add(this.txtSaldo);
-            this.pnlInformacion.Controls.Add(this.txtNoCuenta);
+            this.pnlInformacion.Controls.Add(this.lblDireccion);
+            this.pnlInformacion.Controls.Add(this.lblNombre);
+            this.pnlInformacion.Controls.Add(this.txtNombre);
+            this.pnlInformacion.Controls.Add(this.txtDireccion);
             this.pnlInformacion.Controls.Add(this.txtEstado);
             this.pnlInformacion.Controls.Add(this.lblEstado);
-            this.pnlInformacion.Location = new System.Drawing.Point(40, 83);
+            this.pnlInformacion.Location = new System.Drawing.Point(12, 84);
             this.pnlInformacion.Name = "pnlInformacion";
             this.pnlInformacion.Size = new System.Drawing.Size(847, 100);
-            this.pnlInformacion.TabIndex = 17;
+            this.pnlInformacion.TabIndex = 19;
             // 
             // cmbEstado
             // 
@@ -240,52 +231,52 @@
             this.cmbEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cmbEstado.Location = new System.Drawing.Point(149, 55);
+            this.cmbEstado.Location = new System.Drawing.Point(149, 59);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(187, 21);
             this.cmbEstado.TabIndex = 20;
             this.cmbEstado.Visible = false;
             // 
-            // lblNoCuenta
+            // lblDireccion
             // 
-            this.lblNoCuenta.AutoSize = true;
-            this.lblNoCuenta.Location = new System.Drawing.Point(66, 23);
-            this.lblNoCuenta.Name = "lblNoCuenta";
-            this.lblNoCuenta.Size = new System.Drawing.Size(61, 13);
-            this.lblNoCuenta.TabIndex = 14;
-            this.lblNoCuenta.Text = "No Cuenta:";
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Location = new System.Drawing.Point(429, 27);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(52, 13);
+            this.lblDireccion.TabIndex = 14;
+            this.lblDireccion.Text = "Direccion";
             // 
-            // lblSaldo
+            // lblNombre
             // 
-            this.lblSaldo.AutoSize = true;
-            this.lblSaldo.Location = new System.Drawing.Point(427, 20);
-            this.lblSaldo.Name = "lblSaldo";
-            this.lblSaldo.Size = new System.Drawing.Size(34, 13);
-            this.lblSaldo.TabIndex = 11;
-            this.lblSaldo.Text = "Saldo";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(63, 27);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.TabIndex = 11;
+            this.lblNombre.Text = "Nombre";
             // 
-            // txtSaldo
+            // txtNombre
             // 
-            this.txtSaldo.Enabled = false;
-            this.txtSaldo.Location = new System.Drawing.Point(483, 16);
-            this.txtSaldo.Name = "txtSaldo";
-            this.txtSaldo.Size = new System.Drawing.Size(257, 20);
-            this.txtSaldo.TabIndex = 12;
-            this.txtSaldo.Tag = "nsaldo";
+            this.txtNombre.Enabled = false;
+            this.txtNombre.Location = new System.Drawing.Point(149, 24);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(257, 20);
+            this.txtNombre.TabIndex = 12;
+            this.txtNombre.Tag = "vnombrebanco";
             // 
-            // txtNoCuenta
+            // txtDireccion
             // 
-            this.txtNoCuenta.Enabled = false;
-            this.txtNoCuenta.Location = new System.Drawing.Point(149, 20);
-            this.txtNoCuenta.Name = "txtNoCuenta";
-            this.txtNoCuenta.Size = new System.Drawing.Size(244, 20);
-            this.txtNoCuenta.TabIndex = 15;
-            this.txtNoCuenta.Tag = "nnocuenta";
+            this.txtDireccion.Enabled = false;
+            this.txtDireccion.Location = new System.Drawing.Point(510, 24);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(126, 20);
+            this.txtDireccion.TabIndex = 15;
+            this.txtDireccion.Tag = "vdireccion";
             // 
             // txtEstado
             // 
             this.txtEstado.Enabled = false;
-            this.txtEstado.Location = new System.Drawing.Point(342, 56);
+            this.txtEstado.Location = new System.Drawing.Point(342, 60);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(51, 20);
             this.txtEstado.TabIndex = 17;
@@ -295,74 +286,34 @@
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(66, 58);
+            this.lblEstado.Location = new System.Drawing.Point(66, 62);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(43, 13);
             this.lblEstado.TabIndex = 16;
             this.lblEstado.Text = "Estado:";
-            // 
-            // cmbBanco
-            // 
-            this.cmbBanco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBanco.Enabled = false;
-            this.cmbBanco.FormattingEnabled = true;
-            this.cmbBanco.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
-            this.cmbBanco.Location = new System.Drawing.Point(483, 52);
-            this.cmbBanco.Name = "cmbBanco";
-            this.cmbBanco.Size = new System.Drawing.Size(187, 21);
-            this.cmbBanco.TabIndex = 23;
-            // 
-            // txtBancos
-            // 
-            this.txtBancos.Enabled = false;
-            this.txtBancos.Location = new System.Drawing.Point(483, 79);
-            this.txtBancos.Name = "txtBancos";
-            this.txtBancos.Size = new System.Drawing.Size(51, 20);
-            this.txtBancos.TabIndex = 22;
-            this.txtBancos.Tag = "ncodbanco";
-            this.txtBancos.Visible = false;
-            // 
-            // lblBancos
-            // 
-            this.lblBancos.AutoSize = true;
-            this.lblBancos.Location = new System.Drawing.Point(427, 58);
-            this.lblBancos.Name = "lblBancos";
-            this.lblBancos.Size = new System.Drawing.Size(46, 13);
-            this.lblBancos.TabIndex = 21;
-            this.lblBancos.Text = "Bancos:";
-            // 
-            // lblAgregar
-            // 
-            this.lblAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblAgregar.Enabled = false;
-            this.lblAgregar.Image = ((System.Drawing.Image)(resources.GetObject("lblAgregar.Image")));
-            this.lblAgregar.Location = new System.Drawing.Point(689, 45);
-            this.lblAgregar.Name = "lblAgregar";
-            this.lblAgregar.Size = new System.Drawing.Size(28, 28);
-            this.lblAgregar.TabIndex = 24;
+            this.lblEstado.Visible = false;
             // 
             // txtBuscar
             // 
             this.txtBuscar.Enabled = false;
-            this.txtBuscar.Location = new System.Drawing.Point(149, 20);
+            this.txtBuscar.Location = new System.Drawing.Point(149, 24);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(244, 20);
-            this.txtBuscar.TabIndex = 25;
-            this.txtBuscar.Tag = "nnocuenta";
+            this.txtBuscar.Size = new System.Drawing.Size(257, 20);
+            this.txtBuscar.TabIndex = 21;
+            this.txtBuscar.Tag = "vnombrebanco";
+            this.txtBuscar.Visible = false;
             this.txtBuscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyUp);
             // 
-            // frmCrearBancos
+            // frmAgregaBancos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 484);
+            this.ClientSize = new System.Drawing.Size(873, 479);
             this.Controls.Add(this.grdDatos);
             this.Controls.Add(this.pnlInformacion);
             this.Controls.Add(this.panel3);
-            this.Name = "frmCrearBancos";
-            this.Text = "Crear Bancos";
+            this.Name = "frmAgregaBancos";
+            this.Text = "frmAgregaBancos";
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).EndInit();
             this.pnlInformacion.ResumeLayout(false);
@@ -388,17 +339,13 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.DataGridView grdDatos;
         private System.Windows.Forms.Panel pnlInformacion;
-        private System.Windows.Forms.Label lblNoCuenta;
-        private System.Windows.Forms.Label lblSaldo;
-        private System.Windows.Forms.TextBox txtSaldo;
-        private System.Windows.Forms.TextBox txtNoCuenta;
+        private System.Windows.Forms.ComboBox cmbEstado;
+        private System.Windows.Forms.Label lblDireccion;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.ComboBox cmbEstado;
-        private System.Windows.Forms.Label lblAgregar;
-        private System.Windows.Forms.ComboBox cmbBanco;
-        private System.Windows.Forms.TextBox txtBancos;
-        private System.Windows.Forms.Label lblBancos;
         private System.Windows.Forms.TextBox txtBuscar;
     }
 }
