@@ -1,0 +1,590 @@
+[33mcommit 5954659daaf041d32c2ca194644cd40adeadd823[m
+Author: Diego Taracena <taracenadido@hotmail.com>
+Date:   Thu Nov 12 18:42:49 2015 -0600
+
+    Modulo de Bancos
+
+[33mcommit 7ed5b8aa4174d45f45be999bb8ef4d042b8baf0d[m
+Author: sabrinagomez21 <sam.gg07@gmail.com>
+Date:   Thu Nov 12 17:04:04 2015 -0600
+
+    Facturacion y Recursos Humanos
+    
+    Modulo de facturacion y Recursos Humanos Grupo 3
+
+[33mcommit 1200d5771fd5bf1c8eeb5a8226213320ec654c9e[m
+Merge: b45506c 051831c
+Author: mbatz1049 <ultra143@gmail.com>
+Date:   Thu Nov 12 18:03:04 2015 -0600
+
+    Merge branch 'Pruebas' of https://github.com/sabrinagomez21/Proceso-Industrial-Colchoneria into Pruebas
+
+[33mcommit 051831c75e070fc1b9a06997fd5adb0d8559c171[m
+Author: Dylan Corado <nos_196@hotmail.com>
+Date:   Thu Nov 12 17:10:26 2015 -0700
+
+    Modulo Cuentas por Cobrar
+
+[33mcommit b45506caba7012b300561162d63305d82f9864ae[m
+Author: mbatz1049 <ultra143@gmail.com>
+Date:   Thu Nov 12 17:57:25 2015 -0600
+
+    Modulo Compras
+    
+    Envio de modulo Compras
+
+[33mcommit 248e5342e545786c6c23a63c3b084bc9088792d4[m
+Author: Dennys Iván <navi93@live.com>
+Date:   Thu Nov 12 16:37:26 2015 -0600
+
+    Modulo de Cuentas por pagar
+    
+    Cuentas por pagar
+
+[33mcommit c11d2e8f7797ef34d3de0dae5e400ee698c67241[m
+Author: crissdua <crissdua@hotmail.com>
+Date:   Thu Nov 12 04:26:01 2015 -0600
+
+    Actualizacion de Inventario
+    
+    Faltaban Diagramas
+
+[33mcommit b6e4f3bb557c5935b151cdb68ad38c9a6781594c[m
+Author: crissdua <crissdua@hotmail.com>
+Date:   Thu Nov 12 04:09:07 2015 -0600
+
+    Inventario .rar a pruebas
+
+[33mcommit 87a1add83048180a45b8ecac6fe8ca54ff7e98e0[m
+Author: crissdua <crissdua@hotmail.com>
+Date:   Thu Nov 12 04:07:34 2015 -0600
+
+    Inventario enviado a pruebas
+
+[33mcommit a113e059e7810274d92769eed56897bbdcb3bc0f[m
+Author: crissdua <crissdua@hotmail.com>
+Date:   Tue Nov 10 18:37:59 2015 -0600
+
+    Reporteador Corregido para mejor Uso y manual
+
+[33mcommit 97c4c91870e4f18da5e63f987e10b8daa9cbbe9f[m
+Merge: 637ec5d 44d60c0
+Author: Dylan Corado <nos_196@hotmail.com>
+Date:   Tue Nov 10 17:29:23 2015 -0700
+
+    Merge branch 'Pruebas' of https://github.com/sabrinagomez21/Proceso-Industrial-Colchoneria into Pruebas
+
+[33mcommit 637ec5dd6ce0066a3531cb4e0015de36b1773dee[m
+Author: Dylan Corado <nos_196@hotmail.com>
+Date:   Tue Nov 10 17:27:34 2015 -0700
+
+    Graficador
+
+[33mcommit 44d60c0b1a8b86e2a7824fecd11d6f3943b79894[m
+Author: Walter Flores <skeleton_360@hotmail.com>
+Date:   Mon Nov 9 11:59:34 2015 -0600
+
+    entidad
+    
+    se han corregido los errores, una segunda revision a la entidad relacion
+    del sistema
+
+[33mcommit c66f1658cda8de454f28838cebc75ff3b856475a[m
+Author: Hector Joannes Gil Cardona <joannes14@hotmail.com>
+Date:   Sun Nov 8 12:30:39 2015 -0600
+
+    regreso archivo
+
+[33mcommit 9244d5eca4c7b1a01784b8d3b11dcc30ea666eb8[m
+Author: mbatz1049 <ultra143@gmail.com>
+Date:   Fri Nov 6 18:52:42 2015 -0600
+
+    Error de merge
+
+[33mcommit 988719fc3f0f0eb12c17587e0c51194d2e22d8df[m
+Merge: 4ae5382 45bf595
+Author: taradie <taracenadido@hotmail.com>
+Date:   Thu Nov 5 21:59:00 2015 -0600
+
+    Merge pull request #24 from sabrinagomez21/Diego
+    
+    Diego
+
+[33mcommit 45bf595f515fdb210be21a2eb8f189c0e613266d[m
+Author: Diego Taracena <taracenadido@hotmail.com>
+Date:   Thu Nov 5 21:54:16 2015 -0600
+
+    ER final
+
+[33mcommit 4ae5382f091210da5a9a952fd05bf92c290a9ab0[m
+Author: Walter Flores <skeleton_360@hotmail.com>
+Date:   Wed Nov 4 23:23:40 2015 -0600
+
+    modulo errores
+    
+    envio modulo errores pruebas
+
+[33mcommit 704a17fb440c50ac857c7ffc421f6b3d481882d5[m
+Author: Walter Flores <skeleton_360@hotmail.com>
+Date:   Wed Nov 4 23:22:41 2015 -0600
+
+    modulo bitacora
+
+[33mcommit c86f764962f04dafbd6629c2d002ddbf3a53ed76[m
+Author: crissdua <crissdua@hotmail.com>
+Date:   Wed Nov 4 22:32:27 2015 -0600
+
+    nombre de variables corregidos a la BD 04/11/15
+
+[33mcommit 692eb2f9d38751f806d29c76de437a38475344c7[m
+Merge: 3566b21 5597163
+Author: Diego Taracena <taracenadido@hotmail.com>
+Date:   Wed Nov 4 12:13:59 2015 -0600
+
+    actualizando
+
+[33mcommit 3566b21ce41df39000f9f133fda051b2894d0821[m
+Author: Diego Taracena <taracenadido@hotmail.com>
+Date:   Wed Nov 4 11:55:11 2015 -0600
+
+    sin cambios
+
+[33mcommit 559716353028d058c379a5cf326f6d23bd6adc15[m
+Author: Jrevmen <j.revmen@gmail.com>
+Date:   Tue Nov 3 09:01:50 2015 -0600
+
+    solucion de errores
+
+[33mcommit 381108663aceb244db487c7aee8559ca3f872a9c[m
+Author: crissdua <crissdua@hotmail.com>
+Date:   Tue Nov 3 08:53:25 2015 -0600
+
+    remover del master reporteador
+
+[33mcommit bf1d7f06d299164291e02316b468e209634d4197[m
+Author: crissdua <crissdua@hotmail.com>
+Date:   Mon Nov 2 20:21:41 2015 -0600
+
+    version anterior borrada
+
+[33mcommit 1339a568f1d422552207c24888121e3df6ba6290[m
+Author: crissdua <crissdua@hotmail.com>
+Date:   Mon Nov 2 20:19:39 2015 -0600
+
+    Reporteador Corregido
+
+[33mcommit ff2c369eaf0ce50be60c8c02933341db43791bae[m
+Author: Pamela Selman <pamelaselman_5@hotmail.com>
+Date:   Sun Nov 1 21:37:43 2015 -0600
+
+    Navegador grupo 3
+
+[33mcommit 9aae0e15bf48800a5221ff7c20dbea7d9b66ea3b[m
+Author: crissdua <crissdua@hotmail.com>
+Date:   Sun Nov 1 20:32:30 2015 -0600
+
+    Objeto Comun Terminado con Carta de Pruebas
+
+[33mcommit ff778eff61c3706e08ff1db99cd88c370cbc1bcd[m
+Author: crissdua <crissdua@hotmail.com>
+Date:   Sun Nov 1 19:21:04 2015 -0600
+
+    borrador
+
+[33mcommit f2a3324473fdaf5a13f23144699b9bac9a684d7b[m
+Author: mbatz1049 <ultra143@gmail.com>
+Date:   Sun Nov 1 19:05:30 2015 -0600
+
+    Correcciones Realizadas
+    
+    Correcion de Errores encontrados
+
+[33mcommit 023726df3775ea65f98d4c959b6b54dd59ccf25e[m
+Author: crissdua <crissdua@hotmail.com>
+Date:   Sun Nov 1 11:57:21 2015 -0600
+
+    Objeto Comun Reporteador para Pruebas
+
+[33mcommit 610fe55929a827b0316da2166dbbb5269027b92a[m
+Author: crissdua <crissdua@hotmail.com>
+Date:   Sun Nov 1 11:41:06 2015 -0600
+
+    Reporteador Finalizado
+    
+    Incluye Codigo Fuente, Proyecto, DLL, SQL, Ejecutable para probar la
+    DLL, Manual de uso y operacion
+
+[33mcommit 6e2bb7e9cfbfc73b86f442e189b213660bc9144c[m
+Author: crissdua <crissdua@hotmail.com>
+Date:   Sun Nov 1 11:01:55 2015 -0600
+
+    Reporteador Proyecto y DLL
+    
+    Se incluye un Ejecutable para probar la DLL con instrucciones de Uso
+
+[33mcommit 8e1f7c21972d0e67bc1a339e0b43e4471585ee42[m
+Author: Pamela Selman <pamelaselman_5@hotmail.com>
+Date:   Sun Nov 1 06:26:18 2015 -0600
+
+    Proyecto dll navegador para pruebas 01 de noviembre de 2015
+
+[33mcommit b569ac1d261e5aa26ac2dd1499ca895a4e1e2103[m
+Author: Pamela Selman <pamelaselman_5@hotmail.com>
+Date:   Sat Oct 31 20:31:34 2015 -0600
+
+    NAVEGADOR PARA PRUEBAS
+    
+    Se adjunta RAR con requisitos solicitados para pruebas, además de un
+    documento con especificación de división de trabajo.
+
+[33mcommit ea5f1f74a182d3a25bec5cbc018426de9cbf7a51[m
+Author: Diego Taracena <taracenadido@hotmail.com>
+Date:   Sat Oct 31 12:53:06 2015 -0600
+
+    cambios
+
+[33mcommit 9316a8c45bb9310f4671d5fc450f8fc6f6794ddc[m
+Merge: b4772ee 3e0ff76
+Author: Jrevmen <j.revmen@gmail.com>
+Date:   Sat Oct 31 07:42:34 2015 -0600
+
+    Merge pull request #18 from sabrinagomez21/Josue
+    
+    MDI CxC
+
+[33mcommit 3e0ff769caed3505f2b25a3330d0e557e1b599bc[m
+Author: Jrevmen <j.revmen@gmail.com>
+Date:   Sat Oct 31 07:41:46 2015 -0600
+
+    MDI CxC
+
+[33mcommit c8bf15093a3667a99a7c47f72ed138fa863e1568[m
+Merge: 6e51854 b4772ee
+Author: Jrevmen <j.revmen@gmail.com>
+Date:   Sat Oct 31 07:27:27 2015 -0600
+
+    Merge pull request #17 from sabrinagomez21/Grupo2
+    
+    Grupo2
+
+[33mcommit b4772eec23161b7a43b0dae0246dd4ae8ee2b1fe[m
+Merge: 36072f1 d2b94ab
+Author: Jrevmen <j.revmen@gmail.com>
+Date:   Sat Oct 31 07:24:55 2015 -0600
+
+    Merge pull request #16 from sabrinagomez21/Josue
+    
+    MDI CxC
+
+[33mcommit d2b94ab1f137e007e3f2fe0a5b74928d290c66b1[m
+Merge: 7267dba 5cebb7c
+Author: Jrevmen <j.revmen@gmail.com>
+Date:   Sat Oct 31 07:23:55 2015 -0600
+
+    MDI CxC
+
+[33mcommit 6e51854ddf7287e320cf948cf418076181f08a30[m
+Merge: 03a9f34 5cebb7c
+Author: Jrevmen <j.revmen@gmail.com>
+Date:   Sat Oct 31 07:21:11 2015 -0600
+
+    Merge pull request #15 from sabrinagomez21/Josue
+    
+    Frame Principal CxC
+
+[33mcommit 7267dbaf27ef68abd69518ed371f441fa37feda3[m
+Author: Jrevmen <j.revmen@gmail.com>
+Date:   Sat Oct 31 07:18:25 2015 -0600
+
+    MDI CxC
+
+[33mcommit 5cebb7c213762530e423b8022598afec16fe8d18[m
+Merge: f2b8968 a32c52a
+Author: Jrevmen <j.revmen@gmail.com>
+Date:   Fri Oct 30 16:15:23 2015 -0600
+
+    Merge branch 'Josue' of https://github.com/sabrinagomez21/Proceso-Industrial-Colchoneria into Josue
+
+[33mcommit f2b89681d8d55c76684eee771b2e338a72542713[m
+Author: Jrevmen <j.revmen@gmail.com>
+Date:   Fri Oct 30 16:09:14 2015 -0600
+
+    MDI CxC
+
+[33mcommit 36072f133bfaa6084b19f7d82f29876bbdbfe2bb[m
+Merge: e6fd8dc bfadecc
+Author: taradie <taracenadido@hotmail.com>
+Date:   Wed Oct 28 21:21:10 2015 -0600
+
+    Merge pull request #13 from sabrinagomez21/Diego
+    
+    Diego
+
+[33mcommit bfadecc04a6e4c271a3a11308ae1301e7c81abc9[m
+Author: Diego Taracena <taracenadido@hotmail.com>
+Date:   Wed Oct 28 21:19:27 2015 -0600
+
+    unificacion de prototipos de bancos
+
+[33mcommit ace4ba2c1830821ce37ee49af1618c43c358a8ee[m
+Merge: 4e4ee96 e6fd8dc
+Author: Diego Taracena <taracenadido@hotmail.com>
+Date:   Wed Oct 28 21:17:35 2015 -0600
+
+    Merge branch 'Grupo2' into Diego
+
+[33mcommit f625370a8f5b706811c2ef4b8f4a6d70adaecd3e[m
+Author: Luis Fernando Linares <luiisfer_1992@hotmail.com>
+Date:   Wed Oct 28 17:07:32 2015 -0600
+
+    Revert "Envio de Asignacion Aplicacion"
+    
+    This reverts commit 5f20eef9e901961b1b713e13e6723b330ac8ccc9.
+
+[33mcommit bc4c98b7a693bdfb38184a0f7b3cb00554e6519b[m
+Author: Luis Fernando Linares <luiisfer_1992@hotmail.com>
+Date:   Wed Oct 28 17:06:35 2015 -0600
+
+    Envio de Manejo Asignacion Aplicacion a pruebas
+
+[33mcommit 48c58b2646978a0b2c7053b5cc798b4a3bf45caa[m
+Author: Luis Fernando Linares <luiisfer_1992@hotmail.com>
+Date:   Wed Oct 28 17:06:04 2015 -0600
+
+    Envio de Login a pruebas
+
+[33mcommit 5f20eef9e901961b1b713e13e6723b330ac8ccc9[m
+Author: Luis Fernando Linares <luiisfer_1992@hotmail.com>
+Date:   Mon Oct 26 19:41:44 2015 -0600
+
+    Envio de Asignacion Aplicacion
+
+[33mcommit 035f4f5ce2fc2bb5cadf8cfeb29b69b50e1eceb4[m
+Author: sabrinagomez21 <sam.gg07@gmail.com>
+Date:   Wed Oct 28 11:57:00 2015 -0600
+
+    Revision ER Colchoneria
+    
+    Se adjunta .zip el cual incluye sql en texto plano, archivo para abrir
+    con Embarcadero 11 Data Architecture.
+
+[33mcommit 03784d6fc63840c5d8d1ecbe2ec376032e801d4e[m
+Author: mbatz1049 <ultra143@gmail.com>
+Date:   Wed Oct 28 10:01:35 2015 -0600
+
+    Pruebas
+    
+    Envio modulo de registro de App y usuarios.
+
+[33mcommit e44ff179bfe97e9f060712e12e5b811f0e1cb4f5[m
+Author: mbatz1049 <ultra143@gmail.com>
+Date:   Tue Oct 27 22:31:40 2015 -0600
+
+    Envio Modulos
+    
+    Registro y Busqueda de Aplicaciones y Usuarios
+
+[33mcommit b124d5ee767889f8dcd4bcf6d4f6f174b35594ce[m
+Author: mbatz1049 <ultra143@gmail.com>
+Date:   Tue Oct 27 22:22:35 2015 -0600
+
+    Prueba
+    
+    Envio de modulos de registro de usuarios y aplicaciones.
+
+[33mcommit e6fd8dc7638865c214d1ac67d093100e0190bd2c[m
+Merge: ec5a08b d25aabb
+Author: Manuel Chuquiej <manuelchuquiej@hotmail.com>
+Date:   Mon Oct 26 22:17:47 2015 -0600
+
+    Merge pull request #12 from sabrinagomez21/Manuel
+    
+    Manuel
+
+[33mcommit d25aabbd2c5bf56360ba0fa14c2f2a4d8a001ac9[m
+Merge: bde6f4c ec5a08b
+Author: Manuel Chuquiej <manuelchuquiej@hotmail.com>
+Date:   Mon Oct 26 22:12:04 2015 -0600
+
+    se agregaron formularios menu bancos y pago
+
+[33mcommit bde6f4c2058e6535d920aad0529f1f9050297592[m
+Author: Manuel Chuquiej <manuelchuquiej@hotmail.com>
+Date:   Mon Oct 26 22:06:00 2015 -0600
+
+    Se agrego formulario menu banco y pago
+
+[33mcommit ec5a08b9b7cc00042745173c01a244c8d00686f3[m
+Merge: 5bd0022 06a174c
+Author: Douglas-KCA <kevin-dou@outlook.com>
+Date:   Mon Oct 26 21:48:43 2015 -0600
+
+    Merge pull request #11 from sabrinagomez21/Kevin
+    
+    Cuentas por Cobrar y Creacion Bancos
+
+[33mcommit 06a174cacf09158a6dfe298690b60ee6c35d05d3[m
+Author: Douglas-KCA <kevin-dou@outlook.com>
+Date:   Mon Oct 26 21:43:21 2015 -0600
+
+    Cuentas por Cobrar y Creacion Bancos
+
+[33mcommit 5bd002254784e8780c6358ce8dca551a0387c00c[m
+Merge: dd6f200 ee40413
+Author: Dylan Corado <nos_196@hotmail.com>
+Date:   Mon Oct 26 18:15:47 2015 -0600
+
+    Merge pull request #10 from sabrinagomez21/Dylan
+    
+    Form Historial de la cuenta
+
+[33mcommit ee404139b939551986a0ece0171ca85513caadf5[m
+Author: Dylan Corado <nos_196@hotmail.com>
+Date:   Mon Oct 26 18:11:55 2015 -0700
+
+    Form Historial de la cuenta
+
+[33mcommit 4e4ee96dd67923cd1427ddcb9b10f4f207074d0d[m
+Merge: be80c7b dd6f200
+Author: taradie <taracenadido@hotmail.com>
+Date:   Mon Oct 26 17:47:57 2015 -0600
+
+    Merge pull request #9 from sabrinagomez21/Grupo2
+    
+    Merge pull request #8 from sabrinagomez21/Diego
+
+[33mcommit dd6f20009a39f484054eb0bfe3a624b26f8611d6[m
+Merge: 0d29bba be80c7b
+Author: taradie <taracenadido@hotmail.com>
+Date:   Mon Oct 26 17:46:51 2015 -0600
+
+    Merge pull request #8 from sabrinagomez21/Diego
+    
+    Diego
+
+[33mcommit be80c7b10e25df6c247a935f7eb603b98cf7f1ea[m
+Merge: 775e5b4 0d29bba
+Author: Diego Taracena <taracenadido@hotmail.com>
+Date:   Mon Oct 26 17:46:06 2015 -0600
+
+    bancos
+
+[33mcommit 775e5b44f54e558c542ff359ac7f1831c9b46222[m
+Author: Diego Taracena <taracenadido@hotmail.com>
+Date:   Mon Oct 26 17:44:05 2015 -0600
+
+    Prototipo conciliacion
+
+[33mcommit 0d29bba3dbf3d98ea0e7edd6937ca35d08cbffd1[m
+Merge: 517c98e a93d99f
+Author: Dylan Corado <nos_196@hotmail.com>
+Date:   Mon Oct 26 17:38:48 2015 -0600
+
+    Merge pull request #7 from sabrinagomez21/Dylan
+    
+    Form Autorizacion de Cobros
+
+[33mcommit a93d99f480eca720bea8f65d680fb76f316149b7[m
+Author: Dylan Corado <nos_196@hotmail.com>
+Date:   Mon Oct 26 17:34:43 2015 -0700
+
+    Form Autorizacion de Cobros
+
+[33mcommit 517c98e0365f7c073ca4e11982cabf7172b4c86e[m
+Merge: 6a59a27 a32c52a
+Author: taradie <taracenadido@hotmail.com>
+Date:   Mon Oct 26 15:44:38 2015 -0600
+
+    Merge pull request #6 from sabrinagomez21/Josue
+    
+    Josue
+
+[33mcommit a32c52aeb0d61418d0bdb9073cdd5461d390ee9c[m
+Merge: f6d1e0b 6a59a27
+Author: Jrevmen <j.revmen@gmail.com>
+Date:   Mon Oct 26 15:40:28 2015 -0600
+
+    Merge pull request #5 from sabrinagomez21/Grupo2
+    
+    Prototipo tipo de cobro
+
+[33mcommit f6d1e0b9c6d5c222f19b8c9500f4b67fd25a08b7[m
+Author: Jrevmen <j.revmen@gmail.com>
+Date:   Mon Oct 26 15:35:12 2015 -0600
+
+    Prototipo no funcional tipo de cobros
+
+[33mcommit 25bc3b48ffd39430214669e3439b757efe9b4a89[m
+Author: Luis Fernando Linares <luiisfer_1992@hotmail.com>
+Date:   Sun Oct 25 21:21:35 2015 -0600
+
+    Envio de Login
+
+[33mcommit 7dcdc41551fd16c06cdfaf47736eb5260c78b426[m
+Author: Luis Fernando Linares <luiisfer_1992@hotmail.com>
+Date:   Sun Oct 25 21:21:23 2015 -0600
+
+    Envio de Asignacion Aplicacion
+
+[33mcommit 1afcf5f864459bd99e4cf4ae5c60725eefd5b585[m
+Author: Hector Joannes Gil Cardona <joannes14@hotmail.com>
+Date:   Sun Oct 25 19:40:44 2015 -0600
+
+    CORRECCION DE MODULO ROL COMPLETO
+
+[33mcommit 4548d0d9934b17a977dd03347d634cdffa1c429b[m
+Author: Hector Joannes Gil Cardona <joannes14@hotmail.com>
+Date:   Sun Oct 25 19:39:40 2015 -0600
+
+    Eliminacion
+
+[33mcommit c6ac05b92a2ae17a403d738c028fe6265bdc2b52[m
+Author: Hector Joannes Gil Cardona <joannes14@hotmail.com>
+Date:   Sun Oct 25 18:41:54 2015 -0600
+
+    Proyecto
+
+[33mcommit 9c45ff58532fc9012173da830cc9c058152c163b[m
+Author: Hector Joannes Gil Cardona <joannes14@hotmail.com>
+Date:   Sun Oct 25 18:38:08 2015 -0600
+
+    archivos faltantes
+
+[33mcommit f728f30acc31f2dc9cecd06139e39ca21b0e68a3[m
+Author: Hector Joannes Gil Cardona <joannes14@hotmail.com>
+Date:   Sun Oct 25 18:35:22 2015 -0600
+
+    Correcion modulo roles
+
+[33mcommit 73248dd5590e8041c490dcc30230b1220bed68ec[m
+Author: Hector Joannes Gil Cardona <joannes14@hotmail.com>
+Date:   Sun Oct 25 18:01:15 2015 -0600
+
+    eliminacion modulo
+
+[33mcommit cf8c49d57b8e04d63b2947d411f23b798a622352[m
+Author: Hector Joannes Gil Cardona <joannes14@hotmail.com>
+Date:   Sun Oct 25 00:03:18 2015 -0600
+
+    Modulo de Manejo de Roles y Aplicaciones
+
+[33mcommit 6a59a27937ad922b7cc3a3b980ddf2092cbcb1cb[m
+Merge: 03a9f34 fe8d008
+Author: Douglas-KCA <kevin-dou@outlook.com>
+Date:   Thu Oct 1 17:56:21 2015 -0600
+
+    Merge pull request #4 from sabrinagomez21/Kevin
+    
+    Objeto Comun Graficador
+
+[33mcommit fe8d0086e6bc40b0d30a27f3ecdab9a88bb4c03d[m
+Author: Douglas-KCA <kevin-dou@outlook.com>
+Date:   Thu Oct 1 17:51:44 2015 -0600
+
+    Objeto Comun Graficador
+
+[33mcommit 03a9f34675bdee76f8554582316df97998f0855e[m
+Author: sabrinagomez21 <sam.gg07@gmail.com>
+Date:   Mon Sep 21 19:16:27 2015 -0600
+
+    :circus_tent: Added .gitattributes & .gitignore files
