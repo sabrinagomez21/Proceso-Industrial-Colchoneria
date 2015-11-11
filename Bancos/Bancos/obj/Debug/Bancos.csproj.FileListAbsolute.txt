@@ -31,3 +31,5 @@ C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj
 C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.frmBancos.resources
 C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.frmHistorialCuenta.resources
 C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.frmPagos.resources
+C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.frmEmpleados.resources
+C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.frmProveedor.resources

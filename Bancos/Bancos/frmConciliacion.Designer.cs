@@ -43,14 +43,6 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblCuenta = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Verificacion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.NoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Moneda = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Comentario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblTotal = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnIrUltimo = new System.Windows.Forms.Button();
             this.btnSiguiente = new System.Windows.Forms.Button();
@@ -64,6 +56,11 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.cmbCodigo = new System.Windows.Forms.ComboBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.txtComentario = new System.Windows.Forms.TextBox();
+            this.txtCodDoc = new System.Windows.Forms.TextBox();
+            this.Verificacion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.pnlInformacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -72,6 +69,8 @@
             // pnlInformacion
             // 
             this.pnlInformacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlInformacion.Controls.Add(this.txtCodigo);
+            this.pnlInformacion.Controls.Add(this.cmbCodigo);
             this.pnlInformacion.Controls.Add(this.txtcuenta);
             this.pnlInformacion.Controls.Add(this.cmbcuenta);
             this.pnlInformacion.Controls.Add(this.txtEstado);
@@ -216,81 +215,12 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Verificacion,
-            this.NoDocumento,
-            this.Fecha,
-            this.TipoDocumento,
-            this.Moneda,
-            this.Monto,
-            this.Comentario});
+            this.Verificacion});
             this.dataGridView1.Location = new System.Drawing.Point(57, 180);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(847, 261);
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Verificacion
-            // 
-            this.Verificacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Verificacion.HeaderText = "Verificacion";
-            this.Verificacion.Name = "Verificacion";
-            this.Verificacion.Width = 68;
-            // 
-            // NoDocumento
-            // 
-            this.NoDocumento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NoDocumento.HeaderText = "No.Documento";
-            this.NoDocumento.Name = "NoDocumento";
-            this.NoDocumento.ReadOnly = true;
-            // 
-            // Fecha
-            // 
-            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Fecha.HeaderText = "Fecha Documento";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            // 
-            // TipoDocumento
-            // 
-            this.TipoDocumento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TipoDocumento.HeaderText = "Tipo Documento";
-            this.TipoDocumento.Name = "TipoDocumento";
-            this.TipoDocumento.ReadOnly = true;
-            // 
-            // Moneda
-            // 
-            this.Moneda.HeaderText = "Moneda";
-            this.Moneda.Items.AddRange(new object[] {
-            "Quetzales ",
-            "Dolares",
-            "Euros",
-            "Libras",
-            "Yenes"});
-            this.Moneda.Name = "Moneda";
-            // 
-            // Monto
-            // 
-            this.Monto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Monto.HeaderText = "Monto";
-            this.Monto.Name = "Monto";
-            this.Monto.ReadOnly = true;
-            // 
-            // Comentario
-            // 
-            this.Comentario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Comentario.FillWeight = 200F;
-            this.Comentario.HeaderText = "Comentario";
-            this.Comentario.Name = "Comentario";
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(629, 458);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(83, 13);
-            this.lblTotal.TabIndex = 14;
-            this.lblTotal.Text = "Total Conciliado";
-            this.lblTotal.Click += new System.EventHandler(this.lblTotal_Click);
             // 
             // panel3
             // 
@@ -320,6 +250,7 @@
             this.btnIrUltimo.Size = new System.Drawing.Size(48, 42);
             this.btnIrUltimo.TabIndex = 16;
             this.btnIrUltimo.UseVisualStyleBackColor = true;
+            this.btnIrUltimo.Click += new System.EventHandler(this.btnIrUltimo_Click);
             // 
             // btnSiguiente
             // 
@@ -329,6 +260,7 @@
             this.btnSiguiente.Size = new System.Drawing.Size(48, 42);
             this.btnSiguiente.TabIndex = 15;
             this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
             // btnAnterior
             // 
@@ -338,6 +270,7 @@
             this.btnAnterior.Size = new System.Drawing.Size(48, 42);
             this.btnAnterior.TabIndex = 14;
             this.btnAnterior.UseVisualStyleBackColor = true;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // btnIrPrimero
             // 
@@ -347,9 +280,11 @@
             this.btnIrPrimero.Size = new System.Drawing.Size(48, 42);
             this.btnIrPrimero.TabIndex = 13;
             this.btnIrPrimero.UseVisualStyleBackColor = true;
+            this.btnIrPrimero.Click += new System.EventHandler(this.btnIrPrimero_Click);
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Enabled = false;
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.Location = new System.Drawing.Point(381, 4);
             this.btnBuscar.Name = "btnBuscar";
@@ -359,15 +294,18 @@
             // 
             // btnImprimir
             // 
+            this.btnImprimir.Enabled = false;
             this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
             this.btnImprimir.Location = new System.Drawing.Point(327, 4);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(48, 42);
             this.btnImprimir.TabIndex = 11;
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnRefrescar
             // 
+            this.btnRefrescar.Enabled = false;
             this.btnRefrescar.Image = ((System.Drawing.Image)(resources.GetObject("btnRefrescar.Image")));
             this.btnRefrescar.Location = new System.Drawing.Point(273, 4);
             this.btnRefrescar.Name = "btnRefrescar";
@@ -378,24 +316,29 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Enabled = false;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.Location = new System.Drawing.Point(219, 4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(48, 42);
             this.btnCancelar.TabIndex = 9;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Enabled = false;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.Location = new System.Drawing.Point(165, 4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(48, 42);
             this.btnGuardar.TabIndex = 8;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Enabled = false;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.Location = new System.Drawing.Point(111, 4);
             this.btnEliminar.Name = "btnEliminar";
@@ -405,6 +348,7 @@
             // 
             // btnEditar
             // 
+            this.btnEditar.Enabled = false;
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.Location = new System.Drawing.Point(57, 3);
             this.btnEditar.Name = "btnEditar";
@@ -422,14 +366,58 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // cmbCodigo
+            // 
+            this.cmbCodigo.FormattingEnabled = true;
+            this.cmbCodigo.Location = new System.Drawing.Point(22, 74);
+            this.cmbCodigo.Name = "cmbCodigo";
+            this.cmbCodigo.Size = new System.Drawing.Size(24, 21);
+            this.cmbCodigo.TabIndex = 29;
+            this.cmbCodigo.Visible = false;
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(52, 74);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(24, 20);
+            this.txtCodigo.TabIndex = 30;
+            this.txtCodigo.Tag = "ncodconcilicacion";
+            this.txtCodigo.Visible = false;
+            // 
+            // txtComentario
+            // 
+            this.txtComentario.Location = new System.Drawing.Point(12, 167);
+            this.txtComentario.Name = "txtComentario";
+            this.txtComentario.Size = new System.Drawing.Size(29, 20);
+            this.txtComentario.TabIndex = 16;
+            this.txtComentario.Tag = "cdescripcion";
+            this.txtComentario.Visible = false;
+            // 
+            // txtCodDoc
+            // 
+            this.txtCodDoc.Location = new System.Drawing.Point(12, 193);
+            this.txtCodDoc.Name = "txtCodDoc";
+            this.txtCodDoc.Size = new System.Drawing.Size(29, 20);
+            this.txtCodDoc.TabIndex = 17;
+            this.txtCodDoc.Tag = "ncoddocumento";
+            this.txtCodDoc.Visible = false;
+            // 
+            // Verificacion
+            // 
+            this.Verificacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Verificacion.HeaderText = "Verificacion";
+            this.Verificacion.Name = "Verificacion";
+            this.Verificacion.Width = 68;
+            // 
             // frmConciliacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(976, 497);
+            this.Controls.Add(this.txtCodDoc);
+            this.Controls.Add(this.txtComentario);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pnlInformacion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -453,14 +441,6 @@
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblCuenta;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Verificacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NoDocumento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoDocumento;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Moneda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Comentario;
-        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnIrUltimo;
         private System.Windows.Forms.Button btnSiguiente;
@@ -481,6 +461,11 @@
         private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.TextBox txtcuenta;
         private System.Windows.Forms.ComboBox cmbcuenta;
+        private System.Windows.Forms.ComboBox cmbCodigo;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.TextBox txtComentario;
+        private System.Windows.Forms.TextBox txtCodDoc;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Verificacion;
 
     }
 }
