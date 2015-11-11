@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CAD.cs" />
+<<<<<<< HEAD:Bancos/Bancos/Bancos.csproj
     <Compile Include="CreacionBancos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,18 +73,30 @@
       <DependentUpon>frmBancos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmConciliacion.cs">
+=======
+    <Compile Include="D_CxC.cs" />
+    <Compile Include="E_CxC.cs" />
+    <Compile Include="frmConsultaCxC.cs">
+>>>>>>> Grupo2:CuentasPorCobrar/CuentasPorCobrar/CuentasPorCobrar.csproj
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmConciliacion.Designer.cs">
       <DependentUpon>frmConciliacion.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="frmEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEmpleados.Designer.cs">
       <DependentUpon>frmEmpleados.cs</DependentUpon>
     </Compile>
+=======
+<<<<<<< HEAD:Bancos/Bancos/Bancos.csproj
+>>>>>>> Bancos
     <Compile Include="frmHistorialCuenta.cs">
+=======
+    <Compile Include="frmPrincipalCxC.cs">
+>>>>>>> Grupo2:CuentasPorCobrar/CuentasPorCobrar/CuentasPorCobrar.csproj
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmHistorialCuenta.Designer.cs">
@@ -95,12 +108,16 @@
     <Compile Include="frmPagos.Designer.cs">
       <DependentUpon>frmPagos.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="frmProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmProveedor.Designer.cs">
       <DependentUpon>frmProveedor.cs</DependentUpon>
     </Compile>
+=======
+<<<<<<< HEAD:Bancos/Bancos/Bancos.csproj
+>>>>>>> Bancos
     <Compile Include="Neg_Bancos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -121,6 +138,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPagos.resx">
       <DependentUpon>frmPagos.cs</DependentUpon>
+=======
+    <Compile Include="N_CxC.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmConsultaCxC.resx">
+      <DependentUpon>frmConsultaCxC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipalCxC.resx">
+      <DependentUpon>frmPrincipalCxC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoTransaccion.resx">
+      <DependentUpon>MantenimientoTransaccion.cs</DependentUpon>
+>>>>>>> Grupo2:CuentasPorCobrar/CuentasPorCobrar/CuentasPorCobrar.csproj
     </EmbeddedResource>
     <EmbeddedResource Include="frmProveedor.resx">
       <DependentUpon>frmProveedor.cs</DependentUpon>
