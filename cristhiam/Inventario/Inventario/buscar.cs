@@ -13,14 +13,20 @@ namespace Navegador
 {
     public partial class buscar: Form
     {
-        public buscar()
+        string tablaviene;
+        string datos;
+        public buscar(string tablas, string datoss)
         {
             InitializeComponent();
+            tablaviene = tablas;
+            datos = datoss;
+            /*tablaviene = "mamaterial";
+            datos = "ncodmaterial,vnombre,ncantidad";*/
         }
 
         private void frmbuscar_Load(object sender, EventArgs e)
         {
-            string tabla = "mamaterial";
+            string tabla = tablaviene;
             string basedatos = "COLCHONERIA";
             // PARÁMETROS : (1)(2)(3)
             /*
@@ -100,7 +106,7 @@ namespace Navegador
              * (3) campos que deseo visualizar 
              * sfuncrearBusqueda("cliente", "Ejemplocapas", "idcliente,nombre,apellido,direccion");
              */
-            sfuncrearBusqueda("mamaterial", "colchoneria", "ncodmaterial,vnombre,ncantidad");
+            sfuncrearBusqueda(tablaviene, "colchoneria", datos);
            
             
             }

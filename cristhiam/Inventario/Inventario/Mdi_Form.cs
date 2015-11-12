@@ -12,15 +12,24 @@ using ConexionODBC;
 
 namespace Inventario
 {
+    //Programador y Analista: Cristhiam Noe Duarte Herrera
+    //Fecha de Asignación: 06/11/2015
+    //Fecha de Entrega: 09/11/2015
+    //Utiliza Datos de Login y Botones para llamada de Formularios
     public partial class Mdi_Form : Form
     {
+        #region Variables
         int iduser;
         string privilegio;
+        #endregion
+
+        #region Inicializa y Toma Variables
         public Mdi_Form(int id)
         {
             iduser = id;
             InitializeComponent();
         }
+        #endregion
 
         private static OdbcCommand mySqlComando;
 
@@ -60,6 +69,7 @@ namespace Inventario
         }
         #endregion
 
+        #region Form Load y Condicion Usuario
         private void Mdi_Form_Load(object sender, EventArgs e)
         {
             toma_rol();
@@ -68,46 +78,58 @@ namespace Inventario
                 seguridadToolStripMenuItem.Visible = true;
             }
         }
+        #endregion
 
-        private void materiaPrimaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-
-            
-        }
-
+        #region Btn Form Inventario
         private void inventarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_InvPrincipal form = new Frm_InvPrincipal(iduser,privilegio);
             form.MdiParent = this;
             form.Show();
         }
+        #endregion
 
+        #region Btn Salir
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             Frm_Logueo Login = new Frm_Logueo();
             Login.Show();
         }
+        #endregion
 
+        #region Btn Form Registro
         private void registroDeUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DllSeguridad.frmRegistro registro = new DllSeguridad.frmRegistro();
             registro.Show();
         }
+        #endregion
 
+        #region Btn Form Roles
         private void manejoDeRolesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DllSeguridad.frmManejoRol registro = new DllSeguridad.frmManejoRol();
             registro.Show();
-            
         }
+        #endregion
 
+        #region Btn Orden de Compra
         private void productoTerminadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_OrdenDeCompra form = new Frm_OrdenDeCompra();
+            Frm_OrdenDeCompra form = new Frm_OrdenDeCompra(iduser, privilegio);
             form.MdiParent = this;
             form.Show();
         }
+        #endregion
+
+        #region Btn Bodega
+        private void comprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Bodega form = new Frm_Bodega(iduser, privilegio);
+            form.MdiParent = this;
+            form.Show();
+        }
+        #endregion
     }
 }

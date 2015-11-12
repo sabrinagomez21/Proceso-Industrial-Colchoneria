@@ -30,3 +30,4 @@ C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.exe
 C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.pdb
 C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.csprojResolveAssemblyReference.cache
 C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.Frm_OrdenDeCompra.resources
+C:\Users\Cristhiam\Desktop\Inventario\Inventario\obj\Debug\Inventario.Frm_Bodega.resources

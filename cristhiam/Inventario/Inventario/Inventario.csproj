@@ -56,7 +56,6 @@
     <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -78,6 +77,12 @@
     </Compile>
     <Compile Include="D_Rol.cs" />
     <Compile Include="E_Rol.cs" />
+    <Compile Include="Frm_Bodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Bodega.Designer.cs">
+      <DependentUpon>Frm_Bodega.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_InvPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +113,9 @@
     <EmbeddedResource Include="buscar.resx">
       <DependentUpon>buscar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Bodega.resx">
+      <DependentUpon>Frm_Bodega.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_InvPrincipal.resx">
       <DependentUpon>Frm_InvPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,7 +125,9 @@
     <EmbeddedResource Include="Frm_OrdenDeCompra.resx">
       <DependentUpon>Frm_OrdenDeCompra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="mabodega.rdlc" />
     <EmbeddedResource Include="mamaterial.rdlc" />
+    <EmbeddedResource Include="maordencompra.rdlc" />
     <EmbeddedResource Include="Mdi_Form.resx">
       <DependentUpon>Mdi_Form.cs</DependentUpon>
     </EmbeddedResource>
