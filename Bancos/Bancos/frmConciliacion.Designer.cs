@@ -30,25 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConciliacion));
             this.pnlInformacion = new System.Windows.Forms.Panel();
+            this.txtcuenta = new System.Windows.Forms.TextBox();
+            this.cmbcuenta = new System.Windows.Forms.ComboBox();
+            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.txtFecha = new System.Windows.Forms.TextBox();
+            this.lblfeha = new System.Windows.Forms.Label();
+            this.cmbMes = new System.Windows.Forms.ComboBox();
             this.btnGenerar = new System.Windows.Forms.Button();
-            this.lblConciliacion = new System.Windows.Forms.Label();
+            this.lblMes = new System.Windows.Forms.Label();
             this.lblEncargado = new System.Windows.Forms.Label();
             this.txtEncargado = new System.Windows.Forms.TextBox();
-            this.cmbBanco = new System.Windows.Forms.ComboBox();
             this.lblFecha = new System.Windows.Forms.Label();
-            this.lblBanco = new System.Windows.Forms.Label();
-            this.txtConciliacion = new System.Windows.Forms.TextBox();
-            this.txtCuenta = new System.Windows.Forms.TextBox();
             this.lblCuenta = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Verificacion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.NoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Moneda = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Comentario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblTotal = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnIrUltimo = new System.Windows.Forms.Button();
             this.btnSiguiente = new System.Windows.Forms.Button();
@@ -62,6 +56,11 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.cmbCodigo = new System.Windows.Forms.ComboBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.txtComentario = new System.Windows.Forms.TextBox();
+            this.txtCodDoc = new System.Windows.Forms.TextBox();
+            this.Verificacion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.pnlInformacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -70,38 +69,111 @@
             // pnlInformacion
             // 
             this.pnlInformacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlInformacion.Controls.Add(this.txtCodigo);
+            this.pnlInformacion.Controls.Add(this.cmbCodigo);
+            this.pnlInformacion.Controls.Add(this.txtcuenta);
+            this.pnlInformacion.Controls.Add(this.cmbcuenta);
+            this.pnlInformacion.Controls.Add(this.txtEstado);
+            this.pnlInformacion.Controls.Add(this.txtFecha);
+            this.pnlInformacion.Controls.Add(this.lblfeha);
+            this.pnlInformacion.Controls.Add(this.cmbMes);
             this.pnlInformacion.Controls.Add(this.btnGenerar);
-            this.pnlInformacion.Controls.Add(this.lblConciliacion);
+            this.pnlInformacion.Controls.Add(this.lblMes);
             this.pnlInformacion.Controls.Add(this.lblEncargado);
             this.pnlInformacion.Controls.Add(this.txtEncargado);
-            this.pnlInformacion.Controls.Add(this.cmbBanco);
             this.pnlInformacion.Controls.Add(this.lblFecha);
-            this.pnlInformacion.Controls.Add(this.lblBanco);
-            this.pnlInformacion.Controls.Add(this.txtConciliacion);
-            this.pnlInformacion.Controls.Add(this.txtCuenta);
             this.pnlInformacion.Controls.Add(this.lblCuenta);
             this.pnlInformacion.Location = new System.Drawing.Point(57, 65);
             this.pnlInformacion.Name = "pnlInformacion";
             this.pnlInformacion.Size = new System.Drawing.Size(847, 100);
             this.pnlInformacion.TabIndex = 12;
+            this.pnlInformacion.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlInformacion_Paint);
+            // 
+            // txtcuenta
+            // 
+            this.txtcuenta.Location = new System.Drawing.Point(392, 55);
+            this.txtcuenta.Name = "txtcuenta";
+            this.txtcuenta.Size = new System.Drawing.Size(24, 20);
+            this.txtcuenta.TabIndex = 28;
+            this.txtcuenta.Tag = "ncodcuenta";
+            this.txtcuenta.Visible = false;
+            // 
+            // cmbcuenta
+            // 
+            this.cmbcuenta.Enabled = false;
+            this.cmbcuenta.FormattingEnabled = true;
+            this.cmbcuenta.Location = new System.Drawing.Point(149, 55);
+            this.cmbcuenta.Name = "cmbcuenta";
+            this.cmbcuenta.Size = new System.Drawing.Size(121, 21);
+            this.cmbcuenta.TabIndex = 27;
+            // 
+            // txtEstado
+            // 
+            this.txtEstado.Location = new System.Drawing.Point(776, 62);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(24, 20);
+            this.txtEstado.TabIndex = 26;
+            this.txtEstado.Tag = "cestado";
+            this.txtEstado.Text = "activo";
+            this.txtEstado.Visible = false;
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.Location = new System.Drawing.Point(776, 24);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(24, 20);
+            this.txtFecha.TabIndex = 25;
+            this.txtFecha.Tag = "dfecha";
+            this.txtFecha.Visible = false;
+            // 
+            // lblfeha
+            // 
+            this.lblfeha.AutoSize = true;
+            this.lblfeha.Location = new System.Drawing.Point(705, 27);
+            this.lblfeha.Name = "lblfeha";
+            this.lblfeha.Size = new System.Drawing.Size(0, 13);
+            this.lblfeha.TabIndex = 24;
+            // 
+            // cmbMes
+            // 
+            this.cmbMes.Enabled = false;
+            this.cmbMes.FormattingEnabled = true;
+            this.cmbMes.Items.AddRange(new object[] {
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"});
+            this.cmbMes.Location = new System.Drawing.Point(468, 24);
+            this.cmbMes.Name = "cmbMes";
+            this.cmbMes.Size = new System.Drawing.Size(131, 21);
+            this.cmbMes.TabIndex = 23;
             // 
             // btnGenerar
             // 
-            this.btnGenerar.Location = new System.Drawing.Point(650, 58);
+            this.btnGenerar.Location = new System.Drawing.Point(468, 51);
             this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(97, 26);
+            this.btnGenerar.Size = new System.Drawing.Size(131, 26);
             this.btnGenerar.TabIndex = 22;
             this.btnGenerar.Text = "Generar";
             this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
-            // lblConciliacion
+            // lblMes
             // 
-            this.lblConciliacion.AutoSize = true;
-            this.lblConciliacion.Location = new System.Drawing.Point(429, 27);
-            this.lblConciliacion.Name = "lblConciliacion";
-            this.lblConciliacion.Size = new System.Drawing.Size(90, 13);
-            this.lblConciliacion.TabIndex = 14;
-            this.lblConciliacion.Text = "No. Conciliacion: ";
+            this.lblMes.AutoSize = true;
+            this.lblMes.Location = new System.Drawing.Point(429, 27);
+            this.lblMes.Name = "lblMes";
+            this.lblMes.Size = new System.Drawing.Size(33, 13);
+            this.lblMes.TabIndex = 14;
+            this.lblMes.Text = "Mes: ";
             // 
             // lblEncargado
             // 
@@ -114,50 +186,21 @@
             // 
             // txtEncargado
             // 
+            this.txtEncargado.Enabled = false;
             this.txtEncargado.Location = new System.Drawing.Point(149, 24);
             this.txtEncargado.Name = "txtEncargado";
             this.txtEncargado.Size = new System.Drawing.Size(257, 20);
             this.txtEncargado.TabIndex = 12;
-            // 
-            // cmbBanco
-            // 
-            this.cmbBanco.FormattingEnabled = true;
-            this.cmbBanco.Location = new System.Drawing.Point(382, 55);
-            this.cmbBanco.Name = "cmbBanco";
-            this.cmbBanco.Size = new System.Drawing.Size(187, 21);
-            this.cmbBanco.TabIndex = 19;
+            this.txtEncargado.Tag = "cencargado";
             // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(672, 27);
+            this.lblFecha.Location = new System.Drawing.Point(647, 27);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(43, 13);
             this.lblFecha.TabIndex = 13;
             this.lblFecha.Text = "Fecha: ";
-            // 
-            // lblBanco
-            // 
-            this.lblBanco.AutoSize = true;
-            this.lblBanco.Location = new System.Drawing.Point(329, 58);
-            this.lblBanco.Name = "lblBanco";
-            this.lblBanco.Size = new System.Drawing.Size(41, 13);
-            this.lblBanco.TabIndex = 18;
-            this.lblBanco.Text = "Banco:";
-            // 
-            // txtConciliacion
-            // 
-            this.txtConciliacion.Location = new System.Drawing.Point(520, 24);
-            this.txtConciliacion.Name = "txtConciliacion";
-            this.txtConciliacion.Size = new System.Drawing.Size(126, 20);
-            this.txtConciliacion.TabIndex = 15;
-            // 
-            // txtCuenta
-            // 
-            this.txtCuenta.Location = new System.Drawing.Point(149, 55);
-            this.txtCuenta.Name = "txtCuenta";
-            this.txtCuenta.Size = new System.Drawing.Size(163, 20);
-            this.txtCuenta.TabIndex = 17;
             // 
             // lblCuenta
             // 
@@ -172,81 +215,12 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Verificacion,
-            this.NoDocumento,
-            this.Fecha,
-            this.TipoDocumento,
-            this.Moneda,
-            this.Monto,
-            this.Comentario});
+            this.Verificacion});
             this.dataGridView1.Location = new System.Drawing.Point(57, 180);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(847, 261);
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Verificacion
-            // 
-            this.Verificacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Verificacion.HeaderText = "Verificacion";
-            this.Verificacion.Name = "Verificacion";
-            this.Verificacion.Width = 68;
-            // 
-            // NoDocumento
-            // 
-            this.NoDocumento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NoDocumento.HeaderText = "No.Documento";
-            this.NoDocumento.Name = "NoDocumento";
-            this.NoDocumento.ReadOnly = true;
-            // 
-            // Fecha
-            // 
-            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Fecha.HeaderText = "Fecha Documento";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            // 
-            // TipoDocumento
-            // 
-            this.TipoDocumento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TipoDocumento.HeaderText = "Tipo Documento";
-            this.TipoDocumento.Name = "TipoDocumento";
-            this.TipoDocumento.ReadOnly = true;
-            // 
-            // Moneda
-            // 
-            this.Moneda.HeaderText = "Moneda";
-            this.Moneda.Items.AddRange(new object[] {
-            "Quetzales ",
-            "Dolares",
-            "Euros",
-            "Libras",
-            "Yenes"});
-            this.Moneda.Name = "Moneda";
-            // 
-            // Monto
-            // 
-            this.Monto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Monto.HeaderText = "Monto";
-            this.Monto.Name = "Monto";
-            this.Monto.ReadOnly = true;
-            // 
-            // Comentario
-            // 
-            this.Comentario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Comentario.FillWeight = 200F;
-            this.Comentario.HeaderText = "Comentario";
-            this.Comentario.Name = "Comentario";
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(629, 458);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(83, 13);
-            this.lblTotal.TabIndex = 14;
-            this.lblTotal.Text = "Total Conciliado";
-            this.lblTotal.Click += new System.EventHandler(this.lblTotal_Click);
             // 
             // panel3
             // 
@@ -276,6 +250,7 @@
             this.btnIrUltimo.Size = new System.Drawing.Size(48, 42);
             this.btnIrUltimo.TabIndex = 16;
             this.btnIrUltimo.UseVisualStyleBackColor = true;
+            this.btnIrUltimo.Click += new System.EventHandler(this.btnIrUltimo_Click);
             // 
             // btnSiguiente
             // 
@@ -285,6 +260,7 @@
             this.btnSiguiente.Size = new System.Drawing.Size(48, 42);
             this.btnSiguiente.TabIndex = 15;
             this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
             // btnAnterior
             // 
@@ -294,6 +270,7 @@
             this.btnAnterior.Size = new System.Drawing.Size(48, 42);
             this.btnAnterior.TabIndex = 14;
             this.btnAnterior.UseVisualStyleBackColor = true;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // btnIrPrimero
             // 
@@ -303,9 +280,11 @@
             this.btnIrPrimero.Size = new System.Drawing.Size(48, 42);
             this.btnIrPrimero.TabIndex = 13;
             this.btnIrPrimero.UseVisualStyleBackColor = true;
+            this.btnIrPrimero.Click += new System.EventHandler(this.btnIrPrimero_Click);
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Enabled = false;
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.Location = new System.Drawing.Point(381, 4);
             this.btnBuscar.Name = "btnBuscar";
@@ -315,42 +294,51 @@
             // 
             // btnImprimir
             // 
+            this.btnImprimir.Enabled = false;
             this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
             this.btnImprimir.Location = new System.Drawing.Point(327, 4);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(48, 42);
             this.btnImprimir.TabIndex = 11;
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnRefrescar
             // 
+            this.btnRefrescar.Enabled = false;
             this.btnRefrescar.Image = ((System.Drawing.Image)(resources.GetObject("btnRefrescar.Image")));
             this.btnRefrescar.Location = new System.Drawing.Point(273, 4);
             this.btnRefrescar.Name = "btnRefrescar";
             this.btnRefrescar.Size = new System.Drawing.Size(48, 42);
             this.btnRefrescar.TabIndex = 10;
             this.btnRefrescar.UseVisualStyleBackColor = true;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Enabled = false;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.Location = new System.Drawing.Point(219, 4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(48, 42);
             this.btnCancelar.TabIndex = 9;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Enabled = false;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.Location = new System.Drawing.Point(165, 4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(48, 42);
             this.btnGuardar.TabIndex = 8;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Enabled = false;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.Location = new System.Drawing.Point(111, 4);
             this.btnEliminar.Name = "btnEliminar";
@@ -360,6 +348,7 @@
             // 
             // btnEditar
             // 
+            this.btnEditar.Enabled = false;
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.Location = new System.Drawing.Point(57, 3);
             this.btnEditar.Name = "btnEditar";
@@ -375,6 +364,50 @@
             this.btnNuevo.Size = new System.Drawing.Size(48, 42);
             this.btnNuevo.TabIndex = 5;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // cmbCodigo
+            // 
+            this.cmbCodigo.FormattingEnabled = true;
+            this.cmbCodigo.Location = new System.Drawing.Point(22, 74);
+            this.cmbCodigo.Name = "cmbCodigo";
+            this.cmbCodigo.Size = new System.Drawing.Size(24, 21);
+            this.cmbCodigo.TabIndex = 29;
+            this.cmbCodigo.Visible = false;
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(52, 74);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(24, 20);
+            this.txtCodigo.TabIndex = 30;
+            this.txtCodigo.Tag = "ncodconcilicacion";
+            this.txtCodigo.Visible = false;
+            // 
+            // txtComentario
+            // 
+            this.txtComentario.Location = new System.Drawing.Point(12, 167);
+            this.txtComentario.Name = "txtComentario";
+            this.txtComentario.Size = new System.Drawing.Size(29, 20);
+            this.txtComentario.TabIndex = 16;
+            this.txtComentario.Tag = "cdescripcion";
+            this.txtComentario.Visible = false;
+            // 
+            // txtCodDoc
+            // 
+            this.txtCodDoc.Location = new System.Drawing.Point(12, 193);
+            this.txtCodDoc.Name = "txtCodDoc";
+            this.txtCodDoc.Size = new System.Drawing.Size(29, 20);
+            this.txtCodDoc.TabIndex = 17;
+            this.txtCodDoc.Tag = "ncoddocumento";
+            this.txtCodDoc.Visible = false;
+            // 
+            // Verificacion
+            // 
+            this.Verificacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Verificacion.HeaderText = "Verificacion";
+            this.Verificacion.Name = "Verificacion";
+            this.Verificacion.Width = 68;
             // 
             // frmConciliacion
             // 
@@ -382,8 +415,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(976, 497);
+            this.Controls.Add(this.txtCodDoc);
+            this.Controls.Add(this.txtComentario);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pnlInformacion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -401,25 +435,12 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlInformacion;
-        private System.Windows.Forms.Label lblConciliacion;
+        private System.Windows.Forms.Label lblMes;
         private System.Windows.Forms.Label lblEncargado;
         private System.Windows.Forms.TextBox txtEncargado;
-        private System.Windows.Forms.ComboBox cmbBanco;
         private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.Label lblBanco;
-        private System.Windows.Forms.TextBox txtConciliacion;
-        private System.Windows.Forms.TextBox txtCuenta;
         private System.Windows.Forms.Label lblCuenta;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnGenerar;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Verificacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NoDocumento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoDocumento;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Moneda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Comentario;
-        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnIrUltimo;
         private System.Windows.Forms.Button btnSiguiente;
@@ -433,6 +454,18 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.ComboBox cmbMes;
+        private System.Windows.Forms.Label lblfeha;
+        private System.Windows.Forms.Button btnGenerar;
+        private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.TextBox txtFecha;
+        private System.Windows.Forms.TextBox txtcuenta;
+        private System.Windows.Forms.ComboBox cmbcuenta;
+        private System.Windows.Forms.ComboBox cmbCodigo;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.TextBox txtComentario;
+        private System.Windows.Forms.TextBox txtCodDoc;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Verificacion;
 
     }
 }
