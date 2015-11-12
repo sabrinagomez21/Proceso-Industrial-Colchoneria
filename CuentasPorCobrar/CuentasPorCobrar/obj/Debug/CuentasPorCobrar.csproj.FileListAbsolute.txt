@@ -1,0 +1,16 @@
+c:\users\josue\documents\visual studio 2013\Projects\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\CuentasPorCobrar.exe.config
+C:\Users\Josue\documents\visual studio 2013\Projects\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.csprojResolveAssemblyReference.cache
+C:\Users\Josue\documents\visual studio 2013\Projects\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.frmPrincipalCxC.resources
+C:\Users\Josue\documents\visual studio 2013\Projects\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.Properties.Resources.resources
+C:\Users\Josue\documents\visual studio 2013\Projects\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.csproj.GenerateResource.Cache
+C:\Users\Josue\documents\visual studio 2013\Projects\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\CuentasPorCobrar.exe
+C:\Users\Josue\documents\visual studio 2013\Projects\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\CuentasPorCobrar.pdb
+C:\Users\Josue\documents\visual studio 2013\Projects\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.exe
+C:\Users\Josue\documents\visual studio 2013\Projects\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.pdb
+C:\Users\Josue\documents\visual studio 2013\Projects\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.frmConsultaCxC.resources
+C:\Users\Josue\documents\visual studio 2013\Projects\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.MantenimientoTransaccion.resources
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\CuentasPorCobrar.exe.config
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.exe
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.pdb
+C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\bin\Debug\CuentasPorCobrar.exe.config
+C:\Users\Diego\Documents\GitHub\Proceso-Industrial-Colchoneria\CuentasPorCobrar\CuentasPorCobrar\obj\Debug\CuentasPorCobrar.pdb
