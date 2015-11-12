@@ -15,6 +15,7 @@ namespace Bancos
     {
         string estado = "";
         string sCod;
+        string sCadena;
         public frmAgregaBancos()
         {
             InitializeComponent();
@@ -23,6 +24,60 @@ namespace Bancos
             btnGuardar.Enabled = false;
             btnCancelar.Enabled = false;
             btnImprimir.Enabled = false;
+        }
+
+        string funCortador(string sDato)
+        {
+            sCadena = "";
+            int estado = 0;
+            try
+            {
+                for (int i = 0; i < sDato.Length; i++)
+                {
+
+                    switch (estado)
+                    {
+                        case 0:
+                            if (sDato.Substring(i, 1) != ".")
+                            {
+                                sCadena = sCadena + sDato.Substring(i, 1);
+                            }
+                            else if (sDato.Substring(i, 1) == ".")
+                            {
+                                sCadena = "";
+                                estado = 1;
+                            }
+                            else
+                            {
+                                break;
+                            }
+                            break;
+                        case 1:
+                            if (sDato.Substring(i, 1) != ".")
+                            {
+                                sCadena = sCadena + sDato.Substring(i, 1);
+                            }
+                            else if (sDato.Substring(i, 1) == ".")
+                            {
+                                sCadena = sCadena + sDato.Substring(i, 1);
+                            }
+                            else
+                            {
+                                break;
+                            }
+
+                            break;
+
+                    }
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Error al obtener Codigo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            return sCadena;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)

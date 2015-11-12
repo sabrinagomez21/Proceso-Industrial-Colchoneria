@@ -41,3 +41,4 @@ C:\Users\kevin\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj
 C:\Users\kevin\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.exe
 C:\Users\kevin\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.frmAgregaBancos.resources
 C:\Users\kevin\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.frmCrearNotaCreaditoDebito.resources
+C:\Users\kevin\Documents\GitHub\Proceso-Industrial-Colchoneria\Bancos\Bancos\obj\Debug\Bancos.frmAceptaciondeCobros.resources

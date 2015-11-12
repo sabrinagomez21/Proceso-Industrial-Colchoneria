@@ -66,6 +66,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAceptaciondeCobros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAceptaciondeCobros.Designer.cs">
+      <DependentUpon>frmAceptaciondeCobros.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAgregaBancos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CreacionBancos.resx">
       <DependentUpon>CreacionBancos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAceptaciondeCobros.resx">
+      <DependentUpon>frmAceptaciondeCobros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAgregaBancos.resx">
       <DependentUpon>frmAgregaBancos.cs</DependentUpon>

@@ -16,6 +16,7 @@ namespace Bancos
         string estado = "";
         string sCod;
         string sCodigoBanco;
+        string sCadena;
         public frmCrearBancos()
         {
             InitializeComponent();
@@ -25,6 +26,60 @@ namespace Bancos
             funLlenarcmbBancos();
             funLlenarTabla();
             cmbEstado.SelectedIndex = 0;
+        }
+
+        string funCortador(string sDato)
+        {
+            sCadena = "";
+            int estado = 0;
+            try
+            {
+                for (int i = 0; i < sDato.Length; i++)
+                {
+
+                    switch (estado)
+                    {
+                        case 0:
+                            if (sDato.Substring(i, 1) != ".")
+                            {
+                                sCadena = sCadena + sDato.Substring(i, 1);
+                            }
+                            else if (sDato.Substring(i, 1) == ".")
+                            {
+                                sCadena = "";
+                                estado = 1;
+                            }
+                            else
+                            {
+                                break;
+                            }
+                            break;
+                        case 1:
+                            if (sDato.Substring(i, 1) != ".")
+                            {
+                                sCadena = sCadena + sDato.Substring(i, 1);
+                            }
+                            else if (sDato.Substring(i, 1) == ".")
+                            {
+                                sCadena = sCadena + sDato.Substring(i, 1);
+                            }
+                            else
+                            {
+                                break;
+                            }
+
+                            break;
+
+                    }
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Error al obtener Codigo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            return sCadena;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -54,10 +109,10 @@ namespace Bancos
             clasnegocio cn = new clasnegocio();
             Boolean bPermiso = true;
 
-            string sCadena = cmbBanco.Text;
+            //string sCadena = cmbBanco.Text;
             System.Console.WriteLine(sCadena);
             txtBancos.Clear();
-            txtBancos.Text = sCadena.Substring(0, 1);
+            txtBancos.Text = funCortador(cmbBanco.Text);
             txtEstado.Text = cmbEstado.SelectedItem.ToString();
 
 
