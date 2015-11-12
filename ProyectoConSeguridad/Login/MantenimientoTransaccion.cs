@@ -40,6 +40,10 @@ namespace Login
             nuevo.funactivarDesactivarBoton(btnanterior, Convert.ToBoolean(Permisos.btnanterior));
             nuevo.funactivarDesactivarBoton(btnsiguiente, Convert.ToBoolean(Permisos.btnsiguiente));
             nuevo.funactivarDesactivarBoton(btnirUltimo, Convert.ToBoolean(Permisos.btnirUltimo));
+
+            btnguardar.Enabled = false;
+            btncancelar.Enabled = false;
+            btnimprimir.Enabled = false;
         }
 
         private void funActualizarGrid()

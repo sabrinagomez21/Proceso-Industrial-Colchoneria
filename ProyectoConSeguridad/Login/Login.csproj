@@ -47,6 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Reference Include="ConexionODBC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Visual Studio 2013\probardllconform\fdfdfdf\Pruebadlldegraficador\Pruebadlldegraficador\bin\Debug\ConexionODBC.dll</HintPath>
@@ -54,14 +55,33 @@
     <Reference Include="DllSeguridad, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Diseño Sistemas\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\bin\Debug\DllSeguridad.dll</HintPath>
+=======
+    <Reference Include="ConexionODBC">
+<<<<<<< HEAD
+      <HintPath>..\..\..\..\1universidad\octavo\diseno\2do proyecto\dlls\Objeto Común Navegador\ConexionODBC.dll</HintPath>
+=======
+      <HintPath>..\..\..\..\..\Desktop\8vo Ciclo\Diseño de Sistemas\ESTANDARIZACION\Objeto Común Navegador\ConexionODBC.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=6.8.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\MySql.Data.dll</HintPath>
+    <Reference Include="DllSeguridad">
+      <HintPath>..\..\..\..\DllSeguridad.dll</HintPath>
+>>>>>>> Grupo2
+>>>>>>> Grupo2
     </Reference>
+    <Reference Include="DllSeguridad">
+      <HintPath>..\..\..\..\1universidad\octavo\diseno\2do proyecto\dlls\DllSeguridad.dll</HintPath>
+    </Reference>
+<<<<<<< HEAD
     <Reference Include="Navegador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
+<<<<<<< HEAD
       <HintPath>..\..\..\..\Diseño Sistemas\Objeto Común Navegador\Navegador.dll</HintPath>
+=======
+      <HintPath>..\..\..\..\1universidad\octavo\diseno\2do proyecto\dlls\Navegador.dll</HintPath>
+=======
+    <Reference Include="Navegador">
+      <HintPath>..\..\..\..\..\Desktop\8vo Ciclo\Diseño de Sistemas\ESTANDARIZACION\NUeVA DLL NAVE\Navegador.dll</HintPath>
+>>>>>>> Grupo2
+>>>>>>> Grupo2
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -96,6 +116,12 @@
     </Compile>
     <Compile Include="frmConciliacion.Designer.cs">
       <DependentUpon>frmConciliacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaRecibos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaRecibos.Designer.cs">
+      <DependentUpon>frmConsultaRecibos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmEmpleados.cs">
       <SubType>Form</SubType>
@@ -133,11 +159,19 @@
     <Compile Include="frmordecompra.Designer.cs">
       <DependentUpon>frmordecompra.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="frmPagos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPagos.Designer.cs">
       <DependentUpon>frmPagos.cs</DependentUpon>
+=======
+    <Compile Include="frmPagoProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPagoProveedor.Designer.cs">
+      <DependentUpon>frmPagoProveedor.cs</DependentUpon>
+>>>>>>> Grupo2
     </Compile>
     <Compile Include="frmPrincipalCxC.cs">
       <SubType>Form</SubType>
@@ -189,6 +223,9 @@
     <EmbeddedResource Include="frmConciliacion.resx">
       <DependentUpon>frmConciliacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaRecibos.resx">
+      <DependentUpon>frmConsultaRecibos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEmpleados.resx">
       <DependentUpon>frmEmpleados.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,8 +244,13 @@
     <EmbeddedResource Include="frmordecompra.resx">
       <DependentUpon>frmordecompra.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="frmPagos.resx">
       <DependentUpon>frmPagos.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="frmPagoProveedor.resx">
+      <DependentUpon>frmPagoProveedor.cs</DependentUpon>
+>>>>>>> Grupo2
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipalCxC.resx">
       <DependentUpon>frmPrincipalCxC.cs</DependentUpon>
