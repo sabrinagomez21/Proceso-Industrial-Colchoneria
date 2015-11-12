@@ -110,6 +110,7 @@ C:\Users\Josue\Desktop\Modulo-Seguridad-Grupo-4\Modulo Seguridad Grupo 4\PROYECT
 C:\Users\Josue\Desktop\ProyectoConSeguridad\Login\bin\Debug\Login.exe.config
 C:\Users\Josue\Desktop\ProyectoConSeguridad\Login\obj\Debug\Login.exe
 C:\Users\Josue\Desktop\ProyectoConSeguridad\Login\obj\Debug\Login.pdb
+<<<<<<< HEAD
 C:\Users\DylanIsaac\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\bin\Debug\Login.exe.config
 C:\Users\DylanIsaac\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.pdb
 C:\Users\DylanIsaac\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.csprojResolveAssemblyReference.cache
@@ -137,3 +138,28 @@ C:\Users\DylanIsaac\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConS
 C:\Users\DylanIsaac\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\bin\Debug\Navegador.dll
 C:\Users\DylanIsaac\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.exe
 C:\Users\DylanIsaac\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.frmConsultaRecibos.resources
+=======
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\bin\Debug\Login.exe.config
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.exe
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.pdb
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\bin\Debug\Login.exe
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\bin\Debug\Login.pdb
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.csprojResolveAssemblyReference.cache
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.frmbuscarProveedor.resources
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.frmClientes.resources
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.frmConciliacion.resources
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.frmEmpleados.resources
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.frmgeneraCompra.resources
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.frmImplosion.resources
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.frmLogin.resources
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.frmMenu.resources
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.frmordecompra.resources
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.frmPrincipalCxC.resources
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.frmProveedor.resources
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.frmproveedores.resources
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.frmPrueba.resources
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.MantenimientoFacturas.resources
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.MantenimientoTransaccion.resources
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\Josue\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.csproj.GenerateResource.Cache
+>>>>>>> a6fd3abd254486444dfa5a4e274a84bc5e3a4717
