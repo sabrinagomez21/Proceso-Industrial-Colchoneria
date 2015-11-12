@@ -49,11 +49,11 @@
   <ItemGroup>
     <Reference Include="ConexionODBC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\ConexionODBC.dll</HintPath>
+      <HintPath>..\..\..\..\Visual Studio 2013\probardllconform\fdfdfdf\Pruebadlldegraficador\Pruebadlldegraficador\bin\Debug\ConexionODBC.dll</HintPath>
     </Reference>
     <Reference Include="DllSeguridad, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\DllSeguridad\DllSeguridad\DllSeguridad\bin\Debug\DllSeguridad.dll</HintPath>
+      <HintPath>..\..\..\..\Diseño Sistemas\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\bin\Debug\DllSeguridad.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=6.8.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -61,7 +61,7 @@
     </Reference>
     <Reference Include="Navegador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Navegador.dll</HintPath>
+      <HintPath>..\..\..\..\Diseño Sistemas\Objeto Común Navegador\Navegador.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -133,6 +133,12 @@
     <Compile Include="frmordecompra.Designer.cs">
       <DependentUpon>frmordecompra.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPagos.Designer.cs">
+      <DependentUpon>frmPagos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipalCxC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmordecompra.resx">
       <DependentUpon>frmordecompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPagos.resx">
+      <DependentUpon>frmPagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipalCxC.resx">
       <DependentUpon>frmPrincipalCxC.cs</DependentUpon>

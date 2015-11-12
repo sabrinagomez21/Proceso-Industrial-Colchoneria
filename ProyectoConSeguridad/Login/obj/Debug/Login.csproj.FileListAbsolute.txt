@@ -110,3 +110,5 @@ C:\Users\Josue\Desktop\Modulo-Seguridad-Grupo-4\Modulo Seguridad Grupo 4\PROYECT
 C:\Users\Josue\Desktop\ProyectoConSeguridad\Login\bin\Debug\Login.exe.config
 C:\Users\Josue\Desktop\ProyectoConSeguridad\Login\obj\Debug\Login.exe
 C:\Users\Josue\Desktop\ProyectoConSeguridad\Login\obj\Debug\Login.pdb
+C:\Users\Usuario\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\bin\Debug\Login.exe.config
+C:\Users\Usuario\Documents\GitHub\Proceso-Industrial-Colchoneria\ProyectoConSeguridad\Login\obj\Debug\Login.pdb
