@@ -57,6 +57,7 @@
             this.txtDocto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.TextBox();
+            this.txtPagado = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdFacturas)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -139,6 +140,7 @@
             this.btnbuscar.Size = new System.Drawing.Size(48, 42);
             this.btnbuscar.TabIndex = 12;
             this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // btnimprimir
             // 
@@ -212,6 +214,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.txtPagado);
             this.panel1.Controls.Add(this.txtEstado);
             this.panel1.Controls.Add(this.txtVenchimiento);
             this.panel1.Controls.Add(this.txtFecha);
@@ -274,6 +277,8 @@
             this.txtTotal.Size = new System.Drawing.Size(210, 20);
             this.txtTotal.TabIndex = 75;
             this.txtTotal.Tag = "ntotal";
+            this.txtTotal.Enter += new System.EventHandler(this.txtTotal_Enter);
+            this.txtTotal.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTotal_KeyUp);
             // 
             // dtpVencimiento
             // 
@@ -283,6 +288,8 @@
             this.dtpVencimiento.Name = "dtpVencimiento";
             this.dtpVencimiento.Size = new System.Drawing.Size(210, 20);
             this.dtpVencimiento.TabIndex = 74;
+            this.dtpVencimiento.ValueChanged += new System.EventHandler(this.dtpVencimiento_ValueChanged);
+            this.dtpVencimiento.Enter += new System.EventHandler(this.dtpVencimiento_Enter);
             // 
             // dtpFecha
             // 
@@ -292,6 +299,8 @@
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(210, 20);
             this.dtpFecha.TabIndex = 73;
+            this.dtpFecha.ValueChanged += new System.EventHandler(this.dtpFecha_ValueChanged);
+            this.dtpFecha.Enter += new System.EventHandler(this.dtpFecha_Enter);
             // 
             // label3
             // 
@@ -328,6 +337,8 @@
             this.txtDocto.Size = new System.Drawing.Size(210, 20);
             this.txtDocto.TabIndex = 2;
             this.txtDocto.Tag = "nnofactura";
+            this.txtDocto.Enter += new System.EventHandler(this.txtDocto_Enter);
+            this.txtDocto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDocto_KeyUp);
             // 
             // label1
             // 
@@ -346,6 +357,17 @@
             this.txtCliente.Size = new System.Drawing.Size(210, 20);
             this.txtCliente.TabIndex = 1;
             this.txtCliente.Tag = "ncodcliente";
+            this.txtCliente.Enter += new System.EventHandler(this.txtCliente_Enter);
+            this.txtCliente.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCliente_KeyUp);
+            // 
+            // txtPagado
+            // 
+            this.txtPagado.Location = new System.Drawing.Point(559, 73);
+            this.txtPagado.Name = "txtPagado";
+            this.txtPagado.Size = new System.Drawing.Size(10, 20);
+            this.txtPagado.TabIndex = 80;
+            this.txtPagado.Tag = "cpagado";
+            this.txtPagado.Visible = false;
             // 
             // MantenimientoFacturas
             // 
@@ -396,5 +418,6 @@
         private System.Windows.Forms.TextBox txtVenchimiento;
         private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.TextBox txtPagado;
     }
 }
