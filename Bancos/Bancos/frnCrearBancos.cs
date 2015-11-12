@@ -15,6 +15,7 @@ namespace Bancos
     {
         string estado = "";
         string sCod;
+        string sCodigoBanco;
         public frmCrearBancos()
         {
             InitializeComponent();
@@ -22,7 +23,8 @@ namespace Bancos
             btnCancelar.Enabled = false;
             btnImprimir.Enabled = false;
             funLlenarcmbBancos();
-            //funLlenarTabla();
+            funLlenarTabla();
+            cmbEstado.SelectedIndex = 0;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -31,6 +33,8 @@ namespace Bancos
             cnegocio.funactivarDesactivarTextbox(txtSaldo, true); 
             cnegocio.funactivarDesactivarTextbox(txtNoCuenta, true);
             cnegocio.funactivarDesactivarCombobox(cmbBanco, true);
+            lblEstado.Visible = false;
+            txtBuscar.Visible = false;
             //lblAgregar.Enabled = true;
             btnGuardar.Enabled = true;
             btnCancelar.Enabled = true;
@@ -49,6 +53,11 @@ namespace Bancos
             string sTabla = "macuenta";
             clasnegocio cn = new clasnegocio();
             Boolean bPermiso = true;
+
+            string sCadena = cmbBanco.Text;
+            System.Console.WriteLine(sCadena);
+            txtBancos.Clear();
+            txtBancos.Text = sCadena.Substring(0, 1);
             txtEstado.Text = cmbEstado.SelectedItem.ToString();
 
 
@@ -57,29 +66,33 @@ namespace Bancos
             if (estado.Equals("editar"))
             {
                 TextBox[] aDatosEdit = { txtSaldo, txtNoCuenta, txtEstado, txtBancos };
-                string sCodigo = "ncodbanco";
+                string sCodigo = "ncodcuenta";
 
                 cn.EditarObjetos(sTabla, bPermiso, aDatosEdit, sCod, sCodigo);
+                funLlenarTabla();
 
 
             }
             else if (estado.Equals("eliminar"))
             {
                 //string sTabla = "matipotransaccion";
-                string sCampoLlavePrimaria = "ncodbanco";
+                string sCampoLlavePrimaria = "ncodcuenta";
                 string sCampoEstado = "cestado";
                 //System.Console.WriteLine("----" + sCod);
                 cn.funeliminarRegistro(sTabla, sCod, sCampoLlavePrimaria, sCampoEstado);
             }
             else if (estado.Equals(""))
             {                
-                txtEstado.Text = "Activo";                
+                txtEstado.Text = "Activo";
+                
+                System.Console.WriteLine(txtBancos.Text);
+                //MessageBox.Show("INFO", "Los datos son:" + txtBancos.Text);
                 TextBox[] datos = { txtSaldo, txtNoCuenta, txtEstado, txtBancos };
                 
                 cn.AsignarObjetos(sTabla, bPermiso, datos);                
 
                 funLimpiar();
-                funLlenarTabla();
+                //funLlenarTabla();
             }
 
             estado = "";
@@ -150,7 +163,7 @@ namespace Bancos
         void funLlenarTabla()
         {
             clasnegocio cnegocio = new clasnegocio();
-            cnegocio.funconsultarRegistros("macuenta", "SELECT nsaldo as Saldo, nnocuenta as No.Cuenta, cestado as Estado, ncodbanco as Banco from macuenta", "consulta", grdDatos);
+            cnegocio.funconsultarRegistros("macuenta", "SELECT ncodcuenta as Codigo, nsaldo as Saldo, nnocuenta as NoCuenta, cestado as Estado, ncodbanco as Banco from macuenta", "consulta", grdDatos);
         }
         void funLlenarcmbBancos()
         {
@@ -170,6 +183,7 @@ namespace Bancos
             btnEliminar.Enabled = false;
             btnRefrescar.Enabled = false;
             btnBuscar.Enabled = false;
+            txtBuscar.Visible = false;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -214,7 +228,9 @@ namespace Bancos
             cmbBanco.Visible = false;
             txtBuscar.Visible = true;
             txtBuscar.Enabled = true;
-            //lblBuscar.Visible = true;
+            lblBancos.Visible = false;
+            cmbBanco.Visible = false;
+            lblAgregar.Visible = false;            
             btnGuardar.Enabled = false;
             btnCancelar.Enabled = true;
             btnNuevo.Enabled = false;
@@ -260,10 +276,9 @@ namespace Bancos
                 sCod = grdDatos.Rows[grdDatos.CurrentCell.RowIndex].Cells[0].Value.ToString();
                 txtSaldo.Text = grdDatos.Rows[grdDatos.CurrentCell.RowIndex].Cells[1].Value.ToString();
                 txtNoCuenta.Text = grdDatos.Rows[grdDatos.CurrentCell.RowIndex].Cells[2].Value.ToString();
-                cmbEstado.Visible = true;
+                
                 txtNoCuenta.Enabled = true;
-                lblEstado.Visible = true;
-                cmbEstado.Enabled = true;
+                
                 string sCmb = grdDatos.Rows[grdDatos.CurrentCell.RowIndex].Cells[3].Value.ToString();
                 if (sCmb.Equals("Activo"))
                 {
@@ -272,9 +287,12 @@ namespace Bancos
                     cmbEstado.Visible = false;
                     lblEstado.Visible = false;
                 }
-                else if (sCmb.Equals("Inactivo"))
+                else if (sCmb.Equals("INACTIVO"))
                 {
                     cmbEstado.SelectedIndex = 1;
+                    cmbEstado.Enabled = true;
+                    cmbEstado.Visible = true;
+                    lblEstado.Visible = true;
                 }             
 
             } if (estado.Equals("eliminar"))
@@ -286,7 +304,8 @@ namespace Bancos
         private void txtBuscar_KeyUp(object sender, KeyEventArgs e)
         {
             clasnegocio cnegocio = new clasnegocio();
-            cnegocio.funconsultarRegistros("macuenta", "SELECT ncodcuenta as Codigo, nsaldo as Saldo ,nnocuenta as No.Cuenta, cestado as Estado, ncodbanco as Banco  from macuenta WHERE nnocuenta LIKE '" + txtBuscar.Text + "%'", "consulta", grdDatos);
+            cnegocio.funconsultarRegistros("macuenta", "SELECT ncodcuenta as Codigo, nsaldo as Saldo ,nnocuenta as NoCuenta, cestado as Estado, ncodbanco as Banco  from macuenta WHERE nnocuenta LIKE '" + txtBuscar.Text + "%'", "consulta", grdDatos);
         }
+       
     }
 }

@@ -44,6 +44,11 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.grdDatos = new System.Windows.Forms.DataGridView();
             this.pnlInformacion = new System.Windows.Forms.Panel();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.lblAgregar = new System.Windows.Forms.Label();
+            this.cmbBanco = new System.Windows.Forms.ComboBox();
+            this.txtBancos = new System.Windows.Forms.TextBox();
+            this.lblBancos = new System.Windows.Forms.Label();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.lblNoCuenta = new System.Windows.Forms.Label();
             this.lblSaldo = new System.Windows.Forms.Label();
@@ -51,11 +56,6 @@
             this.txtNoCuenta = new System.Windows.Forms.TextBox();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.lblEstado = new System.Windows.Forms.Label();
-            this.cmbBanco = new System.Windows.Forms.ComboBox();
-            this.txtBancos = new System.Windows.Forms.TextBox();
-            this.lblBancos = new System.Windows.Forms.Label();
-            this.lblAgregar = new System.Windows.Forms.Label();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
             this.pnlInformacion.SuspendLayout();
@@ -232,8 +232,64 @@
             this.pnlInformacion.Size = new System.Drawing.Size(847, 100);
             this.pnlInformacion.TabIndex = 17;
             // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Enabled = false;
+            this.txtBuscar.Location = new System.Drawing.Point(149, 20);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(244, 20);
+            this.txtBuscar.TabIndex = 25;
+            this.txtBuscar.Tag = "nnocuenta";
+            this.txtBuscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyUp);
+            // 
+            // lblAgregar
+            // 
+            this.lblAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblAgregar.Enabled = false;
+            this.lblAgregar.Image = ((System.Drawing.Image)(resources.GetObject("lblAgregar.Image")));
+            this.lblAgregar.Location = new System.Drawing.Point(689, 45);
+            this.lblAgregar.Name = "lblAgregar";
+            this.lblAgregar.Size = new System.Drawing.Size(28, 28);
+            this.lblAgregar.TabIndex = 24;
+            this.lblAgregar.Visible = false;
+            // 
+            // cmbBanco
+            // 
+            this.cmbBanco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBanco.Enabled = false;
+            this.cmbBanco.FormattingEnabled = true;
+            this.cmbBanco.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.cmbBanco.Location = new System.Drawing.Point(483, 52);
+            this.cmbBanco.Name = "cmbBanco";
+            this.cmbBanco.Size = new System.Drawing.Size(187, 21);
+            this.cmbBanco.TabIndex = 23;
+            // 
+            // txtBancos
+            // 
+            this.txtBancos.Enabled = false;
+            this.txtBancos.Location = new System.Drawing.Point(483, 79);
+            this.txtBancos.Name = "txtBancos";
+            this.txtBancos.Size = new System.Drawing.Size(51, 20);
+            this.txtBancos.TabIndex = 22;
+            this.txtBancos.Tag = "ncodbanco";
+            this.txtBancos.Visible = false;
+            // 
+            // lblBancos
+            // 
+            this.lblBancos.AutoSize = true;
+            this.lblBancos.Location = new System.Drawing.Point(427, 58);
+            this.lblBancos.Name = "lblBancos";
+            this.lblBancos.Size = new System.Drawing.Size(46, 13);
+            this.lblBancos.TabIndex = 21;
+            this.lblBancos.Text = "Bancos:";
+            // 
             // cmbEstado
             // 
+            this.cmbEstado.AutoCompleteCustomSource.AddRange(new string[] {
+            "Activo",
+            "Inactivo"});
             this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado.Enabled = false;
             this.cmbEstado.FormattingEnabled = true;
@@ -300,58 +356,7 @@
             this.lblEstado.Size = new System.Drawing.Size(43, 13);
             this.lblEstado.TabIndex = 16;
             this.lblEstado.Text = "Estado:";
-            // 
-            // cmbBanco
-            // 
-            this.cmbBanco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBanco.Enabled = false;
-            this.cmbBanco.FormattingEnabled = true;
-            this.cmbBanco.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
-            this.cmbBanco.Location = new System.Drawing.Point(483, 52);
-            this.cmbBanco.Name = "cmbBanco";
-            this.cmbBanco.Size = new System.Drawing.Size(187, 21);
-            this.cmbBanco.TabIndex = 23;
-            // 
-            // txtBancos
-            // 
-            this.txtBancos.Enabled = false;
-            this.txtBancos.Location = new System.Drawing.Point(483, 79);
-            this.txtBancos.Name = "txtBancos";
-            this.txtBancos.Size = new System.Drawing.Size(51, 20);
-            this.txtBancos.TabIndex = 22;
-            this.txtBancos.Tag = "ncodbanco";
-            this.txtBancos.Visible = false;
-            // 
-            // lblBancos
-            // 
-            this.lblBancos.AutoSize = true;
-            this.lblBancos.Location = new System.Drawing.Point(427, 58);
-            this.lblBancos.Name = "lblBancos";
-            this.lblBancos.Size = new System.Drawing.Size(46, 13);
-            this.lblBancos.TabIndex = 21;
-            this.lblBancos.Text = "Bancos:";
-            // 
-            // lblAgregar
-            // 
-            this.lblAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblAgregar.Enabled = false;
-            this.lblAgregar.Image = ((System.Drawing.Image)(resources.GetObject("lblAgregar.Image")));
-            this.lblAgregar.Location = new System.Drawing.Point(689, 45);
-            this.lblAgregar.Name = "lblAgregar";
-            this.lblAgregar.Size = new System.Drawing.Size(28, 28);
-            this.lblAgregar.TabIndex = 24;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Enabled = false;
-            this.txtBuscar.Location = new System.Drawing.Point(149, 20);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(244, 20);
-            this.txtBuscar.TabIndex = 25;
-            this.txtBuscar.Tag = "nnocuenta";
-            this.txtBuscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyUp);
+            this.lblEstado.Visible = false;
             // 
             // frmCrearBancos
             // 
