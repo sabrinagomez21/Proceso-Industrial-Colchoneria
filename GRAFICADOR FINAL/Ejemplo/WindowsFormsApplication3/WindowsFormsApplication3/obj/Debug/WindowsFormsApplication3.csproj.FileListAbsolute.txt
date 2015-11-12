@@ -1,0 +1,43 @@
+c:\users\josue\documents\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.config
+c:\users\josue\documents\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe
+c:\users\josue\documents\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.pdb
+c:\users\josue\documents\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\Graficador.dll
+c:\users\josue\documents\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\ZedGraph.dll
+c:\users\josue\documents\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\ConexionODBC.dll
+c:\users\josue\documents\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\InsertarGraficador.dll
+c:\users\josue\documents\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\Graficador.pdb
+c:\users\josue\documents\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.csprojResolveAssemblyReference.cache
+c:\users\josue\documents\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Properties.Resources.resources
+c:\users\josue\documents\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.csproj.GenerateResource.Cache
+c:\users\josue\documents\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe
+c:\users\josue\documents\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.pdb
+c:\users\josue\documents\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Form1.resources
+C:\Users\DylanIsaac\Desktop\GRAFICADOR FINAL\Nueva carpeta\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.config
+C:\Users\DylanIsaac\Desktop\GRAFICADOR FINAL\Nueva carpeta\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe
+C:\Users\DylanIsaac\Desktop\GRAFICADOR FINAL\Nueva carpeta\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.pdb
+C:\Users\DylanIsaac\Desktop\GRAFICADOR FINAL\Nueva carpeta\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe
+C:\Users\DylanIsaac\Desktop\GRAFICADOR FINAL\Nueva carpeta\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.pdb
+C:\Users\DylanIsaac\Desktop\GRAFICADOR FINAL\Nueva carpeta\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\ZedGraph.dll
+C:\Users\DylanIsaac\Desktop\GRAFICADOR FINAL\Nueva carpeta\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\ConexionODBC.dll
+C:\Users\DylanIsaac\Desktop\GRAFICADOR FINAL\Nueva carpeta\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\InsertarGraficador.dll
+C:\Users\DylanIsaac\Desktop\GRAFICADOR FINAL\Nueva carpeta\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\Graficador.pdb
+C:\Users\DylanIsaac\Desktop\GRAFICADOR FINAL\Nueva carpeta\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.csprojResolveAssemblyReference.cache
+C:\Users\DylanIsaac\Desktop\GRAFICADOR FINAL\Nueva carpeta\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Form1.resources
+C:\Users\DylanIsaac\Desktop\GRAFICADOR FINAL\Nueva carpeta\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Properties.Resources.resources
+C:\Users\DylanIsaac\Desktop\GRAFICADOR FINAL\Nueva carpeta\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.csproj.GenerateResource.Cache
+C:\Users\kevin\Desktop\gr\GRAFICADOR FINAL\Ejemplo\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.config
+C:\Users\kevin\Desktop\gr\GRAFICADOR FINAL\Ejemplo\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe
+C:\Users\kevin\Desktop\gr\GRAFICADOR FINAL\Ejemplo\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.pdb
+C:\Users\kevin\Desktop\gr\GRAFICADOR FINAL\Ejemplo\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe
+C:\Users\kevin\Desktop\gr\GRAFICADOR FINAL\Ejemplo\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.pdb
+C:\Users\kevin\Desktop\gr\GRAFICADOR FINAL\Ejemplo\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\Graficador.dll
+C:\Users\kevin\Desktop\gr\GRAFICADOR FINAL\Ejemplo\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\ZedGraph.dll
+C:\Users\kevin\Desktop\gr\GRAFICADOR FINAL\Ejemplo\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\ConexionODBC.dll
+C:\Users\kevin\Desktop\gr\GRAFICADOR FINAL\Ejemplo\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\InsertarGraficador.dll
+C:\Users\kevin\Desktop\gr\GRAFICADOR FINAL\Ejemplo\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\MySql.Data.dll
+C:\Users\kevin\Desktop\gr\GRAFICADOR FINAL\Ejemplo\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\Graficador.pdb
+C:\Users\kevin\Desktop\gr\GRAFICADOR FINAL\Ejemplo\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\InsertarGraficador.pdb
+C:\Users\kevin\Desktop\gr\GRAFICADOR FINAL\Ejemplo\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.csprojResolveAssemblyReference.cache
+C:\Users\kevin\Desktop\gr\GRAFICADOR FINAL\Ejemplo\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Form1.resources
+C:\Users\kevin\Desktop\gr\GRAFICADOR FINAL\Ejemplo\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Properties.Resources.resources
+C:\Users\kevin\Desktop\gr\GRAFICADOR FINAL\Ejemplo\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.csproj.GenerateResource.Cache

@@ -29,20 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_AdminReporte));
             this.Gv_Reporte = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.Txt_Nombre = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Btn_EReporte = new System.Windows.Forms.Button();
+            this.Btn_AReporte = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Btn_Salir = new System.Windows.Forms.Button();
-            this.Btn_EReporte = new System.Windows.Forms.Button();
-            this.Btn_AReporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Gv_Reporte)).BeginInit();
             this.panel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -55,7 +56,7 @@
             this.Gv_Reporte.Name = "Gv_Reporte";
             this.Gv_Reporte.Size = new System.Drawing.Size(345, 245);
             this.Gv_Reporte.TabIndex = 0;
-            this.Gv_Reporte.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Gv_Reporte_CellContentClick);
+            this.Gv_Reporte.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Gv_Reporte_CellClick);
             // 
             // label1
             // 
@@ -88,6 +89,44 @@
             this.panel1.Size = new System.Drawing.Size(253, 136);
             this.panel1.TabIndex = 3;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(137, 100);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Eliminar Reporte";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(23, 100);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Agregar Reporte";
+            // 
+            // Btn_EReporte
+            // 
+            this.Btn_EReporte.Image = global::prueba1.Properties.Resources.eliminar;
+            this.Btn_EReporte.Location = new System.Drawing.Point(155, 47);
+            this.Btn_EReporte.Name = "Btn_EReporte";
+            this.Btn_EReporte.Size = new System.Drawing.Size(47, 50);
+            this.Btn_EReporte.TabIndex = 4;
+            this.Btn_EReporte.UseVisualStyleBackColor = true;
+            this.Btn_EReporte.Click += new System.EventHandler(this.Btn_EReporte_Click);
+            // 
+            // Btn_AReporte
+            // 
+            this.Btn_AReporte.Image = ((System.Drawing.Image)(resources.GetObject("Btn_AReporte.Image")));
+            this.Btn_AReporte.Location = new System.Drawing.Point(39, 47);
+            this.Btn_AReporte.Name = "Btn_AReporte";
+            this.Btn_AReporte.Size = new System.Drawing.Size(47, 50);
+            this.Btn_AReporte.TabIndex = 3;
+            this.Btn_AReporte.UseVisualStyleBackColor = true;
+            this.Btn_AReporte.Click += new System.EventHandler(this.Btn_AReporte_Click);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.BackColor = System.Drawing.SystemColors.AppWorkspace;
@@ -117,24 +156,6 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 100);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Agregar Reporte";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(137, 100);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Eliminar Reporte";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -153,26 +174,6 @@
             this.Btn_Salir.TabIndex = 5;
             this.Btn_Salir.UseVisualStyleBackColor = true;
             this.Btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
-            // 
-            // Btn_EReporte
-            // 
-            this.Btn_EReporte.Image = global::prueba1.Properties.Resources.eliminar;
-            this.Btn_EReporte.Location = new System.Drawing.Point(155, 47);
-            this.Btn_EReporte.Name = "Btn_EReporte";
-            this.Btn_EReporte.Size = new System.Drawing.Size(47, 50);
-            this.Btn_EReporte.TabIndex = 4;
-            this.Btn_EReporte.UseVisualStyleBackColor = true;
-            this.Btn_EReporte.Click += new System.EventHandler(this.Btn_EReporte_Click);
-            // 
-            // Btn_AReporte
-            // 
-            this.Btn_AReporte.Image = global::prueba1.Properties.Resources.aceptar;
-            this.Btn_AReporte.Location = new System.Drawing.Point(39, 47);
-            this.Btn_AReporte.Name = "Btn_AReporte";
-            this.Btn_AReporte.Size = new System.Drawing.Size(47, 50);
-            this.Btn_AReporte.TabIndex = 3;
-            this.Btn_AReporte.UseVisualStyleBackColor = true;
-            this.Btn_AReporte.Click += new System.EventHandler(this.Btn_AReporte_Click);
             // 
             // Frm_AdminReporte
             // 
