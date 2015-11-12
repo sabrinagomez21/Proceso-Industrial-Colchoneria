@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{098CF496-085E-4B94-8C43-6FE6FF6776B4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Inventario</RootNamespace>
+    <AssemblyName>Inventario</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ConexionODBC">
+      <HintPath>.\ConexionODBC.dll</HintPath>
+    </Reference>
+    <Reference Include="DllSeguridad">
+      <HintPath>.\DllSeguridad.dll</HintPath>
+    </Reference>
+    <Reference Include="dll_conexion">
+      <HintPath>..\..\Reporteador\Reporteador\dll_conexion.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.8.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Navegador">
+      <HintPath>.\Navegador.dll</HintPath>
+    </Reference>
+    <Reference Include="prueba1">
+      <HintPath>.\prueba1.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="buscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buscar.designer.cs">
+      <DependentUpon>buscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CAD.cs" />
+    <Compile Include="colchoneriaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>colchoneriaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="D_Rol.cs" />
+    <Compile Include="E_Rol.cs" />
+    <Compile Include="Frm_Bodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Bodega.Designer.cs">
+      <DependentUpon>Frm_Bodega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_InvPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_InvPrincipal.Designer.cs">
+      <DependentUpon>Frm_InvPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Logueo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Logueo.Designer.cs">
+      <DependentUpon>Frm_Logueo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_OrdenDeCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_OrdenDeCompra.Designer.cs">
+      <DependentUpon>Frm_OrdenDeCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mdi_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mdi_Form.Designer.cs">
+      <DependentUpon>Mdi_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="N_Rol.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="buscar.resx">
+      <DependentUpon>buscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Bodega.resx">
+      <DependentUpon>Frm_Bodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_InvPrincipal.resx">
+      <DependentUpon>Frm_InvPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Logueo.resx">
+      <DependentUpon>Frm_Logueo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_OrdenDeCompra.resx">
+      <DependentUpon>Frm_OrdenDeCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mabodega.rdlc" />
+    <EmbeddedResource Include="mamaterial.rdlc" />
+    <EmbeddedResource Include="maordencompra.rdlc" />
+    <EmbeddedResource Include="Mdi_Form.resx">
+      <DependentUpon>Mdi_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="colchoneriaDataSet.xsc">
+      <DependentUpon>colchoneriaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="colchoneriaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>colchoneriaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="colchoneriaDataSet.xss">
+      <DependentUpon>colchoneriaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
