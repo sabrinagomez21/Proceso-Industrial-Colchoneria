@@ -48,14 +48,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ConexionODBC">
+<<<<<<< HEAD
       <HintPath>..\..\..\..\1universidad\octavo\diseno\2do proyecto\dlls\Objeto Común Navegador\ConexionODBC.dll</HintPath>
+=======
+      <HintPath>..\..\..\..\..\Desktop\8vo Ciclo\Diseño de Sistemas\ESTANDARIZACION\Objeto Común Navegador\ConexionODBC.dll</HintPath>
+    </Reference>
+    <Reference Include="DllSeguridad">
+      <HintPath>..\..\..\..\DllSeguridad.dll</HintPath>
+>>>>>>> Grupo2
     </Reference>
     <Reference Include="DllSeguridad">
       <HintPath>..\..\..\..\1universidad\octavo\diseno\2do proyecto\dlls\DllSeguridad.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
     <Reference Include="Navegador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\1universidad\octavo\diseno\2do proyecto\dlls\Navegador.dll</HintPath>
+=======
+    <Reference Include="Navegador">
+      <HintPath>..\..\..\..\..\Desktop\8vo Ciclo\Diseño de Sistemas\ESTANDARIZACION\NUeVA DLL NAVE\Navegador.dll</HintPath>
+>>>>>>> Grupo2
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -90,6 +102,12 @@
     </Compile>
     <Compile Include="frmConciliacion.Designer.cs">
       <DependentUpon>frmConciliacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaRecibos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaRecibos.Designer.cs">
+      <DependentUpon>frmConsultaRecibos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmEmpleados.cs">
       <SubType>Form</SubType>
@@ -182,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmConciliacion.resx">
       <DependentUpon>frmConciliacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaRecibos.resx">
+      <DependentUpon>frmConsultaRecibos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmpleados.resx">
       <DependentUpon>frmEmpleados.cs</DependentUpon>
