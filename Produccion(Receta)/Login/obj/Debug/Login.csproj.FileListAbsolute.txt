@@ -1,0 +1,101 @@
+C:\Users\LuiisFer\Desktop\Login\Login\Login\bin\Debug\Login.exe.config
+C:\Users\LuiisFer\Desktop\Login\Login\Login\bin\Debug\Login.exe
+C:\Users\LuiisFer\Desktop\Login\Login\Login\bin\Debug\Login.pdb
+C:\Users\LuiisFer\Desktop\Login\Login\Login\obj\Debug\Login.frmLogin.resources
+C:\Users\LuiisFer\Desktop\Login\Login\Login\obj\Debug\Login.frmMenu.resources
+C:\Users\LuiisFer\Desktop\Login\Login\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\LuiisFer\Desktop\Login\Login\Login\obj\Debug\Login.csproj.GenerateResource.Cache
+C:\Users\LuiisFer\Desktop\Login\Login\Login\obj\Debug\Login.exe
+C:\Users\LuiisFer\Desktop\Login\Login\Login\obj\Debug\Login.pdb
+C:\Users\LuiisFer\Desktop\Login\Login\Login\obj\Debug\Login.csprojResolveAssemblyReference.cache
+C:\Users\Hector Cardona\Desktop\Login\Login\bin\Debug\Login.exe.config
+C:\Users\Hector Cardona\Desktop\Login\Login\obj\Debug\Login.exe
+C:\Users\Hector Cardona\Desktop\Login\Login\obj\Debug\Login.pdb
+C:\Users\Hector Cardona\Desktop\Login\Login\bin\Debug\Login.exe
+C:\Users\Hector Cardona\Desktop\Login\Login\bin\Debug\Login.pdb
+C:\Users\Hector Cardona\Desktop\Login\Login\obj\Debug\Login.csprojResolveAssemblyReference.cache
+C:\Users\Hector Cardona\Desktop\Login\Login\obj\Debug\Login.frmLogin.resources
+C:\Users\Hector Cardona\Desktop\Login\Login\obj\Debug\Login.frmMenu.resources
+C:\Users\Hector Cardona\Desktop\Login\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\Hector Cardona\Desktop\Login\Login\obj\Debug\Login.csproj.GenerateResource.Cache
+C:\Users\Hector Cardona\Desktop\LOGIN BIIEEN!\Login\Login\bin\Debug\Login.exe.config
+C:\Users\Hector Cardona\Desktop\LOGIN BIIEEN!\Login\Login\obj\Debug\Login.exe
+C:\Users\Hector Cardona\Desktop\LOGIN BIIEEN!\Login\Login\obj\Debug\Login.pdb
+C:\Users\Hector Cardona\Desktop\LOGIN BIIEEN!\Login\Login\bin\Debug\Login.exe
+C:\Users\Hector Cardona\Desktop\LOGIN BIIEEN!\Login\Login\bin\Debug\Login.pdb
+C:\Users\Hector Cardona\Desktop\LOGIN BIIEEN!\Login\Login\obj\Debug\Login.csprojResolveAssemblyReference.cache
+C:\Users\Hector Cardona\Desktop\LOGIN BIIEEN!\Login\Login\obj\Debug\Login.frmLogin.resources
+C:\Users\Hector Cardona\Desktop\LOGIN BIIEEN!\Login\Login\obj\Debug\Login.frmMenu.resources
+C:\Users\Hector Cardona\Desktop\LOGIN BIIEEN!\Login\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\Hector Cardona\Desktop\LOGIN BIIEEN!\Login\Login\obj\Debug\Login.csproj.GenerateResource.Cache
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\bin\Debug\Login.exe.config
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\bin\Debug\Login.exe
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\bin\Debug\Login.pdb
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\bin\Debug\DllSeguridad.dll
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\bin\Debug\Login.dll
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\bin\Debug\DllSeguridad.pdb
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\obj\Debug\Login.csprojResolveAssemblyReference.cache
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\obj\Debug\Login.frmLogin.resources
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\obj\Debug\Login.frmMenu.resources
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\obj\Debug\Login.csproj.GenerateResource.Cache
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\obj\Debug\Login.exe
+C:\Users\walter\Documents\Visual Studio 2013\Projects\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\obj\Debug\Login.pdb
+C:\Users\Hector Cardona\Desktop\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\bin\Debug\Login.exe.config
+C:\Users\Hector Cardona\Desktop\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\obj\Debug\Login.exe
+C:\Users\Hector Cardona\Desktop\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\obj\Debug\Login.pdb
+C:\Users\Hector Cardona\Desktop\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\obj\Debug\Login.csprojResolveAssemblyReference.cache
+C:\Users\Hector Cardona\Desktop\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\obj\Debug\Login.frmLogin.resources
+C:\Users\Hector Cardona\Desktop\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\obj\Debug\Login.frmMenu.resources
+C:\Users\Hector Cardona\Desktop\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\Hector Cardona\Desktop\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\obj\Debug\Login.csproj.GenerateResource.Cache
+C:\Users\Hector Cardona\Desktop\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\bin\Debug\Login.exe
+C:\Users\Hector Cardona\Desktop\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\bin\Debug\Login.pdb
+C:\Users\Hector Cardona\Desktop\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\bin\Debug\DllSeguridad.dll
+C:\Users\Hector Cardona\Desktop\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\bin\Debug\DllSeguridad.pdb
+C:\Users\Hector Cardona\Desktop\Login-que-Abre-Forms\Login que Abre Forms\Login\Login\obj\Debug\Login.frmPrueba.resources
+C:\Users\Hector Cardona\Desktop\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\bin\Debug\Login.exe.config
+C:\Users\Hector Cardona\Desktop\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.exe
+C:\Users\Hector Cardona\Desktop\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.pdb
+C:\Users\Hector Cardona\Desktop\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\bin\Debug\Login.exe
+C:\Users\Hector Cardona\Desktop\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\bin\Debug\Login.pdb
+C:\Users\Hector Cardona\Desktop\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\bin\Debug\DllSeguridad.pdb
+C:\Users\Hector Cardona\Desktop\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.csprojResolveAssemblyReference.cache
+C:\Users\Hector Cardona\Desktop\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.frmImplosion.resources
+C:\Users\Hector Cardona\Desktop\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.frmLogin.resources
+C:\Users\Hector Cardona\Desktop\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.frmMenu.resources
+C:\Users\Hector Cardona\Desktop\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.frmPrueba.resources
+C:\Users\Hector Cardona\Desktop\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\Hector Cardona\Desktop\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.csproj.GenerateResource.Cache
+C:\Users\melvinalejandro\Downloads\Modulo-Seguridad-Grupo-4\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\bin\Debug\Login.exe.config
+C:\Users\melvinalejandro\Downloads\Modulo-Seguridad-Grupo-4\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.exe
+C:\Users\melvinalejandro\Downloads\Modulo-Seguridad-Grupo-4\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.pdb
+C:\Users\melvinalejandro\Downloads\Modulo-Seguridad-Grupo-4\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\bin\Debug\Login.exe
+C:\Users\melvinalejandro\Downloads\Modulo-Seguridad-Grupo-4\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\bin\Debug\Login.pdb
+C:\Users\melvinalejandro\Downloads\Modulo-Seguridad-Grupo-4\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\bin\Debug\DllSeguridad.pdb
+C:\Users\melvinalejandro\Downloads\Modulo-Seguridad-Grupo-4\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.csprojResolveAssemblyReference.cache
+C:\Users\melvinalejandro\Downloads\Modulo-Seguridad-Grupo-4\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.frmImplosion.resources
+C:\Users\melvinalejandro\Downloads\Modulo-Seguridad-Grupo-4\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.frmLogin.resources
+C:\Users\melvinalejandro\Downloads\Modulo-Seguridad-Grupo-4\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.frmMenu.resources
+C:\Users\melvinalejandro\Downloads\Modulo-Seguridad-Grupo-4\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.frmproveedores.resources
+C:\Users\melvinalejandro\Downloads\Modulo-Seguridad-Grupo-4\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.frmPrueba.resources
+C:\Users\melvinalejandro\Downloads\Modulo-Seguridad-Grupo-4\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\melvinalejandro\Downloads\Modulo-Seguridad-Grupo-4\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.csproj.GenerateResource.Cache
+C:\Users\melvinalejandro\Downloads\Modulo-Seguridad-Grupo-4\Modulo Seguridad Grupo 4\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.frmbuscarProveedor.resources
+C:\Users\LuiisFer\Desktop\PROYECTO DE SEGURIDAD\Login\bin\Debug\Login.exe.config
+C:\Users\LuiisFer\Desktop\PROYECTO DE SEGURIDAD\Login\bin\Debug\Login.exe
+C:\Users\LuiisFer\Desktop\PROYECTO DE SEGURIDAD\Login\bin\Debug\Login.pdb
+C:\Users\LuiisFer\Desktop\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.frmbuscarProveedor.resources
+C:\Users\LuiisFer\Desktop\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.frmEntregasParciales.resources
+C:\Users\LuiisFer\Desktop\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.frmImplosion.resources
+C:\Users\LuiisFer\Desktop\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.frmLogin.resources
+C:\Users\LuiisFer\Desktop\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.frmMenu.resources
+C:\Users\LuiisFer\Desktop\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.frmProductosTerminados.resources
+C:\Users\LuiisFer\Desktop\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.frmproveedores.resources
+C:\Users\LuiisFer\Desktop\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.frmPrueba.resources
+C:\Users\LuiisFer\Desktop\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.frmReceta.resources
+C:\Users\LuiisFer\Desktop\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\LuiisFer\Desktop\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.csproj.GenerateResource.Cache
+C:\Users\LuiisFer\Desktop\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.exe
+C:\Users\LuiisFer\Desktop\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.pdb
+C:\Users\LuiisFer\Desktop\PROYECTO DE SEGURIDAD\Login\obj\Debug\Login.csprojResolveAssemblyReference.cache
