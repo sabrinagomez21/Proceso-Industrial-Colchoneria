@@ -59,18 +59,7 @@ namespace Login
             {
                 for (int i = 0; i < sDato.Length; i++)
                 {
-                   /* if (sDato.Substring(i, 1) != ".")
-                    {
-                        sCadena = sCadena + sDato.Substring(i, 1);
-                    }
-                    else if (sDato.Substring(i, 1) == ".")
-                    {
-                        sCadena = "";
-                    }
-                    else
-                    {
-                        break;
-                    }*/
+                   
                     switch (estado)
                     {
                         case 0:
