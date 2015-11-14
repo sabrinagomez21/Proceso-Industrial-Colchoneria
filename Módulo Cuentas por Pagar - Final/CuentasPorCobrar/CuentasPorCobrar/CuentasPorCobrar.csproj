@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{12F3CF5A-D940-40C8-98BD-A3F92CD81916}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CuentasPorCobrar</RootNamespace>
+    <AssemblyName>CuentasPorCobrar</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ConexionODBC">
+      <HintPath>obj\ConexionODBC.dll</HintPath>
+    </Reference>
+    <Reference Include="DllSeguridad, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllSeguridad.dll</HintPath>
+    </Reference>
+    <Reference Include="Navegador">
+      <HintPath>.\Navegador.dll</HintPath>
+    </Reference>
+    <Reference Include="prueba1">
+      <HintPath>.\prueba1.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="buscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buscar.Designer.cs">
+      <DependentUpon>buscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="buscardocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buscardocumentos.Designer.cs">
+      <DependentUpon>buscardocumentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="buscartransaccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buscartransaccion.Designer.cs">
+      <DependentUpon>buscartransaccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CAD.cs" />
+    <Compile Include="colchoneriaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>colchoneriaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="D_Rol.cs" />
+    <Compile Include="E_Rol.cs" />
+    <Compile Include="frmConsultaCxC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaCxC.Designer.cs">
+      <DependentUpon>frmConsultaCxC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDocumentodepago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDocumentodepago.Designer.cs">
+      <DependentUpon>frmDocumentodepago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmmantenimientoProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmmantenimientoProveedores.Designer.cs">
+      <DependentUpon>frmmantenimientoProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalCxC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalCxC.Designer.cs">
+      <DependentUpon>frmPrincipalCxC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTipoDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTipoDoc.Designer.cs">
+      <DependentUpon>frmTipoDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Logueo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Logueo.designer.cs">
+      <DependentUpon>Frm_Logueo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoTransaccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoTransaccion.Designer.cs">
+      <DependentUpon>MantenimientoTransaccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mdi_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mdi_Form.designer.cs">
+      <DependentUpon>Mdi_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="N_Rol.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="buscar.resx">
+      <DependentUpon>buscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buscardocumentos.resx">
+      <DependentUpon>buscardocumentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buscartransaccion.resx">
+      <DependentUpon>buscartransaccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaCxC.resx">
+      <DependentUpon>frmConsultaCxC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDocumentodepago.resx">
+      <DependentUpon>frmDocumentodepago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmmantenimientoProveedores.resx">
+      <DependentUpon>frmmantenimientoProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipalCxC.resx">
+      <DependentUpon>frmPrincipalCxC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTipoDoc.resx">
+      <DependentUpon>frmTipoDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Logueo.resx">
+      <DependentUpon>Frm_Logueo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="madocporpagar.rdlc" />
+    <EmbeddedResource Include="MantenimientoTransaccion.resx">
+      <DependentUpon>MantenimientoTransaccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="maproveedor.rdlc" />
+    <EmbeddedResource Include="matipotransaccion.rdlc" />
+    <EmbeddedResource Include="Mdi_Form.resx">
+      <DependentUpon>Mdi_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trdocumentos.rdlc" />
+    <None Include="colchoneriaDataSet.xsc">
+      <DependentUpon>colchoneriaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="colchoneriaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>colchoneriaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="colchoneriaDataSet.xss">
+      <DependentUpon>colchoneriaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\1446925477_checkout.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
